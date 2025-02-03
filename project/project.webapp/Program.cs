@@ -1,7 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using project.data;
+
 var builder = WebApplication.CreateBuilder(args);
+var service = builder.Services;
+var connectionString = builder.Configuration.GetConnectionString("Default");
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+service.AddControllersWithViews();
+
+service.AddDbContext<AppDbContext>(option => 
+    option.UseSqlServer(connectionString)
+);
+
 
 var app = builder.Build();
 
@@ -20,10 +30,15 @@ app.UseAuthorization();
 
 app.MapStaticAssets();
 
+// app.MapControllerRoute(
+//     name: "default",
+//     pattern: "{controller=Home}/{action=Index}/{id?}")
+//     .WithStaticAssets();
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 
 app.Run();
