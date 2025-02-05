@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bayi Portalı - Kayıt Ol</h1>
+</div>
+
+<form method="post" asp-action="Register" asp-controller="Account">
+    <div class="mb-3">
+        <label for="inputUsername" class="form-label">Kullanıcı Adı</label>
+        <input type="text" class="form-control" id="inputUsername" name="name" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="inputPassword" class="form-label">Şifre</label>
+        <input type="password" class="form-control" id="inputPassword" name="password" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Şifreyi Onayla</label>
+        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+</form>

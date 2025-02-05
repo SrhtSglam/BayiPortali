@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using project.webapp.Filters;
 using project.webapp.Models;
 
 namespace project.webapp.Controllers{
@@ -12,6 +13,7 @@ namespace project.webapp.Controllers{
             _logger = logger;
         }
 
+        // [CustomAuthorize("Admin")]
         public IActionResult Index()
         {
             return View();

@@ -12,6 +12,14 @@ service.AddDbContext<AppDbContext>(option =>
     option.UseSqlServer(connectionString)
 );
 
+#region Session
+    service.AddDistributedMemoryCache();
+    service.AddSession(option => {
+        option.IdleTimeout = TimeSpan.FromMinutes(60);
+        option.Cookie.HttpOnly = true;
+        option.Cookie.IsEssential = true;
+    });
+#endregion
 
 var app = builder.Build();
 
@@ -23,21 +31,20 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseSession();
+app.UseRouting();
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
 
-// app.MapControllerRoute(
-//     name: "default",
-//     pattern: "{controller=Home}/{action=Index}/{id?}")
-//     .WithStaticAssets();
-
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}")
+    .WithStaticAssets();
 
 
 

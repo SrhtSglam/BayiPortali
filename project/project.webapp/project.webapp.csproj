@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\project.data\project.data.csproj" />
     <ProjectReference Include="..\project.entity\project.entity.csproj" />
+    <ProjectReference Include="..\project.business\project.business.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -10,5 +11,15 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <!-- <system.web>
+    <authentication mode="Forms">
+        <forms loginUrl="~/Account/Login" timeout="2880"/>
+    </authentication>
+
+    <authorization>
+        <deny users="?"/>
+    </authorization>
+  </system.web> -->
 
 </Project>

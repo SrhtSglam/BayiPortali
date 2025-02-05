@@ -989,6 +989,16 @@
           }
         }
       },
+      "project.business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/project.business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/project.business.dll": {}
+        }
+      },
       "project.data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -2763,6 +2773,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "project.business/1.0.0": {
+      "type": "project",
+      "path": "../project.business/project.business.csproj",
+      "msbuildProject": "../project.business/project.business.csproj"
+    },
     "project.data/1.0.0": {
       "type": "project",
       "path": "../project.data/project.data.csproj",
@@ -2776,6 +2791,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "project.business >= 1.0.0",
       "project.data >= 1.0.0",
       "project.entity >= 1.0.0"
     ]
@@ -2813,6 +2829,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.business\\project.business.csproj": {
+              "projectPath": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.business\\project.business.csproj"
+            },
             "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.data\\project.data.csproj": {
               "projectPath": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.data\\project.data.csproj"
             },

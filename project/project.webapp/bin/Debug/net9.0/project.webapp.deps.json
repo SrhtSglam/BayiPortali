@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "project.webapp/1.0.0": {
         "dependencies": {
+          "project.business": "1.0.0",
           "project.data": "1.0.0",
           "project.entity": "1.0.0"
         },
@@ -518,6 +519,14 @@
           }
         }
       },
+      "project.business/1.0.0": {
+        "runtime": {
+          "project.business.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "project.data/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.1",
@@ -930,6 +939,11 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "project.business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "project.data/1.0.0": {
       "type": "project",

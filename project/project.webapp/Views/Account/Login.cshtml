@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bayi Portalı</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form method="post" asp-action="Login" asp-controller="Account">
+    <div class="mb-3 form-check">
+        <input type="radio" class="form-check-input" id="companyBilgitas" name="company" value="Bilgitas">
+        <label class="form-check-label" for="companyBilgitas">Bilgitas</label>
+    </div>
+    <div class="mb-3 form-check">
+        <input type="radio" class="form-check-input" id="companyBilgitasDijital" name="company" value="Bilgitas Dijital">
+        <label class="form-check-label" for="companyBilgitasDijital">Bilgitas Dijital</label>
+    </div>
+
+    <div class="mb-3">
+        <label for="inputUsername" class="form-label">Kullanıcı Adı</label>
+        <input type="text" class="form-control" id="inputUsername" name="name" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="inputPassword" class="form-label">Şifre</label>
+        <input type="password" class="form-control" id="inputPassword" name="password" required>
+    </div>
+
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+        <label class="form-check-label" for="rememberMe">Beni hatırla</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Giriş Yap</button>
+</form>
