@@ -1,0 +1,15 @@
+@using project.entity;
+@model DataResponse<List<Category>>
+
+@try{
+    @foreach (var items in Model.Data)
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="@items.Controller"
+                asp-action="@items.Action">@items.Name</a>
+        </li>
+    }
+
+}catch{
+    <div>@Model.Message</div>
+}

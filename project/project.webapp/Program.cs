@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using project.data;
+using project.data.Abstract;
+using project.data.Concrete;
 
 var builder = WebApplication.CreateBuilder(args);
 var service = builder.Services;
@@ -11,6 +13,9 @@ service.AddControllersWithViews();
 service.AddDbContext<AppDbContext>(option => 
     option.UseSqlServer(connectionString)
 );
+
+service.AddScoped<IUserRepository, UserRepository>();
+service.AddScoped<ICategoryRepository, CategoryRepository>();
 
 #region Session
     service.AddDistributedMemoryCache();

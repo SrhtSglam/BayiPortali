@@ -1,0 +1,12 @@
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.business\bin\Release\net9.0\project.business.deps.json
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.business\bin\Release\net9.0\project.business.dll
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.business\bin\Release\net9.0\project.business.pdb
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.business\obj\Release\net9.0\project.business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.business\obj\Release\net9.0\project.business.AssemblyInfoInputs.cache
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.business\obj\Release\net9.0\project.business.AssemblyInfo.cs
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.business\obj\Release\net9.0\project.business.csproj.CoreCompileInputs.cache
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.business\obj\Release\net9.0\project.business.sourcelink.json
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.business\obj\Release\net9.0\project.business.dll
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.business\obj\Release\net9.0\refint\project.business.dll
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.business\obj\Release\net9.0\project.business.pdb
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.business\obj\Release\net9.0\ref\project.business.dll

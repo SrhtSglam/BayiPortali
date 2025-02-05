@@ -2,35 +2,33 @@
     ViewData["Title"] = "Login";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bayi Portalı</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="d-flex justify-content-center align-items-center vh-100" style="overflow-x: hidden;">
+    <div class="text-center mb-4" style="max-width: 400px; width: 100%; padding-top: 20px;">
+        <img src="https://www.kyoceradocumentsolutions.com.tr/content/dam/kyocera/common/images/logo/kyocera-logo.svg"
+             alt="Kyocera Logo" class="img-fluid" style="max-width: 200px;">
+    </div>
+    
+    <form method="post" asp-action="Login" asp-controller="Account" class="w-100" style="max-width: 400px;">
+        <div class="mb-3">
+            <select class="form-select" aria-label="Default">
+                <option selected>Bir şirket seçiniz</option>
+                <option value="1">Bilgitas</option>
+                <option value="2">Bilgitas Dijital</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputUsername" class="form-label">Kullanıcı Adı</label>
+            <input type="text" class="form-control" id="inputUsername" name="name" required value="admin">
+        </div>
+
+        <div class="mb-3">
+            <label for="inputPassword" class="form-label">Şifre</label>
+            <input type="password" class="form-control" id="inputPassword" name="password" required value="Abc123+">
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+        </div>
+    </form>
 </div>
-
-<form method="post" asp-action="Login" asp-controller="Account">
-    <div class="mb-3 form-check">
-        <input type="radio" class="form-check-input" id="companyBilgitas" name="company" value="Bilgitas">
-        <label class="form-check-label" for="companyBilgitas">Bilgitas</label>
-    </div>
-    <div class="mb-3 form-check">
-        <input type="radio" class="form-check-input" id="companyBilgitasDijital" name="company" value="Bilgitas Dijital">
-        <label class="form-check-label" for="companyBilgitasDijital">Bilgitas Dijital</label>
-    </div>
-
-    <div class="mb-3">
-        <label for="inputUsername" class="form-label">Kullanıcı Adı</label>
-        <input type="text" class="form-control" id="inputUsername" name="name" required>
-    </div>
-
-    <div class="mb-3">
-        <label for="inputPassword" class="form-label">Şifre</label>
-        <input type="password" class="form-control" id="inputPassword" name="password" required>
-    </div>
-
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
-        <label class="form-check-label" for="rememberMe">Beni hatırla</label>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Giriş Yap</button>
-</form>

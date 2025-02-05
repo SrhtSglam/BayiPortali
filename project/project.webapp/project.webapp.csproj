@@ -11,15 +11,4 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
-  <!-- <system.web>
-    <authentication mode="Forms">
-        <forms loginUrl="~/Account/Login" timeout="2880"/>
-    </authentication>
-
-    <authorization>
-        <deny users="?"/>
-    </authorization>
-  </system.web> -->
-
 </Project>
