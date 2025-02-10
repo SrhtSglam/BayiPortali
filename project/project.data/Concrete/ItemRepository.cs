@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
 using project.data.Abstract;
 using project.entity;
 
@@ -9,8 +10,10 @@ namespace project.data.Concrete{
             _context = context;
         }
 
-        public DataResponse<List<Item>> GetAll(){
+        public DataResponse<List<Item>> GetAll(int currentPage, int itemPerPage){
             var items = _context.Items
+                .Skip((currentPage - 1) * itemPerPage)
+                .Take(itemPerPage)
                 .ToList();
                 
             if(items == null){

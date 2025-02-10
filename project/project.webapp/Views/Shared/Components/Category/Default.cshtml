@@ -1,22 +1,30 @@
 @model List<Category>
 
+<style>
+    .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+</style>
+
 @foreach (var items in Model)
 {
-    @* <div class="dropdown">
-            <button class="btn btn-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                @items.Name
-            </button>
-
+    <div class="dropdown">
+            <a class="nav-link text-dark" asp-area="" asp-controller="@items.Controller"
+            asp-action="@items.Action">@items.Name</a>
+            
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item text-dark" asp-area="" asp-controller="@items.Controller"
-                asp-action="@items.Action">@items.Name</a></li>
+                @foreach(var itemsSubCategories in items.subCategories){
+                    <li><a class="dropdown-item text-dark" asp-area="" asp-controller="@itemsSubCategories.Controller"
+                    asp-action="@itemsSubCategories.Action">@itemsSubCategories.Name</a></li>
+                }
             </ul>
-        </div> *@
+        </div>
 
-    <li class="nav-item">
+    @* <li class="nav-item">
         <a class="nav-link text-dark" asp-area="" asp-controller="@items.Controller"
             asp-action="@items.Action">@items.Name</a>
-    </li>
+    </li> *@
 }
 
 

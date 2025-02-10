@@ -8,6 +8,7 @@ namespace project.data{
 
         public DbSet<User> Users {get; set;} 
         public DbSet<Category> Categories {get; set;} 
+        public DbSet<SubCategory> SubCategories {get; set;} 
         public DbSet<Item> Items {get; set;} 
     }
 }

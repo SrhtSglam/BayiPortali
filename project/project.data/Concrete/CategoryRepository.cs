@@ -28,5 +28,18 @@ namespace project.data.Concrete{
                 Success = true
             };
         }
+
+        public DataResponse<List<Category>> GetAllWithSubCategories(){
+            var categories = _context.Categories
+                .Include(s => s.subCategories)
+                .Where(i => i.Deleted == false && i.Visible == false)
+                .ToList();
+            
+            return new DataResponse<List<Category>>{
+                Data = categories,
+                Message = "Operation was successful",
+                Success = true
+            };
+        }
     }
 }

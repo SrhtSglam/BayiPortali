@@ -14,7 +14,7 @@ namespace project.webapp.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-            var categories = _categoryRepository.GetAll().Data;
+            var categories = _categoryRepository.GetAllWithSubCategories().Data;
             
             // if (RouteData.Values["category"] != null)
             //     ViewBag.SelectedCategory = RouteData?.Values["category"];

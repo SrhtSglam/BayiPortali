@@ -25,7 +25,11 @@ namespace project.webapp.Controllers{
 
         public IActionResult Place()
         {
-            var items = _itemRepository.GetAll().Data;
+            var pagination = new PageModel(){
+                CurrentPage = 1,
+                ItemPerPage = 20
+            };
+            var items = _itemRepository.GetAll(pagination.CurrentPage, pagination.ItemPerPage).Data;
             
             return View(items);
         }
