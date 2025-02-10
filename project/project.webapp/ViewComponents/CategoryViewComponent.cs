@@ -14,9 +14,13 @@ namespace project.webapp.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-            var categories = _categoryRepository.GetAll();
+            var categories = _categoryRepository.GetAll().Data;
+            
+            // if (RouteData.Values["category"] != null)
+            //     ViewBag.SelectedCategory = RouteData?.Values["category"];
 
             return View(categories);
+
         }
     }
 }

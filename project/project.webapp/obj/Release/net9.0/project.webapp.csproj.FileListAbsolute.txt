@@ -65,7 +65,6 @@ C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\scopedcss\bundle\project.webapp.styles.css
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\scopedcss\projectbundle\project.webapp.bundle.scp.css
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\compressed\h8wwoc4agj-b9sayid5wm.gz
-C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\compressed\7wqxprl4mi-61n19gt1b8.gz
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\compressed\0gbdcnn6rg-xtxxf3hu2r.gz
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\compressed\4fsakfmjzp-bqjiyaj88i.gz
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\compressed\s9sh5sc882-c2jlpeoesf.gz
@@ -143,3 +142,8 @@ C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\project.webapp.pdb
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\project.webapp.genruntimeconfig.cache
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\ref\project.webapp.dll
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\compressed\lijz2rjck3-xbpf8ijnwo.gz
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\compressed\7wqxprl4mi-wg6tls123t.gz
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\compressed\6j2kbsneeo-61n19gt1b8.gz
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\compressed\zs5hl48wen-pmb8xnfbnn.gz
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Release\net9.0\compressed\6e9ecx63pb-mabmr4p4ov.gz

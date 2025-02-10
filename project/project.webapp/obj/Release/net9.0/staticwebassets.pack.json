@@ -9,8 +9,24 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon-square.ico",
+      "PackagePath": "staticwebassets\\favicon-square.ico"
+    },
+    {
       "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon02.ico",
+      "PackagePath": "staticwebassets\\favicon02.ico"
+    },
+    {
+      "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon03.ico",
+      "PackagePath": "staticwebassets\\favicon03.ico"
+    },
+    {
+      "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon04.ico",
+      "PackagePath": "staticwebassets\\favicon04.ico"
     },
     {
       "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\js\\site.js",

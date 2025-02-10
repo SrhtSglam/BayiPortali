@@ -16,7 +16,7 @@ namespace project.webapp.Controllers{
             _logger = logger;
         }
 
-        public IActionResult Index()
+    public IActionResult Index()
         {
             if(HttpContext.Session.GetString("UserRole") == null){
                 return RedirectToAction("Login", "Account");

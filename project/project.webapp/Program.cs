@@ -16,6 +16,7 @@ service.AddDbContext<AppDbContext>(option =>
 
 service.AddScoped<IUserRepository, UserRepository>();
 service.AddScoped<ICategoryRepository, CategoryRepository>();
+service.AddScoped<IItemRepository, ItemRepository>();
 
 #region Session
     service.AddDistributedMemoryCache();

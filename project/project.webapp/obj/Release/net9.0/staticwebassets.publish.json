@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cg7eB58o3YfiJqPMS7Kni+xlHkkBpLgGh0dmqd7hZXw=",
+  "Hash": "Z1VbfysrsIUrGdV1DPu4ZlL+wAziXs+R6yFEA1MzSqk=",
   "Source": "project.webapp",
   "BasePath": "_content/project.webapp",
   "Mode": "Default",
@@ -206,6 +206,27 @@
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\6e9ecx63pb-mabmr4p4ov.gz",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "favicon04#[.{fingerprint=mabmr4p4ov}]?.ico.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon04.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "jf8748yr93",
+      "Integrity": "kVV5AXPjl2OFKlQ+7AdB0vvtT/cenMMYg25Tqt0cGOA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon04.ico"
+    },
+    {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\6fjd121lpk-0j3bgjxly4.gz",
       "SourceId": "project.webapp",
       "SourceType": "Discovered",
@@ -225,6 +246,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\6j2kbsneeo-61n19gt1b8.gz",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "favicon02#[.{fingerprint=61n19gt1b8}]?.ico.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon02.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "nezsohjtde",
+      "Integrity": "wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon02.ico"
     },
     {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\6nxcrr0964-ausgxo2sd3.gz",
@@ -269,12 +311,12 @@
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\7wqxprl4mi-61n19gt1b8.gz",
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\7wqxprl4mi-wg6tls123t.gz",
       "SourceId": "project.webapp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\",
       "BasePath": "_content/project.webapp",
-      "RelativePath": "favicon#[.{fingerprint=61n19gt1b8}]?.ico.gz",
+      "RelativePath": "favicon#[.{fingerprint=wg6tls123t}]?.ico.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -283,8 +325,8 @@
       "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon.ico",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "nezsohjtde",
-      "Integrity": "wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0=",
+      "Fingerprint": "ropn5odyyd",
+      "Integrity": "y7beClVVIBQHhypA9+8tlBKWazNTMdjN3fUm4XXbZRY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon.ico"
@@ -899,6 +941,27 @@
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js"
     },
     {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\lijz2rjck3-xbpf8ijnwo.gz",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "favicon-square#[.{fingerprint=xbpf8ijnwo}]?.ico.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon-square.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "a8vv0jxyey",
+      "Integrity": "JpTjNcZK3L/eIabQJHeaM7F9AfSTwhqzKMSqhO7mdgs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon-square.ico"
+    },
+    {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\mb28g71zpl-hrwsygsryq.gz",
       "SourceId": "project.webapp",
       "SourceType": "Discovered",
@@ -1235,6 +1298,27 @@
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\6e9ecx63pb-mabmr4p4ov.br",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "favicon04#[.{fingerprint=mabmr4p4ov}]?.ico.br",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon04.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "br",
+      "Fingerprint": "hfgfdjhmz4",
+      "Integrity": "ExYhG0PpPA6ah/QnslwLABsVU11pldeajj1F4nHYUq8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon04.ico"
+    },
+    {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\6fjd121lpk-0j3bgjxly4.br",
       "SourceId": "project.webapp",
       "SourceType": "Discovered",
@@ -1254,6 +1338,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\6j2kbsneeo-61n19gt1b8.br",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "favicon02#[.{fingerprint=61n19gt1b8}]?.ico.br",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon02.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "br",
+      "Fingerprint": "5bmv0eabqc",
+      "Integrity": "sdq4OozKbzRXncJlEGD27eAyo7pvtW7fFSNznAQnLfE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon02.ico"
     },
     {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\6nxcrr0964-ausgxo2sd3.br",
@@ -1298,12 +1403,12 @@
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\7wqxprl4mi-61n19gt1b8.br",
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\7wqxprl4mi-wg6tls123t.br",
       "SourceId": "project.webapp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\",
       "BasePath": "_content/project.webapp",
-      "RelativePath": "favicon#[.{fingerprint=61n19gt1b8}]?.ico.br",
+      "RelativePath": "favicon#[.{fingerprint=wg6tls123t}]?.ico.br",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1312,8 +1417,8 @@
       "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon.ico",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "br",
-      "Fingerprint": "5bmv0eabqc",
-      "Integrity": "sdq4OozKbzRXncJlEGD27eAyo7pvtW7fFSNznAQnLfE=",
+      "Fingerprint": "7psb29577s",
+      "Integrity": "9YOe72Qdvo6P/8IgYptQuMfk7Yu8HchMh2dSj+oO1Ok=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon.ico"
@@ -1928,6 +2033,27 @@
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.js"
     },
     {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\lijz2rjck3-xbpf8ijnwo.br",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "favicon-square#[.{fingerprint=xbpf8ijnwo}]?.ico.br",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon-square.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "br",
+      "Fingerprint": "1ubik6xl41",
+      "Integrity": "aciB82cX8QF4eZu2Wz3icRorTKrNO5+b9cosDs2gj/E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon-square.ico"
+    },
+    {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\mb28g71zpl-hrwsygsryq.br",
       "SourceId": "project.webapp",
       "SourceType": "Discovered",
@@ -2390,6 +2516,27 @@
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\zs5hl48wen-pmb8xnfbnn.br",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "favicon03#[.{fingerprint=pmb8xnfbnn}]?.ico.br",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon03.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "br",
+      "Fingerprint": "ks6ohr31hy",
+      "Integrity": "ZKW4ld5YVo0TGc5/0XShDyXIa7qDxZc5+PYp/54ajmg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon03.ico"
+    },
+    {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\s503yhffrq-6pdc2jztkx.gz",
       "SourceId": "project.webapp",
       "SourceType": "Discovered",
@@ -2705,6 +2852,27 @@
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\zs5hl48wen-pmb8xnfbnn.gz",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "favicon03#[.{fingerprint=pmb8xnfbnn}]?.ico.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon03.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "sp7ib7ueh8",
+      "Integrity": "cEEC2w/If8bW3m6KUuN3Dz2MWTLgDxvfA0t/0/8WU2U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon03.ico"
+    },
+    {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\scopedcss\\bundle\\project.webapp.styles.css",
       "SourceId": "project.webapp",
       "SourceType": "Computed",
@@ -2768,6 +2936,27 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon-square.ico",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "favicon-square#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xbpf8ijnwo",
+      "Integrity": "/a09bg5B5GEBnNXfqStHO+4f+cmCGss2sptCVrhPx0w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon-square.ico"
+    },
+    {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon.ico",
       "SourceId": "project.webapp",
       "SourceType": "Discovered",
@@ -2782,11 +2971,74 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "wg6tls123t",
+      "Integrity": "AHvLOYU12lFMnmI05/DT7k20Na/ZXuO1JSAF4jcXpoE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon02.ico",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "favicon02#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
       "Fingerprint": "61n19gt1b8",
       "Integrity": "Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
+      "OriginalItemSpec": "wwwroot\\favicon02.ico"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon03.ico",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "favicon03#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pmb8xnfbnn",
+      "Integrity": "4Rlax1QBNvN8oHQrNoAV4xx1jBV7tVZh5DC+zWrsqa8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon03.ico"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon04.ico",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "favicon04#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mabmr4p4ov",
+      "Integrity": "rv2D42c88dQxy++R0DMy8SfXnoU5C/d9dNK/hezTCKM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon04.ico"
     },
     {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\js\\site.js",
@@ -4586,8 +4838,1036 @@
       ]
     },
     {
-      "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\7wqxprl4mi-61n19gt1b8.gz",
+      "Route": "favicon-square.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\lijz2rjck3-xbpf8ijnwo.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000499001996"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2003"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JpTjNcZK3L/eIabQJHeaM7F9AfSTwhqzKMSqhO7mdgs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:42:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"/a09bg5B5GEBnNXfqStHO+4f+cmCGss2sptCVrhPx0w=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/a09bg5B5GEBnNXfqStHO+4f+cmCGss2sptCVrhPx0w="
+        }
+      ]
+    },
+    {
+      "Route": "favicon-square.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\lijz2rjck3-xbpf8ijnwo.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.000831255195"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1202"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aciB82cX8QF4eZu2Wz3icRorTKrNO5+b9cosDs2gj/E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:42:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"/a09bg5B5GEBnNXfqStHO+4f+cmCGss2sptCVrhPx0w=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/a09bg5B5GEBnNXfqStHO+4f+cmCGss2sptCVrhPx0w="
+        }
+      ]
+    },
+    {
+      "Route": "favicon-square.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon-square.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/a09bg5B5GEBnNXfqStHO+4f+cmCGss2sptCVrhPx0w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:42:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/a09bg5B5GEBnNXfqStHO+4f+cmCGss2sptCVrhPx0w="
+        }
+      ]
+    },
+    {
+      "Route": "favicon-square.ico.br",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\lijz2rjck3-xbpf8ijnwo.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1202"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aciB82cX8QF4eZu2Wz3icRorTKrNO5+b9cosDs2gj/E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:42:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-aciB82cX8QF4eZu2Wz3icRorTKrNO5+b9cosDs2gj/E="
+        }
+      ]
+    },
+    {
+      "Route": "favicon-square.ico.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\lijz2rjck3-xbpf8ijnwo.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2003"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JpTjNcZK3L/eIabQJHeaM7F9AfSTwhqzKMSqhO7mdgs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:42:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JpTjNcZK3L/eIabQJHeaM7F9AfSTwhqzKMSqhO7mdgs="
+        }
+      ]
+    },
+    {
+      "Route": "favicon-square.xbpf8ijnwo.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\lijz2rjck3-xbpf8ijnwo.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000499001996"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2003"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JpTjNcZK3L/eIabQJHeaM7F9AfSTwhqzKMSqhO7mdgs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:42:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"/a09bg5B5GEBnNXfqStHO+4f+cmCGss2sptCVrhPx0w=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xbpf8ijnwo"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon-square.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/a09bg5B5GEBnNXfqStHO+4f+cmCGss2sptCVrhPx0w="
+        }
+      ]
+    },
+    {
+      "Route": "favicon-square.xbpf8ijnwo.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\lijz2rjck3-xbpf8ijnwo.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.000831255195"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1202"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aciB82cX8QF4eZu2Wz3icRorTKrNO5+b9cosDs2gj/E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:42:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"/a09bg5B5GEBnNXfqStHO+4f+cmCGss2sptCVrhPx0w=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xbpf8ijnwo"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon-square.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/a09bg5B5GEBnNXfqStHO+4f+cmCGss2sptCVrhPx0w="
+        }
+      ]
+    },
+    {
+      "Route": "favicon-square.xbpf8ijnwo.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon-square.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59586"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/a09bg5B5GEBnNXfqStHO+4f+cmCGss2sptCVrhPx0w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:42:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xbpf8ijnwo"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon-square.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/a09bg5B5GEBnNXfqStHO+4f+cmCGss2sptCVrhPx0w="
+        }
+      ]
+    },
+    {
+      "Route": "favicon-square.xbpf8ijnwo.ico.br",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\lijz2rjck3-xbpf8ijnwo.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1202"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"aciB82cX8QF4eZu2Wz3icRorTKrNO5+b9cosDs2gj/E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:42:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xbpf8ijnwo"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon-square.ico.br"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-aciB82cX8QF4eZu2Wz3icRorTKrNO5+b9cosDs2gj/E="
+        }
+      ]
+    },
+    {
+      "Route": "favicon-square.xbpf8ijnwo.ico.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\lijz2rjck3-xbpf8ijnwo.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2003"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JpTjNcZK3L/eIabQJHeaM7F9AfSTwhqzKMSqhO7mdgs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:42:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xbpf8ijnwo"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon-square.ico.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JpTjNcZK3L/eIabQJHeaM7F9AfSTwhqzKMSqhO7mdgs="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\7wqxprl4mi-wg6tls123t.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000108201688"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9241"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y7beClVVIBQHhypA9+8tlBKWazNTMdjN3fUm4XXbZRY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:43:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"AHvLOYU12lFMnmI05/DT7k20Na/ZXuO1JSAF4jcXpoE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AHvLOYU12lFMnmI05/DT7k20Na/ZXuO1JSAF4jcXpoE="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\7wqxprl4mi-wg6tls123t.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.000108401084"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9224"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9YOe72Qdvo6P/8IgYptQuMfk7Yu8HchMh2dSj+oO1Ok=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:43:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"AHvLOYU12lFMnmI05/DT7k20Na/ZXuO1JSAF4jcXpoE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AHvLOYU12lFMnmI05/DT7k20Na/ZXuO1JSAF4jcXpoE="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9252"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AHvLOYU12lFMnmI05/DT7k20Na/ZXuO1JSAF4jcXpoE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:43:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AHvLOYU12lFMnmI05/DT7k20Na/ZXuO1JSAF4jcXpoE="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico.br",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\7wqxprl4mi-wg6tls123t.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9224"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9YOe72Qdvo6P/8IgYptQuMfk7Yu8HchMh2dSj+oO1Ok=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:43:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9YOe72Qdvo6P/8IgYptQuMfk7Yu8HchMh2dSj+oO1Ok="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\7wqxprl4mi-wg6tls123t.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y7beClVVIBQHhypA9+8tlBKWazNTMdjN3fUm4XXbZRY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:43:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-y7beClVVIBQHhypA9+8tlBKWazNTMdjN3fUm4XXbZRY="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.wg6tls123t.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\7wqxprl4mi-wg6tls123t.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000108201688"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9241"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y7beClVVIBQHhypA9+8tlBKWazNTMdjN3fUm4XXbZRY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:43:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"AHvLOYU12lFMnmI05/DT7k20Na/ZXuO1JSAF4jcXpoE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wg6tls123t"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AHvLOYU12lFMnmI05/DT7k20Na/ZXuO1JSAF4jcXpoE="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.wg6tls123t.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\7wqxprl4mi-wg6tls123t.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.000108401084"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9224"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9YOe72Qdvo6P/8IgYptQuMfk7Yu8HchMh2dSj+oO1Ok=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:43:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"AHvLOYU12lFMnmI05/DT7k20Na/ZXuO1JSAF4jcXpoE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wg6tls123t"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AHvLOYU12lFMnmI05/DT7k20Na/ZXuO1JSAF4jcXpoE="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.wg6tls123t.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9252"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AHvLOYU12lFMnmI05/DT7k20Na/ZXuO1JSAF4jcXpoE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:43:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wg6tls123t"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AHvLOYU12lFMnmI05/DT7k20Na/ZXuO1JSAF4jcXpoE="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.wg6tls123t.ico.br",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\7wqxprl4mi-wg6tls123t.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9224"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9YOe72Qdvo6P/8IgYptQuMfk7Yu8HchMh2dSj+oO1Ok=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:43:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wg6tls123t"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico.br"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9YOe72Qdvo6P/8IgYptQuMfk7Yu8HchMh2dSj+oO1Ok="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.wg6tls123t.ico.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\7wqxprl4mi-wg6tls123t.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9241"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y7beClVVIBQHhypA9+8tlBKWazNTMdjN3fUm4XXbZRY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:43:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wg6tls123t"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-y7beClVVIBQHhypA9+8tlBKWazNTMdjN3fUm4XXbZRY="
+        }
+      ]
+    },
+    {
+      "Route": "favicon02.61n19gt1b8.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\6j2kbsneeo-61n19gt1b8.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -4640,7 +5920,7 @@
         },
         {
           "Name": "label",
-          "Value": "favicon.ico"
+          "Value": "favicon02.ico"
         },
         {
           "Name": "integrity",
@@ -4649,8 +5929,8 @@
       ]
     },
     {
-      "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\7wqxprl4mi-61n19gt1b8.br",
+      "Route": "favicon02.61n19gt1b8.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\6j2kbsneeo-61n19gt1b8.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -4703,7 +5983,7 @@
         },
         {
           "Name": "label",
-          "Value": "favicon.ico"
+          "Value": "favicon02.ico"
         },
         {
           "Name": "integrity",
@@ -4712,8 +5992,8 @@
       ]
     },
     {
-      "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon.ico",
+      "Route": "favicon02.61n19gt1b8.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon02.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4748,7 +6028,7 @@
         },
         {
           "Name": "label",
-          "Value": "favicon.ico"
+          "Value": "favicon02.ico"
         },
         {
           "Name": "integrity",
@@ -4757,8 +6037,8 @@
       ]
     },
     {
-      "Route": "favicon.61n19gt1b8.ico.br",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\7wqxprl4mi-61n19gt1b8.br",
+      "Route": "favicon02.61n19gt1b8.ico.br",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\6j2kbsneeo-61n19gt1b8.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4801,7 +6081,7 @@
         },
         {
           "Name": "label",
-          "Value": "favicon.ico.br"
+          "Value": "favicon02.ico.br"
         },
         {
           "Name": "integrity",
@@ -4810,8 +6090,8 @@
       ]
     },
     {
-      "Route": "favicon.61n19gt1b8.ico.gz",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\7wqxprl4mi-61n19gt1b8.gz",
+      "Route": "favicon02.61n19gt1b8.ico.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\6j2kbsneeo-61n19gt1b8.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4854,7 +6134,7 @@
         },
         {
           "Name": "label",
-          "Value": "favicon.ico.gz"
+          "Value": "favicon02.ico.gz"
         },
         {
           "Name": "integrity",
@@ -4863,8 +6143,8 @@
       ]
     },
     {
-      "Route": "favicon.ico",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\7wqxprl4mi-61n19gt1b8.gz",
+      "Route": "favicon02.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\6j2kbsneeo-61n19gt1b8.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -4918,8 +6198,8 @@
       ]
     },
     {
-      "Route": "favicon.ico",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\7wqxprl4mi-61n19gt1b8.br",
+      "Route": "favicon02.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\6j2kbsneeo-61n19gt1b8.br",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -4973,8 +6253,8 @@
       ]
     },
     {
-      "Route": "favicon.ico",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon.ico",
+      "Route": "favicon02.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon02.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5010,8 +6290,8 @@
       ]
     },
     {
-      "Route": "favicon.ico.br",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\7wqxprl4mi-61n19gt1b8.br",
+      "Route": "favicon02.ico.br",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\6j2kbsneeo-61n19gt1b8.br",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5055,8 +6335,8 @@
       ]
     },
     {
-      "Route": "favicon.ico.gz",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\7wqxprl4mi-61n19gt1b8.gz",
+      "Route": "favicon02.ico.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\6j2kbsneeo-61n19gt1b8.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5096,6 +6376,1034 @@
         {
           "Name": "integrity",
           "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
+        }
+      ]
+    },
+    {
+      "Route": "favicon03.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\zs5hl48wen-pmb8xnfbnn.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.000051880674"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19274"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZKW4ld5YVo0TGc5/0XShDyXIa7qDxZc5+PYp/54ajmg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:18:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"4Rlax1QBNvN8oHQrNoAV4xx1jBV7tVZh5DC+zWrsqa8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4Rlax1QBNvN8oHQrNoAV4xx1jBV7tVZh5DC+zWrsqa8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon03.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\zs5hl48wen-pmb8xnfbnn.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000051647557"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19361"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cEEC2w/If8bW3m6KUuN3Dz2MWTLgDxvfA0t/0/8WU2U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:18:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"4Rlax1QBNvN8oHQrNoAV4xx1jBV7tVZh5DC+zWrsqa8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4Rlax1QBNvN8oHQrNoAV4xx1jBV7tVZh5DC+zWrsqa8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon03.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon03.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19878"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4Rlax1QBNvN8oHQrNoAV4xx1jBV7tVZh5DC+zWrsqa8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:18:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4Rlax1QBNvN8oHQrNoAV4xx1jBV7tVZh5DC+zWrsqa8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon03.ico.br",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\zs5hl48wen-pmb8xnfbnn.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19274"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZKW4ld5YVo0TGc5/0XShDyXIa7qDxZc5+PYp/54ajmg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:18:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZKW4ld5YVo0TGc5/0XShDyXIa7qDxZc5+PYp/54ajmg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon03.ico.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\zs5hl48wen-pmb8xnfbnn.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19361"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cEEC2w/If8bW3m6KUuN3Dz2MWTLgDxvfA0t/0/8WU2U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:18:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cEEC2w/If8bW3m6KUuN3Dz2MWTLgDxvfA0t/0/8WU2U="
+        }
+      ]
+    },
+    {
+      "Route": "favicon03.pmb8xnfbnn.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\zs5hl48wen-pmb8xnfbnn.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.000051880674"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19274"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZKW4ld5YVo0TGc5/0XShDyXIa7qDxZc5+PYp/54ajmg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:18:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"4Rlax1QBNvN8oHQrNoAV4xx1jBV7tVZh5DC+zWrsqa8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pmb8xnfbnn"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon03.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4Rlax1QBNvN8oHQrNoAV4xx1jBV7tVZh5DC+zWrsqa8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon03.pmb8xnfbnn.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\zs5hl48wen-pmb8xnfbnn.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000051647557"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19361"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cEEC2w/If8bW3m6KUuN3Dz2MWTLgDxvfA0t/0/8WU2U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:18:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"4Rlax1QBNvN8oHQrNoAV4xx1jBV7tVZh5DC+zWrsqa8=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pmb8xnfbnn"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon03.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4Rlax1QBNvN8oHQrNoAV4xx1jBV7tVZh5DC+zWrsqa8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon03.pmb8xnfbnn.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon03.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19878"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4Rlax1QBNvN8oHQrNoAV4xx1jBV7tVZh5DC+zWrsqa8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:18:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pmb8xnfbnn"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon03.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4Rlax1QBNvN8oHQrNoAV4xx1jBV7tVZh5DC+zWrsqa8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon03.pmb8xnfbnn.ico.br",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\zs5hl48wen-pmb8xnfbnn.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19274"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZKW4ld5YVo0TGc5/0XShDyXIa7qDxZc5+PYp/54ajmg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:18:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pmb8xnfbnn"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon03.ico.br"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZKW4ld5YVo0TGc5/0XShDyXIa7qDxZc5+PYp/54ajmg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon03.pmb8xnfbnn.ico.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\zs5hl48wen-pmb8xnfbnn.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19361"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cEEC2w/If8bW3m6KUuN3Dz2MWTLgDxvfA0t/0/8WU2U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:18:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pmb8xnfbnn"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon03.ico.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cEEC2w/If8bW3m6KUuN3Dz2MWTLgDxvfA0t/0/8WU2U="
+        }
+      ]
+    },
+    {
+      "Route": "favicon04.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\6e9ecx63pb-mabmr4p4ov.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001383125864"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "722"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kVV5AXPjl2OFKlQ+7AdB0vvtT/cenMMYg25Tqt0cGOA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:40:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"rv2D42c88dQxy++R0DMy8SfXnoU5C/d9dNK/hezTCKM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rv2D42c88dQxy++R0DMy8SfXnoU5C/d9dNK/hezTCKM="
+        }
+      ]
+    },
+    {
+      "Route": "favicon04.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\6e9ecx63pb-mabmr4p4ov.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.002202643172"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "453"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ExYhG0PpPA6ah/QnslwLABsVU11pldeajj1F4nHYUq8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:40:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"rv2D42c88dQxy++R0DMy8SfXnoU5C/d9dNK/hezTCKM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rv2D42c88dQxy++R0DMy8SfXnoU5C/d9dNK/hezTCKM="
+        }
+      ]
+    },
+    {
+      "Route": "favicon04.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon04.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "986"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rv2D42c88dQxy++R0DMy8SfXnoU5C/d9dNK/hezTCKM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:40:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rv2D42c88dQxy++R0DMy8SfXnoU5C/d9dNK/hezTCKM="
+        }
+      ]
+    },
+    {
+      "Route": "favicon04.ico.br",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\6e9ecx63pb-mabmr4p4ov.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "453"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ExYhG0PpPA6ah/QnslwLABsVU11pldeajj1F4nHYUq8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:40:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ExYhG0PpPA6ah/QnslwLABsVU11pldeajj1F4nHYUq8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon04.ico.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\6e9ecx63pb-mabmr4p4ov.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "722"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kVV5AXPjl2OFKlQ+7AdB0vvtT/cenMMYg25Tqt0cGOA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:40:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kVV5AXPjl2OFKlQ+7AdB0vvtT/cenMMYg25Tqt0cGOA="
+        }
+      ]
+    },
+    {
+      "Route": "favicon04.mabmr4p4ov.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\6e9ecx63pb-mabmr4p4ov.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001383125864"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "722"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kVV5AXPjl2OFKlQ+7AdB0vvtT/cenMMYg25Tqt0cGOA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:40:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"rv2D42c88dQxy++R0DMy8SfXnoU5C/d9dNK/hezTCKM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mabmr4p4ov"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon04.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rv2D42c88dQxy++R0DMy8SfXnoU5C/d9dNK/hezTCKM="
+        }
+      ]
+    },
+    {
+      "Route": "favicon04.mabmr4p4ov.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\6e9ecx63pb-mabmr4p4ov.br",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "br",
+          "Quality": "0.002202643172"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "453"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ExYhG0PpPA6ah/QnslwLABsVU11pldeajj1F4nHYUq8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:40:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"rv2D42c88dQxy++R0DMy8SfXnoU5C/d9dNK/hezTCKM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mabmr4p4ov"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon04.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rv2D42c88dQxy++R0DMy8SfXnoU5C/d9dNK/hezTCKM="
+        }
+      ]
+    },
+    {
+      "Route": "favicon04.mabmr4p4ov.ico",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon04.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "986"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rv2D42c88dQxy++R0DMy8SfXnoU5C/d9dNK/hezTCKM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:40:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mabmr4p4ov"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon04.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rv2D42c88dQxy++R0DMy8SfXnoU5C/d9dNK/hezTCKM="
+        }
+      ]
+    },
+    {
+      "Route": "favicon04.mabmr4p4ov.ico.br",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\publish\\6e9ecx63pb-mabmr4p4ov.br",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "453"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ExYhG0PpPA6ah/QnslwLABsVU11pldeajj1F4nHYUq8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:40:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "br"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mabmr4p4ov"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon04.ico.br"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ExYhG0PpPA6ah/QnslwLABsVU11pldeajj1F4nHYUq8="
+        }
+      ]
+    },
+    {
+      "Route": "favicon04.mabmr4p4ov.ico.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Release\\net9.0\\compressed\\6e9ecx63pb-mabmr4p4ov.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "722"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kVV5AXPjl2OFKlQ+7AdB0vvtT/cenMMYg25Tqt0cGOA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 05 Feb 2025 08:40:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mabmr4p4ov"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon04.ico.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kVV5AXPjl2OFKlQ+7AdB0vvtT/cenMMYg25Tqt0cGOA="
         }
       ]
     },
