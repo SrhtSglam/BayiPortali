@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1YcX96iZgm75ix6tMZlqa9e1rVl+VFZYiRh8Cwj2as8=",
+  "Hash": "VSw5o334OW0DYkHZpLvsTz4AjJ2yXmRZ4LHdqHw7ZQE=",
   "Source": "project.webapp",
   "BasePath": "_content/project.webapp",
   "Mode": "Default",
@@ -1611,6 +1611,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon04.ico"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\printers\\ecosys-pa3500cx-1.jpg",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "image/printers/ecosys-pa3500cx-1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jdavczg9ou",
+      "Integrity": "R36/Vc9nkvghP2lVkJN1qsDhiyFQB0mr7V0xcHclL48=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\printers\\ecosys-pa3500cx-1.jpg"
     },
     {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\js\\site.js",
@@ -4680,6 +4701,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-kVV5AXPjl2OFKlQ+7AdB0vvtT/cenMMYg25Tqt0cGOA="
+        }
+      ]
+    },
+    {
+      "Route": "image/printers/ecosys-pa3500cx-1.jdavczg9ou.jpg",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\printers\\ecosys-pa3500cx-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36433"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R36/Vc9nkvghP2lVkJN1qsDhiyFQB0mr7V0xcHclL48=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 10:25:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jdavczg9ou"
+        },
+        {
+          "Name": "label",
+          "Value": "image/printers/ecosys-pa3500cx-1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R36/Vc9nkvghP2lVkJN1qsDhiyFQB0mr7V0xcHclL48="
+        }
+      ]
+    },
+    {
+      "Route": "image/printers/ecosys-pa3500cx-1.jpg",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\printers\\ecosys-pa3500cx-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36433"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R36/Vc9nkvghP2lVkJN1qsDhiyFQB0mr7V0xcHclL48=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 10 Feb 2025 10:25:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-R36/Vc9nkvghP2lVkJN1qsDhiyFQB0mr7V0xcHclL48="
         }
       ]
     },

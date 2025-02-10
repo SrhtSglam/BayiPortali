@@ -30,5 +30,27 @@ namespace project.data.Concrete{
                 Success = true
             };
         }
+
+        public DataResponse<List<Item>> GetAllToner(int currentPage, int itemPerPage){
+            var items = _context.Items
+                .Where(i => i.CategoryName == "A4MFP Color Toner")
+                .Skip((currentPage - 1) * itemPerPage)
+                .Take(itemPerPage)
+                .ToList();
+                
+            if(items == null){
+                return new DataResponse<List<Item>>{
+                    Data = items,
+                    Message = "Items is null",
+                    Success = false
+                };
+            }
+
+            return new DataResponse<List<Item>>{
+                Data = items,
+                Message = "Items was successful",
+                Success = true
+            };
+        }
     }
 }

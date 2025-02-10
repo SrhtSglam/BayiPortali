@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\favicon04.ico"
     },
     {
+      "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\printers\\ecosys-pa3500cx-1.jpg",
+      "PackagePath": "staticwebassets\\image\\printers\\ecosys-pa3500cx-1.jpg"
+    },
+    {
       "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

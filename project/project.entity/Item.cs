@@ -3,6 +3,7 @@ namespace project.entity{
         public int ItemId { get; set; }
         public string CategoryName { get; set; }
         public string ItemGroup { get; set; }
+        public string? ImageUrl { get; set; }
         public string ItemCode { get; set; }
         public string Description { get; set; }
         public string? AlternativeCode { get; set; }
