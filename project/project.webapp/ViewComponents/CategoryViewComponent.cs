@@ -1,26 +1,26 @@
-using Microsoft.AspNetCore.Mvc;
-using project.data.Abstract;
+// using Microsoft.AspNetCore.Mvc;
+// using project.data.Abstract;
 
-namespace project.webapp.ViewComponents
-{
-    public class CategoryViewComponent : ViewComponent
-    {
-        private readonly ICategoryRepository _categoryRepository;
+// namespace project.webapp.ViewComponents
+// {
+//     public class CategoryViewComponent : ViewComponent
+//     {
+//         private readonly ICategoryRepository _categoryRepository;
 
-        public CategoryViewComponent(ICategoryRepository categoryRepository)
-        {
-            _categoryRepository = categoryRepository;
-        }
+//         public CategoryViewComponent(ICategoryRepository categoryRepository)
+//         {
+//             _categoryRepository = categoryRepository;
+//         }
 
-        public IViewComponentResult Invoke()
-        {
-            var categories = _categoryRepository.GetAllWithSubCategories().Data;
+//         public IViewComponentResult Invoke()
+//         {
+//             var categories = _categoryRepository.GetAllWithSubCategories().Data;
             
-            // if (RouteData.Values["category"] != null)
-            //     ViewBag.SelectedCategory = RouteData?.Values["category"];
+//             // if (RouteData.Values["category"] != null)
+//             //     ViewBag.SelectedCategory = RouteData?.Values["category"];
 
-            return View(categories);
+//             return View(categories);
 
-        }
-    }
-}
+//         }
+//     }
+// }

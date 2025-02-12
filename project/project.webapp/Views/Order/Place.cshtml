@@ -1,4 +1,5 @@
-@model OrderPlaceModel
+@* @model OrderPlaceModel *@
+@model List<Item>
 
 @{
   ViewData["Title"] = "Place Order";
@@ -30,9 +31,14 @@
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    @for(int i = 1; i< 20; i++){
+      <li class="page-item">
+        <form method="post" asp-action="Place" asp-controller="Order">
+          <input type="hidden" name="ModalCurrentPage" value="@i" />
+          <button type="submit" class="page-link">@i</button>
+        </form>
+      </li>
+    }
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
@@ -50,30 +56,30 @@
       <th scope="col">Madde Kodu</th>
       <th scope="col">Madde Açıklama</th>
       <th scope="col">Alternatif Kod</th>
-      <th scope="col">Stok Transfer Kodu</th>
+      @* <th scope="col">Stok Transfer Kodu</th>
       <th scope="col">Satış Fiyatı</th>
-      <th scope="col">Stok Miktarı</th>
+      <th scope="col">Stok Miktarı</th> *@
       <th scope="col">Sipariş Açıklama</th>
       <th scope="col">Miktar</th>
       <th scope="col">#</th>
     </tr>
   </thead>
   <tbody>
-    @foreach (var items in Model.Items)
+    @foreach (var items in Model)
     {
       <tr>
-        <td>@items.CategoryName</td>
-        <td>@items.ItemGroup</td>
-        <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#InfoModal">🔎</button>
+        <td>@items.ItemCategory</td>
+        <td>@items.ProductGroup</td>
+        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#InfoModal">Detay</button>
         </td>
         <td>@items.ItemCode</td>
-        <td>@items.Description</td>
+        <td>@items.ItemDescription</td>
         <td>@items.AlternativeCode</td>
-        <td>@items.StockTransferType</td>
+        @* <td>@items.</td>
         <td>@items.SalesPrice</td>
-        <td>@items.StockAmount</td>
-        <td><input type="text"></td>
-        <td><input type="number" name="" id=""></td>
+        <td>@items.StockAmount</td> *@
+        <td><input type="text" class="form-control"></td>
+        <td><input type="number" name="" id="" class="form-control"></td>
         <td><button type="button" class="btn btn-success">Ekle</button></td>
       </tr>
     }
@@ -139,7 +145,6 @@
                       <th scope="col">Madde Kodu</th>
                       <th scope="col">Madde Açıklama</th>
                       <th scope="col">Alternatif Kod</th>
-                      @* <th scope="col">Stok Transfer Kodu</th> *@
                       <th scope="col">Satış Fiyatı</th>
                       <th scope="col">Stok Miktarı</th>
                       <th scope="col">Sipariş Açıklama</th>
@@ -148,7 +153,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach (var items in Model.TonerItems)
+                    @* @foreach (var items in Model)
                     {
                       <tr>
                         <td>@items.CategoryName</td>
@@ -156,14 +161,13 @@
                         <td>@items.ItemCode</td>
                         <td>@items.Description</td>
                         <td>@items.AlternativeCode</td>
-                        @* <td>@items.StockTransferType</td> *@
                         <td>@items.SalesPrice</td>
                         <td>@items.StockAmount</td>
                         <td><input type="text" class="form-control"></td>
                         <td><input type="number" name="" id="" class="form-control"></td>
                         <td><button type="button" class="btn btn-success">Ekle</button></td>
                       </tr>
-                    }
+                    } *@
                   </tbody>
                 </table>
 

@@ -8,18 +8,18 @@ namespace project.webapp.Filters
 {
     public class CustomAuthorizeAttribute : Attribute, IAuthorizationFilter
     {
-        private readonly string[] _allowedRoles;
+        private readonly int[] _allowedRoles;
 
-        public CustomAuthorizeAttribute(params string[] roles)
+        public CustomAuthorizeAttribute(params int[] roles)
         {
             _allowedRoles = roles;
         }
 
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            var userRole = context.HttpContext.Session.GetString("UserRole");
+            var userRole = context.HttpContext.Session.GetInt32("UserRole");
 
-            if (string.IsNullOrEmpty(userRole) || !_allowedRoles.Contains(userRole))
+            if (!userRole.HasValue || userRole == 0 || !_allowedRoles.Contains(userRole.Value))
             {
                 context.Result = new RedirectToActionResult("Login", "Account", null);
             }

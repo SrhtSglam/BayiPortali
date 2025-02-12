@@ -4,7 +4,7 @@ using project.webapp.Filters;
 using project.webapp.Models;
 
 namespace project.webapp.Controllers{
-    [CustomAuthorize("Admin", "User")]
+    [CustomAuthorize(3, 2, 1)]
     public class FunctionController : Controller
     {
         private readonly ILogger<FunctionController> _logger;

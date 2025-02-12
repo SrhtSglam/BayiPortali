@@ -14,3 +14,5 @@ C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Debug\net9
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\bin\Debug\net9.0\project.entity.dll
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\bin\Debug\net9.0\project.entity.pdb
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Debug\net9.0\project..B102649B.Up2Date
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\bin\Debug\net9.0\project.data.runtimeconfig.json
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Debug\net9.0\project.data.genruntimeconfig.cache

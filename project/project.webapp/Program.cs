@@ -10,13 +10,9 @@ var connectionString = builder.Configuration.GetConnectionString("Default");
 // Add services to the container.
 service.AddControllersWithViews();
 
-service.AddDbContext<AppDbContext>(option => 
-    option.UseSqlServer(connectionString)
-);
-
 service.AddScoped<IUserRepository, UserRepository>();
-service.AddScoped<ICategoryRepository, CategoryRepository>();
 service.AddScoped<IItemRepository, ItemRepository>();
+// service.AddScoped<ICategoryRepository, CategoryRepository>();
 
 #region Session
     service.AddDistributedMemoryCache();

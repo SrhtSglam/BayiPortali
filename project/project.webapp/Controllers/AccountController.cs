@@ -12,13 +12,11 @@ namespace project.webapp.Controllers
     {
         private readonly ILogger<AccountController> _logger;
         private readonly IUserRepository _userRepository;
-        private readonly AppDbContext _context;
 
-        public AccountController(ILogger<AccountController> logger, IUserRepository userRepository, AppDbContext context)
+        public AccountController(ILogger<AccountController> logger, IUserRepository userRepository)
         {
             _logger = logger;
             _userRepository = userRepository;
-            _context = context;
         }
 
         public IActionResult Login()
@@ -29,12 +27,11 @@ namespace project.webapp.Controllers
         [HttpPost]
         public IActionResult Login(string name, string password)
         {
-            // var user = _userRepository.GetUserByName(name);
-            var user = _context.Users.FirstOrDefault(i=>i.Name == name);
+            var user = _userRepository.GetUserByName(name, password);
 
-            if (user != null && SecurityHelper.VerifyPassword(user.Password, password))
+            if (user.Data != null)
             {
-                HttpContext.Session.SetString("UserRole", user.Role);
+                HttpContext.Session.SetInt32("UserRole", user.Data.WebVisibility);
                 return RedirectToAction("Index", "Home");
             }
 
@@ -51,24 +48,6 @@ namespace project.webapp.Controllers
         public IActionResult Register()
         {
             return View();
-        }
-
-        [HttpPost]
-        public IActionResult Register(string name, string password)
-        {
-            var hashedPassword = SecurityHelper.HashPassword(password);
-            var user = new User { Name = name, Password = hashedPassword, Role = "User", Visible = false, Deleted = false };
-
-            _context.Users.Add(user);
-            _context.SaveChanges();
-
-            return RedirectToAction("Login");
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

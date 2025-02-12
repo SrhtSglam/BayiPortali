@@ -1,46 +1,53 @@
-using Microsoft.EntityFrameworkCore;
+using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 using project.data.Abstract;
 using project.entity;
 
 namespace project.data.Concrete{
     public class UserRepository : IUserRepository{
-        private readonly AppDbContext _context;
-        public UserRepository(AppDbContext context){
-            _context = context;
+        private readonly string _connectionString;
+        private static string schema;
+        public UserRepository(IConfiguration configuration){
+            _connectionString = configuration.GetConnectionString("Default");
+            schema = "Bilgitas";
         }
 
-        public async Task<DataResponse<List<User>>> GetAll(){
-            var users = await _context.Users
-                .Where(i => i.Deleted == false && i.Visible == false)
-                .ToListAsync();
+        public DataResponse<User> GetUserByName(string name, string password){
+            User user = null;
+            string query = $"SELECT [User ID], [Password], [Web Visibility] from [{schema}$Light User] WHERE [User ID] = @name AND [Password] = @password";
             
-            // if(users == null){
-            //     return new DataResponse<List<User>>{
-            //         Data = users,
-            //         Message = "User Not Found",
-            //         Success = false
-            //     };
-            // }
+            using(SqlConnection conn = new SqlConnection(_connectionString)){
+                conn.Open();
+                using(SqlCommand cmd = new SqlCommand(query, conn)){
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@password", password);
 
-            var result = new DataResponse<List<User>>{
-                Data = users,
-                Message = "Success",
-                Success = true
-            };
+                    using(SqlDataReader reader = cmd.ExecuteReader()){
+                        if(reader.Read()){
+                            user = new User{
+                                UserId = reader["User ID"].ToString(),
+                                Password = reader["Password"].ToString(),
+                                WebVisibility = Convert.ToInt32(reader["Web Visibility"])
+                            };
+                        }
+                    }
+                }
+            }
 
-            return result;
-        }
+            if(user == null){
+                return new DataResponse<User>{
+                    Data = null,
+                    Message = "User failed",
+                    Success = false
+                };
+            }
 
-        public async Task<DataResponse<User>> GetUserByName(string name){
-            var user = await _context.Users.FirstOrDefaultAsync(i=>i.Name == name);
-            
-            var result = new DataResponse<User>{
+            return new DataResponse<User>{
                 Data = user,
-                Message = "Success",
+                Message = "User successful",
                 Success = true
             };
-
-            return result;
         }
     }
 }

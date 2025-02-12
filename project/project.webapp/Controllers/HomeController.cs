@@ -6,7 +6,7 @@ using project.webapp.Filters;
 using project.webapp.Models;
 
 namespace project.webapp.Controllers{
-    [CustomAuthorize("Admin", "User")]
+    [CustomAuthorize(3, 2, 1)]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -18,7 +18,7 @@ namespace project.webapp.Controllers{
 
     public IActionResult Index()
         {
-            if(HttpContext.Session.GetString("UserRole") == null){
+            if(HttpContext.Session.GetInt32("UserRole") == 0){
                 return RedirectToAction("Login", "Account");
             }
 

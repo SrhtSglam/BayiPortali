@@ -1,17 +1,15 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using project.data.Abstract;
-using project.data.Concrete;
 using project.webapp.Filters;
 using project.webapp.Models;
 
 namespace project.webapp.Controllers{
-    [CustomAuthorize("Admin", "User")]
+    [CustomAuthorize(3,2,1)]
     public class OrderController : Controller
     {
         private readonly ILogger<OrderController> _logger;
         private readonly IItemRepository _itemRepository;
-
         public OrderController(ILogger<OrderController> logger, IItemRepository itemRepository)
         {
             _logger = logger;
@@ -25,40 +23,17 @@ namespace project.webapp.Controllers{
 
         public IActionResult Place()
         {
-            var pagination = new PageModel(){
-                CurrentPage = 1,
-                ItemPerPage = 20
-            };
-            var items = _itemRepository.GetAll(pagination.CurrentPage, pagination.ItemPerPage).Data;
-            var toners = _itemRepository.GetAllToner(pagination.CurrentPage, pagination.ItemPerPage).Data;
-
-            var model = new OrderPlaceModel(){
-                Items = items,
-                TonerItems = toners,
-                ModalCurrentPage = 0,
-                PageModel = pagination
-            };
+            var items = _itemRepository.GetAll(1, 20).Data;
             
-            return View(model);
+            return View(items);
         }
 
         [HttpPost]
-        public IActionResult Place(int ModalCurrentPage){
-            var pagination = new PageModel(){
-                CurrentPage = 1,
-                ItemPerPage = 20
-            };
-            var items = _itemRepository.GetAll(pagination.CurrentPage, pagination.ItemPerPage).Data;
-            var toners = _itemRepository.GetAllToner(pagination.CurrentPage, pagination.ItemPerPage).Data;
-
-            var model = new OrderPlaceModel(){
-                Items = items,
-                TonerItems = toners,
-                ModalCurrentPage = ModalCurrentPage,
-                PageModel = pagination
-            };
+        public IActionResult Place(int ModalCurrentPage)
+        {
+            var items = _itemRepository.GetAll(ModalCurrentPage, 20).Data;
             
-            return View(model);
+            return View(items);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
