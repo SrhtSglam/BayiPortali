@@ -18,8 +18,8 @@ namespace project.data.Concrete{
             List<Item> items = new List<Item>();
             int offset = (currentPage - 1) * itemPerPage;
             string query = $@"SELECT 
-            BIC.[Description], BI.[Product Group Code], BI.[No_], BI.[Description], [No_ 2] 
-            FROM [Bilgitas$Item] BI 
+            BIC.[Description], BI.[Product Group Code], BI.[No_], BI.[Description], [No_ 2], BI.[Item Transfer Type]
+            FROM [{schema}$Item] BI 
             LEFT JOIN [{schema}$Item Category] BIC on BIC.[Code] = BI.[Item Category Code]
             ORDER BY BI.[No_]
             OFFSET @Offset ROWS FETCH NEXT @ItemPerPage ROWS ONLY";
@@ -38,6 +38,7 @@ namespace project.data.Concrete{
                                 ItemCode = reader.GetString(2),
                                 ItemDescription = reader.GetString(3),
                                 AlternativeCode = reader.GetString(4),
+                                StockTransferType = reader.GetInt32(5),
                                 // StockTransferType = reader["Password"].ToString()
                                 // SalesPrice = Convert.ToInt32(reader["Web Visibility"])
                                 // StockAmount = Convert.ToInt32(reader["Web Visibility"])
@@ -62,6 +63,82 @@ namespace project.data.Concrete{
                 Success = true
             };
         }
+        
+        public DataResponse<List<ItemCategory>> GetItemCategoriesWithChild(string itemCode){
+            List<ItemCategory> itemCategories = new List<ItemCategory>();
+            string query = $@"SELECT 
+            [Item Category Code], [Description]
+            FROM [{schema}$Product Group]
+            WHERE [Item Category Code] = @itemCode";
+            
+            using(SqlConnection conn = new SqlConnection(_connectionString)){
+                conn.Open();
+                using(SqlCommand cmd = new SqlCommand(query, conn)){
+                    cmd.Parameters.AddWithValue("@itemCode", itemCode);
+
+                    using(SqlDataReader reader = cmd.ExecuteReader()){
+                        while(reader.Read()){
+                            ItemCategory item = new ItemCategory{
+                                Code = reader.GetString(0),
+                                Description = reader.GetString(1),
+                            };
+                            itemCategories.Add(item);
+                        }
+                    }
+                }
+            }
+
+            if(itemCategories.Count == 0){
+                return new DataResponse<List<ItemCategory>>{
+                    Data = new List<ItemCategory>(),
+                    Message = "Item Categories failed",
+                    Success = false
+                };
+            }
+
+            return new DataResponse<List<ItemCategory>>{
+                Data = itemCategories,
+                Message = "Item Categories successful",
+                Success = true
+            };
+        }
+
+        public DataResponse<List<ItemCategory>> GetItemCategories(){
+            List<ItemCategory> itemCategories = new List<ItemCategory>();
+            string query = $@"SELECT 
+            [Code], [Description]
+            FROM [{schema}$Item Category];";
+            
+            using(SqlConnection conn = new SqlConnection(_connectionString)){
+                conn.Open();
+                using(SqlCommand cmd = new SqlCommand(query, conn)){
+                    
+                    using(SqlDataReader reader = cmd.ExecuteReader()){
+                        while(reader.Read()){
+                            ItemCategory item = new ItemCategory{
+                                Code = reader.GetString(0),
+                                Description = reader.GetString(1),
+                            };
+                            itemCategories.Add(item);
+                        }
+                    }
+                }
+            }
+
+            if(itemCategories.Count == 0){
+                return new DataResponse<List<ItemCategory>>{
+                    Data = null,
+                    Message = "Item Categories failed",
+                    Success = false
+                };
+            }
+
+            return new DataResponse<List<ItemCategory>>{
+                Data = itemCategories,
+                Message = "Item Categories successful",
+                Success = true
+            };
+        }
 
         public int GetCount(int itemPerPage){
             int count = 0;
@@ -73,13 +150,15 @@ namespace project.data.Concrete{
 
                     using(SqlDataReader reader = cmd.ExecuteReader()){
                         if(reader.Read()){
-                            count = Convert.ToInt32("TotalCount");
+                            count = reader.GetInt32(0);
                         }
                     }
                 }
             }
 
-            return count;
+            int totalPage = (int)Math.Ceiling((double)count / itemPerPage);
+
+            return totalPage;
         }
     }
 }

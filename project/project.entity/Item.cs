@@ -6,7 +6,7 @@ namespace project.entity{
         public string ItemCode { get; set; }
         public string ItemDescription { get; set; }
         public string AlternativeCode { get; set; }
-        // public string StockTransferType { get; set; }
+        public int StockTransferType { get; set; }
         // public decimal SalesPrice { get; set; }
         // public decimal StockAmount { get; set; }
     }

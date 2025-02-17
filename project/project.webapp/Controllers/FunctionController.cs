@@ -14,7 +14,7 @@ namespace project.webapp.Controllers{
             _logger = logger;
         }
 
-    public IActionResult SerialControl()
+        public IActionResult SerialControl()
         {
             return View();
         }

@@ -1,5 +1,48 @@
-@* @model List<Category>
+@* @model List<Category> *@
 
+<style>
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+</style>
+
+<li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+</li>
+
+<div class="dropdown">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Function"
+        asp-action="Home">Sipariş</a>
+
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
+            asp-action="Place">Sipariş Geç</a></li>
+
+        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
+            asp-action="Place">Sipariş Onayla</a></li>
+
+        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
+            asp-action="Place">Sipariş Kontrol</a></li>
+    </ul>
+</div>
+
+<div class="dropdown">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Function"
+        asp-action="Home">İşlevler</a>
+
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
+            asp-action="Place">Sell-out Giriş</a></li>
+
+        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
+            asp-action="Place">Numaratör Giriş</a></li>
+
+        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
+            asp-action="SerialControl">Seri Kontrol</a></li>
+    </ul>
+</div>
+
+@*
 <style>
     .dropdown:hover .dropdown-menu {
     display: block;
@@ -24,12 +67,9 @@
     @* <li class="nav-item">
         <a class="nav-link text-dark" asp-area="" asp-controller="@items.Controller"
             asp-action="@items.Action">@items.Name</a>
-    </li> *@
-}
-<li class="nav-item">
-    <a class="nav-link text-dark" href="ftp://bayii:2563@mbl.bilgitas.com.tr">Download</a>
-</li> 
+    </li>
+} *@
 
 <li class="nav-item">
     <a class="nav-link text-dark" href="ftp://bayii:2563@mbl.bilgitas.com.tr">Download</a>
-</li> 
+</li>

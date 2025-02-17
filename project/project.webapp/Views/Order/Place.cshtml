@@ -1,5 +1,5 @@
 @* @model OrderPlaceModel *@
-@model List<Item>
+@model OrderPlaceModel
 
 @{
   ViewData["Title"] = "Place Order";
@@ -10,16 +10,31 @@
 
 <div class="mb-3 row">
   <div class="col-sm-5">
-    <select class="form-select" id="ekstreGroup">
+    <form asp-controller="Order" asp-action="Place" method="post"></form>
+    <select name="itemCode" class="form-select" onchange="this.form.submit()" id="ekstreGroup">
       <option selected>Seçiniz..</option>
-      <option value="1">2.EL MAKİNA</option>
+      @try{
+        for(int i = 1; i < Model.ItemCategories.Count(); i++){
+          <option value="@i">@Model.ItemCategories[i].Description</option>
+        }
+      }catch{
+
+      }
     </select>
   </div>
   <div class="col-sm-5">
-    <select class="form-select" id="ekstreGroup">
-      <option selected>Seçiniz..</option>
-      <option value="1">PDF</option>
-    </select>
+    <form method="post" asp-controller="Order" asp-action="Place">
+      <select class="form-select" id="ekstreGroup">
+        <option selected>Seçiniz..</option>
+        @try{
+            for(int i = 1; i < Model.ItemCategoriesWithChild.Count(); i++){
+              <option value="@i">@Model.ItemCategoriesWithChild[i].Description</option>
+            }
+        }catch{
+
+        }
+      </select>
+    </form>
   </div>
   <label class="col-sm-2 col-form-label">Stoklar Anlık Olarak Değişebilir</label>
 </div>
@@ -31,7 +46,7 @@
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
-    @for(int i = 1; i< 20; i++){
+    @for(int i = 1; i< ViewBag.TotalPage; i++){
       <li class="page-item">
         <form method="post" asp-action="Place" asp-controller="Order">
           <input type="hidden" name="ModalCurrentPage" value="@i" />
@@ -56,8 +71,8 @@
       <th scope="col">Madde Kodu</th>
       <th scope="col">Madde Açıklama</th>
       <th scope="col">Alternatif Kod</th>
-      @* <th scope="col">Stok Transfer Kodu</th>
-      <th scope="col">Satış Fiyatı</th>
+      <th scope="col">Stok Transfer Kodu</th>
+      @*<th scope="col">Satış Fiyatı</th>
       <th scope="col">Stok Miktarı</th> *@
       <th scope="col">Sipariş Açıklama</th>
       <th scope="col">Miktar</th>
@@ -65,7 +80,7 @@
     </tr>
   </thead>
   <tbody>
-    @foreach (var items in Model)
+    @foreach (var items in Model.Items)
     {
       <tr>
         <td>@items.ItemCategory</td>
@@ -75,8 +90,8 @@
         <td>@items.ItemCode</td>
         <td>@items.ItemDescription</td>
         <td>@items.AlternativeCode</td>
-        @* <td>@items.</td>
-        <td>@items.SalesPrice</td>
+        <td>@items.StockTransferType</td>
+        @* <td>@items.SalesPrice</td>
         <td>@items.StockAmount</td> *@
         <td><input type="text" class="form-control"></td>
         <td><input type="number" name="" id="" class="form-control"></td>
