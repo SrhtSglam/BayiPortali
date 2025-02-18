@@ -23,10 +23,10 @@ namespace project.webapp.Controllers{
 
         public IActionResult Place()
         {
-            var items = _itemRepository.GetAll(1, 20);
+            var items = _itemRepository.GetAll(1, 40);
             var itemCategories = _itemRepository.GetItemCategories();
 
-            int totalPage = _itemRepository.GetCount(20);
+            int totalPage = _itemRepository.GetCount(40);
             ViewBag.TotalPage = totalPage;
             
             var model = new OrderPlaceModel{
@@ -40,7 +40,10 @@ namespace project.webapp.Controllers{
         [HttpPost]
         public IActionResult Place(int ModalCurrentPage)
         {
-            var items = _itemRepository.GetAll(ModalCurrentPage, 20);
+            if(ModalCurrentPage < 1){
+                ModalCurrentPage = 1;
+            }
+            var items = _itemRepository.GetAll(ModalCurrentPage, 40);
             var itemCategories = _itemRepository.GetItemCategories();
             var itemCategoriesChild = _itemRepository.GetItemCategoriesWithChild("2EL.004");
 

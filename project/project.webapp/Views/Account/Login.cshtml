@@ -2,17 +2,16 @@
     ViewData["Title"] = "Login";
 }
 
-<div class="d-flex justify-content-center align-items-center vh-100" style="overflow-x: hidden;">
+<div class="d-flex justify-content-center align-items-center vh-100" style="overflow-x: hidden;"> @*Flex-Column eklenirse logo en üste alınır*@
     <div class="text-center mb-4" style="max-width: 400px; width: 100%; padding-top: 20px;">
         <img src="https://www.kyoceradocumentsolutions.com.tr/content/dam/kyocera/common/images/logo/kyocera-logo.svg"
-             alt="Kyocera Logo" class="img-fluid" style="max-width: 200px;">
+             alt="Kyocera Logo" class="img-fluid" style="max-width: 100%; height: auto;">
     </div>
     
     <form method="post" asp-action="Login" asp-controller="Account" class="w-100" style="max-width: 400px;">
         <div class="mb-3">
-            <select class="form-select" aria-label="Default">
-                <option selected>Bir şirket seçiniz</option>
-                <option value="1">Bilgitas</option>
+            <select name="company" class="form-select" aria-label="Default">
+                <option value="1" selected>Bilgitas</option>
                 <option value="2">Bilgitas Dijital</option>
             </select>
         </div>

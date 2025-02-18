@@ -2,25 +2,27 @@
 @model OrderPlaceModel
 
 @{
-  ViewData["Title"] = "Place Order";
+  ViewData["Title"] = "Sipariş Geç";
 }
+
 <h1>@ViewData["Title"]</h1>
 
 <p>Herhangi bir sipariş işlemi giriniz</p>
 
 <div class="mb-3 row">
   <div class="col-sm-5">
-    <form asp-controller="Order" asp-action="Place" method="post"></form>
-    <select name="itemCode" class="form-select" onchange="this.form.submit()" id="ekstreGroup">
-      <option selected>Seçiniz..</option>
-      @try{
-        for(int i = 1; i < Model.ItemCategories.Count(); i++){
-          <option value="@i">@Model.ItemCategories[i].Description</option>
-        }
-      }catch{
+    <form asp-controller="Order" asp-action="Place" method="post">
+      <select name="itemCode" class="form-select" id="ekstreGroup">
+        <option selected>Seçiniz..</option>
+        @try{
+          for(int i = 1; i < Model.ItemCategories.Count(); i++){
+            <option value="@i">@Model.ItemCategories[i].Description</option>
+          }
+        }catch{
 
-      }
-    </select>
+        }
+      </select>
+    </form>
   </div>
   <div class="col-sm-5">
     <form method="post" asp-controller="Order" asp-action="Place">
@@ -71,32 +73,43 @@
       <th scope="col">Madde Kodu</th>
       <th scope="col">Madde Açıklama</th>
       <th scope="col">Alternatif Kod</th>
-      <th scope="col">Stok Transfer Kodu</th>
-      @*<th scope="col">Satış Fiyatı</th>
-      <th scope="col">Stok Miktarı</th> *@
+      <th scope="col">Para Birimi</th>
+      <th scope="col">Satış Fiyatı</th>
       <th scope="col">Sipariş Açıklama</th>
-      <th scope="col">Miktar</th>
       <th scope="col">#</th>
+    </tr>
+    <tr>
+      <th scope="col" />
+      <th scope="col" />
+      <th scope="col" />
+      <th scope="col"><input type="text" class="form-control"></th>
+      <th scope="col"><input type="text" class="form-control"></th>
+      <th scope="col"><input type="text" class="form-control"></th>
+      <th scope="col" />
+      <th scope="col" />
+      <th scope="col" />
     </tr>
   </thead>
   <tbody>
-    @foreach (var items in Model.Items)
-    {
-      <tr>
-        <td>@items.ItemCategory</td>
-        <td>@items.ProductGroup</td>
-        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#InfoModal">Detay</button>
-        </td>
-        <td>@items.ItemCode</td>
-        <td>@items.ItemDescription</td>
-        <td>@items.AlternativeCode</td>
-        <td>@items.StockTransferType</td>
-        @* <td>@items.SalesPrice</td>
-        <td>@items.StockAmount</td> *@
-        <td><input type="text" class="form-control"></td>
-        <td><input type="number" name="" id="" class="form-control"></td>
-        <td><button type="button" class="btn btn-success">Ekle</button></td>
-      </tr>
+    @try{
+      foreach (var items in Model.Items)
+      {
+        <tr>
+          <td>@items.ItemCategory</td>
+          <td>@items.ProductGroup</td>
+          <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#InfoModal">Detay</button></td>
+          <td>@items.ItemCode</td>
+          <td>@items.ItemDescription</td>
+          <td>@items.AlternativeCode</td>
+          <td>@items.CurrencyCode</td>
+          <td>@items.UnitPrice</td>
+          <td><input type="text" class="form-control"></td>
+          <td><input type="number" name="" id="" class="form-control"></td>
+          <td><button type="button" class="btn btn-success">Ekle</button></td>
+        </tr>
+      }
+    }catch{
+
     }
   </tbody>
 </table>

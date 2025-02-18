@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VSw5o334OW0DYkHZpLvsTz4AjJ2yXmRZ4LHdqHw7ZQE=",
+  "Hash": "7QLJG5I3RQONQry9hfsHUPe3uvi5XIPT9ALvHbaihB4=",
   "Source": "project.webapp",
   "BasePath": "_content/project.webapp",
   "Mode": "Default",
@@ -773,12 +773,12 @@
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\h8wwoc4agj-b9sayid5wm.gz",
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\h8wwoc4agj-2ubzqgubti.gz",
       "SourceId": "project.webapp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/project.webapp",
-      "RelativePath": "css/site#[.{fingerprint=b9sayid5wm}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=2ubzqgubti}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -787,8 +787,8 @@
       "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "0suozzrugb",
-      "Integrity": "0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=",
+      "Fingerprint": "kanxe8t34b",
+      "Integrity": "1I0s3TVEoUCmrGq8j+IUlgY5V8UINIDwy1HsvAMnDhc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\css\\site.css"
@@ -1501,8 +1501,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b9sayid5wm",
-      "Integrity": "j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=",
+      "Fingerprint": "2ubzqgubti",
+      "Integrity": "qmDTP753ERJylgkKIQpQkdZU0hpJp5umzoKebMFE/S0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2917,13 +2917,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.b9sayid5wm.css",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\h8wwoc4agj-b9sayid5wm.gz",
+      "Route": "css/site.2ubzqgubti.css",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\h8wwoc4agj-2ubzqgubti.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003134796238"
+          "Quality": "0.003039513678"
         }
       ],
       "ResponseHeaders": [
@@ -2933,15 +2933,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "328"
         },
         {
           "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
+          "Value": "\"1I0s3TVEoUCmrGq8j+IUlgY5V8UINIDwy1HsvAMnDhc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 11:31:43 GMT"
+          "Value": "Tue, 18 Feb 2025 08:27:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2961,13 +2961,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "W/\"qmDTP753ERJylgkKIQpQkdZU0hpJp5umzoKebMFE/S0=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "2ubzqgubti"
         },
         {
           "Name": "label",
@@ -2975,12 +2975,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-qmDTP753ERJylgkKIQpQkdZU0hpJp5umzoKebMFE/S0="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css",
+      "Route": "css/site.2ubzqgubti.css",
       "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2990,7 +2990,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "667"
+          "Value": "673"
         },
         {
           "Name": "Content-Type",
@@ -2998,11 +2998,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "\"qmDTP753ERJylgkKIQpQkdZU0hpJp5umzoKebMFE/S0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 11:31:43 GMT"
+          "Value": "Tue, 18 Feb 2025 08:27:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3012,7 +3012,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "2ubzqgubti"
         },
         {
           "Name": "label",
@@ -3020,13 +3020,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-qmDTP753ERJylgkKIQpQkdZU0hpJp5umzoKebMFE/S0="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css.gz",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\h8wwoc4agj-b9sayid5wm.gz",
+      "Route": "css/site.2ubzqgubti.css.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\h8wwoc4agj-2ubzqgubti.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3035,7 +3035,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "328"
         },
         {
           "Name": "Content-Type",
@@ -3043,11 +3043,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
+          "Value": "\"1I0s3TVEoUCmrGq8j+IUlgY5V8UINIDwy1HsvAMnDhc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 11:31:43 GMT"
+          "Value": "Tue, 18 Feb 2025 08:27:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3065,7 +3065,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "2ubzqgubti"
         },
         {
           "Name": "label",
@@ -3073,18 +3073,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y="
+          "Value": "sha256-1I0s3TVEoUCmrGq8j+IUlgY5V8UINIDwy1HsvAMnDhc="
         }
       ]
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\h8wwoc4agj-b9sayid5wm.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\h8wwoc4agj-2ubzqgubti.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003134796238"
+          "Quality": "0.003039513678"
         }
       ],
       "ResponseHeaders": [
@@ -3094,15 +3094,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "328"
         },
         {
           "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
+          "Value": "\"1I0s3TVEoUCmrGq8j+IUlgY5V8UINIDwy1HsvAMnDhc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 11:31:43 GMT"
+          "Value": "Tue, 18 Feb 2025 08:27:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3122,13 +3122,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "W/\"qmDTP753ERJylgkKIQpQkdZU0hpJp5umzoKebMFE/S0=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-qmDTP753ERJylgkKIQpQkdZU0hpJp5umzoKebMFE/S0="
         }
       ]
     },
@@ -3143,7 +3143,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "667"
+          "Value": "673"
         },
         {
           "Name": "Content-Type",
@@ -3151,11 +3151,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "\"qmDTP753ERJylgkKIQpQkdZU0hpJp5umzoKebMFE/S0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 11:31:43 GMT"
+          "Value": "Tue, 18 Feb 2025 08:27:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3165,13 +3165,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-qmDTP753ERJylgkKIQpQkdZU0hpJp5umzoKebMFE/S0="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\h8wwoc4agj-b9sayid5wm.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\h8wwoc4agj-2ubzqgubti.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3180,7 +3180,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "328"
         },
         {
           "Name": "Content-Type",
@@ -3188,11 +3188,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
+          "Value": "\"1I0s3TVEoUCmrGq8j+IUlgY5V8UINIDwy1HsvAMnDhc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 11:31:43 GMT"
+          "Value": "Tue, 18 Feb 2025 08:27:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3210,7 +3210,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y="
+          "Value": "sha256-1I0s3TVEoUCmrGq8j+IUlgY5V8UINIDwy1HsvAMnDhc="
         }
       ]
     },

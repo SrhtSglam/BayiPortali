@@ -14,6 +14,11 @@ namespace project.webapp.Controllers{
             _logger = logger;
         }
 
+        public IActionResult SellOutEntry()
+        {
+            return View();
+        }
+
         public IActionResult SerialControl()
         {
             return View();

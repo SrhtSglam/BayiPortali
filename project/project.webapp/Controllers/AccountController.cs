@@ -25,16 +25,21 @@ namespace project.webapp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(string name, string password)
+        public IActionResult Login(string name, string password, int company)
         {
-            var user = _userRepository.GetUserByName(name, password);
+            var user = new DataResponse<User>();
+            if(company == 1){
+                user = _userRepository.GetUserByName(name, password);
+            }else{
+                
+            }
 
             if (user.Data != null)
             {
                 HttpContext.Session.SetInt32("UserRole", user.Data.WebVisibility);
                 return RedirectToAction("Index", "Home");
             }
-
+ 
             ViewBag.Message = "Geçersiz kullanıcı adı veya şifre!";
             return View();
         }
