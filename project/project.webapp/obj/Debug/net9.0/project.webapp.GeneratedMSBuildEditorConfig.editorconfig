@@ -40,6 +40,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Order/Confirm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ29uZmlybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Order/Control.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ29udHJvbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Order/OrderHome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,6 +70,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Shared/_itemdetailmodal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9pdGVtZGV0YWlsbW9kYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Shared/_itemTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9pdGVtVGFibGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Shared/_ValidationScriptsPartial.cshtml]

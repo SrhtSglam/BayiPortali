@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using project.data.Abstract;
+using project.entity;
 using project.webapp.Filters;
 using project.webapp.Models;
 
@@ -21,42 +22,46 @@ namespace project.webapp.Controllers{
             return View();
         }
 
-        public IActionResult Place()
+        public IActionResult Place(int page = 1)
         {
-            var items = _itemRepository.GetAll(1, 40);
+            int pageSize = 40;
+            
+            var items = _itemRepository.GetAll(page, pageSize);
             var itemCategories = _itemRepository.GetItemCategories();
 
-            int totalPage = _itemRepository.GetCount(40);
+            int totalPage = _itemRepository.GetCount(pageSize);
             ViewBag.TotalPage = totalPage;
-            
-            var model = new OrderPlaceModel{
-                Items = items.Data,
-                ItemCategories = itemCategories.Data,
+            ViewBag.CurrentPage = page; 
+
+            var model = new OrderPlaceModel
+            {
+                Items = items,
+                ItemCategories = itemCategories,
             };
 
             return View(model);
         }
 
-        [HttpPost]
-        public IActionResult Place(int ModalCurrentPage)
+        [HttpGet]
+        public JsonResult GetItemCategoriesByItemCode(string selectedItemCode)
         {
-            if(ModalCurrentPage < 1){
-                ModalCurrentPage = 1;
+            try
+            {
+                var filteredCategories = _itemRepository.GetItemCategories(selectedItemCode);
+                return Json(filteredCategories);
             }
-            var items = _itemRepository.GetAll(ModalCurrentPage, 40);
-            var itemCategories = _itemRepository.GetItemCategories();
-            var itemCategoriesChild = _itemRepository.GetItemCategoriesWithChild("2EL.004");
+            catch (Exception ex)
+            {
+                return Json(new List<ItemCategory>());
+            }
+        }
 
-            int totalPage = _itemRepository.GetCount(20);
-            ViewBag.TotalPage = totalPage;
-            
-            var model = new OrderPlaceModel{
-                Items = items.Data,
-                ItemCategories = itemCategories.Data,
-                ItemCategoriesWithChild = itemCategoriesChild.Data
-            };
+        public IActionResult Confirm(){
+            return View();
+        }
 
-            return View(model);
+        public IActionResult Control(){
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -13,7 +13,7 @@ namespace project.data.Concrete{
             schema = "Bilgitas";
         }
 
-        public DataResponse<User> GetUserByName(string name, string password){
+        public User GetUserByName(string name, string password){
             User user = null;
             string query = $"SELECT [User ID], [Password], [Web Visibility] from [{schema}$Light User] WHERE [User ID] = @name AND [Password] = @password";
             
@@ -35,19 +35,10 @@ namespace project.data.Concrete{
                 }
             }
 
-            if(user == null){
-                return new DataResponse<User>{
-                    Data = null,
-                    Message = "User failed",
-                    Success = false
-                };
-            }
+            if(user == null)
+                return new User();
 
-            return new DataResponse<User>{
-                Data = user,
-                Message = "User successful",
-                Success = true
-            };
+            return user;
         }
     }
 }

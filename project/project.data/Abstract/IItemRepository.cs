@@ -2,10 +2,13 @@ using project.entity;
 
 namespace project.data.Abstract{
     public interface IItemRepository{
-        public DataResponse<List<Item>> GetAll(int currentPage, int itemPerPage);
-        public DataResponse<List<ItemCategory>> GetItemCategoriesWithChild(string itemCode);
-        public DataResponse<List<ItemCategory>> GetItemCategories();
-        public DataResponse<ItemDetail> GetItemDetail();
+        public List<Item> GetAll(int currentPage, int itemPerPage);
+        public List<Item> GetItemsByFilter(int currentPage, int itemPerPage, string selectedItemCode );
+        public List<ItemCategory> GetItemCategories();
+        public List<ItemCategory> GetItemCategories(string SelectedItemCode);
+        public ItemDetail GetItemDetail();
         public int GetCount(int itemPerPage);
+        
+        public ItemSerial GetItemBySerialNo(string SerialNo);
     }
 }

@@ -19,10 +19,10 @@
             asp-action="Place">Sipariş Geç</a></li>
 
         <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
-            asp-action="Place">Sipariş Onayla</a></li>
+            asp-action="Confirm">Sipariş Onayla</a></li>
 
         <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
-            asp-action="Place">Sipariş Kontrol</a></li>
+            asp-action="Control">Sipariş Kontrol</a></li>
     </ul>
 </div>
 
@@ -31,14 +31,31 @@
         asp-action="Home">İşlevler</a>
 
     <ul class="dropdown-menu">
-        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
-            asp-action="Place">Sell-out Giriş</a></li>
+        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
+            asp-action="SellOutEntry">Sell-out Giriş</a></li>
 
-        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
+        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
             asp-action="Place">Numaratör Giriş</a></li>
 
         <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
             asp-action="SerialControl">Seri Kontrol</a></li>
+        
+        <li>
+            <a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
+            asp-action="SerialControl">Garanti</a></li>
+    </ul>
+</div>
+
+<div class="dropdown">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Function"
+        asp-action="Home">Raporlar</a>
+
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Report"
+            asp-action="Mizan">Mizan</a></li>
+
+        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Report"
+            asp-action="Ekstre">Ekstre</a></li>
     </ul>
 </div>
 

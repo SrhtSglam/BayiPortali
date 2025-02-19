@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Sipariş Onayla";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">SEPETİNİZ</th>
+        </tr>
+        <tr>
+            <th scope="col">Tarih / Saat</th>
+            <th scope="col">Madde No</th>
+            <th scope="col">Madde Açıklama</th>
+            <th scope="col">Satış Açıklaması</th>
+            <th scope="col">Miktar</th>
+            <th scope="col">Ölçü Birimi</th>
+            <th scope="col">Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        @try
+        {
+            @* foreach (var items in Model.Items)
+            {
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            } *@
+        }
+        catch
+        {
+
+        }
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-success">Onayla</button>

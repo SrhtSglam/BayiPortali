@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7QLJG5I3RQONQry9hfsHUPe3uvi5XIPT9ALvHbaihB4=",
+  "Hash": "FV6toSzqhbRk/mQpdnuiVeCHVy7mO1RgHcRfkwsCNf8=",
   "Source": "project.webapp",
   "BasePath": "_content/project.webapp",
   "Mode": "Default",
@@ -687,6 +687,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gckptoj4dg-2v9g4y38al.gz",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "js/jquery-3.6.0.min#[.{fingerprint=2v9g4y38al}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\js\\jquery-3.6.0.min.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "v9oia2wqo7",
+      "Integrity": "naLEUfbhBGqVCz6k4NYpYXP0dW+FzaAM76wc/lpwa3o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\js\\jquery-3.6.0.min.js"
     },
     {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gehcjyruq2-eb1vhfjfqg.gz",
@@ -1632,6 +1653,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\printers\\ecosys-pa3500cx-1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\js\\jquery-3.6.0.min.js",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "js/jquery-3.6.0.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2v9g4y38al",
+      "Integrity": "7hHpAkFqHYlvU4EDEQM3s5oOLiYGvB+vXNBlKRSJESc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\jquery-3.6.0.min.js"
     },
     {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\js\\site.js",
@@ -2941,7 +2983,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Feb 2025 08:27:40 GMT"
+          "Value": "Tue, 18 Feb 2025 11:14:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3002,7 +3044,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Feb 2025 08:27:40 GMT"
+          "Value": "Tue, 18 Feb 2025 11:14:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3047,7 +3089,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Feb 2025 08:27:40 GMT"
+          "Value": "Tue, 18 Feb 2025 11:14:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3102,7 +3144,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Feb 2025 08:27:40 GMT"
+          "Value": "Tue, 18 Feb 2025 11:14:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3155,7 +3197,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Feb 2025 08:27:40 GMT"
+          "Value": "Tue, 18 Feb 2025 11:14:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3192,7 +3234,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Feb 2025 08:27:40 GMT"
+          "Value": "Tue, 18 Feb 2025 11:14:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4787,6 +4829,304 @@
       ]
     },
     {
+      "Route": "js/jquery-3.6.0.min.2v9g4y38al.js",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gckptoj4dg-2v9g4y38al.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000032016392"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31233"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"naLEUfbhBGqVCz6k4NYpYXP0dW+FzaAM76wc/lpwa3o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Feb 2025 12:18:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"7hHpAkFqHYlvU4EDEQM3s5oOLiYGvB+vXNBlKRSJESc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2v9g4y38al"
+        },
+        {
+          "Name": "label",
+          "Value": "js/jquery-3.6.0.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7hHpAkFqHYlvU4EDEQM3s5oOLiYGvB+vXNBlKRSJESc="
+        }
+      ]
+    },
+    {
+      "Route": "js/jquery-3.6.0.min.2v9g4y38al.js",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\js\\jquery-3.6.0.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "89501"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7hHpAkFqHYlvU4EDEQM3s5oOLiYGvB+vXNBlKRSJESc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Feb 2025 12:18:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2v9g4y38al"
+        },
+        {
+          "Name": "label",
+          "Value": "js/jquery-3.6.0.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7hHpAkFqHYlvU4EDEQM3s5oOLiYGvB+vXNBlKRSJESc="
+        }
+      ]
+    },
+    {
+      "Route": "js/jquery-3.6.0.min.2v9g4y38al.js.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gckptoj4dg-2v9g4y38al.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31233"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"naLEUfbhBGqVCz6k4NYpYXP0dW+FzaAM76wc/lpwa3o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Feb 2025 12:18:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2v9g4y38al"
+        },
+        {
+          "Name": "label",
+          "Value": "js/jquery-3.6.0.min.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-naLEUfbhBGqVCz6k4NYpYXP0dW+FzaAM76wc/lpwa3o="
+        }
+      ]
+    },
+    {
+      "Route": "js/jquery-3.6.0.min.js",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gckptoj4dg-2v9g4y38al.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000032016392"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31233"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"naLEUfbhBGqVCz6k4NYpYXP0dW+FzaAM76wc/lpwa3o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Feb 2025 12:18:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"7hHpAkFqHYlvU4EDEQM3s5oOLiYGvB+vXNBlKRSJESc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7hHpAkFqHYlvU4EDEQM3s5oOLiYGvB+vXNBlKRSJESc="
+        }
+      ]
+    },
+    {
+      "Route": "js/jquery-3.6.0.min.js",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\js\\jquery-3.6.0.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "89501"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7hHpAkFqHYlvU4EDEQM3s5oOLiYGvB+vXNBlKRSJESc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Feb 2025 12:18:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7hHpAkFqHYlvU4EDEQM3s5oOLiYGvB+vXNBlKRSJESc="
+        }
+      ]
+    },
+    {
+      "Route": "js/jquery-3.6.0.min.js.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gckptoj4dg-2v9g4y38al.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31233"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"naLEUfbhBGqVCz6k4NYpYXP0dW+FzaAM76wc/lpwa3o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Feb 2025 12:18:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-naLEUfbhBGqVCz6k4NYpYXP0dW+FzaAM76wc/lpwa3o="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\0gbdcnn6rg-xtxxf3hu2r.gz",
       "Selectors": [
@@ -4811,7 +5151,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 11:31:43 GMT"
+          "Value": "Tue, 18 Feb 2025 12:18:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4864,7 +5204,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 11:31:43 GMT"
+          "Value": "Tue, 18 Feb 2025 12:18:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4901,7 +5241,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 11:31:43 GMT"
+          "Value": "Tue, 18 Feb 2025 12:18:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4948,7 +5288,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 11:31:43 GMT"
+          "Value": "Tue, 18 Feb 2025 12:18:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5009,7 +5349,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 11:31:43 GMT"
+          "Value": "Tue, 18 Feb 2025 12:18:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5054,7 +5394,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 03 Feb 2025 11:31:43 GMT"
+          "Value": "Tue, 18 Feb 2025 12:18:12 GMT"
         },
         {
           "Name": "Cache-Control",

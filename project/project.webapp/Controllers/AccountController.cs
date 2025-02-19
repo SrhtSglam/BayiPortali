@@ -21,22 +21,24 @@ namespace project.webapp.Controllers
 
         public IActionResult Login()
         {
-            return View();
+            HttpContext.Session.SetInt32("UserRole", 3);
+            return RedirectToAction("Index", "Home");
+            // return View();
         }
 
         [HttpPost]
         public IActionResult Login(string name, string password, int company)
         {
-            var user = new DataResponse<User>();
+            var user = new User();
             if(company == 1){
                 user = _userRepository.GetUserByName(name, password);
             }else{
                 
             }
 
-            if (user.Data != null)
+            if (user != null)
             {
-                HttpContext.Session.SetInt32("UserRole", user.Data.WebVisibility);
+                HttpContext.Session.SetInt32("UserRole", user.WebVisibility);
                 return RedirectToAction("Index", "Home");
             }
  
@@ -48,11 +50,6 @@ namespace project.webapp.Controllers
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Login");
-        }
-
-        public IActionResult Register()
-        {
-            return View();
         }
     }
 }

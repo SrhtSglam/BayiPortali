@@ -5,7 +5,7 @@ namespace project.webapp.Models{
     {
         public List<Item> Items { get; set; }
         public List<ItemCategory> ItemCategories { get; set; }
-        public List<ItemCategory> ItemCategoriesWithChild { get; set; }
+        public List<ItemCategory> ItemCategoriesById { get; set; }
     }
 }
 

@@ -14,7 +14,7 @@ namespace project.data.Concrete{
             schema = "Bilgitas";
         }
 
-        public DataResponse<List<Item>> GetAll(int currentPage, int itemPerPage){
+        public List<Item> GetAll(int currentPage, int itemPerPage){
             List<Item> items = new List<Item>();
             int offset = (currentPage - 1) * itemPerPage;
             string query = $@"SELECT BIC.[Description], BI.[Product Group Code], 
@@ -53,21 +53,59 @@ namespace project.data.Concrete{
             }
 
             if(items.Count == 0){
-                return new DataResponse<List<Item>>{
-                    Data = new List<Item>(),
-                    Message = "Items failed",
-                    Success = false
-                };
+                return new List<Item>();
             }
 
-            return new DataResponse<List<Item>>{
-                Data = items,
-                Message = "Items successful",
-                Success = true
-            };
+            return items;
+        }
+
+        public List<Item> GetItemsByFilter(int currentPage, int itemPerPage, string selectedItemCode){
+            List<Item> items = new List<Item>();
+            int offset = (currentPage - 1) * itemPerPage;
+            string query = $@"SELECT BIC.[Description], BI.[Product Group Code], 
+            BI.[No_], BI.[Description], BI.[No_ 2], 
+            SP.[Currency Code], SP.[Unit Price]
+            FROM [{schema}$Item] BI 
+            INNER JOIN [Bilgitas$Item Category] BIC on 
+            BIC.[Code] = BI.[Item Category Code]
+            LEFT JOIN [Bilgitas$Sales Price] SP on
+            SP.[Item No_] = BI.[No_]
+            WHERE BI.[Product Group Code] = @SelectItem AND (SP.[Sales Code] != 'LISTE' OR SP.[Sales Code] IS NULL)
+            ORDER BY BI.[No_]
+            OFFSET @Offset ROWS FETCH NEXT @ItemPerPage ROWS ONLY";
+            
+            using(SqlConnection conn = new SqlConnection(_connectionString)){
+                conn.Open();
+                using(SqlCommand cmd = new SqlCommand(query, conn)){
+                    cmd.Parameters.AddWithValue("@Offset", offset);
+                    cmd.Parameters.AddWithValue("@ItemPerPage", itemPerPage);
+                    cmd.Parameters.AddWithValue("@SelectItem", selectedItemCode);
+
+                    using(SqlDataReader reader = cmd.ExecuteReader()){
+                        while(reader.Read()){
+                            Item item = new Item{
+                                ItemCategory = reader.IsDBNull(0) ? string.Empty : reader.GetString(0),
+                                ProductGroup = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                                ItemCode = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                                ItemDescription = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
+                                AlternativeCode = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
+                                CurrencyCode = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
+                                UnitPrice = reader.IsDBNull(6) ? 0 : reader.GetDecimal(6)
+                            };
+                            items.Add(item);
+                        }
+                    }
+                }
+            }
+
+            if(items.Count == 0){
+                return new List<Item>();
+            }
+
+            return items;
         }
         
-        public DataResponse<List<ItemCategory>> GetItemCategoriesWithChild(string itemCode){
+        public List<ItemCategory> GetItemCategories(string SelectedItemCode){
             List<ItemCategory> itemCategories = new List<ItemCategory>();
             string query = $@"SELECT 
             [Item Category Code], [Description]
@@ -77,7 +115,7 @@ namespace project.data.Concrete{
             using(SqlConnection conn = new SqlConnection(_connectionString)){
                 conn.Open();
                 using(SqlCommand cmd = new SqlCommand(query, conn)){
-                    cmd.Parameters.AddWithValue("@itemCode", itemCode);
+                    cmd.Parameters.AddWithValue("@itemCode", SelectedItemCode);
 
                     using(SqlDataReader reader = cmd.ExecuteReader()){
                         while(reader.Read()){
@@ -92,21 +130,13 @@ namespace project.data.Concrete{
             }
 
             if(itemCategories.Count == 0){
-                return new DataResponse<List<ItemCategory>>{
-                    Data = new List<ItemCategory>(),
-                    Message = "Item Categories failed",
-                    Success = false
-                };
+                return new List<ItemCategory>();
             }
 
-            return new DataResponse<List<ItemCategory>>{
-                Data = itemCategories,
-                Message = "Item Categories successful",
-                Success = true
-            };
+            return itemCategories;
         }
 
-        public DataResponse<List<ItemCategory>> GetItemCategories(){
+        public List<ItemCategory> GetItemCategories(){
             List<ItemCategory> itemCategories = new List<ItemCategory>();
             string query = $@"SELECT 
             [Code], [Description]
@@ -129,23 +159,15 @@ namespace project.data.Concrete{
             }
 
             if(itemCategories.Count == 0){
-                return new DataResponse<List<ItemCategory>>{
-                    Data = new List<ItemCategory>(),
-                    Message = "Item Categories failed",
-                    Success = false
-                };
+                return new List<ItemCategory>();
             }
 
-            return new DataResponse<List<ItemCategory>>{
-                Data = itemCategories,
-                Message = "Item Categories successful",
-                Success = true
-            };
+            return itemCategories;
         }
 
         public int GetCount(int itemPerPage){
             int count = 0;
-            string query = $@"SELECT COUNT('TotalCount') AS 'TotalCount' FROM [{schema}$Item]";
+            string query = $@"SELECT COUNT(*) AS 'TotalCount' FROM [{schema}$Item]";
             
             using(SqlConnection conn = new SqlConnection(_connectionString)){
                 conn.Open();
@@ -164,7 +186,7 @@ namespace project.data.Concrete{
             return totalPage;
         }
 
-        public DataResponse<ItemDetail> GetItemDetail(){
+        public ItemDetail GetItemDetail(){
             int count = 0;
             string query = $@"SELECT COUNT('TotalCount') AS 'TotalCount' FROM [{schema}$Item]";
             
@@ -181,6 +203,37 @@ namespace project.data.Concrete{
             }
             
             return null;
+        }
+
+        public ItemSerial GetItemBySerialNo(string SerialNo){
+            var item = new ItemSerial();
+            string query = $@"SELECT 
+            SNI.[Item No_], SNI.[Serial No_], BI.[Description]
+            FROM [Bilgitas$Serial No_ Information] SNI
+            LEFT JOIN [Bilgitas$Item] BI ON BI.No_ = SNI.[Item No_]
+            WHERE [Serial No_] = @ItemCode";
+            
+            using(SqlConnection conn = new SqlConnection(_connectionString)){
+                conn.Open();
+                using(SqlCommand cmd = new SqlCommand(query, conn)){
+                    cmd.Parameters.AddWithValue("@ItemCode", SerialNo);
+
+                    using(SqlDataReader reader = cmd.ExecuteReader()){
+                        if(reader.Read()){
+                            item = new ItemSerial{
+                                Code = reader.IsDBNull(0) ? string.Empty : reader.GetString(0),
+                                SerialNo = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                                Description = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                            };
+                        }
+                    }
+                }
+            }
+
+            if(item == null)
+                return new ItemSerial();
+            
+            return item;
         }
     }
 }

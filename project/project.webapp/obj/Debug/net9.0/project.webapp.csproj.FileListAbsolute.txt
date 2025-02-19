@@ -147,3 +147,4 @@ C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Debug\ne
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Debug\net9.0\compressed\lijz2rjck3-xbpf8ijnwo.gz
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Debug\net9.0\compressed\7wqxprl4mi-wg6tls123t.gz
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Debug\net9.0\compressed\h8wwoc4agj-2ubzqgubti.gz
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.webapp\obj\Debug\net9.0\compressed\gckptoj4dg-2v9g4y38al.gz

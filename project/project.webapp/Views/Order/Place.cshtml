@@ -1,237 +1,120 @@
-@* @model OrderPlaceModel *@
 @model OrderPlaceModel
 
 @{
-  ViewData["Title"] = "Sipariş Geç";
+    ViewData["Title"] = "Sipariş Geç";
+}
+
+@{
+    int currentPage = ViewBag.CurrentPage ?? 1;
+    int totalPages = ViewBag.TotalPage ?? 1;
+    int pageRange = 20;
+    int startPage = Math.Max(1, currentPage - (pageRange / 2));
+    int endPage = Math.Min(totalPages, startPage + pageRange - 1);
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<p>Herhangi bir sipariş işlemi giriniz</p>
-
 <div class="mb-3 row">
-  <div class="col-sm-5">
-    <form asp-controller="Order" asp-action="Place" method="post">
-      <select name="itemCode" class="form-select" id="ekstreGroup">
-        <option selected>Seçiniz..</option>
-        @try{
-          for(int i = 1; i < Model.ItemCategories.Count(); i++){
-            <option value="@i">@Model.ItemCategories[i].Description</option>
-          }
-        }catch{
+    <div class="col-sm-4">
+        <form asp-controller="Order" asp-action="GetItemCategoriesByItemCode" method="get" id="firstFilterForm">
+            <select name="SelectedItemCode" class="form-select" id="firstFilter">
+                <option selected>Seçiniz..</option>
+                @foreach (var item in Model.ItemCategories)
+                {
+                    <option value="@item.Code">@item.Description</option>
+                }
+            </select>
+        </form>
+    </div>
+    <div class="col-sm-4">
+        <select class="form-select" id="secondFilter">
+            <option selected>Seçiniz..</option>
+            @try{
+                foreach (var item in Model.ItemCategoriesById)
+                {
+                    <option value="@item.Code">@item.Description</option>
+                }
 
-        }
-      </select>
-    </form>
-  </div>
-  <div class="col-sm-5">
-    <form method="post" asp-controller="Order" asp-action="Place">
-      <select class="form-select" id="ekstreGroup">
-        <option selected>Seçiniz..</option>
-        @try{
-            for(int i = 1; i < Model.ItemCategoriesWithChild.Count(); i++){
-              <option value="@i">@Model.ItemCategoriesWithChild[i].Description</option>
+            }catch{
+
             }
-        }catch{
-
-        }
-      </select>
-    </form>
-  </div>
-  <label class="col-sm-2 col-form-label">Stoklar Anlık Olarak Değişebilir</label>
+        </select>
+    </div>
+    <label class="col-sm-4 col-form-label">Stoklar Anlık Olarak Değişebilir</label>
 </div>
+
 
 <nav>
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    @for(int i = 1; i< ViewBag.TotalPage; i++){
-      <li class="page-item">
-        <form method="post" asp-action="Place" asp-controller="Order">
-          <input type="hidden" name="ModalCurrentPage" value="@i" />
-          <button type="submit" class="page-link">@i</button>
-        </form>
-      </li>
-    }
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
+    <ul class="pagination">
+        @if (currentPage > 1)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Place", "Order", new { page = currentPage - 1 })">&laquo;</a>
+            </li>
+        }
+
+        @for (int i = startPage; i <= endPage; i++)
+        {
+            <li class="page-item @(i == currentPage ? "active" : "")">
+                <a class="page-link" href="@Url.Action("Place", "Order", new { page = i })">@i</a>
+            </li>
+        }
+
+        @if (currentPage < totalPages)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Place", "Order", new { page = currentPage + 1 })">&raquo;</a>
+            </li>
+        }
+    </ul>
 </nav>
 
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Madde Kategori</th>
-      <th scope="col">Ürün Grup</th>
-      <th scope="col">Özellikler</th>
-      <th scope="col">Madde Kodu</th>
-      <th scope="col">Madde Açıklama</th>
-      <th scope="col">Alternatif Kod</th>
-      <th scope="col">Para Birimi</th>
-      <th scope="col">Satış Fiyatı</th>
-      <th scope="col">Sipariş Açıklama</th>
-      <th scope="col">#</th>
-    </tr>
-    <tr>
-      <th scope="col" />
-      <th scope="col" />
-      <th scope="col" />
-      <th scope="col"><input type="text" class="form-control"></th>
-      <th scope="col"><input type="text" class="form-control"></th>
-      <th scope="col"><input type="text" class="form-control"></th>
-      <th scope="col" />
-      <th scope="col" />
-      <th scope="col" />
-    </tr>
-  </thead>
-  <tbody>
-    @try{
-      foreach (var items in Model.Items)
-      {
-        <tr>
-          <td>@items.ItemCategory</td>
-          <td>@items.ProductGroup</td>
-          <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#InfoModal">Detay</button></td>
-          <td>@items.ItemCode</td>
-          <td>@items.ItemDescription</td>
-          <td>@items.AlternativeCode</td>
-          <td>@items.CurrencyCode</td>
-          <td>@items.UnitPrice</td>
-          <td><input type="text" class="form-control"></td>
-          <td><input type="number" name="" id="" class="form-control"></td>
-          <td><button type="button" class="btn btn-success">Ekle</button></td>
-        </tr>
-      }
-    }catch{
 
-    }
-  </tbody>
-</table>
+<partial name="_itemTable" />
 
-
-<!-- Modal -->
-<div class="modal fade" id="InfoModal" tabindex="-1" aria-labelledby="InfoModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a href="#" class="nav-link active" data-tab="0">Bilgi</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" data-tab="1">Aksesuar & Bileşenler</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" data-tab="2">Saf Malzemeler</a>
-          </li>
-        </ul>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <div class="modal-body">
-        <div class="tab-content">
-          <div class="tab-pane show active" id="content1">
-            <div class="row">
-              <div class="col-6">
-                <img src="~/image/printers/ecosys-pa3500cx-1.jpg" style="max-width: 480px;" class="rounded float-start"
-                  alt="">
-              </div>
-              <div class="col-6">
-                <ul class="list-group">
-                  <li class="list-group-item">Çift taraflı baskı</li>
-                  <li class="list-group-item">1.200 x 1.200 dpi</li>
-                  <li class="list-group-item">TLS 1.3</li>
-                  <li class="list-group-item">480 × 577.5 × 571.5 mm</li>
-                  <li class="list-group-item">Dakikada 35 sayfaya kadar</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-pane" id="content2">
-            <div class="row">
-              <div class="col-12">
-                <p>Aksesuar & Bileşenler İçeriği Buraya Gelecek</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-pane" id="content3">
-            <div class="row">
-              <div class="col-12">
-                <table class="table">
-                  <thead class="thead-dark">
-                    <tr>
-                      <th scope="col">Madde Kategori</th>
-                      <th scope="col">Ürün Grup</th>
-                      <th scope="col">Madde Kodu</th>
-                      <th scope="col">Madde Açıklama</th>
-                      <th scope="col">Alternatif Kod</th>
-                      <th scope="col">Satış Fiyatı</th>
-                      <th scope="col">Stok Miktarı</th>
-                      <th scope="col">Sipariş Açıklama</th>
-                      <th scope="col">Miktar</th>
-                      <th scope="col">#</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @* @foreach (var items in Model)
-                    {
-                      <tr>
-                        <td>@items.CategoryName</td>
-                        <td>@items.ItemGroup</td>
-                        <td>@items.ItemCode</td>
-                        <td>@items.Description</td>
-                        <td>@items.AlternativeCode</td>
-                        <td>@items.SalesPrice</td>
-                        <td>@items.StockAmount</td>
-                        <td><input type="text" class="form-control"></td>
-                        <td><input type="number" name="" id="" class="form-control"></td>
-                        <td><button type="button" class="btn btn-success">Ekle</button></td>
-                      </tr>
-                    } *@
-                  </tbody>
-                </table>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+<partial name="_itemdetailmodal" />
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll(".nav-tabs .nav-link");
-    const tabContents = document.querySelectorAll(".tab-pane");
+    document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-tabs .nav-link");
+        const tabContents = document.querySelectorAll(".tab-pane");
 
-    navLinks.forEach(link => {
-      link.addEventListener("click", function (event) {
-        event.preventDefault();
+        navLinks.forEach(link => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
 
-        // Aktif sekmeyi kaldır
-        navLinks.forEach(nav => nav.classList.remove("active"));
-        tabContents.forEach(content => content.classList.remove("show", "active"));
+                // Aktif sekmeyi kaldır
+                navLinks.forEach(nav => nav.classList.remove("active"));
+                tabContents.forEach(content => content.classList.remove("show", "active"));
 
-        // Yeni aktif sekmeyi belirle
-        this.classList.add("active");
-        const tabIndex = this.getAttribute("data-tab");
-        document.getElementById(`content${parseInt(tabIndex) + 1}`).classList.add("show", "active");
-      });
+                // Yeni aktif sekmeyi belirle
+                this.classList.add("active");
+                const tabIndex = this.getAttribute("data-tab");
+                document.getElementById(`content${parseInt(tabIndex) + 1}`).classList.add("show", "active");
+            });
+        });
     });
-  });
+</script>
+
+<script>
+    document.getElementById('firstFilter').addEventListener('change', function() {
+        var selectedItemCode = this.value;
+
+        if (selectedItemCode) {
+            fetch(`/Order/GetItemCategoriesByItemCode?SelectedItemCode=${selectedItemCode}`)
+                .then(response => response.json())
+                .then(data => {
+                    var secondFilter = document.getElementById('secondFilter');
+                    secondFilter.innerHTML = '<option selected>Seçiniz..</option>';
+
+                    data.forEach(function(item) {
+                        var option = document.createElement('option');
+                        option.value = item.code;
+                        option.textContent = item.description;
+                        secondFilter.appendChild(option);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    });
 </script>
