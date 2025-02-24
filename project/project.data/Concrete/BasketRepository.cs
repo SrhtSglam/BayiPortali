@@ -1,0 +1,53 @@
+using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using project.data.Abstract;
+using project.entity;
+
+namespace project.data.Concrete{
+    public class BasketRepository : IBasketRepository{
+        private readonly string _connectionString;
+        private static string schema;
+        public BasketRepository(IConfiguration configuration){
+            _connectionString = configuration.GetConnectionString("Default");
+            schema = "Bilgitas";
+        }
+
+        public List<BasketItem> GetBasketByUserId(string UserId){
+            List<BasketItem> items = new List<BasketItem>();
+            string query = @$"SELECT 
+            DATEADD(mi, DATEDIFF(mi, GETUTCDATE(), GETDATE()), WB.[Time Stamp]), 
+            WB.[Item No_], Item.[Description], WB.[Sales Description], WB.[Quantity], Item.[Base Unit of Measure]
+            FROM [{schema}$Web Basket] WB
+            INNER JOIN [Bilgitas$Item] Item
+            ON WB.[Item No_] = Item.[No_]
+            WHERE WB.[User ID] = @UserId";
+            
+            using(SqlConnection conn = new SqlConnection(_connectionString)){
+                conn.Open();
+                using(SqlCommand cmd = new SqlCommand(query, conn)){
+                    cmd.Parameters.AddWithValue("@UserId", UserId);
+
+                    using(SqlDataReader reader = cmd.ExecuteReader()){
+                        while(reader.Read()){
+                            BasketItem item = new BasketItem{
+                                Date = reader.IsDBNull(0) ? DateTime.MinValue : reader.GetDateTime(0),
+                                ItemNo = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                                Description = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                                SalesDescription = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
+                                Quantity = reader.IsDBNull(4) ? 0 : reader.GetDecimal(4),
+                                BaseUnit = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
+                            };
+                            items.Add(item);
+                        }
+                    }
+                }
+            }
+
+            if(items == null)
+                return new List<BasketItem>();
+
+            return items;
+        }
+    }
+}

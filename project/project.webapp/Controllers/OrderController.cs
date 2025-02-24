@@ -11,10 +11,12 @@ namespace project.webapp.Controllers{
     {
         private readonly ILogger<OrderController> _logger;
         private readonly IItemRepository _itemRepository;
-        public OrderController(ILogger<OrderController> logger, IItemRepository itemRepository)
+        private readonly IBasketRepository _basketRepository;
+        public OrderController(ILogger<OrderController> logger, IItemRepository itemRepository, IBasketRepository basketRepository)
         {
             _logger = logger;
             _itemRepository = itemRepository;
+            _basketRepository = basketRepository;
         }
 
         public IActionResult OrderHome()
@@ -57,7 +59,8 @@ namespace project.webapp.Controllers{
         }
 
         public IActionResult Confirm(){
-            return View();
+            var items = _basketRepository.GetBasketByUserId(HttpContext.Session.GetString("UserId"));
+            return View(items);
         }
 
         public IActionResult Control(){

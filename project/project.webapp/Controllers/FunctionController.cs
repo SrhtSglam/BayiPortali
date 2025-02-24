@@ -31,12 +31,16 @@ namespace project.webapp.Controllers{
         public IActionResult SerialControl(string SerialNo = ""){
             var item = _itemRepository.GetItemBySerialNo(SerialNo);
             
-            if(item != null && SerialNo != "" && SerialNo != null)
+            if(item != null && SerialNo != "")
                 ViewBag.QuerySuccess = true;
             else
                 ViewBag.QuerySuccess = false;
             
             return View(item);
+        }
+
+        public IActionResult NumaratorEntry(){
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

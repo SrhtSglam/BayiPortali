@@ -7,7 +7,7 @@
 @{
     int currentPage = ViewBag.CurrentPage ?? 1;
     int totalPages = ViewBag.TotalPage ?? 1;
-    int pageRange = 20;
+    int pageRange = 10;
     int startPage = Math.Max(1, currentPage - (pageRange / 2));
     int endPage = Math.Min(totalPages, startPage + pageRange - 1);
 }
@@ -49,7 +49,11 @@
         @if (currentPage > 1)
         {
             <li class="page-item">
-                <a class="page-link" href="@Url.Action("Place", "Order", new { page = currentPage - 1 })">&laquo;</a>
+                <a class="page-link" href="@Url.Action("Place", "Order", new { page = 1 })">&laquo;</a>
+            </li>
+
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Place", "Order", new { page = currentPage - 1 })">&lt;</a>
             </li>
         }
 
@@ -63,7 +67,11 @@
         @if (currentPage < totalPages)
         {
             <li class="page-item">
-                <a class="page-link" href="@Url.Action("Place", "Order", new { page = currentPage + 1 })">&raquo;</a>
+                <a class="page-link" href="@Url.Action("Place", "Order", new { page = currentPage + 1 })">&gt;</a>
+            </li>
+
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Place", "Order", new { page = totalPages })">&raquo;</a>
             </li>
         }
     </ul>

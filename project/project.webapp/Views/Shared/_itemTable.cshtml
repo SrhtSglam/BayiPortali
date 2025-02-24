@@ -1,3 +1,7 @@
+@{
+    string formattedPrice;
+}
+
 <table class="table">
     <thead class="thead-dark">
         <tr>
@@ -38,7 +42,7 @@
                     <td>@items.ItemDescription</td>
                     <td>@items.AlternativeCode</td>
                     <td>@items.CurrencyCode</td>
-                    <td>@items.UnitPrice</td>
+                    <td>@{formattedPrice = items.UnitPrice.ToString("0.##");}@formattedPrice</td>
                     <td><input type="text" class="form-control"></td>
                     <td><input type="number" name="" id="" class="form-control"></td>
                     <td><button type="button" class="btn btn-success">Ekle</button></td>

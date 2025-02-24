@@ -20,8 +20,9 @@ namespace project.webapp.Controllers
         }
 
         public IActionResult Login()
-        {
+        { //Geçici Bölüm
             HttpContext.Session.SetInt32("UserRole", 3);
+            HttpContext.Session.SetString("UserId", "İZMİR");
             return RedirectToAction("Index", "Home");
             // return View();
         }
@@ -39,6 +40,7 @@ namespace project.webapp.Controllers
             if (user != null)
             {
                 HttpContext.Session.SetInt32("UserRole", user.WebVisibility);
+                HttpContext.Session.SetString("UserId", user.UserId);
                 return RedirectToAction("Index", "Home");
             }
  
