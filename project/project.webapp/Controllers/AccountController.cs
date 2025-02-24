@@ -22,7 +22,7 @@ namespace project.webapp.Controllers
         public IActionResult Login()
         { //Geçici Bölüm
             HttpContext.Session.SetInt32("UserRole", 3);
-            HttpContext.Session.SetString("UserId", "İZMİR");
+            HttpContext.Session.SetString("UserId", "BAŞAK"); //BAŞAK , EKOSIS, İZMİR
             return RedirectToAction("Index", "Home");
             // return View();
         }

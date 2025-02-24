@@ -8,6 +8,8 @@ namespace project.entity{
         public string? AlternativeCode { get; set; }
         public string? CurrencyCode { get; set; }
         public decimal UnitPrice { get; set; }
+
+        public string? FormattedPrice { get; set; }
     }
 
     public class ItemDetail{

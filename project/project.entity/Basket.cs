@@ -17,6 +17,8 @@ namespace project.entity{
         public string? SalesDescription { get; set; }
         public decimal Quantity { get; set; }
         public string BaseUnit { get; set; }
+
+        public string? FormattedQuantity { get; set; }
     }
 }
 

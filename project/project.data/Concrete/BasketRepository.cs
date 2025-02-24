@@ -38,6 +38,7 @@ namespace project.data.Concrete{
                                 Quantity = reader.IsDBNull(4) ? 0 : reader.GetDecimal(4),
                                 BaseUnit = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
                             };
+                            item.FormattedQuantity = item.Quantity.ToString("0.##");
                             items.Add(item);
                         }
                     }

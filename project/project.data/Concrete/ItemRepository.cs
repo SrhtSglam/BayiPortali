@@ -44,8 +44,9 @@ namespace project.data.Concrete{
                                 ItemDescription = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
                                 AlternativeCode = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
                                 CurrencyCode = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
-                                UnitPrice = reader.IsDBNull(6) ? 0 : reader.GetDecimal(6)
+                                UnitPrice = reader.IsDBNull(6) ? 0 : reader.GetDecimal(6),
                             };
+                            item.FormattedPrice = item.UnitPrice.ToString("0.##");
                             items.Add(item);
                         }
                     }
