@@ -11,31 +11,26 @@ namespace project.webapp.Controllers
     public class AccountController : Controller
     {
         private readonly ILogger<AccountController> _logger;
-        private readonly IUserRepository _userRepository;
+        private readonly IAccountRepository _accountRepository;
 
-        public AccountController(ILogger<AccountController> logger, IUserRepository userRepository)
+        public AccountController(ILogger<AccountController> logger, IAccountRepository accountRepository)
         {
             _logger = logger;
-            _userRepository = userRepository;
+            _accountRepository = accountRepository;
         }
 
         public IActionResult Login()
-        { //Geçici Bölüm
-            HttpContext.Session.SetInt32("UserRole", 3);
-            HttpContext.Session.SetString("UserId", "BAŞAK"); //BAŞAK , EKOSIS, İZMİR
-            return RedirectToAction("Index", "Home");
-            // return View();
+        {
+            var companies = _accountRepository.GetCompanies();
+            return View(companies);
         }
 
         [HttpPost]
-        public IActionResult Login(string name, string password, int company)
+        public IActionResult Login(string name, string password, string company)
         {
             var user = new User();
-            if(company == 1){
-                user = _userRepository.GetUserByName(name, password);
-            }else{
-                
-            }
+
+            user = _accountRepository.GetUserByName(name, password, company);
 
             if (user != null)
             {

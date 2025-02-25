@@ -1,3 +1,5 @@
+@model List<Company>
+
 @{
     ViewData["Title"] = "Login";
 }
@@ -10,20 +12,22 @@
     
     <form method="post" asp-action="Login" asp-controller="Account" class="w-100" style="max-width: 400px;">
         <div class="mb-3">
-            <select name="company" class="form-select" aria-label="Default">
-                <option value="1" selected>Bilgitas</option>
-                <option value="2">Bilgitas Dijital</option>
+            <select name="company" class="form-select" id="compaynChoose" aria-label="Default">
+                @foreach (var item in Model)
+                {
+                    <option value="@item.CompanyName">@item.CompanyName</option>
+                }
             </select>
         </div>
 
         <div class="mb-3">
             <label for="inputUsername" class="form-label">Kullanıcı Adı</label>
-            <input type="text" class="form-control" id="inputUsername" name="name" required value="TEST_USER">
+            <input type="text" class="form-control" id="inputUsername" name="name" required value="ERDEN_ADMIN">
         </div>
 
         <div class="mb-3">
             <label for="inputPassword" class="form-label">Şifre</label>
-            <input type="password" class="form-control" id="inputPassword" name="password" required value="1234">
+            <input type="password" class="form-control" id="inputPassword" name="password" required value="9319">
         </div>
 
         <div class="text-center">

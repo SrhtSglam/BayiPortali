@@ -47,15 +47,18 @@ namespace project.webapp.Controllers{
         [HttpGet]
         public JsonResult GetItemCategoriesByItemCode(string selectedItemCode)
         {
-            try
-            {
-                var filteredCategories = _itemRepository.GetItemCategories(selectedItemCode);
-                return Json(filteredCategories);
-            }
-            catch (Exception ex)
-            {
-                return Json(new List<ItemCategory>());
-            }
+            var filteredCategories = _itemRepository.GetItemCategories(selectedItemCode);
+            return Json(filteredCategories);
+
+            // try
+            // {
+            //     var filteredCategories = _itemRepository.GetItemCategories(selectedItemCode);
+            //     return Json(filteredCategories);
+            // }
+            // catch (Exception ex)
+            // {
+            //     return Json(new List<ItemCategory>());
+            // }
         }
 
         public IActionResult Confirm(){

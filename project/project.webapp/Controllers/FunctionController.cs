@@ -10,16 +10,27 @@ namespace project.webapp.Controllers{
     {
         private readonly ILogger<FunctionController> _logger;
         private readonly IItemRepository _itemRepository;
+        private readonly IOtherRepository _otherRepository;
+        private readonly IFunctionRepository _functionRepository;
 
-        public FunctionController(ILogger<FunctionController> logger, IItemRepository itemRepository)
+        public FunctionController(ILogger<FunctionController> logger, IItemRepository itemRepository, IFunctionRepository functionRepository, IOtherRepository otherRepository)
         {
             _logger = logger;
             _itemRepository = itemRepository;
+            _otherRepository = otherRepository;
+            _functionRepository = functionRepository;
         }
 
-        public IActionResult SellOutEntry()
+        public IActionResult SellOutEntry(int page = 1)
         {
-            return View();
+            int itemPerPage = 40;
+            var items = _functionRepository.GetSellOutItems(page, itemPerPage);
+            
+            int totalPage = _otherRepository.GetCountPerPage("Sell-out Ledger Entry", itemPerPage);
+            ViewBag.TotalPage = totalPage;
+            ViewBag.CurrentPage = page;
+
+            return View(items);
         }
 
         public IActionResult SerialControl()

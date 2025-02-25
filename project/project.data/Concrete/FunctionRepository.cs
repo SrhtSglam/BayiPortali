@@ -1,0 +1,48 @@
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using project.data.Abstract;
+using project.entity;
+
+namespace project.data.Concrete{
+    public class FunctionRepository : IFunctionRepository{
+
+        private readonly string _connectionString;
+        private static string schema = "Bilgitas";
+        public FunctionRepository(IConfiguration configuration){
+            _connectionString = configuration.GetConnectionString("Default");
+        }
+
+        public List<SellOutItem> GetSellOutItems(int currentPage, int itemPerPage){
+            List<SellOutItem> items = new List<SellOutItem>();
+            int offset = (currentPage - 1) * itemPerPage;
+            string query = @$"SELECT 
+            [Entry No_], [Item No_], [Serial No_], [Bilgitaş Invoice No_], [Bilgitaş Invoice Date] 
+            FROM [{schema}$Sell-out Ledger Entry]
+            ORDER BY [Entry No_]
+            OFFSET @Offset ROWS FETCH NEXT @ItemPerPage ROWS ONLY";
+            
+            using(SqlConnection conn = new SqlConnection(_connectionString)){
+                conn.Open();
+                using(SqlCommand cmd = new SqlCommand(query, conn)){
+                    cmd.Parameters.AddWithValue("@Offset", offset);
+                    cmd.Parameters.AddWithValue("@ItemPerPage", itemPerPage);
+
+                    using(SqlDataReader reader = cmd.ExecuteReader()){
+                        while(reader.Read()){
+                            SellOutItem item = new SellOutItem{
+                                EntryNo = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
+                                ItemNo = reader.IsDBNull(0) ? string.Empty : reader.GetString(1),
+                                SerialNo = reader.IsDBNull(1) ? string.Empty : reader.GetString(2),
+                                InvoiceNo = reader.IsDBNull(2) ? string.Empty : reader.GetString(3),
+                                InvoiceDate = reader.IsDBNull(3) ? DateTime.Now : reader.GetDateTime(4),
+                            };
+                            items.Add(item);
+                        }
+                    }
+                }
+            }
+
+            return items;
+        }
+    }
+}

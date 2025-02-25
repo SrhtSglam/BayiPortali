@@ -7,7 +7,7 @@ using project.entity;
 
 namespace project.data.Concrete{
     public class ItemRepository : IItemRepository{
-        private readonly string _connectionString;
+        private readonly string _connectionString;  
         private static string schema;
         public ItemRepository(IConfiguration configuration){
             _connectionString = configuration.GetConnectionString("Default");
@@ -211,7 +211,7 @@ namespace project.data.Concrete{
             string query = $@"SELECT 
             SNI.[Item No_], SNI.[Serial No_], BI.[Description]
             FROM [{schema}$Serial No_ Information] SNI
-            LEFT JOIN [Bilgitas$Item] BI ON BI.No_ = SNI.[Item No_]
+            LEFT JOIN [{schema}$Item] BI ON BI.No_ = SNI.[Item No_]
             WHERE [Serial No_] = @ItemCode";
             
             using(SqlConnection conn = new SqlConnection(_connectionString)){

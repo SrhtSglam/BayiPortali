@@ -13,6 +13,9 @@ service.AddControllersWithViews();
 service.AddScoped<IUserRepository, UserRepository>();
 service.AddScoped<IItemRepository, ItemRepository>();
 service.AddScoped<IBasketRepository, BasketRepository>();
+service.AddScoped<IAccountRepository, AccountRepository>();
+service.AddScoped<IFunctionRepository, FunctionRepository>();
+service.AddScoped<IOtherRepository, OtherRepository>();
 // service.AddScoped<ICategoryRepository, CategoryRepository>();
 
 #region Session
