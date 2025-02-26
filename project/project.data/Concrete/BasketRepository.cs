@@ -13,7 +13,7 @@ namespace project.data.Concrete{
             schema = "Bilgitas";
         }
 
-        public List<BasketItem> GetBasketByUserId(string UserId){
+        public List<BasketItem> GetBasketByUserId(string UserId, int ConfirmedStatus){
             List<BasketItem> items = new List<BasketItem>();
             string query = @$"SELECT 
             DATEADD(mi, DATEDIFF(mi, GETUTCDATE(), GETDATE()), WB.[Time Stamp]), 
@@ -21,12 +21,13 @@ namespace project.data.Concrete{
             FROM [{schema}$Web Basket] WB
             INNER JOIN [Bilgitas$Item] Item
             ON WB.[Item No_] = Item.[No_]
-            WHERE WB.[User ID] = @UserId";
+            WHERE WB.[User ID] = @UserId AND WB.[Confirmed] = @ConfirmedStatus";
             
             using(SqlConnection conn = new SqlConnection(_connectionString)){
                 conn.Open();
                 using(SqlCommand cmd = new SqlCommand(query, conn)){
                     cmd.Parameters.AddWithValue("@UserId", UserId);
+                    cmd.Parameters.AddWithValue("@ConfirmedStatus", ConfirmedStatus);
 
                     using(SqlDataReader reader = cmd.ExecuteReader()){
                         while(reader.Read()){

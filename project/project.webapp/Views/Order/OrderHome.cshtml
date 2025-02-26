@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Order";
+    ViewData["Title"] = "Sipariş";
 }
 <h1>@ViewData["Title"]</h1>
 
@@ -10,7 +10,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Sipariş Geç</h5>
-                <a asp-area="" asp-controller="" asp-action="" class="btn btn-primary">Sayfaya Git</a>
+                <a asp-area="" asp-controller="Order" asp-action="Place" class="btn btn-primary">Sayfaya Git</a>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Sipariş Onayla</h5>
-                <a asp-area="" asp-controller="" asp-action="" class="btn btn-primary">Sayfaya Git</a>
+                <a asp-area="" asp-controller="Order" asp-action="Confirm" class="btn btn-primary">Sayfaya Git</a>
 
             </div>
         </div>
@@ -27,7 +27,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Sipariş Kontrol</h5>
-                <a asp-area="" asp-controller="" asp-action="" class="btn btn-primary">Sayfaya Git</a>
+                <a asp-area="" asp-controller="Order" asp-action="Control" class="btn btn-primary">Sayfaya Git</a>
             </div>
         </div>
     </div>

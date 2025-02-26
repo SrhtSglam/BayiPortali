@@ -62,12 +62,13 @@ namespace project.webapp.Controllers{
         }
 
         public IActionResult Confirm(){
-            var items = _basketRepository.GetBasketByUserId(HttpContext.Session.GetString("UserId"));
+            var items = _basketRepository.GetBasketByUserId(HttpContext.Session.GetString("UserId"), 0);
             return View(items);
         }
 
         public IActionResult Control(){
-            return View();
+            var items = _basketRepository.GetBasketByUserId(HttpContext.Session.GetString("UserId"), 1);
+            return View(items);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

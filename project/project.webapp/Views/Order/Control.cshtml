@@ -1,3 +1,5 @@
+@model List<BasketItem>
+
 @{
     ViewData["Title"] = "Sipariş Kontrol";
 }
@@ -33,18 +35,18 @@
     <tbody>
         @try
         {
-            @* foreach (var items in Model.Items)
+            foreach (var items in Model)
             {
                 <tr>
+                    <td>@items.Date</td>
+                    <td>@items.ItemNo</td>
+                    <td>@items.Description</td>
                     <td></td>
+                    <td>@items.BaseUnit</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>@items.SalesDescription</td>
                 </tr>
-            } *@
+            }
         }
         catch
         {

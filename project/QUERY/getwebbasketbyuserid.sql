@@ -6,4 +6,6 @@ WB.[Item No_], Item.[Description], WB.[Sales Description], WB.[Quantity], Item.[
 FROM [Bilgitas$Web Basket] WB
 INNER JOIN [Bilgitas$Item] Item
 ON WB.[Item No_] = Item.[No_]
-WHERE WB.[User ID] = @UserId
+WHERE WB.[User ID] = @UserId AND WB.[Confirmed] = 1
+
+//WB.CONFIRMED = 0 / 1
