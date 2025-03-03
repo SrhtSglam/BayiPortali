@@ -5,11 +5,13 @@ using project.entity;
 
 namespace project.data.Concrete{
     public class AccountRepository : IAccountRepository{
-
+        private readonly SchemaService _schemeService;
         private readonly string _connectionString;
-        private static string schema = "";
-        public AccountRepository(IConfiguration configuration){
+        private readonly string _schema;
+        public AccountRepository(IConfiguration configuration, SchemaService schemeService){
             _connectionString = configuration.GetConnectionString("Default");
+            _schemeService = schemeService;
+            _schema = _schemeService.GetSchema();
         }
 
         public List<Company> GetCompanies(){
@@ -38,9 +40,8 @@ namespace project.data.Concrete{
         }
 
         public User GetUserByName(string name, string password, string company){
-            schema = company;
             User user = new User();
-            string query = $"SELECT [User ID], [Password], [Web Visibility] from [{schema}$Light User] WHERE [User ID] = @name AND [Password] = @password";
+            string query = $"SELECT [User ID], [Password], [Web Visibility] from [{_schema}$Light User] WHERE [User ID] = @name AND [Password] = @password";
             
             using(SqlConnection conn = new SqlConnection(_connectionString)){
                 conn.Open();

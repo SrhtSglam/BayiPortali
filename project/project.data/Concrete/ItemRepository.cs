@@ -7,11 +7,13 @@ using project.entity;
 
 namespace project.data.Concrete{
     public class ItemRepository : IItemRepository{
+        private readonly SchemaService _schemeService;
         private readonly string _connectionString;  
-        private static string schema;
-        public ItemRepository(IConfiguration configuration){
+        private readonly string _schema;
+        public ItemRepository(IConfiguration configuration, SchemaService schemaService){
             _connectionString = configuration.GetConnectionString("Default");
-            schema = "Bilgitas";
+            _schemeService = schemaService;
+            _schema = schemaService.GetSchema();
         }
 
         public List<Item> GetAll(int currentPage, int itemPerPage){
@@ -20,10 +22,10 @@ namespace project.data.Concrete{
             string query = $@"SELECT BIC.[Description], BI.[Product Group Code], 
             BI.[No_], BI.[Description], BI.[No_ 2], 
             SP.[Currency Code], SP.[Unit Price]
-            FROM [{schema}$Item] BI 
-            INNER JOIN [Bilgitas$Item Category] BIC on 
+            FROM [{_schema}$Item] BI 
+            INNER JOIN [{_schema}$Item Category] BIC on 
             BIC.[Code] = BI.[Item Category Code]
-            LEFT JOIN [Bilgitas$Sales Price] SP on
+            LEFT JOIN [{_schema}$Sales Price] SP on
             SP.[Item No_] = BI.[No_]
             WHERE SP.[Sales Code] != 'LISTE' OR SP.[Sales Code] IS NULL
             ORDER BY BI.[No_]
@@ -66,10 +68,10 @@ namespace project.data.Concrete{
             string query = $@"SELECT BIC.[Description], BI.[Product Group Code], 
             BI.[No_], BI.[Description], BI.[No_ 2], 
             SP.[Currency Code], SP.[Unit Price]
-            FROM [{schema}$Item] BI 
-            INNER JOIN [Bilgitas$Item Category] BIC on 
+            FROM [{_schema}$Item] BI 
+            INNER JOIN [{_schema}$Item Category] BIC on 
             BIC.[Code] = BI.[Item Category Code]
-            LEFT JOIN [Bilgitas$Sales Price] SP on
+            LEFT JOIN [{_schema}$Sales Price] SP on
             SP.[Item No_] = BI.[No_]
             WHERE BI.[Product Group Code] = @SelectItem AND (SP.[Sales Code] != 'LISTE' OR SP.[Sales Code] IS NULL)
             ORDER BY BI.[No_]
@@ -110,7 +112,7 @@ namespace project.data.Concrete{
             List<ItemCategory> itemCategories = new List<ItemCategory>();
             string query = $@"SELECT 
             [Item Category Code], [Description]
-            FROM [{schema}$Product Group]
+            FROM [{_schema}$Product Group]
             WHERE [Item Category Code] = @itemCode";
             
             using(SqlConnection conn = new SqlConnection(_connectionString)){
@@ -141,7 +143,7 @@ namespace project.data.Concrete{
             List<ItemCategory> itemCategories = new List<ItemCategory>();
             string query = $@"SELECT 
             [Code], [Description]
-            FROM [{schema}$Item Category];";
+            FROM [{_schema}$Item Category];";
             
             using(SqlConnection conn = new SqlConnection(_connectionString)){
                 conn.Open();
@@ -166,30 +168,9 @@ namespace project.data.Concrete{
             return itemCategories;
         }
 
-        public int GetCount(int itemPerPage){
-            int count = 0;
-            string query = $@"SELECT COUNT(*) AS 'TotalCount' FROM [{schema}$Item]";
-            
-            using(SqlConnection conn = new SqlConnection(_connectionString)){
-                conn.Open();
-                using(SqlCommand cmd = new SqlCommand(query, conn)){
-
-                    using(SqlDataReader reader = cmd.ExecuteReader()){
-                        if(reader.Read()){
-                            count = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
-                        }
-                    }
-                }
-            }
-
-            int totalPage = (int)Math.Ceiling((double)count / itemPerPage);
-
-            return totalPage;
-        }
-
         public ItemDetail GetItemDetail(){
             int count = 0;
-            string query = $@"SELECT COUNT('TotalCount') AS 'TotalCount' FROM [{schema}$Item]";
+            string query = $@"SELECT COUNT('TotalCount') AS 'TotalCount' FROM [{_schema}$Item]";
             
             using(SqlConnection conn = new SqlConnection(_connectionString)){
                 conn.Open();
@@ -210,8 +191,8 @@ namespace project.data.Concrete{
             var item = new ItemSerial();
             string query = $@"SELECT 
             SNI.[Item No_], SNI.[Serial No_], BI.[Description]
-            FROM [{schema}$Serial No_ Information] SNI
-            LEFT JOIN [{schema}$Item] BI ON BI.No_ = SNI.[Item No_]
+            FROM [{_schema}$Serial No_ Information] SNI
+            LEFT JOIN [{_schema}$Item] BI ON BI.No_ = SNI.[Item No_]
             WHERE [Serial No_] = @ItemCode";
             
             using(SqlConnection conn = new SqlConnection(_connectionString)){

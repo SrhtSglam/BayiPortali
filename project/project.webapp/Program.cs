@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using project.data;
 using project.data.Abstract;
 using project.data.Concrete;
+using project.webapp.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 var service = builder.Services;
@@ -10,12 +11,12 @@ var connectionString = builder.Configuration.GetConnectionString("Default");
 // Add services to the container.
 service.AddControllersWithViews();
 
-service.AddScoped<IUserRepository, UserRepository>();
 service.AddScoped<IItemRepository, ItemRepository>();
 service.AddScoped<IBasketRepository, BasketRepository>();
 service.AddScoped<IAccountRepository, AccountRepository>();
 service.AddScoped<IFunctionRepository, FunctionRepository>();
 service.AddScoped<IOtherRepository, OtherRepository>();
+service.AddSingleton<SchemaService>();
 // service.AddScoped<ICategoryRepository, CategoryRepository>();
 
 #region Session

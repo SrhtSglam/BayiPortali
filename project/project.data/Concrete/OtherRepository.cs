@@ -6,15 +6,18 @@ using project.entity;
 namespace project.data.Concrete{
     public class OtherRepository : IOtherRepository{
 
+        private readonly SchemaService _schemaService;
         private readonly string _connectionString;
-        private static string schema = "Bilgitas";
-        public OtherRepository(IConfiguration configuration){
+        private readonly string _schema;
+        public OtherRepository(IConfiguration configuration, SchemaService schemaService){
             _connectionString = configuration.GetConnectionString("Default");
+            _schemaService = schemaService;
+            _schema = _schemaService.GetSchema();
         }
 
         public int GetCount(string table_name){
             int count = 0;
-            string query = $@"SELECT COUNT(*) AS 'TotalCount' FROM [{schema}${table_name}]";
+            string query = $@"SELECT COUNT(*) AS 'TotalCount' FROM [{_schema}${table_name}]";
             
             using(SqlConnection conn = new SqlConnection(_connectionString)){
                 conn.Open();
@@ -33,7 +36,7 @@ namespace project.data.Concrete{
 
         public int GetCountPerPage(string table_name,int perPage){
             int count = 0;
-            string query = $@"SELECT COUNT(*) AS 'TotalCount' FROM [{schema}${table_name}]";
+            string query = $@"SELECT COUNT(*) AS 'TotalCount' FROM [{_schema}${table_name}]";
             
             using(SqlConnection conn = new SqlConnection(_connectionString)){
                 conn.Open();

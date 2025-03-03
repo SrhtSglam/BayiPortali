@@ -6,10 +6,13 @@ using project.entity;
 namespace project.data.Concrete{
     public class FunctionRepository : IFunctionRepository{
 
+        private readonly SchemaService _schemaService;
         private readonly string _connectionString;
-        private static string schema = "Bilgitas";
-        public FunctionRepository(IConfiguration configuration){
+        private readonly string _schema;
+        public FunctionRepository(IConfiguration configuration, SchemaService schemaService){
             _connectionString = configuration.GetConnectionString("Default");
+            _schemaService = schemaService;
+            _schema = _schemaService.GetSchema();
         }
 
         public List<SellOutItem> GetSellOutItems(int currentPage, int itemPerPage){
@@ -17,7 +20,7 @@ namespace project.data.Concrete{
             int offset = (currentPage - 1) * itemPerPage;
             string query = @$"SELECT 
             [Entry No_], [Item No_], [Serial No_], [Bilgitaş Invoice No_], [Bilgitaş Invoice Date] 
-            FROM [{schema}$Sell-out Ledger Entry]
+            FROM [{_schema}$Sell-out Ledger Entry]
             ORDER BY [Entry No_]
             OFFSET @Offset ROWS FETCH NEXT @ItemPerPage ROWS ONLY";
             

@@ -10,13 +10,15 @@ namespace project.webapp.Controllers{
     public class OrderController : Controller
     {
         private readonly ILogger<OrderController> _logger;
+        private readonly IOtherRepository _otherRepository;
         private readonly IItemRepository _itemRepository;
         private readonly IBasketRepository _basketRepository;
-        public OrderController(ILogger<OrderController> logger, IItemRepository itemRepository, IBasketRepository basketRepository)
+        public OrderController(ILogger<OrderController> logger, IItemRepository itemRepository, IBasketRepository basketRepository, IOtherRepository otherRepository)
         {
             _logger = logger;
             _itemRepository = itemRepository;
             _basketRepository = basketRepository;
+            _otherRepository = otherRepository;
         }
 
         public IActionResult OrderHome()
@@ -31,7 +33,7 @@ namespace project.webapp.Controllers{
             var items = _itemRepository.GetAll(page, pageSize);
             var itemCategories = _itemRepository.GetItemCategories();
 
-            int totalPage = _itemRepository.GetCount(pageSize);
+            int totalPage = _otherRepository.GetCountPerPage("Item", pageSize);
             ViewBag.TotalPage = totalPage;
             ViewBag.CurrentPage = page; 
 

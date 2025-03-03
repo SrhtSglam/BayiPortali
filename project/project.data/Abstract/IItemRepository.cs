@@ -7,7 +7,6 @@ namespace project.data.Abstract{
         public List<ItemCategory> GetItemCategories();
         public List<ItemCategory> GetItemCategories(string SelectedItemCode);
         public ItemDetail GetItemDetail();
-        public int GetCount(int itemPerPage);
         
         public ItemSerial GetItemBySerialNo(string SerialNo);
     }

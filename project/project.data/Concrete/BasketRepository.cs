@@ -6,11 +6,13 @@ using project.entity;
 
 namespace project.data.Concrete{
     public class BasketRepository : IBasketRepository{
+        private readonly SchemaService _schemaService;
         private readonly string _connectionString;
-        private static string schema;
-        public BasketRepository(IConfiguration configuration){
+        private readonly string _schema;
+        public BasketRepository(IConfiguration configuration, SchemaService schemaService){
             _connectionString = configuration.GetConnectionString("Default");
-            schema = "Bilgitas";
+            _schemaService = schemaService;
+            _schema = _schemaService.GetSchema();
         }
 
         public List<BasketItem> GetBasketByUserId(string UserId, int ConfirmedStatus){
@@ -18,8 +20,8 @@ namespace project.data.Concrete{
             string query = @$"SELECT 
             DATEADD(mi, DATEDIFF(mi, GETUTCDATE(), GETDATE()), WB.[Time Stamp]), 
             WB.[Item No_], Item.[Description], WB.[Sales Description], WB.[Quantity], Item.[Base Unit of Measure]
-            FROM [{schema}$Web Basket] WB
-            INNER JOIN [Bilgitas$Item] Item
+            FROM [{_schema}$Web Basket] WB
+            INNER JOIN [{_schema}$Item] Item
             ON WB.[Item No_] = Item.[No_]
             WHERE WB.[User ID] = @UserId AND WB.[Confirmed] = @ConfirmedStatus";
             

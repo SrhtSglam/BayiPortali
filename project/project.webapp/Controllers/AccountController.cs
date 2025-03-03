@@ -5,6 +5,7 @@ using project.entity;
 using project.webapp.Filters;
 using project.data.Abstract;
 using project.data;
+using project.data.Concrete;
 
 namespace project.webapp.Controllers
 {
@@ -12,11 +13,13 @@ namespace project.webapp.Controllers
     {
         private readonly ILogger<AccountController> _logger;
         private readonly IAccountRepository _accountRepository;
+        private readonly SchemaService _schemaService;
 
-        public AccountController(ILogger<AccountController> logger, IAccountRepository accountRepository)
+        public AccountController(ILogger<AccountController> logger, IAccountRepository accountRepository, SchemaService schemeService)
         {
             _logger = logger;
             _accountRepository = accountRepository;
+            _schemaService = schemeService;
         }
 
         public IActionResult Login()
@@ -34,6 +37,7 @@ namespace project.webapp.Controllers
 
             if (user != null)
             {
+                _schemaService.SetSchema(company);
                 HttpContext.Session.SetInt32("UserRole", user.WebVisibility);
                 HttpContext.Session.SetString("UserId", user.UserId);
                 return RedirectToAction("Index", "Home");
