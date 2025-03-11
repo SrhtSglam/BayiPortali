@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Linq;
+using project.entity;
 
 namespace project.webapp.Filters
 {
@@ -17,12 +18,10 @@ namespace project.webapp.Filters
 
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            var userRole = context.HttpContext.Session.GetInt32("UserRole");
+            var userRole = WebLoginUser.Visibility;
 
-            if (!userRole.HasValue || userRole == 0 || !_allowedRoles.Contains(userRole.Value))
-            {
+            if (userRole == 0)
                 context.Result = new RedirectToActionResult("Login", "Account", null);
-            }
         }
     }
 }

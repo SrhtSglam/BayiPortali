@@ -5,60 +5,69 @@ using project.entity;
 
 namespace project.data.Concrete{
     public class AccountRepository : IAccountRepository{
-        private readonly SchemaService _schemeService;
         private readonly string _connectionString;
         private readonly string _schema;
-        public AccountRepository(IConfiguration configuration, SchemaService schemeService){
+        public AccountRepository(IConfiguration configuration){
             _connectionString = configuration.GetConnectionString("Default");
-            _schemeService = schemeService;
-            _schema = _schemeService.GetSchema();
+            _schema = WebLoginUser.Company;
         }
 
         public List<Company> GetCompanies(){
             List<Company> companies = new List<Company>();
             string query = @$"SELECT [Name] FROM [Company]";
             
-            using(SqlConnection conn = new SqlConnection(_connectionString)){
-                conn.Open();
-                using(SqlCommand cmd = new SqlCommand(query, conn)){
+            try{
+                using(SqlConnection conn = new SqlConnection(_connectionString)){
+                    conn.Open();
+                    using(SqlCommand cmd = new SqlCommand(query, conn)){
 
-                    using(SqlDataReader reader = cmd.ExecuteReader()){
-                        while(reader.Read()){
-                            Company item = new Company{
-                                CompanyName = reader.IsDBNull(0) ? string.Empty : reader.GetString(0),
-                            };
-                            companies.Add(item);
+                        using(SqlDataReader reader = cmd.ExecuteReader()){
+                            if(reader.HasRows){
+                                while(reader.Read()){
+                                    Company item = new Company{
+                                        CompanyName = reader.IsDBNull(0) ? string.Empty : reader.GetString(0),
+                                    };
+                                    companies.Add(item);
+                                }
+                            }
                         }
                     }
+                    conn.Close();
                 }
-            }
+            }catch{
 
-            if(companies == null)
-                return new List<Company>();
+            }
 
             return companies;
         }
 
-        public User GetUserByName(string name, string password, string company){
-            User user = new User();
-            string query = $"SELECT [User ID], [Password], [Web Visibility] from [{_schema}$Light User] WHERE [User ID] = @name AND [Password] = @password";
+        public WebLoginUser GetUserByName(string name, string password){
+            WebLoginUser user = new WebLoginUser();
+            string query = @$"SELECT [User ID], [Password], [Web Visibility] 
+            FROM [{_schema}$Light User] 
+            WHERE [User ID] = @name AND [Password] = @password";
             
-            using(SqlConnection conn = new SqlConnection(_connectionString)){
-                conn.Open();
-                using(SqlCommand cmd = new SqlCommand(query, conn)){
-                    cmd.Parameters.AddWithValue("@name", name);
-                    cmd.Parameters.AddWithValue("@password", password);
+            try{
+                using(SqlConnection conn = new SqlConnection(_connectionString)){
+                    conn.Open();
+                    using(SqlCommand cmd = new SqlCommand(query, conn)){
+                        cmd.Parameters.AddWithValue("@name", name);
+                        cmd.Parameters.AddWithValue("@password", password);
 
-                    using(SqlDataReader reader = cmd.ExecuteReader()){
-                        if(reader.Read()){
-                            user = new User{
-                                UserId = reader["User ID"].ToString(),
-                                Password = reader["Password"].ToString(),
-                                WebVisibility = Convert.ToInt32(reader["Web Visibility"])
-                            };
+                        using(SqlDataReader reader = cmd.ExecuteReader()){
+                            if(reader.Read()){
+                                user = new WebLoginUser{
+                                    UserId = reader["User ID"].ToString(),
+                                    Password = reader["Password"].ToString(),
+                                    WebVisibility = Convert.ToInt32(reader["Web Visibility"])
+                                };
+                            }
                         }
                     }
+                    conn.Close();
                 }
+            }catch{
+
             }
 
             return user;

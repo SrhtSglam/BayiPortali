@@ -14,14 +14,8 @@ namespace project.entity{
 
     public class ItemDetail{
         public string BaseUnitOfMeasure { get; set; }
-        public string MonthlyPrintVolume { get; set; }
-        public string PrintingCapacity { get; set; }
-    }
-
-    public class ItemCategory
-    {
-        public string? Code { get; set; }
-        public string? Description { get; set; }
+        public int MonthlyPrintVolume { get; set; }
+        public int PrintingCapacity { get; set; }
     }
 
     public class ItemSerial

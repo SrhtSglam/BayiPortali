@@ -12,12 +12,12 @@ namespace project.webapp.Controllers{
         private readonly ILogger<OrderController> _logger;
         private readonly IOtherRepository _otherRepository;
         private readonly IItemRepository _itemRepository;
-        private readonly IBasketRepository _basketRepository;
-        public OrderController(ILogger<OrderController> logger, IItemRepository itemRepository, IBasketRepository basketRepository, IOtherRepository otherRepository)
+        private readonly IOrderRepository _orderRepository;
+        public OrderController(ILogger<OrderController> logger, IItemRepository itemRepository, IOtherRepository otherRepository, IOrderRepository orderRepository)
         {
             _logger = logger;
             _itemRepository = itemRepository;
-            _basketRepository = basketRepository;
+            _orderRepository = orderRepository;
             _otherRepository = otherRepository;
         }
 
@@ -35,12 +35,14 @@ namespace project.webapp.Controllers{
 
             int totalPage = _otherRepository.GetCountPerPage("Item", pageSize);
             ViewBag.TotalPage = totalPage;
-            ViewBag.CurrentPage = page; 
+            ViewBag.CurrentPage = page;
 
             var model = new OrderPlaceModel
             {
                 Items = items,
                 ItemCategories = itemCategories,
+                TotalPages = totalPage,
+                CurrentPage = page
             };
 
             return View(model);
@@ -51,25 +53,29 @@ namespace project.webapp.Controllers{
         {
             var filteredCategories = _itemRepository.GetItemCategories(selectedItemCode);
             return Json(filteredCategories);
+        }
 
-            // try
-            // {
-            //     var filteredCategories = _itemRepository.GetItemCategories(selectedItemCode);
-            //     return Json(filteredCategories);
-            // }
-            // catch (Exception ex)
-            // {
-            //     return Json(new List<ItemCategory>());
-            // }
+        [HttpGet]
+        public JsonResult GetItemsByCategory(string selectedItemCode)
+        {
+            var filteredCategories = _itemRepository.GetItemsByCategory(1, 40, selectedItemCode);
+            return Json(filteredCategories);
+        }
+
+        [HttpGet]
+        public JsonResult GetItemDetails(string itemCode)
+        {
+            var item = _orderRepository.GetItemDetail(itemCode);
+            return Json(item);
         }
 
         public IActionResult Confirm(){
-            var items = _basketRepository.GetBasketByUserId(HttpContext.Session.GetString("UserId"), 0);
+            var items = _orderRepository.GetBasketByUserId(0);
             return View(items);
         }
 
         public IActionResult Control(){
-            var items = _basketRepository.GetBasketByUserId(HttpContext.Session.GetString("UserId"), 1);
+            var items = _orderRepository.GetBasketByUserId(1);
             return View(items);
         }
 

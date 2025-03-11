@@ -12,11 +12,11 @@ var connectionString = builder.Configuration.GetConnectionString("Default");
 service.AddControllersWithViews();
 
 service.AddScoped<IItemRepository, ItemRepository>();
-service.AddScoped<IBasketRepository, BasketRepository>();
 service.AddScoped<IAccountRepository, AccountRepository>();
 service.AddScoped<IFunctionRepository, FunctionRepository>();
 service.AddScoped<IOtherRepository, OtherRepository>();
-service.AddSingleton<SchemaService>();
+service.AddScoped<IOrderRepository, OrderRepository>();
+// service.AddScoped<SchemaService>();
 // service.AddScoped<ICategoryRepository, CategoryRepository>();
 
 #region Session

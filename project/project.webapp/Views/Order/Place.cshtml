@@ -126,3 +126,72 @@
         }
     });
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    var firstFilter = document.getElementById('firstFilter');
+    var secondFilter = document.getElementById('secondFilter');
+    
+    // 1. İlk filtre değiştiğinde ikinci filtreyi getir
+    firstFilter.addEventListener('change', function () {
+        var selectedItemCode = this.value;
+        
+        if (selectedItemCode) {
+            fetch(`/Order/GetItemCategoriesByItemCode?selectedItemCode=${selectedItemCode}`)
+                .then(response => response.json())
+                .then(data => {
+                    secondFilter.innerHTML = '<option selected>Seçiniz..</option>'; // Önce temizle
+
+                    data.forEach(function (item) {
+                        var option = document.createElement('option');
+                        option.value = item.code;
+                        option.textContent = item.description;
+                        secondFilter.appendChild(option);
+                    });
+
+                    secondFilter.disabled = false; // İkinci filtreyi aktif hale getir
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    });
+
+    // 2. Filtreleri kullanarak tabloyu getir
+    function filterTable() {
+        var selectedCategory = firstFilter.value;
+        var selectedSubCategory = secondFilter.value;
+
+        fetch(`/Order/GetItemsByCategory?selectedItemCode=${selectedCategory}`)
+            .then(response => response.json())
+            .then(data => {
+                var tbody = document.querySelector("tbody");
+                tbody.innerHTML = "";
+
+                data.forEach(function (item) {
+                    var row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td>${item.itemCategory}</td>
+                        <td>${item.productGroup}</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#InfoModal">Detay</button></td>
+                        <td>${item.itemCode}</td>
+                        <td>${item.itemDescription}</td>
+                        <td>${item.alternativeCode}</td>
+                        <td>${item.currencyCode}</td>
+                        <td>${item.formattedPrice}</td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="number" class="form-control"></td>
+                        <td><button type="button" class="btn btn-success">Ekle</button></td>   
+                    `;
+
+                    if (selectedSubCategory === "Seçiniz.." || selectedSubCategory === "" || item.ProductGroup === selectedSubCategory) {
+                        tbody.appendChild(row);
+                    }
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    // 3. Filtrelerin değişimini dinle ve tabloyu güncelle
+    firstFilter.addEventListener("change", filterTable);
+    secondFilter.addEventListener("change", filterTable);
+});
+</script>

@@ -3,7 +3,6 @@
 }
 
 <div class="container mt-5">
-    <!-- Başlık ve hoş geldiniz mesajı -->
     <div class="row mb-4 text-start">
         <div class="col">
             <h3><span class="text-brown">KYOCERA</span> Bayi Sistemine Hoş Geldiniz...</h3>
@@ -11,8 +10,7 @@
         </div>
     </div>
 
-    <!-- Kredi kartı komisyon oranları tablosu -->
-    <div class="row mb-4">
+    @* <div class="row mb-4">
         <div class="col-6">
             <h4 class="font-weight-bold">Kredi Kartı Komisyon Oranları:</h4>
             <table class="table table-striped table-bordered table-hover">
@@ -75,7 +73,6 @@
         </div>
     </div>
 
-    <!-- Notlar kısmı -->
     <div class="row mb-4">
         <div class="col-12">
             <h4>Notlar:</h4>
@@ -86,5 +83,7 @@
                 <li><span class="text-brown">(****)</span> Kampanya şartlarında belirtilen hesap kapatma tarihinden sonra yapılacak Tek & Taksitli çekimler için yukarıda belirtilen komisyon oranları uygulanacaktır.</li>
             </ul>
         </div>
-    </div>
+    </div> *@
+
+    @Html.Raw(NoticeTextClass.NoticeTextValue)
 </div>

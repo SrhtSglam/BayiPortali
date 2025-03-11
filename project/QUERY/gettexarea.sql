@@ -1,0 +1,1 @@
+SELECT [Code], [Description] FROM [Bilgitas$Tax Area]

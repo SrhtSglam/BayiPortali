@@ -1,4 +1,4 @@
-@model List<SellOutItem>
+@model SelloutModel
 
 @{
     ViewData["Title"] = "Sell Out Entry";
@@ -64,10 +64,21 @@
     <tbody>
         @try
         {
-            foreach (var items in Model)
+            foreach (var items in Model.SellOutItems)
             {
                 <tr>
-                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sellOutEntryModal">Giriş</button></td>
+                    @* <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sellOutEntryModal">Giriş</button></td> *@
+                    <td>
+                        <button type="button" class="btn btn-primary sellOutEntryBtn"
+                            data-bs-toggle="modal" 
+                            data-bs-target="#sellOutEntryModal"
+                            data-itemno="@items.ItemNo"
+                            data-serialno="@items.SerialNo"
+                            data-invoiceno="@items.InvoiceNo"
+                            data-invoicedate="@items.InvoiceDate">
+                            Giriş
+                        </button>
+                    </td>
                     <td>@items.ItemNo</td>
                     <td>@items.SerialNo</td>
                     <td>@items.InvoiceNo</td>
@@ -81,25 +92,6 @@
         }
     </tbody>
 </table>
-
-<!-- Modal -->
-@* <div class="modal fade" id="sellOutEntryModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="sellOutEntryModal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Giriş Yapınız</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
-    </div>
-  </div>
-</div> *@
 
 <div class="modal fade" id="sellOutEntryModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="sellOutEntryModal" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -138,17 +130,16 @@
                         <!-- Kamu Kuruluşu -->
                         <div class="col-6 mb-3">
                             <label for="kamuKurulusu" class="form-label">Kamu Kuruluşu</label>
-                            <input type="checkbox" class="form-control" id="kamuKurulusu">
+                            <input type="checkbox" class="form-check-input" id="kamuKurulusu">
                         </div>
 
                         <!-- Müşteri Vergi Dairesi -->
                         <div class="col-6 mb-3">
                             <label for="musteriVergiDairesi" class="form-label">Müşteri Vergi Dairesi</label>
                             <select name="" id="">
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
+                                @foreach(var item in Model.KeyValueItems){
+                                    <option value="@item.Code">@item.Description</option>         
+                                }
                             </select>
                         </div>
 
@@ -161,7 +152,7 @@
                         <!-- Müşteri Telefon No -->
                         <div class="col-6 mb-3">
                             <label for="musteriTelefon" class="form-label">Müşteri Telefon No</label>
-                            <input type="tel" class="form-control" id="musteriTelefon" placeholder="(___) ___ __ __">
+                            <input type="number" class="form-control" id="musteriTelefon" placeholder="(___) ___ __ __">
                         </div>
 
                         <!-- Müşteri Faks No -->
@@ -245,3 +236,24 @@
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Tüm detay butonlarını seç
+    document.querySelectorAll(".sellOutEntryBtn").forEach(button => {
+        button.addEventListener("click", function() {
+            // Butondan data-attribute'ları al
+            let itemNo = this.getAttribute("data-itemno");
+            let serialNo = this.getAttribute("data-serialno");
+            let invoiceNo = this.getAttribute("data-invoiceno");
+            let invoiceDate = this.getAttribute("data-invoicedate");
+
+            // Modal içindeki ilgili inputları doldur
+            document.getElementById("maddeNo").value = itemNo;
+            document.getElementById("seriNo").value = serialNo;
+            document.getElementById("faturaNo").value = invoiceNo;
+            document.getElementById("faturaTarih").value = invoiceDate;
+        });
+    });
+});
+</script>

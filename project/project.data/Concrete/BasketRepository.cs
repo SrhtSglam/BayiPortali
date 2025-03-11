@@ -6,16 +6,14 @@ using project.entity;
 
 namespace project.data.Concrete{
     public class BasketRepository : IBasketRepository{
-        private readonly SchemaService _schemaService;
         private readonly string _connectionString;
         private readonly string _schema;
-        public BasketRepository(IConfiguration configuration, SchemaService schemaService){
+        public BasketRepository(IConfiguration configuration){
             _connectionString = configuration.GetConnectionString("Default");
-            _schemaService = schemaService;
-            _schema = _schemaService.GetSchema();
+            _schema = WebLoginUser.Company;
         }
 
-        public List<BasketItem> GetBasketByUserId(string UserId, int ConfirmedStatus){
+        public List<BasketItem> GetBasketByUserId(int ConfirmedStatus){
             List<BasketItem> items = new List<BasketItem>();
             string query = @$"SELECT 
             DATEADD(mi, DATEDIFF(mi, GETUTCDATE(), GETDATE()), WB.[Time Stamp]), 
@@ -25,31 +23,35 @@ namespace project.data.Concrete{
             ON WB.[Item No_] = Item.[No_]
             WHERE WB.[User ID] = @UserId AND WB.[Confirmed] = @ConfirmedStatus";
             
-            using(SqlConnection conn = new SqlConnection(_connectionString)){
-                conn.Open();
-                using(SqlCommand cmd = new SqlCommand(query, conn)){
-                    cmd.Parameters.AddWithValue("@UserId", UserId);
-                    cmd.Parameters.AddWithValue("@ConfirmedStatus", ConfirmedStatus);
+            try{
+                using(SqlConnection conn = new SqlConnection(_connectionString)){
+                    conn.Open();
+                    using(SqlCommand cmd = new SqlCommand(query, conn)){
+                        cmd.Parameters.AddWithValue("@UserId", WebLoginUser.AuthId);
+                        cmd.Parameters.AddWithValue("@ConfirmedStatus", ConfirmedStatus);
 
-                    using(SqlDataReader reader = cmd.ExecuteReader()){
-                        while(reader.Read()){
-                            BasketItem item = new BasketItem{
-                                Date = reader.IsDBNull(0) ? DateTime.MinValue : reader.GetDateTime(0),
-                                ItemNo = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
-                                Description = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
-                                SalesDescription = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
-                                Quantity = reader.IsDBNull(4) ? 0 : reader.GetDecimal(4),
-                                BaseUnit = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
-                            };
-                            item.FormattedQuantity = item.Quantity.ToString("0.##");
-                            items.Add(item);
+                        using(SqlDataReader reader = cmd.ExecuteReader()){
+                            if(reader.HasRows){
+                                while(reader.Read()){
+                                        BasketItem item = new BasketItem{
+                                            Date = reader.IsDBNull(0) ? DateTime.MinValue : reader.GetDateTime(0),
+                                            ItemNo = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                                            Description = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                                            SalesDescription = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
+                                            Quantity = reader.IsDBNull(4) ? 0 : reader.GetDecimal(4),
+                                            BaseUnit = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
+                                        };
+                                        item.FormattedQuantity = item.Quantity.ToString("0.##");
+                                        items.Add(item);
+                                }
+                            }
                         }
                     }
+                    conn.Close();
                 }
-            }
+            }catch{
 
-            if(items == null)
-                return new List<BasketItem>();
+            }
 
             return items;
         }

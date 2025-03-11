@@ -5,14 +5,11 @@ using project.entity;
 
 namespace project.data.Concrete{
     public class OtherRepository : IOtherRepository{
-
-        private readonly SchemaService _schemaService;
         private readonly string _connectionString;
         private readonly string _schema;
-        public OtherRepository(IConfiguration configuration, SchemaService schemaService){
+        public OtherRepository(IConfiguration configuration){
             _connectionString = configuration.GetConnectionString("Default");
-            _schemaService = schemaService;
-            _schema = _schemaService.GetSchema();
+            _schema = WebLoginUser.Company;
         }
 
         public int GetCount(string table_name){

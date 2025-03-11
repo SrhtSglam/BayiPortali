@@ -13,13 +13,11 @@ namespace project.webapp.Controllers
     {
         private readonly ILogger<AccountController> _logger;
         private readonly IAccountRepository _accountRepository;
-        private readonly SchemaService _schemaService;
 
-        public AccountController(ILogger<AccountController> logger, IAccountRepository accountRepository, SchemaService schemeService)
+        public AccountController(ILogger<AccountController> logger, IAccountRepository accountRepository)
         {
             _logger = logger;
             _accountRepository = accountRepository;
-            _schemaService = schemeService;
         }
 
         public IActionResult Login()
@@ -31,15 +29,18 @@ namespace project.webapp.Controllers
         [HttpPost]
         public IActionResult Login(string name, string password, string company)
         {
-            var user = new User();
+            var user = new WebLoginUser();
 
-            user = _accountRepository.GetUserByName(name, password, company);
+            user = _accountRepository.GetUserByName(name, password);
 
             if (user != null)
             {
-                _schemaService.SetSchema(company);
-                HttpContext.Session.SetInt32("UserRole", user.WebVisibility);
-                HttpContext.Session.SetString("UserId", user.UserId);
+                // HttpContext.Session.SetInt32("UserRole", user.WebVisibility);
+                // HttpContext.Session.SetString("UserId", user.UserId);
+                WebLoginUser.AuthId = user.UserId;
+                WebLoginUser.Visibility = user.WebVisibility;
+                WebLoginUser.Company = company;
+                
                 return RedirectToAction("Index", "Home");
             }
  
@@ -50,6 +51,9 @@ namespace project.webapp.Controllers
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
+            WebLoginUser.AuthId = "";
+            WebLoginUser.Company = "";
+            WebLoginUser.Visibility = 0;
             return RedirectToAction("Login");
         }
     }

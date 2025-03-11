@@ -1,0 +1,28 @@
+<script src="~/lib/ckeditor/ckeditor.js"></script>
+
+@{
+    ViewData["Title"] = "Duyuru Düzenle";
+    string value = NoticeTextClass.NoticeTextValue;
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="mb-3 row">
+    <div class="col-12">
+        <textarea name="Description" id="editor" class="ckeditor"></textarea>
+
+        <form>
+            <script>
+                CKEDITOR.replace('editor');
+
+                CKEDITOR.instances['editor'].setData(@Html.Raw(Json.Serialize(value)));
+            </script>
+        </form>
+    </div>
+</div>
+
+<div class="mb-3 row">
+    <div class="col-3">
+        <button type="button" class="btn btn-success">Değişiklikleri Uygula</button>
+    </div>
+</div>
+

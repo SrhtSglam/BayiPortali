@@ -25,12 +25,18 @@ namespace project.webapp.Controllers{
         {
             int itemPerPage = 40;
             var items = _functionRepository.GetSellOutItems(page, itemPerPage);
+            var keyvalueitems = _functionRepository.GetTaxAreas();
             
             int totalPage = _otherRepository.GetCountPerPage("Sell-out Ledger Entry", itemPerPage);
             ViewBag.TotalPage = totalPage;
             ViewBag.CurrentPage = page;
 
-            return View(items);
+            var model = new SelloutModel{
+                SellOutItems = items,
+                KeyValueItems = keyvalueitems
+            };
+
+            return View(model);
         }
 
         public IActionResult SerialControl()

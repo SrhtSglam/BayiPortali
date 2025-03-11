@@ -5,14 +5,11 @@ using project.entity;
 
 namespace project.data.Concrete{
     public class FunctionRepository : IFunctionRepository{
-
-        private readonly SchemaService _schemaService;
         private readonly string _connectionString;
         private readonly string _schema;
-        public FunctionRepository(IConfiguration configuration, SchemaService schemaService){
+        public FunctionRepository(IConfiguration configuration){
             _connectionString = configuration.GetConnectionString("Default");
-            _schemaService = schemaService;
-            _schema = _schemaService.GetSchema();
+            _schema = WebLoginUser.Company;
         }
 
         public List<SellOutItem> GetSellOutItems(int currentPage, int itemPerPage){
@@ -43,6 +40,32 @@ namespace project.data.Concrete{
                         }
                     }
                 }
+            }
+
+            return items;
+        }
+
+        public List<KeyValueItem> GetTaxAreas(){
+            List<KeyValueItem> items = new List<KeyValueItem>();
+            string query = @$"SELECT [Code], [Description] FROM [{_schema}$Tax Area]";
+            
+            using(SqlConnection conn = new SqlConnection(_connectionString)){
+                conn.Open();
+                using(SqlCommand cmd = new SqlCommand(query, conn)){
+
+                    using(SqlDataReader reader = cmd.ExecuteReader()){
+                        if(reader.HasRows){
+                            while(reader.Read()){
+                                KeyValueItem item = new KeyValueItem{
+                                    Code = reader.IsDBNull(0) ? string.Empty : reader.GetString(0),
+                                    Description = reader.IsDBNull(0) ? string.Empty : reader.GetString(1)
+                                };
+                                items.Add(item);
+                            }
+                        }
+                    }
+                }
+                conn.Close();
             }
 
             return items;
