@@ -11,12 +11,10 @@ namespace project.webapp.Controllers{
     {
         private readonly ILogger<OrderController> _logger;
         private readonly IOtherRepository _otherRepository;
-        private readonly IItemRepository _itemRepository;
         private readonly IOrderRepository _orderRepository;
-        public OrderController(ILogger<OrderController> logger, IItemRepository itemRepository, IOtherRepository otherRepository, IOrderRepository orderRepository)
+        public OrderController(ILogger<OrderController> logger, IOtherRepository otherRepository, IOrderRepository orderRepository)
         {
             _logger = logger;
-            _itemRepository = itemRepository;
             _orderRepository = orderRepository;
             _otherRepository = otherRepository;
         }
@@ -30,8 +28,8 @@ namespace project.webapp.Controllers{
         {
             int pageSize = 40;
             
-            var items = _itemRepository.GetAll(page, pageSize);
-            var itemCategories = _itemRepository.GetItemCategories();
+            var items = _orderRepository.GetAll(page, pageSize);
+            var itemCategories = _orderRepository.GetItemCategories();
 
             int totalPage = _otherRepository.GetCountPerPage("Item", pageSize);
             ViewBag.TotalPage = totalPage;
@@ -51,14 +49,14 @@ namespace project.webapp.Controllers{
         [HttpGet]
         public JsonResult GetItemCategoriesByItemCode(string selectedItemCode)
         {
-            var filteredCategories = _itemRepository.GetItemCategories(selectedItemCode);
+            var filteredCategories = _orderRepository.GetItemCategories(selectedItemCode);
             return Json(filteredCategories);
         }
 
         [HttpGet]
         public JsonResult GetItemsByCategory(string selectedItemCode)
         {
-            var filteredCategories = _itemRepository.GetItemsByCategory(1, 40, selectedItemCode);
+            var filteredCategories = _orderRepository.GetItemsByCategory(1, 40, selectedItemCode);
             return Json(filteredCategories);
         }
 

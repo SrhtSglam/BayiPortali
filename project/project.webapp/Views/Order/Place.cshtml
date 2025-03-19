@@ -14,73 +14,75 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<div class="mb-3 row">
-    <div class="col-sm-4">
-        <form asp-controller="Order" asp-action="GetItemCategoriesByItemCode" method="get" id="firstFilterForm">
-            <select name="SelectedItemCode" class="form-select" id="firstFilter">
+<div class="pb-3">
+    <div class="mb-3 row">
+        <div class="col-sm-4">
+            <form asp-controller="Order" asp-action="GetItemCategoriesByItemCode" method="get" id="firstFilterForm">
+                <select name="SelectedItemCode" class="form-select" id="firstFilter">
+                    <option selected>Seçiniz..</option>
+                    @foreach (var item in Model.ItemCategories)
+                    {
+                        <option value="@item.Code">@item.Description</option>
+                    }
+                </select>
+            </form>
+        </div>
+        <div class="col-sm-4">
+            <select class="form-select" id="secondFilter">
                 <option selected>Seçiniz..</option>
-                @foreach (var item in Model.ItemCategories)
-                {
-                    <option value="@item.Code">@item.Description</option>
+                @try{
+                    foreach (var item in Model.ItemCategoriesById)
+                    {
+                        <option value="@item.Code">@item.Description</option>
+                    }
+
+                }catch{
+
                 }
             </select>
-        </form>
+        </div>
+        <label class="col-sm-4 col-form-label">Stoklar Anlık Olarak Değişebilir</label>
     </div>
-    <div class="col-sm-4">
-        <select class="form-select" id="secondFilter">
-            <option selected>Seçiniz..</option>
-            @try{
-                foreach (var item in Model.ItemCategoriesById)
-                {
-                    <option value="@item.Code">@item.Description</option>
-                }
 
-            }catch{
 
+    <nav>
+        <ul class="pagination">
+            @if (currentPage > 1)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Place", "Order", new { page = 1 })">&laquo;</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Place", "Order", new { page = currentPage - 1 })">&lt;</a>
+                </li>
             }
-        </select>
-    </div>
-    <label class="col-sm-4 col-form-label">Stoklar Anlık Olarak Değişebilir</label>
+
+            @for (int i = startPage; i <= endPage; i++)
+            {
+                <li class="page-item @(i == currentPage ? "active" : "")">
+                    <a class="page-link" href="@Url.Action("Place", "Order", new { page = i })">@i</a>
+                </li>
+            }
+
+            @if (currentPage < totalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Place", "Order", new { page = currentPage + 1 })">&gt;</a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Place", "Order", new { page = totalPages })">&raquo;</a>
+                </li>
+            }
+        </ul>
+    </nav>
+
+
+    <partial name="_itemTable" />
+
+    <partial name="_itemdetailmodal" />
 </div>
-
-
-<nav>
-    <ul class="pagination">
-        @if (currentPage > 1)
-        {
-            <li class="page-item">
-                <a class="page-link" href="@Url.Action("Place", "Order", new { page = 1 })">&laquo;</a>
-            </li>
-
-            <li class="page-item">
-                <a class="page-link" href="@Url.Action("Place", "Order", new { page = currentPage - 1 })">&lt;</a>
-            </li>
-        }
-
-        @for (int i = startPage; i <= endPage; i++)
-        {
-            <li class="page-item @(i == currentPage ? "active" : "")">
-                <a class="page-link" href="@Url.Action("Place", "Order", new { page = i })">@i</a>
-            </li>
-        }
-
-        @if (currentPage < totalPages)
-        {
-            <li class="page-item">
-                <a class="page-link" href="@Url.Action("Place", "Order", new { page = currentPage + 1 })">&gt;</a>
-            </li>
-
-            <li class="page-item">
-                <a class="page-link" href="@Url.Action("Place", "Order", new { page = totalPages })">&raquo;</a>
-            </li>
-        }
-    </ul>
-</nav>
-
-
-<partial name="_itemTable" />
-
-<partial name="_itemdetailmodal" />
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {

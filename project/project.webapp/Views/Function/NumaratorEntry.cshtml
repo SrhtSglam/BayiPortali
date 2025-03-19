@@ -1,3 +1,5 @@
+@model List<NumeratorItem>
+
 @{
     ViewData["Title"] = "Numaratör Girişi";
     DateTime currentDate = DateTime.Now;
@@ -6,87 +8,134 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<div class="mb-3 row">
-    <div class="col-3">
-        <div class="input-group mb-3">
-            <label class="input-group-text" for="ekstreGroup">Fatura Dönemi</label>
-            <input type="number" class="form-control" value="@currentYear">
+<div class="pb-3">
+    <div class="mb-3 row">
+        <div class="col-3">
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="ekstreGroup">Fatura Dönemi</label>
+                <input type="number" class="form-control" value="@currentYear">
+            </div>
+
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="ekstreGroup">Kur Tarihi: </label>
+                <input type="date" class="form-control" value="@currentDate.ToString("yyyy-dd-MM")">
+            </div>
         </div>
 
-        <div class="input-group mb-3">
-            <label class="input-group-text" for="ekstreGroup">Kur Tarihi: </label>
-            <input type="date" class="form-control" value="@currentDate.ToString("yyyy-dd-MM")">
+        <div class="col-3">
+            <div class="input-group mb-3">
+                <select class="form-select" id="ekstreGroup">
+                    <option selected>Seçiniz..</option>
+                    @for(int i = 0; i < months.Length; i++){
+                        <option value="@i">@months[i]</option>
+                    }
+                </select>
+            </div>
         </div>
     </div>
 
-    <div class="col-3">
-        <div class="input-group mb-3">
-            <select class="form-select" id="ekstreGroup">
-                <option selected>Seçiniz..</option>
-                @for(int i = 0; i < months.Length; i++){
-                    <option value="@i">@months[i]</option>
-                }
-            </select>
+    <div class="container mt-4">
+        <div style="overflow-x:auto;">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th >#</th>
+                        <th>Bayi Adı</th>
+                        <th>Envanter No</th>
+                        <th>Sorumluluk Merkezi</th>
+                        <th>Sözleşme No</th>
+                        <th>Bitiş Tarihi</th>
+                        <th>Sözleşme Durumu</th>
+                        <th>Madde No</th>
+                        <th>Description</th>
+                        <th>Seri No</th>
+                        <th>Cari Tanım</th>
+                        <th>S/B Son Okuma</th>
+                        <th>S/B Girilen</th>
+                        <th>S/B Fark</th>
+                        <th>Renkli Son Okuma</th>
+                        <th>Renkli Girilen</th>
+                        <th>Renkli Fark</th>
+                        <th>S/B Fiyat</th>
+                        <th>RNK Fiyat</th>
+                        <th>Müdahale Süresi</th>
+                        <th>Çözüm Süresi</th>
+                        <th>Periyodik Bakım Zamanı</th>
+                        <th>Notlar</th>
+                        <th>İşçilik Bedeli</th>
+                        <th>Sözleşme Türü</th>
+                        <th>Kapsam Türü</th>
+                        <th>Kapsam Türü Açıklaması</th>
+                        <th>Servis Blok</th>
+                        <th>Malzeme Blok</th>
+                        <th>Cezai Şart</th>
+                        <th>Döviz Cinsi</th>
+                        <th>Kur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if(Model != null && Model.Count > 0){
+                        foreach(var item in Model){
+                            <tr>
+                                <td class="text-center"></td>
+                                <td class="text-center">@item.BranchName</td>
+                                <td class="text-center">@item.InventoryNo</td>
+                                <td class="text-center">@item.ResponsibilityCenter</td>
+                                <td class="text-center">@item.ContractNo</td>
+                                <td class="text-center">@item.EndDate</td>
+                                <td class="text-center">@item.ContractStatus</td>
+                                <td class="text-center">@item.ArticleNo</td>
+                                <td class="text-center">@item.Description</td>
+                                <td class="text-center">@item.SerialNo</td>
+                                <td class="text-center">@item.CurrentDefinition</td>
+                                <td class="text-center">@item.StockReading</td>
+                                <td class="text-center">@item.StockEntered</td>
+                                <td class="text-center">@item.StockDifference</td>
+                                <td class="text-center">@item.ColoredReading</td>
+                                <td class="text-center">@item.ColoredEntered</td>
+                                <td class="text-center">@item.ColoredDifference</td>
+                                <td class="text-center">@item.StockPrice</td>
+                                <td class="text-center">@item.RNKPrice</td>
+                                <td class="text-center">@item.InterventionTime</td>
+                                <td class="text-center">@item.ResolutionTime</td>
+                                <td class="text-center">@item.PeriodicMaintenanceTime</td>
+                                <td class="text-center">@item.Notes</td>
+                                <td class="text-center">@item.LaborCost</td>
+                                <td class="text-center">@item.ContractType</td>
+                                <td class="text-center">@item.ScopeType</td>
+                                <td class="text-center">@item.ScopeTypeDescription</td>
+                                <td class="text-center">@item.ServiceBlock</td>
+                                <td class="text-center">@item.MaterialBlock</td>
+                                <td class="text-center">@item.PenalClause</td>
+                                <td class="text-center">@item.CurrencyType</td>
+                                <td class="text-center">@item.ExchangeRate</td>
+                            </tr>
+                        }
+                    }
+                    else{
+                        <tr>
+                            <td colspan="32" class="text-center">No data to display</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
-</div>
 
-<div class="container mt-4">
-    <div style="overflow-x:auto;">
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Bayi Adı</th>
-                    <th>Envanter No</th>
-                    <th>Sorumluluk Merkezi</th>
-                    <th>Sözleşme No</th>
-                    <th>Bitiş Tarihi</th>
-                    <th>Sözleşme Durumu</th>
-                    <th>Madde No</th>
-                    <th>Description</th>
-                    <th>Seri No</th>
-                    <th>Cari Tanım</th>
-                    <th>S/B Son Okuma</th>
-                    <th>S/B Girilen</th>
-                    <th>S/B Fark</th>
-                    <th>Renkli Son Okuma</th>
-                    <th>Renkli Girilen</th>
-                    <th>Renkli Fark</th>
-                    <th>S/B Fiyat</th>
-                    <th>RNK Fiyat</th>
-                    <th>Müdahale Süresi</th>
-                    <th>Çözüm Süresi</th>
-                    <th>Periyodik Bakım Zamanı</th>
-                    <th>Notlar</th>
-                    <th>İşçilik Bedeli</th>
-                    <th>Sözleşme Türü</th>
-                    <th>Kapsam Türü</th>
-                    <th>Kapsam Türü Açıklaması</th>
-                    <th>Servis Blok</th>
-                    <th>Malzeme Blok</th>
-                    <th>Cezai Şart</th>
-                    <th>Döviz Cinsi</th>
-                    <th>Kur</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="32" class="text-center">No data to display</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="mb-3 row">
+        <div class="col-12">
+            <label for="warningNote">"Not: Giriş butonu olmayan cihazların numaratör girişi Bilgitaş tarafından yapılacaktır.</label>
+        </div>
     </div>
-</div>
-
-<div class="mb-3 row">
-    <div class="col-12">
-        <label for="warningNote">"Not: Giriş butonu olmayan cihazların numaratör girişi Bilgitaş tarafından yapılacaktır.</label>
-    </div>
-</div>
-
-<div class="mb-3 row">
-    <div class="col-3">
-        <input type="submit" class="form-control btn btn-success" id="InputExcel" value="Excel'e Gönder">
-    </div>
+    @using (Html.BeginForm("UploadExcel", "Function", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="mb-3 row">
+            <div class="col-3">
+                <input type="file" class="form-control btn btn-secondary" name="file" id="file" />
+            </div>
+            <div class="col-3">
+                <input type="submit" class="form-control btn btn-success" id="InputExcel" value="Excel'e Gönder">
+            </div>
+        </div>
+    }
 </div>

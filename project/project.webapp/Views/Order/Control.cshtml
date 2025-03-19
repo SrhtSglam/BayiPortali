@@ -6,53 +6,55 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">SEPETİNİZ</th>
-        </tr>
-        <tr>
-            <th scope="col">Tarih / Saat</th>
-            <th scope="col">Madde No</th>
-            <th scope="col">Madde Açıklama</th>
-            <th scope="col">Talep Miktar</th>
-            <th scope="col">Ölçü Birimi</th>
-            <th scope="col">Karşılanan Miktar</th>
-            <th scope="col">Kalan Miktar</th>
-            <th scope="col">Sipariş Açıklama</th>
-        </tr>
-        <tr>
-            <th scope="col" />
-            <th scope="col"><input type="text" class="form-control"></th>
-            <th scope="col"><input type="text" class="form-control"></th>
-            <th scope="col" />
-            <th scope="col" />
-            <th scope="col" />
-            <th scope="col" />
-            <th scope="col"><input type="text" class="form-control"></th>
-        </tr>
-    </thead>
-    <tbody>
-        @try
-        {
-            foreach (var items in Model)
+<div class="pb-3">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">SEPETİNİZ</th>
+            </tr>
+            <tr>
+                <th scope="col">Tarih / Saat</th>
+                <th scope="col">Madde No</th>
+                <th scope="col">Madde Açıklama</th>
+                <th scope="col">Talep Miktar</th>
+                <th scope="col">Ölçü Birimi</th>
+                <th scope="col">Karşılanan Miktar</th>
+                <th scope="col">Kalan Miktar</th>
+                <th scope="col">Sipariş Açıklama</th>
+            </tr>
+            <tr>
+                <th scope="col" />
+                <th scope="col"><input type="text" class="form-control"></th>
+                <th scope="col"><input type="text" class="form-control"></th>
+                <th scope="col" />
+                <th scope="col" />
+                <th scope="col" />
+                <th scope="col" />
+                <th scope="col"><input type="text" class="form-control"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @try
             {
-                <tr>
-                    <td>@items.Date</td>
-                    <td>@items.ItemNo</td>
-                    <td>@items.Description</td>
-                    <td></td>
-                    <td>@items.BaseUnit</td>
-                    <td></td>
-                    <td>@items.SalesDescription</td>
-                </tr>
+                foreach (var items in Model)
+                {
+                    <tr>
+                        <td>@items.Date</td>
+                        <td>@items.ItemNo</td>
+                        <td>@items.Description</td>
+                        <td></td>
+                        <td>@items.BaseUnit</td>
+                        <td></td>
+                        <td>@items.SalesDescription</td>
+                    </tr>
+                }
             }
-        }
-        catch
-        {
+            catch
+            {
 
-        }
-    </tbody>
-</table>
+            }
+        </tbody>
+    </table>
 
-<button type="button" class="btn btn-success">Onayla</button>
+    <button type="button" class="btn btn-success">Onayla</button>
+</div>

@@ -70,5 +70,34 @@ namespace project.data.Concrete{
 
             return items;
         }
+
+        public ItemSerial GetItemBySerialNo(string SerialNo){
+            var item = new ItemSerial();
+            string query = $@"SELECT 
+            SNI.[Item No_], SNI.[Serial No_], BI.[Description]
+            FROM [{_schema}$Serial No_ Information] SNI
+            LEFT JOIN [{_schema}$Item] BI ON BI.No_ = SNI.[Item No_]
+            WHERE [Serial No_] = @ItemCode";
+            
+            using(SqlConnection conn = new SqlConnection(_connectionString)){
+                conn.Open();
+                using(SqlCommand cmd = new SqlCommand(query, conn)){
+                    cmd.Parameters.AddWithValue("@ItemCode", SerialNo);
+
+                    using(SqlDataReader reader = cmd.ExecuteReader()){
+                        if(reader.Read()){
+                            item = new ItemSerial{
+                                Code = reader.IsDBNull(0) ? string.Empty : reader.GetString(0),
+                                SerialNo = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                                Description = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                            };
+                        }
+                    }
+                }
+                conn.Close();
+            }
+            
+            return item;
+        }
     }
 }

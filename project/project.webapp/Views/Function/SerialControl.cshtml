@@ -6,40 +6,41 @@
     var Success = ViewBag.QuerySuccess;
 }
 <h1>@ViewData["Title"]</h1>
+<div class="pb-3">
+    <form asp-controller="Function" asp-action="SerialControl" method="post">
+        <div class="mb-3 row">
+            <label for="InputSerialNumber" class="col-sm-2 col-form-label">Seri Numarasını Girin: </label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="SerialNo" id="InputSerialNumber">
+            </div>
+            <div class="col-sm-2">
+                <input type="submit" class="form-control btn btn-primary" id="InputQuery" value="Sorgula">
+            </div>
+        </div>
+    </form>
 
-<form asp-controller="Function" asp-action="SerialControl" method="post">
-    <div class="mb-3 row">
-        <label for="InputSerialNumber" class="col-sm-2 col-form-label">Seri Numarasını Girin: </label>
-        <div class="col-sm-4">
-            <input type="text" class="form-control" name="SerialNo" id="InputSerialNumber">
-        </div>
-        <div class="col-sm-2">
-            <input type="submit" class="form-control btn btn-primary" id="InputQuery" value="Sorgula">
-        </div>
-    </div>
-</form>
-
-@if(Success != null){
-    if(Success == true){
-        <div class="col-5">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <strong>Kod:</strong>
-                    <span>@Model.Code</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <strong>Seri No:</strong>
-                    <span>@Model.SerialNo</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <strong>Açıklama:</strong>
-                    <span>@Model.Description</span>
-                </li>
-            </ul>
-        </div>
-    }else{
-        <div class="alert alert-warning" role="alert">
-            Sorguladığınız seri numarası bir Kyocera ürünü DEĞİLDİR!
-        </div>
+    @if(Success != null){
+        if(Success == true){
+            <div class="col-5">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <strong>Kod:</strong>
+                        <span>@Model.Code</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <strong>Seri No:</strong>
+                        <span>@Model.SerialNo</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <strong>Açıklama:</strong>
+                        <span>@Model.Description</span>
+                    </li>
+                </ul>
+            </div>
+        }else{
+            <div class="alert alert-warning" role="alert">
+                Sorguladığınız seri numarası bir Kyocera ürünü DEĞİLDİR!
+            </div>
+        }
     }
-}
+</div>

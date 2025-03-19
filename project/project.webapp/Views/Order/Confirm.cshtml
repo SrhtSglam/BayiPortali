@@ -6,43 +6,45 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">SEPETİNİZ</th>
-        </tr>
-        <tr>
-            <th scope="col">Tarih / Saat</th>
-            <th scope="col">Madde No</th>
-            <th scope="col">Madde Açıklama</th>
-            <th scope="col">Satış Açıklaması</th>
-            <th scope="col">Miktar</th>
-            <th scope="col">Ölçü Birimi</th>
-            <th scope="col">Sil</th>
-        </tr>
-    </thead>
-    <tbody>
-        @try
-        {
-            foreach (var item in Model)
+<div class="pb-3">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">SEPETİNİZ</th>
+            </tr>
+            <tr>
+                <th scope="col">Tarih / Saat</th>
+                <th scope="col">Madde No</th>
+                <th scope="col">Madde Açıklama</th>
+                <th scope="col">Satış Açıklaması</th>
+                <th scope="col">Miktar</th>
+                <th scope="col">Ölçü Birimi</th>
+                <th scope="col">Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            @try
             {
-                <tr>
-                    <td>@item.Date</td>
-                    <td>@item.ItemNo</td>
-                    <td>@item.Description</td>
-                    <td>@item.SalesDescription</td>
-                    @* <td>@item.Quantity</td> *@
-                    <td>@item.FormattedQuantity</td>
-                    <td>@item.BaseUnit</td>
-                    <td><button type="button" class="btn btn-danger">Sil</button></td>
-                </tr>
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Date</td>
+                        <td>@item.ItemNo</td>
+                        <td>@item.Description</td>
+                        <td>@item.SalesDescription</td>
+                        @* <td>@item.Quantity</td> *@
+                        <td>@item.FormattedQuantity</td>
+                        <td>@item.BaseUnit</td>
+                        <td><button type="button" class="btn btn-danger">Sil</button></td>
+                    </tr>
+                }
             }
-        }
-        catch
-        {
+            catch
+            {
 
-        }
-    </tbody>
-</table>
+            }
+        </tbody>
+    </table>
 
-<button type="button" class="btn btn-success">Onayla</button>
+    <button type="button" class="btn btn-success">Onayla</button>
+</div>

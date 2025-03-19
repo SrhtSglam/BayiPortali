@@ -11,7 +11,6 @@ var connectionString = builder.Configuration.GetConnectionString("Default");
 // Add services to the container.
 service.AddControllersWithViews();
 
-service.AddScoped<IItemRepository, ItemRepository>();
 service.AddScoped<IAccountRepository, AccountRepository>();
 service.AddScoped<IFunctionRepository, FunctionRepository>();
 service.AddScoped<IOtherRepository, OtherRepository>();

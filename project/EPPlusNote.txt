@@ -1,0 +1,77 @@
+public IActionResult NumaratorEntry(){
+            var items = TempData["NumeratorItems"] as List<NumeratorItem>;
+
+            if (TempData["NumeratorItems"] != null)
+            {
+                string json = TempData["NumeratorItems"].ToString();
+                items = JsonConvert.DeserializeObject<List<NumeratorItem>>(json);
+            }
+
+            return View(items);
+        }
+
+        // [HttpPost]
+        // public ActionResult UploadExcel(IFormFile file)
+        // {
+        //     List<NumeratorItem> numeratorItems = new List<NumeratorItem>();
+
+        //     if (file != null && file.Length > 0)
+        //     {
+        //         using (var package = new ExcelPackage(file.OpenReadStream()))
+        //         {
+        //             var workbook = package.Workbook;
+        //             var worksheet = workbook.Worksheets[0];
+
+        //             int rowCount = worksheet.Dimension.Rows;
+
+        //             for (int row = 2; row <= rowCount; row++) // Start from row 2 to skip the header
+        //             {
+        //                 var numeratorItem = new NumeratorItem
+        //                 {
+        //                     BranchName = worksheet.Cells[row, 1].Text,
+        //                     InventoryNo = worksheet.Cells[row, 2].Text,
+        //                     ResponsibilityCenter = worksheet.Cells[row, 3].Text,
+        //                     ContractNo = worksheet.Cells[row, 4].Text,
+        //                     EndDate = DateOnly.Parse(worksheet.Cells[row, 5].Text),
+        //                     ContractStatus = worksheet.Cells[row, 6].Text,
+        //                     ArticleNo = worksheet.Cells[row, 7].Text,
+        //                     Description = worksheet.Cells[row, 8].Text,
+        //                     SerialNo = worksheet.Cells[row, 9].Text,
+        //                     CurrentDefinition = worksheet.Cells[row, 10].Text,
+        //                     StockReading = worksheet.Cells[row, 11].Text,
+        //                     StockEntered = worksheet.Cells[row, 12].Text,
+        //                     StockDifference = worksheet.Cells[row, 13].Text,
+        //                     ColoredReading = worksheet.Cells[row, 14].Text,
+        //                     ColoredEntered = worksheet.Cells[row, 15].Text,
+        //                     ColoredDifference = worksheet.Cells[row, 16].Text,
+        //                     StockPrice = worksheet.Cells[row, 17].Text,
+        //                     RNKPrice = worksheet.Cells[row, 18].Text,
+        //                     InterventionTime = worksheet.Cells[row, 19].Text,
+        //                     ResolutionTime = worksheet.Cells[row, 20].Text,
+        //                     PeriodicMaintenanceTime = worksheet.Cells[row, 21].Text,
+        //                     Notes = worksheet.Cells[row, 22].Text,
+        //                     LaborCost = worksheet.Cells[row, 23].Text,
+        //                     ContractType = worksheet.Cells[row, 24].Text,
+        //                     ScopeType = worksheet.Cells[row, 25].Text,
+        //                     ScopeTypeDescription = worksheet.Cells[row, 26].Text,
+        //                     ServiceBlock = worksheet.Cells[row, 27].Text,
+        //                     MaterialBlock = worksheet.Cells[row, 28].Text,
+        //                     PenalClause = worksheet.Cells[row, 29].Text,
+        //                     CurrencyType = worksheet.Cells[row, 30].Text,
+        //                     ExchangeRate = worksheet.Cells[row, 31].Text
+        //                 };
+
+        //                 numeratorItems.Add(numeratorItem);
+        //             }
+        //         }
+
+        //         TempData["NumeratorItems"] = JsonConvert.SerializeObject(numeratorItems);
+        //         ViewBag.Message = "File uploaded successfully!";
+        //     }
+        //     else
+        //     {
+        //         ViewBag.Message = "Please select a valid file.";
+        //     }
+
+        //     return RedirectToAction("NumaratorEntry");
+        // }
