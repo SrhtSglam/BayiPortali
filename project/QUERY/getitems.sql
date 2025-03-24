@@ -1,6 +1,6 @@
 SELECT BIC.[Description], BI.[Product Group Code], 
 BI.[No_], BI.[Description], BI.[No_ 2], 
-SP.[Currency Code], SP.[Unit Price]
+SP.[Currency Code], SP.[Unit Price], BI.[Picture]
 FROM [Bilgitas$Item] BI 
 INNER JOIN [Bilgitas$Item Category] BIC on 
 BIC.[Code] = BI.[Item Category Code]

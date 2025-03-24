@@ -9,6 +9,7 @@ namespace project.entity{
         public string? CurrencyCode { get; set; }
         public decimal UnitPrice { get; set; }
 
+        public string? Image { get; set; }
         public string? FormattedPrice { get; set; }
     }
 

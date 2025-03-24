@@ -83,57 +83,61 @@ namespace project.webapp.Controllers
 
                     try
                     {
-                        // Geçici bir dosya oluşturuyoruz
                         string tempFilePath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString() + ".xlsx");
                         System.IO.File.WriteAllBytes(tempFilePath, fileBytes);
 
-                        // ClosedXML ile Excel dosyasını açıyoruz
                         using (var workbook = new XLWorkbook(tempFilePath))
                         {
+                            
                             var worksheet = workbook.Worksheet(1);
+                            
+                            if(worksheet.Name != "NUMARATOR" || worksheet.Name != "NUMARATÖR" || worksheet.Name != ""){
+                                RedirectToAction("NumaratorEntry");
+                            }else{
+                                int rowCount = worksheet.RowsUsed().Count();
 
-                            // Excel verilerini okuma
-                            int rowCount = worksheet.RowsUsed().Count();
-
-                            for (int row = 2; row <= rowCount; row++) // Başlık satırını atlıyoruz
-                            {
-                                var numeratorItem = new NumeratorItem
+                                for (int row = 2; row <= rowCount; row++)
                                 {
-                                    BranchName = worksheet.Cell(row, 1).Value?.ToString(),
-                                    InventoryNo = worksheet.Cell(row, 2).Value?.ToString(),
-                                    ResponsibilityCenter = worksheet.Cell(row, 3).Value?.ToString(),
-                                    ContractNo = worksheet.Cell(row, 4).Value?.ToString(),
-                                    EndDate = DateOnly.TryParse(worksheet.Cell(row, 5).Value?.ToString() ?? "", out var endDate) ? endDate : default,
-                                    ContractStatus = worksheet.Cell(row, 6).Value?.ToString(),
-                                    ArticleNo = worksheet.Cell(row, 7).Value?.ToString(),
-                                    Description = worksheet.Cell(row, 8).Value?.ToString(),
-                                    SerialNo = worksheet.Cell(row, 9).Value?.ToString(),
-                                    CurrentDefinition = worksheet.Cell(row, 10).Value?.ToString(),
-                                    StockReading = worksheet.Cell(row, 11).Value?.ToString(),
-                                    StockEntered = worksheet.Cell(row, 12).Value?.ToString(),
-                                    StockDifference = worksheet.Cell(row, 13).Value?.ToString(),
-                                    ColoredReading = worksheet.Cell(row, 14).Value?.ToString(),
-                                    ColoredEntered = worksheet.Cell(row, 15).Value?.ToString(),
-                                    ColoredDifference = worksheet.Cell(row, 16).Value?.ToString(),
-                                    StockPrice = worksheet.Cell(row, 17).Value?.ToString(),
-                                    RNKPrice = worksheet.Cell(row, 18).Value?.ToString(),
-                                    InterventionTime = worksheet.Cell(row, 19).Value?.ToString(),
-                                    ResolutionTime = worksheet.Cell(row, 20).Value?.ToString(),
-                                    PeriodicMaintenanceTime = worksheet.Cell(row, 21).Value?.ToString(),
-                                    Notes = worksheet.Cell(row, 22).Value?.ToString(),
-                                    LaborCost = worksheet.Cell(row, 23).Value?.ToString(),
-                                    ContractType = worksheet.Cell(row, 24).Value?.ToString(),
-                                    ScopeType = worksheet.Cell(row, 25).Value?.ToString(),
-                                    ScopeTypeDescription = worksheet.Cell(row, 26).Value?.ToString(),
-                                    ServiceBlock = worksheet.Cell(row, 27).Value?.ToString(),
-                                    MaterialBlock = worksheet.Cell(row, 28).Value?.ToString(),
-                                    PenalClause = worksheet.Cell(row, 29).Value?.ToString(),
-                                    CurrencyType = worksheet.Cell(row, 30).Value?.ToString(),
-                                    ExchangeRate = worksheet.Cell(row, 31).Value?.ToString()
-                                };
+                                    var numeratorItem = new NumeratorItem
+                                    {
+                                        BranchName = worksheet.Cell(row, 1).Value?.ToString(),
+                                        InventoryNo = worksheet.Cell(row, 2).Value?.ToString(),
+                                        ResponsibilityCenter = worksheet.Cell(row, 3).Value?.ToString(),
+                                        ContractNo = worksheet.Cell(row, 4).Value?.ToString(),
+                                        EndDate = DateOnly.TryParse(worksheet.Cell(row, 5).Value?.ToString() ?? "", out var endDate) ? endDate : default,
+                                        ContractStatus = worksheet.Cell(row, 6).Value?.ToString(),
+                                        ArticleNo = worksheet.Cell(row, 7).Value?.ToString(),
+                                        Description = worksheet.Cell(row, 8).Value?.ToString(),
+                                        SerialNo = worksheet.Cell(row, 9).Value?.ToString(),
+                                        CurrentDefinition = worksheet.Cell(row, 10).Value?.ToString(),
+                                        StockReading = worksheet.Cell(row, 11).Value?.ToString(),
+                                        StockEntered = worksheet.Cell(row, 12).Value?.ToString(),
+                                        StockDifference = worksheet.Cell(row, 13).Value?.ToString(),
+                                        ColoredReading = worksheet.Cell(row, 14).Value?.ToString(),
+                                        ColoredEntered = worksheet.Cell(row, 15).Value?.ToString(),
+                                        ColoredDifference = worksheet.Cell(row, 16).Value?.ToString(),
+                                        StockPrice = worksheet.Cell(row, 17).Value?.ToString(),
+                                        RNKPrice = worksheet.Cell(row, 18).Value?.ToString(),
+                                        InterventionTime = worksheet.Cell(row, 19).Value?.ToString(),
+                                        ResolutionTime = worksheet.Cell(row, 20).Value?.ToString(),
+                                        PeriodicMaintenanceTime = worksheet.Cell(row, 21).Value?.ToString(),
+                                        Notes = worksheet.Cell(row, 22).Value?.ToString(),
+                                        LaborCost = worksheet.Cell(row, 23).Value?.ToString(),
+                                        ContractType = worksheet.Cell(row, 24).Value?.ToString(),
+                                        ScopeType = worksheet.Cell(row, 25).Value?.ToString(),
+                                        ScopeTypeDescription = worksheet.Cell(row, 26).Value?.ToString(),
+                                        ServiceBlock = worksheet.Cell(row, 27).Value?.ToString(),
+                                        MaterialBlock = worksheet.Cell(row, 28).Value?.ToString(),
+                                        PenalClause = worksheet.Cell(row, 29).Value?.ToString(),
+                                        CurrencyType = worksheet.Cell(row, 30).Value?.ToString(),
+                                        ExchangeRate = worksheet.Cell(row, 31).Value?.ToString()
+                                    };
 
-                                numeratorItems.Add(numeratorItem);
+                                    numeratorItems.Add(numeratorItem);
+                                }
+
                             }
+
                         }
                     }
                     catch (Exception ex)
@@ -143,8 +147,7 @@ namespace project.webapp.Controllers
                     }
                 }
 
-                // Veriyi model olarak gönderiyoruz
-                return View("NumaratorEntry", numeratorItems);  // Directly pass the list to the view
+                return View("NumaratorEntry", numeratorItems); 
             }
             else
             {

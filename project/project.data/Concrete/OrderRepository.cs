@@ -90,7 +90,7 @@ namespace project.data.Concrete{
             int offset = (currentPage - 1) * itemPerPage;
             string query = $@"SELECT BIC.[Description], BI.[Product Group Code], 
             BI.[No_], BI.[Description], BI.[No_ 2], 
-            SP.[Currency Code], SP.[Unit Price]
+            SP.[Currency Code], SP.[Unit Price], BI.[Picture]
             FROM [{_schema}$Item] BI 
             INNER JOIN [{_schema}$Item Category] BIC on 
             BIC.[Code] = BI.[Item Category Code]
@@ -119,6 +119,18 @@ namespace project.data.Concrete{
                                         CurrencyCode = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
                                         UnitPrice = reader.IsDBNull(6) ? 0 : reader.GetDecimal(6),
                                     };
+
+                                    if (!reader.IsDBNull(7))
+                                    {
+                                        byte[] pictureData = (byte[])reader[7];
+                                        string base64Image = Convert.ToBase64String(pictureData);
+                                        item.Image = $"data:image/jpeg;base64,{base64Image}";
+                                    }
+                                    else
+                                    {
+                                        item.Image = string.Empty;
+                                    }
+
                                     item.FormattedPrice = item.UnitPrice.ToString("0.##");
                                     items.Add(item);
                                 }

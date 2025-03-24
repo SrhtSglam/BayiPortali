@@ -5,24 +5,25 @@
     string value = NoticeTextClass.NoticeTextValue;
 }
 <h1>@ViewData["Title"]</h1>
+<div class="pb-3">
+    <div class="mb-3 row">
+        <div class="col-12">
+            <textarea name="Description" id="editor" class="ckeditor"></textarea>
 
-<div class="mb-3 row">
-    <div class="col-12">
-        <textarea name="Description" id="editor" class="ckeditor"></textarea>
+            <form>
+                <script>
+                    CKEDITOR.replace('editor');
 
-        <form>
-            <script>
-                CKEDITOR.replace('editor');
-
-                CKEDITOR.instances['editor'].setData(@Html.Raw(Json.Serialize(value)));
-            </script>
-        </form>
+                    CKEDITOR.instances['editor'].setData(@Html.Raw(Json.Serialize(value)));
+                </script>
+            </form>
+        </div>
     </div>
-</div>
 
-<div class="mb-3 row">
-    <div class="col-3">
-        <button type="button" class="btn btn-success">Değişiklikleri Uygula</button>
+    <div class="mb-3 row">
+        <div class="col-3">
+            <button type="button" class="btn btn-success">Değişiklikleri Uygula</button>
+        </div>
     </div>
 </div>
 
