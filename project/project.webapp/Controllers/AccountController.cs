@@ -22,6 +22,9 @@ namespace project.webapp.Controllers
 
         public IActionResult Login()
         {
+            // WebLoginUser.AuthId = "ERDEN_ADMIN";
+            // WebLoginUser.Visibility = 3;
+            // WebLoginUser.Company = "Bilgitas";
             var companies = _accountRepository.GetCompanies();
             return View(companies);
         }

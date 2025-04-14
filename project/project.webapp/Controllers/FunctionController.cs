@@ -91,7 +91,7 @@ namespace project.webapp.Controllers
                             
                             var worksheet = workbook.Worksheet(1);
                             
-                            if(worksheet.Name != "NUMARATOR" || worksheet.Name != "NUMARATÖR" || worksheet.Name != ""){
+                            if(worksheet.Name != "NUMARATOR" && worksheet.Name != "NUMARATÖR" && worksheet.Name != ""){
                                 RedirectToAction("NumaratorEntry");
                             }else{
                                 int rowCount = worksheet.RowsUsed().Count();

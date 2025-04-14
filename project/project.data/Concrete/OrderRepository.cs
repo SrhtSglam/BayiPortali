@@ -1,3 +1,4 @@
+using System.Text;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using project.data.Abstract;
@@ -14,7 +15,7 @@ namespace project.data.Concrete{
 
         public ItemDetail GetItemDetail(string itemCode){
             ItemDetail item = new ItemDetail();
-            string query = @$"SELECT [Base Unit of Measure], [Aylık Baskı Hacmi], [Baskı Kapasitesi (Num)] 
+            string query = @$"SELECT [Base Unit of Measure], [Aylık Baskı Hacmi], [Baskı Kapasitesi (Num)], [Picture]
             FROM [{_schema}$Item] WHERE [No_] = @itemCode";
             
             try{
@@ -26,11 +27,22 @@ namespace project.data.Concrete{
                             if(reader.Read()){
                                 item = new ItemDetail{
                                     BaseUnitOfMeasure = reader.IsDBNull(0) ? string.Empty : reader.GetString(0),
-                                    MonthlyPrintVolume = reader.IsDBNull(0) ? 0 : reader.GetInt32(0),
-                                    PrintingCapacity = reader.IsDBNull(0) ? 0 : reader.GetInt32(0)
+                                    MonthlyPrintVolume = reader.IsDBNull(1) ? 0 : reader.GetInt32(1),
+                                    PrintingCapacity = reader.IsDBNull(2) ? 0 : reader.GetInt32(2)
                                 
                                 };
-                            }
+
+                                if (!reader.IsDBNull(3))
+                                    {
+                                        byte[] pictureData = (byte[])reader[3];
+                                        string base64Image = Convert.ToBase64String(pictureData);
+                                        item.PictureData = $"data:image/jpeg;base64,{base64Image}";
+                                    }
+                                    else
+                                    {
+                                        item.PictureData = string.Empty;
+                                    }
+                                }
                         }
                     }
                     conn.Close();
@@ -123,8 +135,12 @@ namespace project.data.Concrete{
                                     if (!reader.IsDBNull(7))
                                     {
                                         byte[] pictureData = (byte[])reader[7];
+                                        // string decodedString = Encoding.UTF8.GetString(pictureData);
                                         string base64Image = Convert.ToBase64String(pictureData);
-                                        item.Image = $"data:image/jpeg;base64,{base64Image}";
+
+                                        // string base64Image = System.Text.Encoding.UTF8.GetBytes(pictureData);
+                                        // item.Image = $"data:image/jpeg;base64,{base64Image}";
+                                        item.Image = base64Image;
                                     }
                                     else
                                     {

@@ -56,11 +56,9 @@ namespace project.data.Concrete{
 
                         using(SqlDataReader reader = cmd.ExecuteReader()){
                             if(reader.Read()){
-                                user = new WebLoginUser{
-                                    UserId = reader["User ID"].ToString(),
-                                    Password = reader["Password"].ToString(),
-                                    WebVisibility = Convert.ToInt32(reader["Web Visibility"])
-                                };
+                                user.UserId = reader["User ID"].ToString();
+                                user.Password = reader["Password"].ToString();
+                                user.WebVisibility = Convert.ToInt32(reader["Web Visibility"]);
                             }
                         }
                     }

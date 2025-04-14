@@ -64,7 +64,8 @@ namespace project.webapp.Controllers{
         public JsonResult GetItemDetails(string itemCode)
         {
             var item = _orderRepository.GetItemDetail(itemCode);
-            return Json(item);
+
+            return Json(new { data = item });
         }
 
         public IActionResult Confirm(){
