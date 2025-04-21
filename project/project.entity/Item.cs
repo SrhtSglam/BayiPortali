@@ -19,12 +19,5 @@ namespace project.entity{
         public int MonthlyPrintVolume { get; set; }
         public int PrintingCapacity { get; set; }
     }
-
-    public class ItemSerial
-    {
-        public string? Code { get; set; }
-        public string? SerialNo { get; set; }
-        public string? Description { get; set; }
-    }
 }
 

@@ -6,7 +6,7 @@ using project.entity;
 namespace project.data.Concrete{
     public class AccountRepository : IAccountRepository{
         private readonly string _connectionString;
-        private readonly string _schema;
+        private string _schema;
         public AccountRepository(IConfiguration configuration){
             _connectionString = configuration.GetConnectionString("Default");
             _schema = WebLoginUser.Company;
@@ -41,9 +41,10 @@ namespace project.data.Concrete{
             return companies;
         }
 
-        public WebLoginUser GetUserByName(string name, string password){
+        public WebLoginUser GetUserByName(string name, string password, string company){
             WebLoginUser user = new WebLoginUser();
-            string query = @$"SELECT [User ID], [Password], [Web Visibility] 
+            _schema = company;
+            string query = @$"SELECT [User ID], [Password], [Web Visibility], [E-mail]
             FROM [{_schema}$Light User] 
             WHERE [User ID] = @name AND [Password] = @password";
             
@@ -56,18 +57,26 @@ namespace project.data.Concrete{
 
                         using(SqlDataReader reader = cmd.ExecuteReader()){
                             if(reader.Read()){
-                                user.UserId = reader["User ID"].ToString();
-                                user.Password = reader["Password"].ToString();
-                                user.WebVisibility = Convert.ToInt32(reader["Web Visibility"]);
+                                user.UserId = reader.IsDBNull(0) ? string.Empty : reader.GetString(0);
+                                user.Password = reader.IsDBNull(1) ? string.Empty : reader.GetString(1);
+                                user.WebVisibility = reader.IsDBNull(2) ? 0 : reader.GetInt32(2);
+                                WebLoginUser.EMail = reader.IsDBNull(3) ? string.Empty : reader.GetString(3);
                             }
                         }
                     }
                     conn.Close();
                 }
-            }catch{
-
+            }catch (Exception ex)
+            {
+                Console.WriteLine("Hata: " + ex.Message);
+                Console.WriteLine("StackTrace: " + ex.StackTrace);
             }
 
+            // if(string.IsNullOrEmpty(user.UserId))
+            //     return user;
+            // else{
+            //     return null;
+            // }
             return user;
         }
     }

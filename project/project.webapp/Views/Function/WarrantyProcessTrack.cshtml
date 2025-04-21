@@ -1,0 +1,103 @@
+@{
+    ViewData["Title"] = "Garanti Süreç Takibi";
+
+    bool IsTest = false;
+}
+<h1>@ViewData["Title"]</h1>
+<div class="pb-3">
+    <div class="mb-3 row">
+        
+        <div class="container mt-4">
+            <div style="overflow-x:auto;">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Garanti Durumu</th>
+                            <th>Referans No</th>
+                            <th>Makina Modeli</th>
+                            <th>Makina Açıklama</th>
+                            <th>Seri No</th>
+                            <th>Giriş Tarihi</th>
+                            <th>Müşteri Adı</th>
+                            <th>Montaj Tarihi</th>
+                            <th>Arızalı Parça Kodu</th>
+                            <th>Arızalı Parça Açıklama</th>
+                            <th>Parça Seri Nosu (Bozuk)</th>
+                            <th>Parça Seri Nosu (Yeni)</th>
+                            <th>Arıza Tespit Numaratörü</th>
+                            <th>Tamirat Sonu Numaratör</th>
+                            <th>Hata Kodu</th>
+                            <th>Arıza Açıklaması</th>
+                            <th>Garanti Sonuç Notu</th>
+                            <th>Fatura Tarihi</th>
+                            <th>Garanti Fatura Tarihi</th>
+                            <th>Fatura Dövizi</th>
+                            <th>Garanti Fatura Kuru</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @try{
+                            @if (Model != null && Model.Count > 0)
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="text-center"><button type="button" class="btn btn-primary">Giriş</button></td>
+                                        <td class="text-center">@item.BranchName</td>
+                                        <td class="text-center">@item.InventoryNo</td>
+                                        <td class="text-center">@item.ResponsibilityCenter</td>
+                                        <td class="text-center">@item.ContractNo</td>
+                                        <td class="text-center">@item.EndDate</td>
+                                        <td class="text-center">@item.ContractStatus</td>
+                                        <td class="text-center">@item.ArticleNo</td>
+                                        <td class="text-center">@item.Description</td>
+                                        <td class="text-center">@item.SerialNo</td>
+                                        <td class="text-center">@item.CurrentDefinition</td>
+                                        <td class="text-center">@item.StockReading</td>
+                                        <td class="text-center">@item.StockEntered</td>
+                                        <td class="text-center">@item.StockDifference</td>
+                                        <td class="text-center">@item.ColoredReading</td>
+                                        <td class="text-center">@item.ColoredEntered</td>
+                                        <td class="text-center">@item.ColoredDifference</td>
+                                        <td class="text-center">@item.StockPrice</td>
+                                        <td class="text-center">@item.RNKPrice</td>
+                                        <td class="text-center">@item.InterventionTime</td>
+                                        <td class="text-center">@item.ResolutionTime</td>
+                                        <td class="text-center">@item.PeriodicMaintenanceTime</td>
+                                        <td class="text-center">@item.Notes</td>
+                                        <td class="text-center">@item.LaborCost</td>
+                                        <td class="text-center">@item.ContractType</td>
+                                        <td class="text-center">@item.ScopeType</td>
+                                        <td class="text-center">@item.ScopeTypeDescription</td>
+                                        <td class="text-center">@item.ServiceBlock</td>
+                                        <td class="text-center">@item.MaterialBlock</td>
+                                        <td class="text-center">@item.PenalClause</td>
+                                        <td class="text-center">@item.CurrencyType</td>
+                                        <td class="text-center">@item.ExchangeRate</td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="32" class="text-center">No data to display</td>
+                                </tr>
+                            }
+                        }catch{
+                            <tr>
+                                <td colspan="32" class="text-center">No data to display</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <div class="mb-3 row"></div>
+            <div class="col-3">
+                <input type="submit" class="form-control btn btn-success" id="InputExcel" value="Excel'e Gönder">
+            </div>
+        </div>
+    </div>
+</div>

@@ -21,21 +21,39 @@
 
     @if(Success != null){
         if(Success == true){
-            <div class="col-5">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <strong>Kod:</strong>
-                        <span>@Model.Code</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <strong>Seri No:</strong>
-                        <span>@Model.SerialNo</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        <strong>Açıklama:</strong>
-                        <span>@Model.Description</span>
-                    </li>
-                </ul>
+            <div class="row">
+                <div class="col-5">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <strong>Madde Kodu:</strong>
+                            <span>@Model.ItemNo</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <strong>Gönderi Tarihi:</strong>
+                            <span>@Model.PostingDate</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <strong>Seri Numarası:</strong>
+                            <span>@Model.SerialNo</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-5">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <strong>Açıklama</strong>
+                            <span>@Model.Description</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <strong>Müşteri Numarası:</strong>
+                            <span>@Model.CustomerNo</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <strong>Müşteri Adı:</strong>
+                            <span>@Model.Name</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         }else{
             <div class="alert alert-warning" role="alert">

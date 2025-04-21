@@ -1,4 +1,5 @@
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\bin\Release\net9.0\project.data.deps.json
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\bin\Release\net9.0\project.data.runtimeconfig.json
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\bin\Release\net9.0\project.data.dll
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\bin\Release\net9.0\project.data.pdb
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\bin\Release\net9.0\project.entity.dll
@@ -13,4 +14,5 @@ C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Release\ne
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Release\net9.0\project.data.dll
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Release\net9.0\refint\project.data.dll
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Release\net9.0\project.data.pdb
+C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Release\net9.0\project.data.genruntimeconfig.cache
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Release\net9.0\ref\project.data.dll

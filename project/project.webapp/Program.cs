@@ -2,10 +2,12 @@ using Microsoft.EntityFrameworkCore;
 using project.data;
 using project.data.Abstract;
 using project.data.Concrete;
+using System.Configuration;
 using project.webapp.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 var service = builder.Services;
+// var connString = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 var connectionString = builder.Configuration.GetConnectionString("Default");
 
 // Add services to the container.
@@ -15,6 +17,9 @@ service.AddScoped<IAccountRepository, AccountRepository>();
 service.AddScoped<IFunctionRepository, FunctionRepository>();
 service.AddScoped<IOtherRepository, OtherRepository>();
 service.AddScoped<IOrderRepository, OrderRepository>();
+service.AddScoped<ISMTPRepository, SMTPRepository>();
+
+service.AddScoped<IMailHelper, MailHelper>();
 
 #region Session
     service.AddDistributedMemoryCache();

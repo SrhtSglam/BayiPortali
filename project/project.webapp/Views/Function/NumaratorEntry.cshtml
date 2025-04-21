@@ -4,7 +4,8 @@
     ViewData["Title"] = "Numaratör Girişi";
     DateTime currentDate = DateTime.Now;
     int currentYear = currentDate.Year;
-    string[] months = {"Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"};
+    string[] months = {"Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım",
+"Aralık"};
 }
 <h1>@ViewData["Title"]</h1>
 
@@ -26,7 +27,8 @@
             <div class="input-group mb-3">
                 <select class="form-select" id="ekstreGroup">
                     <option selected>Seçiniz..</option>
-                    @for(int i = 0; i < months.Length; i++){
+                    @for (int i = 0; i < months.Length; i++)
+                    {
                         <option value="@i">@months[i]</option>
                     }
                 </select>
@@ -39,7 +41,7 @@
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th >#</th>
+                        <th>#</th>
                         <th>Bayi Adı</th>
                         <th>Envanter No</th>
                         <th>Sorumluluk Merkezi</th>
@@ -74,8 +76,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @if(Model != null && Model.Count > 0){
-                        foreach(var item in Model){
+                    @if (Model != null && Model.Count > 0)
+                    {
+                        foreach (var item in Model)
+                        {
                             <tr>
                                 <td class="text-center"><button type="button" class="btn btn-primary">Giriş</button></td>
                                 <td class="text-center">@item.BranchName</td>
@@ -112,7 +116,8 @@
                             </tr>
                         }
                     }
-                    else{
+                    else
+                    {
                         <tr>
                             <td colspan="32" class="text-center">No data to display</td>
                         </tr>
@@ -124,7 +129,8 @@
 
     <div class="mb-3 row">
         <div class="col-12">
-            <label for="warningNote">"Not: Giriş butonu olmayan cihazların numaratör girişi Bilgitaş tarafından yapılacaktır.</label>
+            <label for="warningNote">"Not: Giriş butonu olmayan cihazların numaratör girişi Bilgitaş tarafından
+                yapılacaktır.</label>
         </div>
     </div>
     @using (Html.BeginForm("UploadExcel", "Function", FormMethod.Post, new { enctype = "multipart/form-data" }))
@@ -137,7 +143,11 @@
                 <input type="submit" class="form-control btn btn-success" id="InputExcel" value="Excel'den Çek">
             </div>
             <div class="col-3">
-                <input type="button" class="form-control btn btn-success" id="InputExcel" value="Excel'den Çek" data-bs-toggle="modal" data-bs-target="#previewDataModal">
+                <input type="button" class="form-control btn btn-success" id="PreviewExcel" value="Excel Önizleme"
+                    data-bs-toggle="modal" data-bs-target="#previewDataModal">
+            </div>
+            <div class="col-3">
+                <input type="button" class="form-control btn btn-success" id="ExampleExcelDownload" value="Şablon İndir">
             </div>
             @* <div class="col-3">
                 <input type="submit" class="form-control btn btn-success" id="Output" value="Excel'e Yolla">
@@ -147,106 +157,151 @@
 </div>
 
 <!-- MODAL -->
-<div class="modal fade" id="previewDataModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="previewDataModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="previewDataModalLabel">Numaratör Önizleme</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="container mt-4">
-        <div style="overflow-x:auto;">
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th >#</th>
-                        <th>Bayi Adı</th>
-                        <th>Envanter No</th>
-                        <th>Sorumluluk Merkezi</th>
-                        <th>Sözleşme No</th>
-                        <th>Bitiş Tarihi</th>
-                        <th>Sözleşme Durumu</th>
-                        <th>Madde No</th>
-                        <th>Description</th>
-                        <th>Seri No</th>
-                        <th>Cari Tanım</th>
-                        <th>S/B Son Okuma</th>
-                        <th>S/B Girilen</th>
-                        <th>S/B Fark</th>
-                        <th>Renkli Son Okuma</th>
-                        <th>Renkli Girilen</th>
-                        <th>Renkli Fark</th>
-                        <th>S/B Fiyat</th>
-                        <th>RNK Fiyat</th>
-                        <th>Müdahale Süresi</th>
-                        <th>Çözüm Süresi</th>
-                        <th>Periyodik Bakım Zamanı</th>
-                        <th>Notlar</th>
-                        <th>İşçilik Bedeli</th>
-                        <th>Sözleşme Türü</th>
-                        <th>Kapsam Türü</th>
-                        <th>Kapsam Türü Açıklaması</th>
-                        <th>Servis Blok</th>
-                        <th>Malzeme Blok</th>
-                        <th>Cezai Şart</th>
-                        <th>Döviz Cinsi</th>
-                        <th>Kur</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @if(Model != null && Model.Count > 0){
-                        foreach(var item in Model){
-                            <tr>
-                                <td class="text-center"><button type="button" class="btn btn-danger">Sil</button></td>
-                                <td class="text-center">@item.BranchName</td>
-                                <td class="text-center">@item.InventoryNo</td>
-                                <td class="text-center">@item.ResponsibilityCenter</td>
-                                <td class="text-center">@item.ContractNo</td>
-                                <td class="text-center">@item.EndDate</td>
-                                <td class="text-center">@item.ContractStatus</td>
-                                <td class="text-center">@item.ArticleNo</td>
-                                <td class="text-center">@item.Description</td>
-                                <td class="text-center">@item.SerialNo</td>
-                                <td class="text-center">@item.CurrentDefinition</td>
-                                <td class="text-center">@item.StockReading</td>
-                                <td class="text-center">@item.StockEntered</td>
-                                <td class="text-center">@item.StockDifference</td>
-                                <td class="text-center">@item.ColoredReading</td>
-                                <td class="text-center">@item.ColoredEntered</td>
-                                <td class="text-center">@item.ColoredDifference</td>
-                                <td class="text-center">@item.StockPrice</td>
-                                <td class="text-center">@item.RNKPrice</td>
-                                <td class="text-center">@item.InterventionTime</td>
-                                <td class="text-center">@item.ResolutionTime</td>
-                                <td class="text-center">@item.PeriodicMaintenanceTime</td>
-                                <td class="text-center">@item.Notes</td>
-                                <td class="text-center">@item.LaborCost</td>
-                                <td class="text-center">@item.ContractType</td>
-                                <td class="text-center">@item.ScopeType</td>
-                                <td class="text-center">@item.ScopeTypeDescription</td>
-                                <td class="text-center">@item.ServiceBlock</td>
-                                <td class="text-center">@item.MaterialBlock</td>
-                                <td class="text-center">@item.PenalClause</td>
-                                <td class="text-center">@item.CurrencyType</td>
-                                <td class="text-center">@item.ExchangeRate</td>
-                            </tr>
-                        }
-                    }
-                    else{
-                        <tr>
-                            <td colspan="32" class="text-center">No data to display</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+<div class="modal fade" id="previewDataModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="previewDataModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="previewDataModalLabel">Numaratör Önizleme</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container mt-4">
+                    <div style="overflow-x:auto;">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Bayi Adı</th>
+                                    <th>Envanter No</th>
+                                    <th>Sorumluluk Merkezi</th>
+                                    <th>Sözleşme No</th>
+                                    <th>Bitiş Tarihi</th>
+                                    <th>Sözleşme Durumu</th>
+                                    <th>Madde No</th>
+                                    <th>Description</th>
+                                    <th>Seri No</th>
+                                    <th>Cari Tanım</th>
+                                    <th>S/B Son Okuma</th>
+                                    <th>S/B Girilen</th>
+                                    <th>S/B Fark</th>
+                                    <th>Renkli Son Okuma</th>
+                                    <th>Renkli Girilen</th>
+                                    <th>Renkli Fark</th>
+                                    <th>S/B Fiyat</th>
+                                    <th>RNK Fiyat</th>
+                                    <th>Müdahale Süresi</th>
+                                    <th>Çözüm Süresi</th>
+                                    <th>Periyodik Bakım Zamanı</th>
+                                    <th>Notlar</th>
+                                    <th>İşçilik Bedeli</th>
+                                    <th>Sözleşme Türü</th>
+                                    <th>Kapsam Türü</th>
+                                    <th>Kapsam Türü Açıklaması</th>
+                                    <th>Servis Blok</th>
+                                    <th>Malzeme Blok</th>
+                                    <th>Cezai Şart</th>
+                                    <th>Döviz Cinsi</th>
+                                    <th>Kur</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null && Model.Count > 0)
+                                {
+                                    foreach (var item in Model)
+                                    {
+
+                                        bool isInvalidRow =
+                                        string.IsNullOrWhiteSpace(item.BranchName) ||
+                                        string.IsNullOrWhiteSpace(item.InventoryNo) ||
+                                        string.IsNullOrWhiteSpace(item.ResponsibilityCenter) ||
+                                        string.IsNullOrWhiteSpace(item.ContractNo) ||
+                                        @* string.IsNullOrWhiteSpace(item.EndDate) || *@
+                                        string.IsNullOrWhiteSpace(item.ContractStatus) ||
+                                        string.IsNullOrWhiteSpace(item.ArticleNo) ||
+                                        string.IsNullOrWhiteSpace(item.Description) ||
+                                        string.IsNullOrWhiteSpace(item.SerialNo) ||
+                                        string.IsNullOrWhiteSpace(item.CurrentDefinition) ||
+                                        string.IsNullOrWhiteSpace(item.StockReading) ||
+                                        string.IsNullOrWhiteSpace(item.StockEntered) ||
+                                        string.IsNullOrWhiteSpace(item.StockDifference) ||
+                                        string.IsNullOrWhiteSpace(item.ColoredReading) ||
+                                        string.IsNullOrWhiteSpace(item.ColoredEntered) ||
+                                        string.IsNullOrWhiteSpace(item.ColoredDifference) ||
+                                        string.IsNullOrWhiteSpace(item.StockPrice) ||
+                                        string.IsNullOrWhiteSpace(item.RNKPrice) ||
+                                        string.IsNullOrWhiteSpace(item.InterventionTime) ||
+                                        string.IsNullOrWhiteSpace(item.ResolutionTime) ||
+                                        string.IsNullOrWhiteSpace(item.PeriodicMaintenanceTime) ||
+                                        string.IsNullOrWhiteSpace(item.Notes) ||
+                                        string.IsNullOrWhiteSpace(item.LaborCost) ||
+                                        string.IsNullOrWhiteSpace(item.ContractType) ||
+                                        string.IsNullOrWhiteSpace(item.ScopeType) ||
+                                        string.IsNullOrWhiteSpace(item.ScopeTypeDescription) ||
+                                        string.IsNullOrWhiteSpace(item.ServiceBlock) ||
+                                        string.IsNullOrWhiteSpace(item.MaterialBlock) ||
+                                        string.IsNullOrWhiteSpace(item.PenalClause) ||
+                                        string.IsNullOrWhiteSpace(item.CurrencyType) ||
+                                        string.IsNullOrWhiteSpace(item.ExchangeRate);
+
+                                        <tr class="@(isInvalidRow ? "table-warning" : "")">
+                                            <td class="text-center"><button type="button" class="btn btn-danger">Sil</button>
+                                            </td>
+                                            <td class="text-center">@item.BranchName</td>
+                                            <td class="text-center">@item.InventoryNo</td>
+                                            <td class="text-center">@item.ResponsibilityCenter</td>
+                                            <td class="text-center">@item.ContractNo</td>
+                                            <td class="text-center">@item.EndDate</td>
+                                            <td class="text-center">@item.ContractStatus</td>
+                                            <td class="text-center">@item.ArticleNo</td>
+                                            <td class="text-center">@item.Description</td>
+                                            <td class="text-center">@item.SerialNo</td>
+                                            <td class="text-center">@item.CurrentDefinition</td>
+                                            <td class="text-center">@item.StockReading</td>
+                                            <td class="text-center">@item.StockEntered</td>
+                                            <td class="text-center">@item.StockDifference</td>
+                                            <td class="text-center">@item.ColoredReading</td>
+                                            <td class="text-center">@item.ColoredEntered</td>
+                                            <td class="text-center">@item.ColoredDifference</td>
+                                            <td class="text-center">@item.StockPrice</td>
+                                            <td class="text-center">@item.RNKPrice</td>
+                                            <td class="text-center">@item.InterventionTime</td>
+                                            <td class="text-center">@item.ResolutionTime</td>
+                                            <td class="text-center">@item.PeriodicMaintenanceTime</td>
+                                            <td class="text-center">@item.Notes</td>
+                                            <td class="text-center">@item.LaborCost</td>
+                                            <td class="text-center">@item.ContractType</td>
+                                            <td class="text-center">@item.ScopeType</td>
+                                            <td class="text-center">@item.ScopeTypeDescription</td>
+                                            <td class="text-center">@item.ServiceBlock</td>
+                                            <td class="text-center">@item.MaterialBlock</td>
+                                            <td class="text-center">@item.PenalClause</td>
+                                            <td class="text-center">@item.CurrencyType</td>
+                                            <td class="text-center">@item.ExchangeRate</td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="32" class="text-center">No data to display</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-success">Onayla</button>
+            </div>
         </div>
     </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-        <button type="button" class="btn btn-success">Onayla</button>
-      </div>
-    </div>
-  </div>
 </div>
+
+<script>
+    document.getElementById("ExampleExcelDownload").addEventListener("click", function () {
+        window.location.href = "/files/ExampleNumaratorExcel.xlsx";
+    });
+</script>

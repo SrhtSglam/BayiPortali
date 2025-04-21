@@ -1,0 +1,67 @@
+@{
+    ViewData["Title"] = "Garanti İstek Girişi";
+
+    bool IsTest = false;
+}
+<h1>@ViewData["Title"]</h1>
+<div class="pb-3">
+    <form asp-controller="Function" asp-action="WarrantyReqEntry" method="post">
+        <div class="mb-3 row">
+            <label for="InputSerialNumber" class="col-sm-2 col-form-label">Seri Numarasını Girin: </label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="SerialNo" id="InputSerialNumber">
+            </div>
+            <div class="col-sm-2">
+                <input type="submit" class="form-control btn btn-primary" id="InputQuery" value="Bul">
+            </div>
+        </div>
+    </form>
+
+    @if (IsTest == true)
+    {
+        <div class="row">
+            <div class="col-5">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <strong>Madde Kodu:</strong>
+                        <span>@Model.ItemNo</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <strong>Gönderi Tarihi:</strong>
+                        <span>@Model.PostingDate</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <strong>Seri Numarası:</strong>
+                        <span>@Model.SerialNo</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-5">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <strong>Açıklama</strong>
+                        <span>@Model.Description</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <strong>Müşteri Numarası:</strong>
+                        <span>@Model.CustomerNo</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <strong>Müşteri Adı:</strong>
+                        <span>@Model.Name</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="col-12">
+            <div class="alert alert-warning" role="alert">
+                <img src="~/error.png" alt="">
+                <b>HATA: </b>Garanti isteği oluşturulamadı. Nedeni: {SERİNO} ürününün garanti süresi tanımlı değil!
+                <button type="button" class="btn btn-secondary">Kapat</button>
+            </div>
+        </div>
+    }
+</div>

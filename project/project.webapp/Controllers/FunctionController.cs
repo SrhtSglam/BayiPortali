@@ -53,7 +53,7 @@ namespace project.webapp.Controllers
         {
             var item = _functionRepository.GetItemBySerialNo(SerialNo);
             
-            if(item != null && SerialNo != "")
+            if(item != null && SerialNo != "" && !string.IsNullOrEmpty(item.SerialNo))
                 ViewBag.QuerySuccess = true;
             else
                 ViewBag.QuerySuccess = false;
@@ -155,6 +155,16 @@ namespace project.webapp.Controllers
             }
 
             return RedirectToAction("NumaratorEntry");
+        }
+
+        public IActionResult WarrantyReqEntry()
+        {
+            return View();
+        }
+
+        public IActionResult WarrantyProcessTrack()
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

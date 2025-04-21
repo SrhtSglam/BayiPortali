@@ -2,11 +2,23 @@
   "Files": [
     {
       "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\project.webapp.bundle.scp.css",
-      "PackagePath": "staticwebassets\\project.webapp.xl2q4e260s.bundle.scp.css"
+      "PackagePath": "staticwebassets\\project.webapp.cpq522cf8f.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\Files\\ExampleNumaratorExcel.xlsx",
+      "PackagePath": "staticwebassets\\Files\\ExampleNumaratorExcel.xlsx"
+    },
+    {
+      "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\Files\\Test.pdf",
+      "PackagePath": "staticwebassets\\Files\\Test.pdf"
     },
     {
       "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\error.png",
+      "PackagePath": "staticwebassets\\error.png"
     },
     {
       "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon-square.ico",
@@ -27,6 +39,14 @@
     {
       "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon04.ico",
       "PackagePath": "staticwebassets\\favicon04.ico"
+    },
+    {
+      "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\items\\03KYFS2020D.jpg",
+      "PackagePath": "staticwebassets\\image\\items\\03KYFS2020D.jpg"
+    },
+    {
+      "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\items\\03KYFSC5300DN.jpg",
+      "PackagePath": "staticwebassets\\image\\items\\03KYFSC5300DN.jpg"
     },
     {
       "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\printers\\ecosys-pa3500cx-1.jpg",

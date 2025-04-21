@@ -84,17 +84,6 @@
 
     <partial name="_itemTable" />
 
-    @{
-        List<Item> itemList = new List<Item>(){
-        new Item{ItemCategory = "Other Metarials", ProductGroup = "Kyocera", ItemCode = "03KYFS2020D", ItemDescription =
-        "1620/2020 DRUM", AlternativeCode = "", CurrencyCode = "EURO-MS", UnitPrice = 0},
-        new Item{ItemCategory = "Other Metarials", ProductGroup = "Kyocera", ItemCode = "03KYFS2020D", ItemDescription =
-        "1620/2020 DRUM", AlternativeCode = "", CurrencyCode = "EURO-MS", UnitPrice = 0},
-        new Item{ItemCategory = "Other Metarials", ProductGroup = "Kyocera", ItemCode = "03KYFS2020D", ItemDescription =
-        "1620/2020 DRUM", AlternativeCode = "", CurrencyCode = "EURO-MS", UnitPrice = 0}
-        };
-    }
-
     <div class="modal fade" id="InfoModal" tabindex="-1" aria-labelledby="InfoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -140,37 +129,9 @@
                             <div class="row">
                                 <div class="col-12">
                                     <table class="table">
-                                        <thead class="thead-dark">
-                                            <tr>
-                                                <th scope="col">Madde Kategori</th>
-                                                <th scope="col">Ürün Grup</th>
-                                                <th scope="col">Madde Kodu</th>
-                                                <th scope="col">Madde Açıklama</th>
-                                                <th scope="col">Alternatif Kod</th>
-                                                <th scope="col">Satış Fiyatı</th>
-                                                <th scope="col">Stok Miktarı</th>
-                                                <th scope="col">Sipariş Açıklama</th>
-                                                <th scope="col">Miktar</th>
-                                                <th scope="col">#</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach (var items in itemList)
-                                            {
-                                                <tr>
-                                                    <td>@items.ItemCategory</td>
-                                                    <td>@items.ProductGroup</td>
-                                                    <td>@items.ItemCode</td>
-                                                    <td>@items.ItemDescription</td>
-                                                    <td>@items.AlternativeCode</td>
-                                                    <td>@items.CurrencyCode</td>
-                                                    <td>@items.UnitPrice</td>
-                                                    <td><input type="text" class="form-control"></td>
-                                                    <td><input type="number" name="" id="" class="form-control"></td>
-                                                    <td><button type="button" class="btn btn-success">Ekle</button></td>
-                                                </tr>
-                                            }
-                                        </tbody>
+                                        <div class="alert alert-warning" role="alert"></div>
+                                            Veri Bulunamadı!
+                                        </div>
                                     </table>
                                 </div>
                             </div>
@@ -186,6 +147,8 @@
         </div>
     </div>
 </div>
+
+<div id="settings" data-use-dynamic-image="@ViewBag.UseDynamicImage.ToString().ToLower()"></div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -255,6 +218,7 @@
                     tbody.innerHTML = "";
 
                     data.forEach(function (item) {
+                        console.log("Item:", item);
                         var row = document.createElement("tr");
                         row.innerHTML = `
                             <td>${item.itemCategory}</td>
@@ -293,23 +257,31 @@
             fetch(`/Order/GetItemDetails?itemCode=${itemCode}`)
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data)
+
+                    const useDynamicImage = document.getElementById('settings').dataset.useDynamicImage === 'true';
+
+                    const imageHtml = useDynamicImage && data.itemDetailData.pictureData
+                    ? `<img src="${data.itemDetailData.pictureData}" style="max-width: 480px;" class="rounded float-start" alt="Product Image">`
+                    : `<img src="/image/items/${itemCode}.jpg" style="max-width: 480px;" class="rounded float-start" alt="Product Image">`;
+                    
                     var modalContent = `
                         <div class="tab-content">
                             <div class="tab-pane show active" id="content1">
                                 <div class="row">
                                     <div class="col-6">
-                                        <img src="${data.data.pictureData}" style="max-width: 480px;" class="rounded float-start" alt="Product Image">
+                                        ${imageHtml}
                                     </div>
                                     <div class="col-6">
                                         <ul class="list-group">
                                             <li class="list-group-item">
-                                                <strong>Temel Ölçü Birimi:</strong> ${data.data.baseUnitOfMeasure}
+                                                <strong>Temel Ölçü Birimi:</strong> ${data.itemDetailData.baseUnitOfMeasure}
                                             </li>
                                             <li class="list-group-item">
-                                                <strong>Aylık Baskı Hacmi:</strong> ${data.data.monthlyPrintVolume}
+                                                <strong>Aylık Baskı Hacmi:</strong> ${data.itemDetailData.monthlyPrintVolume}
                                             </li>
                                             <li class="list-group-item">
-                                                <strong>Baskı Kapasitesi:</strong> ${data.data.printingCapacity}
+                                                <strong>Baskı Kapasitesi:</strong> ${data.itemDetailData.printingCapacity}
                                             </li>
                                         </ul>
                                     </div>
@@ -332,34 +304,27 @@
                                         <table class="table">
                                             <thead class="thead-dark">
                                                 <tr>
-                                                    <th scope="col">Madde Kategori</th>
-                                                    <th scope="col">Ürün Grup</th>
-                                                    <th scope="col">Madde Kodu</th>
-                                                    <th scope="col">Madde Açıklama</th>
-                                                    <th scope="col">Alternatif Kod</th>
-                                                    <th scope="col">Satış Fiyatı</th>
-                                                    <th scope="col">Stok Miktarı</th>
+                                                    <th scope="col">Madde No</th>
+                                                    <th scope="col">Bileşen No</th>
+                                                    <th scope="col">Açıklama</th>
                                                     <th scope="col">Sipariş Açıklama</th>
                                                     <th scope="col">Miktar</th>
                                                     <th scope="col">#</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach (var items in itemList)
-                                                {
+                                                ${console.log(data.itemComponentData)}
+                                                ${data.itemComponentData ? data.itemComponentData.map(item => `
                                                     <tr>
-                                                        <td>@items.ItemCategory</td>
-                                                        <td>@items.ProductGroup</td>
-                                                        <td>@items.ItemCode</td>
-                                                        <td>@items.ItemDescription</td>
-                                                        <td>@items.AlternativeCode</td>
-                                                        <td>@items.CurrencyCode</td>
-                                                        <td>@items.UnitPrice</td>
+                                                        ${console.log(item.ItemNo)}
+                                                        <td>${item.itemNo}</td>
+                                                        <td>${item.componentItemNo}</td>
+                                                        <td>${item.description}</td>
                                                         <td><input type="text" class="form-control"></td>
                                                         <td><input type="number" class="form-control"></td>
                                                         <td><button type="button" class="btn btn-success">Ekle</button></td>
                                                     </tr>
-                                                }
+                                                `).join('') : '<tr><td colspan="6">Bileşen bulunamadı.</td></tr>'}
                                             </tbody>
                                         </table>
                                     </div>

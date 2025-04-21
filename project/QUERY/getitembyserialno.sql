@@ -1,6 +1,5 @@
-DECLARE @ItemCode nvarchar(MAX) SET @ItemCode = '4NY019664'
+SELECT ILE.[Item No_], ILE.[Posting Date], ILE.[Serial No_], ILE.[Description] , ILE.[Customer No_]
+,CUS.Name FROM [Bilgitas$Item Ledger Entry] ILE
+INNER JOIN [Bilgitas$Customer] CUS ON CUS.No_ = ILE.[Customer No_]
 
-SELECT SNI.[Item No_], SNI.[Serial No_], BI.[Description]
-FROM [Bilgitas$Serial No_ Information] SNI
-LEFT JOIN [Bilgitas$Item] BI ON BI.No_ = SNI.[Item No_]
-WHERE [Serial No_] = @ItemCode
+WHERE ILE.[Serial No_] = 'NXCY089975' and ILE.[Entry Type]=1

@@ -8,6 +8,8 @@ namespace project.entity{
 
         public static string AuthId {get; set;}
         public static int Visibility {get; set;}
+
+        public static string? EMail {get; set;}
     }
 }
 

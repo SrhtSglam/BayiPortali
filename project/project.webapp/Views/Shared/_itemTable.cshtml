@@ -43,16 +43,16 @@
             <th scope="col" class="sortable" onclick="sortTable(9)">#</th>
         </tr>
         <tr>
-            <th scope="col"><input type="text" class="form-control"></th>
-            <th scope="col"><input type="text" class="form-control"></th>
-            <th scope="col"><input type="text" class="form-control"></th>
-            <th scope="col"><input type="text" class="form-control"></th>
-            <th scope="col"><input type="text" class="form-control"></th>
-            <th scope="col"><input type="text" class="form-control"></th>
-            <th scope="col"><input type="text" class="form-control"></th>
-            <th scope="col"><input type="text" class="form-control"></th>
-            <th scope="col"><input type="text" class="form-control"></th>
-            <th scope="col"><input type="number" class="form-control"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"><input type="text" class="form-control" id="filterItemCode"></th>
+            <th scope="col"><input type="text" class="form-control" id="filterItemDescription"></th>
+            <th scope="col"><input type="text" class="form-control" id="filterAlternativeCode"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
@@ -110,4 +110,79 @@
         
         rows.forEach(row => table.appendChild(row));
     }
+
+    @* function filterTable() {
+        let input = document.getElementById("filterItemCode");
+        let filter = input.value.toUpperCase();
+        let table = document.getElementById("myTable");
+        let rows = table.getElementsByTagName("tr");
+        
+        for (let i = 2; i < rows.length; i++) {
+            let cells = rows[i].getElementsByTagName("td");
+            if (cells.length > 3) {
+                let itemCodeCell = cells[3].textContent || cells[3].innerText;
+                if (itemCodeCell.toUpperCase().indexOf(filter) > -1) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+    }     *@
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const input = document.getElementById("filterItemCode");
+
+        input.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+
+                let value = input.value.trim();
+
+                if (value === "") return;
+
+                fetch(`/Order/GetAllFilterItems?itemCode=${encodeURIComponent(value)}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Sunucu hatası");
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data);
+                        updateTable(data);
+                    })
+                    .catch(error => {
+                        console.error("Hata:", error);
+                        alert("Veri alınırken hata oluştu.");
+                    });
+            }
+        });
+
+        function updateTable(data) {
+            const tbody = document.querySelector("#myTable tbody");
+            tbody.innerHTML = "";
+
+            data.forEach(item => {
+                let row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${item.itemCategory}</td>
+                    <td>${item.productGroup}</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#InfoModal" data-itemcode="${item.itemCode}">Detay</button></td>
+                    <td>${item.itemCode}</td>
+                    <td>${item.itemDescription}</td>
+                    <td>${item.alternativeCode}</td>
+                    <td>${item.currencyCode}</td>
+                    <td>${item.formattedPrice}</td>
+                    <td><input type="text" class="form-control"></td>
+                    <td><input type="number" class="form-control"></td>
+                    <td><button type="button" class="btn btn-success">Ekle</button></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+    });
 </script>

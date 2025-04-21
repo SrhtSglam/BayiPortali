@@ -2,6 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using project.data.Abstract;
 using project.data.Concrete;
+using project.entity;
 using project.webapp.Filters;
 using project.webapp.Models;
 
@@ -10,10 +11,12 @@ namespace project.webapp.Controllers{
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IMailHelper _mailHelper;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IMailHelper mailHelper)
         {
             _logger = logger;
+            _mailHelper = mailHelper;
         }
 
     public IActionResult Index()
@@ -21,6 +24,8 @@ namespace project.webapp.Controllers{
             if(HttpContext.Session.GetInt32("UserRole") == 0){
                 return RedirectToAction("Login", "Account");
             }
+
+            // _mailHelper.SendMail("Sipariş Onay", "Siparişiniz Onaylanmıştır Başarıyla!"); //Çalışıyor
 
             return View();
         }

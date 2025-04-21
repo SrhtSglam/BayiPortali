@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OFRF4bmUHslWRFO0dl3UmqhhmNTf3/PHhYW3OZCaOps=",
+  "Hash": "PZ9NPb/iBX4HzC573OJxhV7znZxZt5WA1YsLon8tpgs=",
   "Source": "project.webapp",
   "BasePath": "_content/project.webapp",
   "Mode": "Default",
@@ -3755,12 +3755,12 @@
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\js\\jquery-3.6.0.min.js"
     },
     {
-      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gehcjyruq2-xl2q4e260s.gz",
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gehcjyruq2-cpq522cf8f.gz",
       "SourceId": "project.webapp",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/project.webapp",
-      "RelativePath": "project.webapp#[.{fingerprint=xl2q4e260s}]?.styles.css.gz",
+      "RelativePath": "project.webapp#[.{fingerprint=cpq522cf8f}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -3769,8 +3769,8 @@
       "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\scopedcss\\bundle\\project.webapp.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ct1fad4a2r",
-      "Integrity": "EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU=",
+      "Fingerprint": "ltxb47x58w",
+      "Integrity": "BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\scopedcss\\bundle\\project.webapp.styles.css"
@@ -6212,12 +6212,12 @@
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\th0999w4d9-xl2q4e260s.gz",
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\th0999w4d9-cpq522cf8f.gz",
       "SourceId": "project.webapp",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/project.webapp",
-      "RelativePath": "project.webapp#[.{fingerprint=xl2q4e260s}]!.bundle.scp.css.gz",
+      "RelativePath": "project.webapp#[.{fingerprint=cpq522cf8f}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -6226,8 +6226,8 @@
       "RelatedAsset": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\project.webapp.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ct1fad4a2r",
-      "Integrity": "EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU=",
+      "Fingerprint": "ltxb47x58w",
+      "Integrity": "BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\project.webapp.bundle.scp.css"
@@ -7549,8 +7549,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "xl2q4e260s",
-      "Integrity": "tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw=",
+      "Fingerprint": "cpq522cf8f",
+      "Integrity": "cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\scopedcss\\bundle\\project.webapp.styles.css"
@@ -7570,8 +7570,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "xl2q4e260s",
-      "Integrity": "tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw=",
+      "Fingerprint": "cpq522cf8f",
+      "Integrity": "cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\project.webapp.bundle.scp.css"
@@ -7596,6 +7596,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\error.png",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "error#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0cl3v2t2mg",
+      "Integrity": "QFqGuLPbL+SVV3ry6BZLBWw9G+IpXSozYbuvcPiIx04=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\error.png"
     },
     {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\favicon-square.ico",
@@ -7701,6 +7722,90 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon04.ico"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\Files\\ExampleNumaratorExcel.xlsx",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "Files/ExampleNumaratorExcel#[.{fingerprint}]?.xlsx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6pncnvo5an",
+      "Integrity": "BurIUGeseAf2vxgVsi1bT3owMgIDbVtgdsSWkP21/lk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\ExampleNumaratorExcel.xlsx"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\Files\\Test.pdf",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "Files/Test#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wmqt2d56xb",
+      "Integrity": "GJJwJwGOkn49Ou6QKJe+E+zzFkTveh/0uVLtweT9f48=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\Test.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\items\\03KYFS2020D.jpg",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "image/items/03KYFS2020D#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xn14stkppg",
+      "Integrity": "bZFfJKrbTdpNvx0ckeMSxng7Zm3JcUttyBlU+AtbuiM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\items\\03KYFS2020D.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\items\\03KYFSC5300DN.jpg",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "image/items/03KYFSC5300DN#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3psws3ub66",
+      "Integrity": "R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\items\\03KYFSC5300DN.jpg"
     },
     {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\printers\\ecosys-pa3500cx-1.jpg",
@@ -16172,6 +16277,88 @@
       ]
     },
     {
+      "Route": "error.0cl3v2t2mg.png",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\error.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2796"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QFqGuLPbL+SVV3ry6BZLBWw9G+IpXSozYbuvcPiIx04=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 08:50:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0cl3v2t2mg"
+        },
+        {
+          "Name": "label",
+          "Value": "error.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QFqGuLPbL+SVV3ry6BZLBWw9G+IpXSozYbuvcPiIx04="
+        }
+      ]
+    },
+    {
+      "Route": "error.png",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\error.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2796"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QFqGuLPbL+SVV3ry6BZLBWw9G+IpXSozYbuvcPiIx04=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 08:50:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QFqGuLPbL+SVV3ry6BZLBWw9G+IpXSozYbuvcPiIx04="
+        }
+      ]
+    },
+    {
       "Route": "favicon-square.ico",
       "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\lijz2rjck3-xbpf8ijnwo.gz",
       "Selectors": [
@@ -17658,6 +17845,334 @@
         {
           "Name": "integrity",
           "Value": "sha256-kVV5AXPjl2OFKlQ+7AdB0vvtT/cenMMYg25Tqt0cGOA="
+        }
+      ]
+    },
+    {
+      "Route": "Files/ExampleNumaratorExcel.6pncnvo5an.xlsx",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\Files\\ExampleNumaratorExcel.xlsx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11576"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BurIUGeseAf2vxgVsi1bT3owMgIDbVtgdsSWkP21/lk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 12:18:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6pncnvo5an"
+        },
+        {
+          "Name": "label",
+          "Value": "Files/ExampleNumaratorExcel.xlsx"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BurIUGeseAf2vxgVsi1bT3owMgIDbVtgdsSWkP21/lk="
+        }
+      ]
+    },
+    {
+      "Route": "Files/ExampleNumaratorExcel.xlsx",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\Files\\ExampleNumaratorExcel.xlsx",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11576"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BurIUGeseAf2vxgVsi1bT3owMgIDbVtgdsSWkP21/lk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 12:18:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BurIUGeseAf2vxgVsi1bT3owMgIDbVtgdsSWkP21/lk="
+        }
+      ]
+    },
+    {
+      "Route": "Files/Test.pdf",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\Files\\Test.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "512970"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GJJwJwGOkn49Ou6QKJe+E+zzFkTveh/0uVLtweT9f48=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 11:03:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GJJwJwGOkn49Ou6QKJe+E+zzFkTveh/0uVLtweT9f48="
+        }
+      ]
+    },
+    {
+      "Route": "Files/Test.wmqt2d56xb.pdf",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\Files\\Test.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "512970"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GJJwJwGOkn49Ou6QKJe+E+zzFkTveh/0uVLtweT9f48=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 11:03:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wmqt2d56xb"
+        },
+        {
+          "Name": "label",
+          "Value": "Files/Test.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GJJwJwGOkn49Ou6QKJe+E+zzFkTveh/0uVLtweT9f48="
+        }
+      ]
+    },
+    {
+      "Route": "image/items/03KYFS2020D.jpg",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\items\\03KYFS2020D.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39267"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bZFfJKrbTdpNvx0ckeMSxng7Zm3JcUttyBlU+AtbuiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 10:29:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bZFfJKrbTdpNvx0ckeMSxng7Zm3JcUttyBlU+AtbuiM="
+        }
+      ]
+    },
+    {
+      "Route": "image/items/03KYFS2020D.xn14stkppg.jpg",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\items\\03KYFS2020D.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39267"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bZFfJKrbTdpNvx0ckeMSxng7Zm3JcUttyBlU+AtbuiM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 10:29:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xn14stkppg"
+        },
+        {
+          "Name": "label",
+          "Value": "image/items/03KYFS2020D.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bZFfJKrbTdpNvx0ckeMSxng7Zm3JcUttyBlU+AtbuiM="
+        }
+      ]
+    },
+    {
+      "Route": "image/items/03KYFSC5300DN.3psws3ub66.jpg",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\items\\03KYFSC5300DN.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "63325"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 10:29:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3psws3ub66"
+        },
+        {
+          "Name": "label",
+          "Value": "image/items/03KYFSC5300DN.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI="
+        }
+      ]
+    },
+    {
+      "Route": "image/items/03KYFSC5300DN.jpg",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\items\\03KYFSC5300DN.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "63325"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 10:29:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI="
         }
       ]
     },
@@ -125161,7 +125676,7 @@
     },
     {
       "Route": "project.webapp.bundle.scp.css",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\th0999w4d9-xl2q4e260s.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\th0999w4d9-cpq522cf8f.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -125180,11 +125695,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU=\""
+          "Value": "\"BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 08:59:15 GMT"
+          "Value": "Tue, 15 Apr 2025 10:58:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -125204,13 +125719,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw=\""
+          "Value": "W/\"cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw="
+          "Value": "sha256-cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310="
         }
       ]
     },
@@ -125233,11 +125748,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw=\""
+          "Value": "\"cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 08:59:15 GMT"
+          "Value": "Tue, 15 Apr 2025 10:58:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -125247,13 +125762,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw="
+          "Value": "sha256-cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310="
         }
       ]
     },
     {
       "Route": "project.webapp.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\th0999w4d9-xl2q4e260s.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\th0999w4d9-cpq522cf8f.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -125270,11 +125785,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU=\""
+          "Value": "\"BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 08:59:15 GMT"
+          "Value": "Tue, 15 Apr 2025 10:58:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -125292,13 +125807,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU="
+          "Value": "sha256-BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc="
         }
       ]
     },
     {
-      "Route": "project.webapp.styles.css",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gehcjyruq2-xl2q4e260s.gz",
+      "Route": "project.webapp.cpq522cf8f.bundle.scp.css",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\th0999w4d9-cpq522cf8f.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -125317,148 +125832,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU=\""
+          "Value": "\"BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 08:59:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw="
-        }
-      ]
-    },
-    {
-      "Route": "project.webapp.styles.css",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\scopedcss\\bundle\\project.webapp.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1106"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 08:59:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw="
-        }
-      ]
-    },
-    {
-      "Route": "project.webapp.styles.css.gz",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gehcjyruq2-xl2q4e260s.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "482"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 08:59:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU="
-        }
-      ]
-    },
-    {
-      "Route": "project.webapp.xl2q4e260s.bundle.scp.css",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\th0999w4d9-xl2q4e260s.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.002070393375"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "482"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 08:59:15 GMT"
+          "Value": "Tue, 15 Apr 2025 10:58:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -125478,13 +125856,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw=\""
+          "Value": "W/\"cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xl2q4e260s"
+          "Value": "cpq522cf8f"
         },
         {
           "Name": "label",
@@ -125492,12 +125870,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw="
+          "Value": "sha256-cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310="
         }
       ]
     },
     {
-      "Route": "project.webapp.xl2q4e260s.bundle.scp.css",
+      "Route": "project.webapp.cpq522cf8f.bundle.scp.css",
       "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\project.webapp.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -125515,11 +125893,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw=\""
+          "Value": "\"cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 08:59:15 GMT"
+          "Value": "Tue, 15 Apr 2025 10:58:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -125529,7 +125907,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xl2q4e260s"
+          "Value": "cpq522cf8f"
         },
         {
           "Name": "label",
@@ -125537,13 +125915,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw="
+          "Value": "sha256-cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310="
         }
       ]
     },
     {
-      "Route": "project.webapp.xl2q4e260s.bundle.scp.css.gz",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\th0999w4d9-xl2q4e260s.gz",
+      "Route": "project.webapp.cpq522cf8f.bundle.scp.css.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\th0999w4d9-cpq522cf8f.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -125560,11 +125938,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU=\""
+          "Value": "\"BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 08:59:15 GMT"
+          "Value": "Tue, 15 Apr 2025 10:58:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -125582,7 +125960,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xl2q4e260s"
+          "Value": "cpq522cf8f"
         },
         {
           "Name": "label",
@@ -125590,13 +125968,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU="
+          "Value": "sha256-BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc="
         }
       ]
     },
     {
-      "Route": "project.webapp.xl2q4e260s.styles.css",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gehcjyruq2-xl2q4e260s.gz",
+      "Route": "project.webapp.cpq522cf8f.styles.css",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gehcjyruq2-cpq522cf8f.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -125615,11 +125993,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU=\""
+          "Value": "\"BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 08:59:15 GMT"
+          "Value": "Tue, 15 Apr 2025 10:58:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -125639,13 +126017,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw=\""
+          "Value": "W/\"cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xl2q4e260s"
+          "Value": "cpq522cf8f"
         },
         {
           "Name": "label",
@@ -125653,12 +126031,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw="
+          "Value": "sha256-cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310="
         }
       ]
     },
     {
-      "Route": "project.webapp.xl2q4e260s.styles.css",
+      "Route": "project.webapp.cpq522cf8f.styles.css",
       "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\scopedcss\\bundle\\project.webapp.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -125676,11 +126054,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw=\""
+          "Value": "\"cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 08:59:15 GMT"
+          "Value": "Tue, 15 Apr 2025 10:58:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -125690,7 +126068,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xl2q4e260s"
+          "Value": "cpq522cf8f"
         },
         {
           "Name": "label",
@@ -125698,13 +126076,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-tauBKxfX0YdkqYyxb6dtPPaisG73p/yMkqs6k1Qw+pw="
+          "Value": "sha256-cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310="
         }
       ]
     },
     {
-      "Route": "project.webapp.xl2q4e260s.styles.css.gz",
-      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gehcjyruq2-xl2q4e260s.gz",
+      "Route": "project.webapp.cpq522cf8f.styles.css.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gehcjyruq2-cpq522cf8f.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -125721,11 +126099,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU=\""
+          "Value": "\"BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 19 Mar 2025 08:59:15 GMT"
+          "Value": "Tue, 15 Apr 2025 10:58:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -125743,7 +126121,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "xl2q4e260s"
+          "Value": "cpq522cf8f"
         },
         {
           "Name": "label",
@@ -125751,7 +126129,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EOvRwyHAL2j4Jzshw6F7cjPSXv9lbLH1HKhi1uxfFcU="
+          "Value": "sha256-BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc="
+        }
+      ]
+    },
+    {
+      "Route": "project.webapp.styles.css",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gehcjyruq2-cpq522cf8f.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002070393375"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "482"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 10:58:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310="
+        }
+      ]
+    },
+    {
+      "Route": "project.webapp.styles.css",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\scopedcss\\bundle\\project.webapp.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1106"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 10:58:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cCCb7ngFhDNVTIGztvOmIVsL5Iopj/6gxgiUS0rx310="
+        }
+      ]
+    },
+    {
+      "Route": "project.webapp.styles.css.gz",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\obj\\Debug\\net9.0\\compressed\\gehcjyruq2-cpq522cf8f.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "482"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 10:58:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BzBmVcIKHWO6Y2ms2vdoMHMUfB5VRHaF0YDaMWskYzc="
         }
       ]
     }

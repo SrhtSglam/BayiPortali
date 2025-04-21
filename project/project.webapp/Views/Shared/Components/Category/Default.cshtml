@@ -1,7 +1,32 @@
 <style>
-    .dropdown:hover .dropdown-menu {
+    .dropdown:hover > .dropdown-menu {
         display: block;
     }
+
+    .dropdown-submenu {
+        position: relative;
+    }
+
+    .dropdown-submenu > .dropdown-menu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        margin-top: 0;
+    }
+
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+
+    span:hover, a:hover {
+        background-color: #eeeeee;
+        padding: 6px 12px;
+        border-radius: 4px;
+        transition: background-color 0.5s ease, padding 0.3s ease;
+    }
+
+
 </style>
 
 <li class="nav-item">
@@ -10,7 +35,7 @@
 
 <div class="dropdown">
     <a class="nav-link text-dark" asp-area="" asp-controller="Order"
-        asp-action="OrderHome">Sipariş</a>
+        asp-action="Place">Sipariş</a>
 
     <ul class="dropdown-menu">
         <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
@@ -26,27 +51,34 @@
 
 <div class="dropdown">
     <a class="nav-link text-dark" asp-area="" asp-controller="Function"
-        asp-action="Home">İşlevler</a>
+       asp-action="SellOutEntry">İşlevler</a>
 
     <ul class="dropdown-menu">
         <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
-            asp-action="SellOutEntry">Sell-out Giriş</a></li>
+               asp-action="SellOutEntry">Sell-out Giriş</a></li>
 
         <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
-            asp-action="NumaratorEntry">Numaratör Giriş</a></li>
+               asp-action="NumaratorEntry">Numaratör Giriş</a></li>
 
         <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
-            asp-action="SerialControl">Seri Kontrol</a></li>
+               asp-action="SerialControl">Seri Kontrol</a></li>
         
-        <li>
-            <a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
-            asp-action="SerialControl">Garanti</a></li>
+        <li class="dropdown-submenu">
+            <a class="dropdown-item text-dark">Garanti</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
+               asp-action="WarrantyReqEntry">Garanti İstek Giriş</a></li>
+                <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
+               asp-action="WarrantyProcessTrack">Garanti Süreç Takibi</a></li>
+            </ul>
+        </li>
     </ul>
 </div>
 
+
 <div class="dropdown">
     <a class="nav-link text-dark" asp-area="" asp-controller="Function"
-        asp-action="Home">Raporlar</a>
+        asp-action="Mizan">Raporlar</a>
 
     <ul class="dropdown-menu">
         <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Report"
@@ -65,9 +97,16 @@
     <a class="nav-link text-dark" href="ftp://bayii:2563@mbl.bilgitas.com.tr">Download</a>
 </li>
 
-<li class="nav-item">
-    <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">@WebLoginUser.AuthId</a>
-</li>
+<ul class="navbar-nav ms-auto">
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout"><span style="color: brown;">[Sistemden Çıkış]</span></a>
+    </li>
+
+    <li class="nav-item"></li>
+        <a class="nav-link text-dark">@WebLoginUser.AuthId</a>
+    </li>
+</ul>
+
 
 @*
 <style>

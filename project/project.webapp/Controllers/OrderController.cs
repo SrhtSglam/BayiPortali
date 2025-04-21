@@ -10,11 +10,13 @@ namespace project.webapp.Controllers{
     public class OrderController : Controller
     {
         private readonly ILogger<OrderController> _logger;
+        private readonly IConfiguration _configuration;
         private readonly IOtherRepository _otherRepository;
         private readonly IOrderRepository _orderRepository;
-        public OrderController(ILogger<OrderController> logger, IOtherRepository otherRepository, IOrderRepository orderRepository)
+        public OrderController(ILogger<OrderController> logger, IOtherRepository otherRepository, IOrderRepository orderRepository, IConfiguration configuration)
         {
             _logger = logger;
+            _configuration = configuration;
             _orderRepository = orderRepository;
             _otherRepository = otherRepository;
         }
@@ -35,6 +37,9 @@ namespace project.webapp.Controllers{
             ViewBag.TotalPage = totalPage;
             ViewBag.CurrentPage = page;
 
+            bool useDynamicImage = _configuration.GetValue<bool>("UseDynamicImage");
+            ViewBag.UseDynamicImage = useDynamicImage;
+
             var model = new OrderPlaceModel
             {
                 Items = items,
@@ -53,6 +58,7 @@ namespace project.webapp.Controllers{
             return Json(filteredCategories);
         }
 
+
         [HttpGet]
         public JsonResult GetItemsByCategory(string selectedItemCode)
         {
@@ -63,9 +69,17 @@ namespace project.webapp.Controllers{
         [HttpGet]
         public JsonResult GetItemDetails(string itemCode)
         {
-            var item = _orderRepository.GetItemDetail(itemCode);
+            var itemDetailList = _orderRepository.GetItemDetail(itemCode);
+            var itemComponentList = _orderRepository.GetComponentsByItemNo(itemCode);
+            return Json(new { itemDetailData = itemDetailList, itemComponentData = itemComponentList});
+        }
 
-            return Json(new { data = item });
+        [HttpGet]
+        public JsonResult GetAllFilterItems(string itemCode)
+        {
+            var filteredItems = _orderRepository.GetAll(1, 40, itemCode);
+
+            return Json(filteredItems);
         }
 
         public IActionResult Confirm(){

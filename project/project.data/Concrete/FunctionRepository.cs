@@ -74,10 +74,10 @@ namespace project.data.Concrete{
         public ItemSerial GetItemBySerialNo(string SerialNo){
             var item = new ItemSerial();
             string query = $@"SELECT 
-            SNI.[Item No_], SNI.[Serial No_], BI.[Description]
-            FROM [{_schema}$Serial No_ Information] SNI
-            LEFT JOIN [{_schema}$Item] BI ON BI.No_ = SNI.[Item No_]
-            WHERE [Serial No_] = @ItemCode";
+            ILE.[Item No_], ILE.[Posting Date], ILE.[Serial No_], ILE.[Description] , ILE.[Customer No_], CUS.[Name]
+            FROM [{_schema}$Item Ledger Entry] ILE
+            INNER JOIN [{_schema}$Customer] CUS ON CUS.No_ = ILE.[Customer No_]
+            WHERE ILE.[Serial No_] = @ItemCode and ILE.[Entry Type]=1";
             
             using(SqlConnection conn = new SqlConnection(_connectionString)){
                 conn.Open();
@@ -87,9 +87,12 @@ namespace project.data.Concrete{
                     using(SqlDataReader reader = cmd.ExecuteReader()){
                         if(reader.Read()){
                             item = new ItemSerial{
-                                Code = reader.IsDBNull(0) ? string.Empty : reader.GetString(0),
-                                SerialNo = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
-                                Description = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                                ItemNo = reader.IsDBNull(0) ? string.Empty : reader.GetString(0),
+                                PostingDate = reader.IsDBNull(1) ? DateTime.MinValue : reader.GetDateTime(1),
+                                SerialNo = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                                Description = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
+                                CustomerNo = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
+                                Name = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
                             };
                         }
                     }
