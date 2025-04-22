@@ -261,6 +261,10 @@
       "PackagePath": "staticwebassets\\lib\\ckeditor\\adapters\\jquery.js"
     },
     {
+      "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\ckeditor\\bender-runner.config.json",
+      "PackagePath": "staticwebassets\\lib\\ckeditor\\bender-runner.config.json"
+    },
+    {
       "Id": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\lib\\ckeditor\\build-config.js",
       "PackagePath": "staticwebassets\\lib\\ckeditor\\build-config.js"
     },

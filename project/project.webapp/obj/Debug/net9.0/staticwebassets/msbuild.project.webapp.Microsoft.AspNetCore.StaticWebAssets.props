@@ -1074,11 +1074,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>vy4kqwr1y0</Fingerprint>
-      <Integrity>2d97DJIrm8qCAwnN+Tq/a4CgRggkV0RdDWZUQagvmbs=</Integrity>
+      <Fingerprint>r38rgb7npw</Fingerprint>
+      <Integrity>x61MCTJXJPgB/AWGSXkoLxYeYx/8MyLg1WdNJqBCc6g=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\adapters\jquery.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\bender-runner.config.json'))">
+      <SourceType>Package</SourceType>
+      <SourceId>project.webapp</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/project.webapp</BasePath>
+      <RelativePath>lib/ckeditor/bender-runner.config.json</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>q006v0on7d</Fingerprint>
+      <Integrity>mgRL6koz8Wt2l4TEKohjxd5VNppvS/gkOGTf/3SXEeE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\bender-runner.config.json'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\build-config.js'))">
       <SourceType>Package</SourceType>
@@ -1092,8 +1110,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>t09dv2ex6w</Fingerprint>
-      <Integrity>7VUYiR6FgjIlFP8H9yZLgl87H3ud/piwHn8Ai7hpua4=</Integrity>
+      <Fingerprint>vfl74tuwo6</Fingerprint>
+      <Integrity>S2Cc8Ghm2LVGBJw0Q1ji83dCzM3B/hTbxuHyP7D/2tM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\build-config.js'))</OriginalItemSpec>
@@ -1110,8 +1128,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>krc28zk5s2</Fingerprint>
-      <Integrity>4F70//SilG6l/i5ypd7P3tXhjGIFjeRCjeIbHAG7D+Y=</Integrity>
+      <Fingerprint>1lv05ok0h9</Fingerprint>
+      <Integrity>G5udaL6X+vbfDVfAYiz4NxkWnlRwDEmt2JP+i9WD6Z8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\CHANGES.md'))</OriginalItemSpec>
@@ -1128,8 +1146,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kq3om26dki</Fingerprint>
-      <Integrity>FBnWexbR0d/0rMIylOFkAPi+VyLbrnj2DJL9p0Adtec=</Integrity>
+      <Fingerprint>pm99cvta2f</Fingerprint>
+      <Integrity>AVGFISO7TCgDv9H/5TeJM1qs1F8afaw9W5YlgGgY8Tc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\ckeditor.js'))</OriginalItemSpec>
@@ -1146,8 +1164,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>atkxs9knp0</Fingerprint>
-      <Integrity>Yrgck5chB83IGjrtdM2st8m8+WPLFQ06kiHfMSI8x5k=</Integrity>
+      <Fingerprint>bgkhh0fvd5</Fingerprint>
+      <Integrity>y+J8ULfXf4polHxvFx76lWjMVQ+pZM69FTBLC/YF858=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\config.js'))</OriginalItemSpec>
@@ -1164,8 +1182,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wi9auimox1</Fingerprint>
-      <Integrity>uBR+jPD45ipW4sCFAVu1UQiZbm1nWOyCtUHZjiXHw/U=</Integrity>
+      <Fingerprint>jevq0lg696</Fingerprint>
+      <Integrity>exV6gJK8Ws5LmKlSQZEq1xFIli0h1kMeNhsjUsAPoO8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\contents.css'))</OriginalItemSpec>
@@ -1182,8 +1200,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ob1jbysywg</Fingerprint>
-      <Integrity>jH/EhmAITAv47ZvkbK5pvhdFql1189gbqZVvam2PrfQ=</Integrity>
+      <Fingerprint>ppddoblnj3</Fingerprint>
+      <Integrity>U0UnmJjdJoPkXMRNkJZNMpKf9seBU7WFG6X0xIm+3jw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\af.js'))</OriginalItemSpec>
@@ -1200,8 +1218,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zi6wpm1qwe</Fingerprint>
-      <Integrity>C0qb57NGh6gXlwwuRNVozNploQ1A37v9GoIHiaQX+6s=</Integrity>
+      <Fingerprint>v7bdmo2ys5</Fingerprint>
+      <Integrity>C1BvrazllmksuPVLC3lrG8hjqskGUJxI7RcY2CGgtc4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\ar.js'))</OriginalItemSpec>
@@ -1218,8 +1236,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qjd24tcsgy</Fingerprint>
-      <Integrity>FolIgxtLjkYTk0x2llSOtynF7KpWWYwxx7Kas7XxwAg=</Integrity>
+      <Fingerprint>4oe9cx7mb2</Fingerprint>
+      <Integrity>fK3QLeyRtQ7p/que6yLRXI+vR8Wsr3TXivv7qtncJ48=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\az.js'))</OriginalItemSpec>
@@ -1236,8 +1254,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>48nnl2fpcg</Fingerprint>
-      <Integrity>VIICe5li0gMaawZ28qFC6FJtkSZIW/QuakdN7IrXsT8=</Integrity>
+      <Fingerprint>7h86vdnern</Fingerprint>
+      <Integrity>azOy92W9p11cDpjyLaPho7v5bCcUTQ7ve6oYeM0I5nU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\bg.js'))</OriginalItemSpec>
@@ -1254,8 +1272,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hvz3175bgy</Fingerprint>
-      <Integrity>o/oIQKyeQfyvY5nEJ1bOrEFXIxwUL0uPnvpUtTq2T1A=</Integrity>
+      <Fingerprint>z4og5g0myu</Fingerprint>
+      <Integrity>zTw2tJvxdSaSXEqa8XR76FC4WZ8CWLFfgWZVKBCZaqU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\bn.js'))</OriginalItemSpec>
@@ -1272,8 +1290,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>28nmm4n68i</Fingerprint>
-      <Integrity>EnWeVamnZsptfiEX8PBnlmWAAtXlJbp7PesvSHj4NZw=</Integrity>
+      <Fingerprint>v73kxo2q86</Fingerprint>
+      <Integrity>tfFDOXnN5K+xjDHBr+MutDduHVnS7pMdkEkujsZuqiI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\bs.js'))</OriginalItemSpec>
@@ -1290,8 +1308,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>w6mef4r7uc</Fingerprint>
-      <Integrity>2Nb9Mpu20SYLiTi8w66EDX0BkDgdTu8CIlBmAfYAMsU=</Integrity>
+      <Fingerprint>lt6svc6yfd</Fingerprint>
+      <Integrity>d99fB0BkJPXDC/HeTsSiGDq9Vs79wuau0biWgfhAHMw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\ca.js'))</OriginalItemSpec>
@@ -1308,8 +1326,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>82cco32dmr</Fingerprint>
-      <Integrity>ECzZY/c2C5VB9TbYLF9Y+Tr9yoelmuaz0NO8Mfpsbi0=</Integrity>
+      <Fingerprint>e9jwkz6f1s</Fingerprint>
+      <Integrity>frbymGdpMoSe9RtOWm23Bo3ztGxpDkQekQWHA3uMaTA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\cs.js'))</OriginalItemSpec>
@@ -1326,8 +1344,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>lmftkt4kg5</Fingerprint>
-      <Integrity>XVwnrFSAOwhXX37KEArYFWNsUHWqwr7MZiQ61N34034=</Integrity>
+      <Fingerprint>uxg8txhzm3</Fingerprint>
+      <Integrity>PsdeH64B54Wr/VHcXFUcEa/9rNW8jQbMnt+NISvfkqE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\cy.js'))</OriginalItemSpec>
@@ -1344,8 +1362,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>550r9g0bgm</Fingerprint>
-      <Integrity>eeI4IWIKxe1oE8i8dr27QEjyTv0qLnLXGCKrALWrHU4=</Integrity>
+      <Fingerprint>mjx9t3xf8e</Fingerprint>
+      <Integrity>7vRKzJrJtZmfUuZ4se8NZbDoYs052Baeuhbh4HkLJro=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\da.js'))</OriginalItemSpec>
@@ -1362,8 +1380,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dvairhfrun</Fingerprint>
-      <Integrity>iZbixBO4hJEwQdEiNz+Psulz7LVEjERS6OzuBiwjE2c=</Integrity>
+      <Fingerprint>vv4h87vdpy</Fingerprint>
+      <Integrity>++bAouwf+m1tc14WlAKjcYaCYqVQWKvbNGTQJQHSAQc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\de.js'))</OriginalItemSpec>
@@ -1380,8 +1398,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3jbghod6u9</Fingerprint>
-      <Integrity>X/85hu81bUo322Qo/hBFfQTwXTcW3sFItvdYzOimedM=</Integrity>
+      <Fingerprint>6r34nd2vzj</Fingerprint>
+      <Integrity>/mguGQ2+GNefsntCTJn5tfupUh6/engtlfvD/X2XUdU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\de-ch.js'))</OriginalItemSpec>
@@ -1398,8 +1416,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>s7vwrsrgge</Fingerprint>
-      <Integrity>+P6naeK3hO6Ru60spzy2AIVon4Bs3IWUi+b1qFGNaOg=</Integrity>
+      <Fingerprint>bm2x2g5e10</Fingerprint>
+      <Integrity>g92YiOvT565uB3a/SctdRFKyXai4NgyN99iRgXZLmZA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\el.js'))</OriginalItemSpec>
@@ -1416,8 +1434,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>cr7rok66ug</Fingerprint>
-      <Integrity>CCgNJuWuinsj9G25j4IxUrHc25/7UGWqRpkTRlhPHec=</Integrity>
+      <Fingerprint>6iwjyqokcy</Fingerprint>
+      <Integrity>TrVUY4Q7pkxq8NIagzKlnTaFTKaN7VTJaugPjr925eg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\en.js'))</OriginalItemSpec>
@@ -1434,8 +1452,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>etov16jimm</Fingerprint>
-      <Integrity>YriMqp+4hpImA5laxk3rZSVvjZoWwojU4R6Fe9xUtxI=</Integrity>
+      <Fingerprint>i10w0b6ywt</Fingerprint>
+      <Integrity>yksxLPSVW6K5hKw4O/gEzBN8uuRMCuMOHszNbyjNbQM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\en-au.js'))</OriginalItemSpec>
@@ -1452,8 +1470,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4hxxjvhc19</Fingerprint>
-      <Integrity>uAYZy4jB3dtNwwuZiLOrwKC3DoYTbP1V1K1CIqpw1MU=</Integrity>
+      <Fingerprint>7joh802ww6</Fingerprint>
+      <Integrity>c743esV+iTR4ho3XlVMZwm0JKJq2OQs9jKx1qUOfhmI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\en-ca.js'))</OriginalItemSpec>
@@ -1470,8 +1488,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>r3ymsj5tby</Fingerprint>
-      <Integrity>J65j86S5z9EzXLWQVYcKHwATzI8npjPunW3/jh4JLsY=</Integrity>
+      <Fingerprint>648j2jm1n0</Fingerprint>
+      <Integrity>1r37Ivhehn5Ol9r1253hV6/SHFBZgGYnmM5szqSYwhE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\en-gb.js'))</OriginalItemSpec>
@@ -1488,8 +1506,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>czzoxecue5</Fingerprint>
-      <Integrity>KMV2YyCNjVwNQ/Ye9rx5BYKTzAmXp7+l3nSzNyBRn14=</Integrity>
+      <Fingerprint>9br6eipftf</Fingerprint>
+      <Integrity>xXXSZCAAVxFrIL56Ve3rAxbpHXR49ALn/ETpntwf5EQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\eo.js'))</OriginalItemSpec>
@@ -1506,8 +1524,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kgfiinwspa</Fingerprint>
-      <Integrity>PNO+kSd6jiPz4enOTZCk2gwE4EG6wOuf8H8eOExpnVg=</Integrity>
+      <Fingerprint>ztg8prjifc</Fingerprint>
+      <Integrity>yUNMpzztvb/j1FHkcwTvFwC8x/dpkn+9sIIytlwRQLs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\es.js'))</OriginalItemSpec>
@@ -1524,8 +1542,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>sxuq0w0g65</Fingerprint>
-      <Integrity>4GCaeGwMF7iojXK8cpTWvl04Iamt/YrgnUPAWxKU9Z0=</Integrity>
+      <Fingerprint>qufobxggbf</Fingerprint>
+      <Integrity>QnUmaCCONg0S7vT0Bp26ErY7f14Ap8MZ5+/1n76PW5w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\es-mx.js'))</OriginalItemSpec>
@@ -1542,8 +1560,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>whj4kdkmyb</Fingerprint>
-      <Integrity>tOOShS3714wJrILqTqwiUR4TgfuMbymBr1zR6ZnSDf4=</Integrity>
+      <Fingerprint>0hdaspl68c</Fingerprint>
+      <Integrity>TC2H7aXFksuTKDx8lDgZ6Wm+yLgOCbugnXjHHAJYAY8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\et.js'))</OriginalItemSpec>
@@ -1560,8 +1578,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>d098hr7u2r</Fingerprint>
-      <Integrity>nczLOG8D9vQueNtCC8F7otk5iGNrCyRFl42R36UAeVc=</Integrity>
+      <Fingerprint>rmoa9bl1fr</Fingerprint>
+      <Integrity>M+DI+6cfCiZIB+G1b+2E6+Bf0LxnTWnYwNm9ajrFunQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\eu.js'))</OriginalItemSpec>
@@ -1578,8 +1596,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5x24upk00t</Fingerprint>
-      <Integrity>N/bQKyXGs6DuXZZgHunGzgkprjwkm8inr2Nt7py6HYU=</Integrity>
+      <Fingerprint>etn422qoiq</Fingerprint>
+      <Integrity>knsjEiX/KN8WLRC3xljkQBOVNfqBlsY29WLU5nCQ9p4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\fa.js'))</OriginalItemSpec>
@@ -1596,8 +1614,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>trtths372x</Fingerprint>
-      <Integrity>+cxJKJiH+3U16JWfFEQtZ6p6F45AWgf1d3WgOj3D0lU=</Integrity>
+      <Fingerprint>btjqp367hq</Fingerprint>
+      <Integrity>MVQ1wuAnA2vseh7WugqaxzHOHSwSE1cpI8MJk0G1hEg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\fi.js'))</OriginalItemSpec>
@@ -1614,8 +1632,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nrlapoepnv</Fingerprint>
-      <Integrity>s8Xhc5bcClgeRWkrNqVQx1379Fw/75ZaP2WMr7n4ir8=</Integrity>
+      <Fingerprint>rk13up9q7c</Fingerprint>
+      <Integrity>ReNBh72ZQTG9KdQsRr3YK8jYKyvDca5FcGyHZOnacOY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\fo.js'))</OriginalItemSpec>
@@ -1632,8 +1650,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>h0u5s4ctmq</Fingerprint>
-      <Integrity>MVOscArl6ahrt4MLw2w6ACsg2KFcH9u3GvPFsxjeLwg=</Integrity>
+      <Fingerprint>kyzyx1fql9</Fingerprint>
+      <Integrity>jL9OusZTKqF7D5peaAqDU9OO575vL7EZ+VGpKl4gNNY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\fr.js'))</OriginalItemSpec>
@@ -1650,8 +1668,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9du8urmjwl</Fingerprint>
-      <Integrity>vZVE/i0RsNUai7tVVsHL3NwtB3/x9taG3psTg9UfRR0=</Integrity>
+      <Fingerprint>ggxa4vgmil</Fingerprint>
+      <Integrity>IFjnpk9fhOOiG0wEq9S6yjjmS9lFUVKDBIHW9ArSDQ4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\fr-ca.js'))</OriginalItemSpec>
@@ -1668,8 +1686,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yrgwmxh5lc</Fingerprint>
-      <Integrity>Epm57wByCSeD9fr8MBrWcgwalSdNqAHCZ5XqEedijTg=</Integrity>
+      <Fingerprint>xjerzpuuz7</Fingerprint>
+      <Integrity>kxYzw274mXKkxKYyjiMtFlETvhGVMVnD/obFx6hdPPc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\gl.js'))</OriginalItemSpec>
@@ -1686,8 +1704,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>tq5emfkut0</Fingerprint>
-      <Integrity>lUaTv8v4YsRoVYgMM2mgOSr/AZz1ZZGk+Ude9NoRErY=</Integrity>
+      <Fingerprint>vg4g2ka7ec</Fingerprint>
+      <Integrity>n+wbt4N9suIgDoFXk1MPKT8ReVEdzSDM0yrdoZljcVA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\gu.js'))</OriginalItemSpec>
@@ -1704,8 +1722,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6aelqyuk0m</Fingerprint>
-      <Integrity>jj18RZTU310yw81Ib6RSe8e1EeXBcC3k9gVp4ILlzBU=</Integrity>
+      <Fingerprint>l74ua3pclk</Fingerprint>
+      <Integrity>0TauzfhNp3JppkrwtBJDJO/YmeqIW4lJxcVvPojZDeU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\he.js'))</OriginalItemSpec>
@@ -1722,8 +1740,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0bucxaecrr</Fingerprint>
-      <Integrity>lNK5q7CafputBISoLCAcjxoOzoW/dU+/1dnX0dYk1/4=</Integrity>
+      <Fingerprint>8q27q8ottf</Fingerprint>
+      <Integrity>kENUu+3CI8oE6zx9bMDK33P2Udml88xuj5xyij7y1Sw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\hi.js'))</OriginalItemSpec>
@@ -1740,8 +1758,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>m1hwo8ega4</Fingerprint>
-      <Integrity>Sja0fRWOoVt0y+dxcJa8kGYUSprcq02q7ukcSO6uiwA=</Integrity>
+      <Fingerprint>wnm8674cr5</Fingerprint>
+      <Integrity>RFn/TWGR/7HenyEcrTZrZSGW33Iq0q6iYkLbsFnTyD0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\hr.js'))</OriginalItemSpec>
@@ -1758,8 +1776,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>obxpes3gq6</Fingerprint>
-      <Integrity>9GK2MgLKzlwfv/OVHvo6eMaOKDa/VnohCm+Ed8/6zGs=</Integrity>
+      <Fingerprint>5qmfw8wtlc</Fingerprint>
+      <Integrity>M1+HYiv08NXIQajh9aGRwv6o7Xd5PlV4fuv1q8Pf/Tk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\hu.js'))</OriginalItemSpec>
@@ -1776,8 +1794,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3gnot6672e</Fingerprint>
-      <Integrity>TT6fmR4gHTzUga4paxwkNb2IOAEVwxAQ8UfX17HRDrA=</Integrity>
+      <Fingerprint>s3xafi2qlk</Fingerprint>
+      <Integrity>GF3dkGkfRMZxPGMBq74O6WdBCyRZXkUkQK0q+LZFLzk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\id.js'))</OriginalItemSpec>
@@ -1794,8 +1812,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>bfqd1f56bh</Fingerprint>
-      <Integrity>+SvtP0C4ZDGu6gGG6kOnOdaw3X2nicvXsR1z8H3eunc=</Integrity>
+      <Fingerprint>i1my0qc088</Fingerprint>
+      <Integrity>FgyqAFb0Fa9613/gEdNEcpublqs7rERkZmeGI461z/Y=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\is.js'))</OriginalItemSpec>
@@ -1812,8 +1830,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>znl759sqw0</Fingerprint>
-      <Integrity>kW0iTMoK+GGk5H/LGlw/tV1zNw2VYRz4Ng60tdzn7lI=</Integrity>
+      <Fingerprint>ophgosj4eh</Fingerprint>
+      <Integrity>rPVlPr9kc4Y1vHDgjm1LgKr8oVj3TjRtYaBMarhfbNQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\it.js'))</OriginalItemSpec>
@@ -1830,8 +1848,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>a0jmmiyfa8</Fingerprint>
-      <Integrity>ukcTZe8KphlUyDuBZLm4O+Zu7QWSylB4Eyl68ABJj1Y=</Integrity>
+      <Fingerprint>ctmo9v9r8f</Fingerprint>
+      <Integrity>gKFxwqL9/uuv162zNjw9qdWuWNSWTpMkmTMR5Di377Q=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\ja.js'))</OriginalItemSpec>
@@ -1848,8 +1866,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>g5nviyspgc</Fingerprint>
-      <Integrity>DF9o1jWPdWvHUeC1NYCprSI5TRvZhgmWFmOuNnN15gA=</Integrity>
+      <Fingerprint>hfwd9zae2m</Fingerprint>
+      <Integrity>bRpd980UGWZgGLCN8syGwc1w1La1qGwD6yMtlkbobSg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\ka.js'))</OriginalItemSpec>
@@ -1866,8 +1884,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>s90pd5shi1</Fingerprint>
-      <Integrity>oC6SLizj+3BYXHcjXPuXLF70xGXKrmOK4ZD02grOJk8=</Integrity>
+      <Fingerprint>lw8db5rf2p</Fingerprint>
+      <Integrity>Vf2K7eL2DMdrRXAeNxbUBuMmg0R79xrWT/Ot/6Rallg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\km.js'))</OriginalItemSpec>
@@ -1884,8 +1902,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>u8rcx8w8pq</Fingerprint>
-      <Integrity>7vUQq1ozSV8UbOWBxIuu1Jok0BIlW2u2byn4/yjTvt4=</Integrity>
+      <Fingerprint>dxtsgd8sr7</Fingerprint>
+      <Integrity>f5UYsGGc/ouWR9WzqhA4/Ij0KVSB0K7S2xEQhh7DPLM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\ko.js'))</OriginalItemSpec>
@@ -1902,8 +1920,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dloy54v1c2</Fingerprint>
-      <Integrity>AZb4xMCQ31ADI0mXAiNAK1cb8OL9OMLiOIv7jUuDhIk=</Integrity>
+      <Fingerprint>4c5brjunqs</Fingerprint>
+      <Integrity>xLYrJixzFqpM5z+DoT/iaFUTMR6Sok1F6BLwVLrzjaI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\ku.js'))</OriginalItemSpec>
@@ -1920,8 +1938,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>lur2oprau0</Fingerprint>
-      <Integrity>fUU2+PuJ+Y4n8rxhx97ayh+yF16UXxRJXV35hEPp4lQ=</Integrity>
+      <Fingerprint>0eo2m6usxz</Fingerprint>
+      <Integrity>CIqa+sIsp9nvHTNSKwVjh5Mk9t9R726pNFCG/frEqgQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\lt.js'))</OriginalItemSpec>
@@ -1938,8 +1956,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zeiqditoqh</Fingerprint>
-      <Integrity>RZvnKrr10gPfeiA91cQoRyZLy2GoC7COYIQo1i4Cv0s=</Integrity>
+      <Fingerprint>jmw2p0lf7a</Fingerprint>
+      <Integrity>q9rjSgYn28dgVmQaxNdD866dlimcbvVulITzzXeo/XY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\lv.js'))</OriginalItemSpec>
@@ -1956,8 +1974,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wizkl3c7ni</Fingerprint>
-      <Integrity>2JHAi6rPr6Va2WSnNAk8fRhRyq88kd3C1knkPjCwl0A=</Integrity>
+      <Fingerprint>40m1301pzn</Fingerprint>
+      <Integrity>XKf/GRB5ogCwUZQKomajOIecDbSbSxDW5lE00j5HInI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\mk.js'))</OriginalItemSpec>
@@ -1974,8 +1992,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>f8wiw9s740</Fingerprint>
-      <Integrity>r9fOUfFe2GFMFyi+VMG8hVEnRb3cy80sDpRRQH6+H4I=</Integrity>
+      <Fingerprint>i69sdsnpmy</Fingerprint>
+      <Integrity>hhXYISUKFF69CQb/hjdSW9vma0GprV+66qqTKA8Gx+Y=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\mn.js'))</OriginalItemSpec>
@@ -1992,8 +2010,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zesiuxbfz3</Fingerprint>
-      <Integrity>W9JXSqMY0aBwmZK7zz36qG32sjQoIB/Fghrkc8JScZ8=</Integrity>
+      <Fingerprint>ya55mvkxfu</Fingerprint>
+      <Integrity>Gtwb3xfTQxFjMGbeZcxpPqntXOfALe3+ILoM8BWL1ek=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\ms.js'))</OriginalItemSpec>
@@ -2010,8 +2028,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uq9ztana5b</Fingerprint>
-      <Integrity>6k7rBM8jSLymdCq13sN4lOXHZ2QvCX9evLQoWshNimA=</Integrity>
+      <Fingerprint>gw0csue69e</Fingerprint>
+      <Integrity>cDxBBoBvl0bLDPaFFEmjfFIJxkAap1GDVe8/t6AgnE0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\nb.js'))</OriginalItemSpec>
@@ -2028,8 +2046,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>psaw5sxtcu</Fingerprint>
-      <Integrity>V5xMHzLZTtPb0cwg/BFJWo2a6IPt9+H/SMbOv3NfU6M=</Integrity>
+      <Fingerprint>kqye19hqrs</Fingerprint>
+      <Integrity>pGO+S5vR+g7caF7b0tuvpNWTAeDkXQEowyDLhtenam8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\nl.js'))</OriginalItemSpec>
@@ -2046,8 +2064,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6a1n4d2yh9</Fingerprint>
-      <Integrity>Pt74m1aBOoZzVX4m1Lj9qw7hO7FGACXVUWL+rhT2DYI=</Integrity>
+      <Fingerprint>6o7f3q040q</Fingerprint>
+      <Integrity>aqASF9/AQtCjhhFntlp40R4wwA476/1X2cvHjYtAH4M=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\no.js'))</OriginalItemSpec>
@@ -2064,8 +2082,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>xpc9he39n3</Fingerprint>
-      <Integrity>Wz5QFA7ypZOPADBMtlaTu5G51gE9d59/J9ovDwh7H74=</Integrity>
+      <Fingerprint>w7fggg74lw</Fingerprint>
+      <Integrity>DHGXIQpMId42be2RNGqzUamsi580WIfJOCAm+n0pGhg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\oc.js'))</OriginalItemSpec>
@@ -2082,8 +2100,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8oisvt44nh</Fingerprint>
-      <Integrity>eF/M9RiyuIDtX1OKYXbX8hk4d3MUk6yVJZxUv6Em19s=</Integrity>
+      <Fingerprint>sqojroizfw</Fingerprint>
+      <Integrity>BD/iOXmZCF1TFl76ZaxdJnPKSgxyF64FWBt5vOmLRLw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\pl.js'))</OriginalItemSpec>
@@ -2100,8 +2118,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ommf2d0t8u</Fingerprint>
-      <Integrity>UPZ1pKg8PLIfvGqnapvGmyWrv6msaJ6iaU6UqOHcBRc=</Integrity>
+      <Fingerprint>ulu3gvart1</Fingerprint>
+      <Integrity>sgnvEtw4EicSWppDV5Wzu8g/iEDsL3PlgBcvZCGV99U=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\pt.js'))</OriginalItemSpec>
@@ -2118,8 +2136,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>valbjzxtyn</Fingerprint>
-      <Integrity>l+9v7e1OULUQz5YlA/Swf9DzduJXXkgk+iSmesZgd2E=</Integrity>
+      <Fingerprint>t07d8qd791</Fingerprint>
+      <Integrity>M1uAOi2nD3+1y/Vl4TLsB+McO9HOl4Em6am4abFKIGw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\pt-br.js'))</OriginalItemSpec>
@@ -2136,8 +2154,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>x46adeyjam</Fingerprint>
-      <Integrity>b70133KwZpbahsxtgiz3qCEzAEZ3zwW7Tckq0ULn87A=</Integrity>
+      <Fingerprint>aihflecdhh</Fingerprint>
+      <Integrity>YjPt/9fi9FAFSO9nPehKA0g6xKvpCl6sDcsrN0fx7iY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\ro.js'))</OriginalItemSpec>
@@ -2154,8 +2172,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2fiv2tosyz</Fingerprint>
-      <Integrity>Ajv7H+rvb6v+OzC2sneiU+wfdt1sb/ivBdyUrV3ayC4=</Integrity>
+      <Fingerprint>ly9ogf0oq7</Fingerprint>
+      <Integrity>bfTmzjOyFjkfGdz+mKqaonOT6WQxY9G8OInJqPINaBE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\ru.js'))</OriginalItemSpec>
@@ -2172,8 +2190,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pfe9otchxs</Fingerprint>
-      <Integrity>q6JVmltEbf/2wVpRLVXs+CU5Lcg4n7t2nerMbMyQzYI=</Integrity>
+      <Fingerprint>3uq90rl9zk</Fingerprint>
+      <Integrity>5TP6QJfUwDOv43oW0hJv8k91phFsQZiIwHe111LtE9Y=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\si.js'))</OriginalItemSpec>
@@ -2190,8 +2208,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>l4tapmj0jt</Fingerprint>
-      <Integrity>9bKXfE7b9yZzUHzXogTz0hh7PIBW/7N6GHUc7PaWICQ=</Integrity>
+      <Fingerprint>091xl8n2q2</Fingerprint>
+      <Integrity>bDZA0zhpK77K1pcnfQj7fYH9s2KMc7vnVplL9LQQqa0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\sk.js'))</OriginalItemSpec>
@@ -2208,8 +2226,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7p2q4rskr4</Fingerprint>
-      <Integrity>1d8JR27gBiOlQg4S073tPmSAROpyHqAS0j/GlycOCSw=</Integrity>
+      <Fingerprint>x86gnbm52d</Fingerprint>
+      <Integrity>X1lpT1Sl/MybEGpuinWs0i+aI8udOV3ETKtaIRYHOzI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\sl.js'))</OriginalItemSpec>
@@ -2226,8 +2244,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wvmkv1ts7h</Fingerprint>
-      <Integrity>3KNSQ/svNrNtMVh/pJDSXQEs4C3LJH0v48EEAucnk6Y=</Integrity>
+      <Fingerprint>w3uvr04krt</Fingerprint>
+      <Integrity>1Bq9C5IxW4bswDvS0TdRgXSYqRfmUgEhgPvzYXvmouI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\sq.js'))</OriginalItemSpec>
@@ -2244,8 +2262,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ay7prbv3oa</Fingerprint>
-      <Integrity>gqvIRU6zUIZn4ncxsrjW/+kzrOMJEGbiOkAYWcZ6ILA=</Integrity>
+      <Fingerprint>2lw0pli925</Fingerprint>
+      <Integrity>9jGWU4GGSIdXPW/G3gqS9SxAwtyZlTkGDK766EGNsS0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\sr.js'))</OriginalItemSpec>
@@ -2262,8 +2280,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7n3dtny0af</Fingerprint>
-      <Integrity>TZN0dOIZYuSYNwIZBtr4ndQuq7woo1IH7AML9DFjS1A=</Integrity>
+      <Fingerprint>u5etxwjtni</Fingerprint>
+      <Integrity>8p2hT9WQoEk3LMJAJMFt9lbKsRLxXTRjB9WuTKJA22s=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\sr-latn.js'))</OriginalItemSpec>
@@ -2280,8 +2298,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ue4ojdu8ec</Fingerprint>
-      <Integrity>VlPWIGkaWy8kc4qdj5LOmUKKnVwboBymhBKQ9DiZ38g=</Integrity>
+      <Fingerprint>ar3u6lgjae</Fingerprint>
+      <Integrity>hmiQ7gEV2nsOVXcyfnmMkYvohcRB594D0FmPfkzQa+k=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\sv.js'))</OriginalItemSpec>
@@ -2298,8 +2316,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>b2wmlhguat</Fingerprint>
-      <Integrity>0+TpLW1YzoUeP9mE180Gi0BT5xzErnnm/5k5CWSicX4=</Integrity>
+      <Fingerprint>caf5zlg63w</Fingerprint>
+      <Integrity>pNONxM8c7KlkFYLaNgzxuMCV88YTwMnbI+j+BD9XEhE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\th.js'))</OriginalItemSpec>
@@ -2316,8 +2334,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1bedzaz8je</Fingerprint>
-      <Integrity>U9vu7bWukAbsuMKs5i2DJzDKBaDin41qUo5egi5pPEw=</Integrity>
+      <Fingerprint>d3uo3orij2</Fingerprint>
+      <Integrity>p94/ls0DRQetDD9l0zJ9EeTtoMb/H6DKqGAHA1S9q8U=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\tr.js'))</OriginalItemSpec>
@@ -2334,8 +2352,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>388ajkyzl5</Fingerprint>
-      <Integrity>I+t+m6WMHYdL3EVG7CLMLJyc9q7KkAMd6kVZF5vx41o=</Integrity>
+      <Fingerprint>fi11pcs3eo</Fingerprint>
+      <Integrity>56Yv9/fOyDwwp0EN5Se7NbsrifYT1eGzWdGXSbpe3+o=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\tt.js'))</OriginalItemSpec>
@@ -2352,8 +2370,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>vrajxdcco2</Fingerprint>
-      <Integrity>tW1KFTvQ2KfPq9tBTkvxHD9KXpYQxsw/Izh/BUsBMlg=</Integrity>
+      <Fingerprint>yxmvo4tw2b</Fingerprint>
+      <Integrity>GgLdMyRNZtnAj2rHG+jgagyH5Un29r1SWZWKJNTFGh0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\ug.js'))</OriginalItemSpec>
@@ -2370,8 +2388,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>g7vehj1p2w</Fingerprint>
-      <Integrity>fMKNKb1JEbEsglshnUnZfZqf2zdskJdcF48FTFiQj6Q=</Integrity>
+      <Fingerprint>i6oknh04b5</Fingerprint>
+      <Integrity>ahJJZNM6c3l6DheVTfc/jp+PlTauZxQ+iqaGgi4aDJ0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\uk.js'))</OriginalItemSpec>
@@ -2388,8 +2406,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>170t92yore</Fingerprint>
-      <Integrity>w0jGFIYoU/CS+dE7Nlwwz7CoZKuH3a1MWj8RCWcqD7M=</Integrity>
+      <Fingerprint>9c7q7iuo2n</Fingerprint>
+      <Integrity>V4nyvJhdbVfQzb5o6jRdOLWHf3P4uHzSlQk3x1vQadI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\vi.js'))</OriginalItemSpec>
@@ -2406,8 +2424,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1uj542mdxg</Fingerprint>
-      <Integrity>qV+Fafxiu0tXpoJmkYQbTtflyiTh5PmQ8O/Uh8fUmFQ=</Integrity>
+      <Fingerprint>6b1hp0z4i2</Fingerprint>
+      <Integrity>HvYgdqBeE+z+M/taUsTPV6/b39NifZ8KMtBJvkGEtfQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\zh.js'))</OriginalItemSpec>
@@ -2424,8 +2442,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>v3j9ai8em0</Fingerprint>
-      <Integrity>BWXTa4Yy58iYdH/rNmmHYudFc2WZ9/8DguebZvdNIB4=</Integrity>
+      <Fingerprint>xpxienmw8m</Fingerprint>
+      <Integrity>NWX8IovGM+0whSu4NMEVCaLT0aOnUiA1L2Nx2ZsoHK0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\lang\zh-cn.js'))</OriginalItemSpec>
@@ -2442,8 +2460,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ufazlht5vn</Fingerprint>
-      <Integrity>mkiforJd8eU45lhegHayAqx5BOyDK5ramicgLu36bME=</Integrity>
+      <Fingerprint>hzg45n2eju</Fingerprint>
+      <Integrity>/a+YOuC22ZVW1/516vqcVOI71eD0Z4nb3/o1X6c1j+k=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\LICENSE.md'))</OriginalItemSpec>
@@ -2460,8 +2478,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>za7i1wz3pc</Fingerprint>
-      <Integrity>hfkB8gAvgKSOAmxsJfd2BebNcDRy+juYmddL90nCn6g=</Integrity>
+      <Fingerprint>3w404kqga8</Fingerprint>
+      <Integrity>PfN+DDayq0SilaBKWcGcZ0eb/GePMFZXVtxXDhmS+gg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js'))</OriginalItemSpec>
@@ -2478,8 +2496,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>p5tde545fs</Fingerprint>
-      <Integrity>I6lnuf74nCafy4wH3cii9Sm4CADj/XzSd8b/scOAZgc=</Integrity>
+      <Fingerprint>i3tm6xd58m</Fingerprint>
+      <Integrity>MskryQTKmw3Iojq7f1LG+Z0z2xUGX8BS/e7WXV1o60w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\af.js'))</OriginalItemSpec>
@@ -2496,8 +2514,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>awuz4hxvf3</Fingerprint>
-      <Integrity>Kr/qtoLunHdrZ/QFurDFTDWj8xK/yMFwz3RXixMTxNA=</Integrity>
+      <Fingerprint>biu74xtfgf</Fingerprint>
+      <Integrity>zTFOOS6/BMPpLS9DLXrSNL/8drK3jygfEUrCPA02ssc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js'))</OriginalItemSpec>
@@ -2514,8 +2532,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2clqgcg644</Fingerprint>
-      <Integrity>gi4Hpv9GoDMjc2ITlbBCABxd8la+GF0ouaD4NjEoLnM=</Integrity>
+      <Fingerprint>boxxfbgn6h</Fingerprint>
+      <Integrity>RZz/lMJqj+vc0MiafxWi6pOT8eL9UrC0T4rXcaZa3GY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\az.js'))</OriginalItemSpec>
@@ -2532,8 +2550,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zfzwzkkhsq</Fingerprint>
-      <Integrity>b84w9OiT/vhy7wjMb7JXJvOLun0tapM5Oq36ivLkoNg=</Integrity>
+      <Fingerprint>zenuit1pzu</Fingerprint>
+      <Integrity>Cwg2+Ec+aYhO5DFl5aDJnUL3URasl8hDkFRtDQVxYg0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js'))</OriginalItemSpec>
@@ -2550,8 +2568,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>375fiiy400</Fingerprint>
-      <Integrity>D8JgVZNp3EY3mIsdt0wL/21Ag5Gg5uh8PNOLCYRIq0c=</Integrity>
+      <Fingerprint>mpzm1g4wit</Fingerprint>
+      <Integrity>Sn8+osgUs5kREq/5WVHmXRacf561ioJOMcCaQFQ6ByM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js'))</OriginalItemSpec>
@@ -2568,8 +2586,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qo53r1skml</Fingerprint>
-      <Integrity>ip7tfynjKP1i2NuZD5YTYkZLkCnd8qFX008x7rA3jQA=</Integrity>
+      <Fingerprint>iuudr214q0</Fingerprint>
+      <Integrity>ls8KrOIFJor5/tu7NVF9UOPLACSLyhbSjrCgUR1rcx8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js'))</OriginalItemSpec>
@@ -2586,8 +2604,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>llh3s4prgu</Fingerprint>
-      <Integrity>JwjkNHCXB6Cf3K8LII4amY8SQg9lZcKdRL0jBMSTErE=</Integrity>
+      <Fingerprint>avhqb7jr6q</Fingerprint>
+      <Integrity>9jOkhVm/Xn9JVPq7YFU+fN5G8RU230GqwcLe2SlpSsM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js'))</OriginalItemSpec>
@@ -2604,8 +2622,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ugcd1ph1xt</Fingerprint>
-      <Integrity>ooqvl8xlJFSHy4f8N1M5ufRH2h32DhcZxRtvP1v8lSg=</Integrity>
+      <Fingerprint>wixcpcekkn</Fingerprint>
+      <Integrity>SIL2AGQgwu2YIosPUoa6YiVWTDt+wfAFlqmlHAmD8i4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\da.js'))</OriginalItemSpec>
@@ -2622,8 +2640,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gfdxjw1w23</Fingerprint>
-      <Integrity>PEX4cb80EsdZU3FM+SJsgQ00kE3HWENOyR5gVaMMi4Y=</Integrity>
+      <Fingerprint>0o1zszfawg</Fingerprint>
+      <Integrity>0JR0updFDv/eErR+mcIbcZJNTunE59+GRmD9iywAumk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\de.js'))</OriginalItemSpec>
@@ -2640,8 +2658,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1ga4y1udm4</Fingerprint>
-      <Integrity>4TPYjqIQH+gY8+In50QSWu8XXLhop95YM8bwiQtgSIc=</Integrity>
+      <Fingerprint>29omlv057n</Fingerprint>
+      <Integrity>uoqxmHGxUk66wWT+A4/PS07arM68oJI7yuYTEBULzyA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\de-ch.js'))</OriginalItemSpec>
@@ -2658,8 +2676,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>mnoqju00bl</Fingerprint>
-      <Integrity>rtW38roG+ou/E7819DmNVmwVKedvNNiHA1eUiPBfZr8=</Integrity>
+      <Fingerprint>tzlp1h0zuq</Fingerprint>
+      <Integrity>mYD5GkHmLtAr5AmcaUWlOR9DAruS2DrSL85eplMjxgM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\el.js'))</OriginalItemSpec>
@@ -2676,8 +2694,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kwhgb8qufj</Fingerprint>
-      <Integrity>XBYnQH78wT2V3qPkkQ6eAYitrnEA2BIgI3p06QeTDqI=</Integrity>
+      <Fingerprint>ji3detdp0z</Fingerprint>
+      <Integrity>9TqHIB6e6SWwF3qjISYJPJfQJkcqXVnJfaTq6dZDCQs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\en.js'))</OriginalItemSpec>
@@ -2694,8 +2712,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1ws5xpb3yc</Fingerprint>
-      <Integrity>f6nB/bpxMBjPUlLCTgenNFi4BZWkLu1tyE7R4Nu7nCU=</Integrity>
+      <Fingerprint>2vmype09x2</Fingerprint>
+      <Integrity>wmaYrucfOJKkl+5y6Tn34rpKel8JCPZGMzxVrzykC7g=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\en-au.js'))</OriginalItemSpec>
@@ -2712,8 +2730,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>303q51ayg7</Fingerprint>
-      <Integrity>s3pkvrThW5Zch4BAkPhCRgvQhS2KGlY9sSoMBfRX3YE=</Integrity>
+      <Fingerprint>myprzt36u4</Fingerprint>
+      <Integrity>LgPKcH9ebjp6eGYg3qCAugkt1NZJrRMow7MZLIYRHhI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js'))</OriginalItemSpec>
@@ -2730,8 +2748,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>x9nnu5bnyq</Fingerprint>
-      <Integrity>a6hRjXz9gQ70W2GIrSvW4v8jxzoxcXTGsFJwlCskrAE=</Integrity>
+      <Fingerprint>012ki9661m</Fingerprint>
+      <Integrity>RD10S61NJFxemwrvVP8XoFnWRpSkG3yLAFDyvI5TPPc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js'))</OriginalItemSpec>
@@ -2748,8 +2766,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wetv0a40q4</Fingerprint>
-      <Integrity>WLGoBk/YgHzkmUq2BwxVJTQ9pqvuBFCH4rGxRq+R9Pc=</Integrity>
+      <Fingerprint>asup2gqsal</Fingerprint>
+      <Integrity>5nWbhqyOiky9FgFiQQ+ImexK/+rBK2wshGIrCACSdLw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\es.js'))</OriginalItemSpec>
@@ -2766,8 +2784,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8jx3g43803</Fingerprint>
-      <Integrity>hJxSg2KnTaRXZCv9XLbMl8OI7qpmYR0S7QOUqqX46TI=</Integrity>
+      <Fingerprint>k2kdnksy25</Fingerprint>
+      <Integrity>JNLT6kTsbTnFWmpS5QatcmKVTOcdNUZLyaLYlehERTU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\es-mx.js'))</OriginalItemSpec>
@@ -2784,8 +2802,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>aqcr2rg4qu</Fingerprint>
-      <Integrity>zvhtHpHJDCzuTwjDdIPoPqwONnvq8uiPIGN7GtuMfyw=</Integrity>
+      <Fingerprint>gqyk8j7py7</Fingerprint>
+      <Integrity>2NCBRRkRWzYF7ebTiy7eqFgHCItR1cuTFCZaPy3ltTo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\et.js'))</OriginalItemSpec>
@@ -2802,8 +2820,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>z8zo4xjgms</Fingerprint>
-      <Integrity>jV9wbnLoozPBXa/kNM3P1uidyn4hof1dE1/dq8TSJX0=</Integrity>
+      <Fingerprint>1ixh0kx10o</Fingerprint>
+      <Integrity>JxwvxEyBPKfL9KSJMjusu7Pi8xMRd8psSVjDmTPPCP4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\eu.js'))</OriginalItemSpec>
@@ -2820,8 +2838,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4mbyo6ptzj</Fingerprint>
-      <Integrity>TC/UWtZ/Xu5wFt9ZiUhYmsJbI8PPCoTPcpdgQTBFpSo=</Integrity>
+      <Fingerprint>qx5rtfoekt</Fingerprint>
+      <Integrity>zi/zBSVS7gV72cQb6rlGzlUvWDwILRj87uB6T1mkXvc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js'))</OriginalItemSpec>
@@ -2838,8 +2856,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>alz89cuk2q</Fingerprint>
-      <Integrity>0mAYe3Xynar6T7pZDovmFM2Jn9yYyS4d5xkp768Qh3M=</Integrity>
+      <Fingerprint>q9ky693yzx</Fingerprint>
+      <Integrity>HtX65hOTgG1z1VJMmI8jwPKNxFp/1AfypUgwDr52Vh8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js'))</OriginalItemSpec>
@@ -2856,8 +2874,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>k46xjjikaf</Fingerprint>
-      <Integrity>RNyKQRR10BpSrSqUciPqNMq67AOeMERxSYTMNDwi/HQ=</Integrity>
+      <Fingerprint>uqpsdserye</Fingerprint>
+      <Integrity>qtEW7NKpSoiYmvcdXznAPBztQzk/ok/etczLf9BfwZ4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\fo.js'))</OriginalItemSpec>
@@ -2874,8 +2892,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>lpgsyl8qnc</Fingerprint>
-      <Integrity>mRnt+T4QE1YFwyAmocxK12z5EFYNoRnxBMzfICBH7lQ=</Integrity>
+      <Fingerprint>8ctcnrns7z</Fingerprint>
+      <Integrity>iFIScFcHwXQunUYvEW6Ndmww8OVheAMpK97qyqW9pTU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js'))</OriginalItemSpec>
@@ -2892,8 +2910,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>c106kqvbfx</Fingerprint>
-      <Integrity>sDFMcvTyirJDpYaiACNJ6lWe6ustSERs8kNdeX2RlqQ=</Integrity>
+      <Fingerprint>oks44t8261</Fingerprint>
+      <Integrity>qIENhWiGLX960DbMSN3gb98E0AUXm7f2rF+vHCX2kdE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js'))</OriginalItemSpec>
@@ -2910,8 +2928,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uq1xxvoazw</Fingerprint>
-      <Integrity>FiR6OR1S4rYtc4Y5Ke8lax4AUZ7Y+1oWHRAcpUOYK+s=</Integrity>
+      <Fingerprint>yqjmz30j3o</Fingerprint>
+      <Integrity>hkOt+o16Ka/f5/TuKV5b6kW4SZRMDNwbtm6Vmqfda1g=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js'))</OriginalItemSpec>
@@ -2928,8 +2946,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7arbw74110</Fingerprint>
-      <Integrity>IYXt13PDvciE/tm40hQbSrPswwOoRT9a78ErqYUhRiI=</Integrity>
+      <Fingerprint>6p86x2tnk6</Fingerprint>
+      <Integrity>igpgc0TbpK0cqoJBfPMRZJOpJS4uMibFBAJzzIrz3dY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js'))</OriginalItemSpec>
@@ -2946,8 +2964,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>o7a7z1wpmv</Fingerprint>
-      <Integrity>dBaJxgs0FVQHeMv05rVBjhrbg/yvGP92xr8SZFBcGyA=</Integrity>
+      <Fingerprint>ishwumbfpi</Fingerprint>
+      <Integrity>EojOFdlYhkULcUIm5jNs6viwcYmCbvdAGpd83q+2948=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\he.js'))</OriginalItemSpec>
@@ -2964,8 +2982,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>78aqnqpuds</Fingerprint>
-      <Integrity>uRoqkZ22/Fe7nPrWjLxaxGjCWjbG3/Amt5zEC+Udi9w=</Integrity>
+      <Fingerprint>um01w7k5xa</Fingerprint>
+      <Integrity>iipzC9jrnO6hgvZTl54tSCZPNbxCLbPvBhdELUFU3+Q=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js'))</OriginalItemSpec>
@@ -2982,8 +3000,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jpc5cog0s5</Fingerprint>
-      <Integrity>l7tnA9wDq/YetNIxEC8Ouv8lpr7RUUtuAppv12tFd1o=</Integrity>
+      <Fingerprint>cph0zjmm8b</Fingerprint>
+      <Integrity>YJdrmzoO/OP84zzJ0yGzUnpMOTZS50KuH6LjCs1+ZKI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js'))</OriginalItemSpec>
@@ -3000,8 +3018,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6t4wh8f9sq</Fingerprint>
-      <Integrity>WuF1nvkVrLowNyIPThLUhrvNT+dAGEzkPg0gJH8rWjw=</Integrity>
+      <Fingerprint>1pi6ymz013</Fingerprint>
+      <Integrity>JU5iYoIB5A9XuKaAFYEgJLHfjnpOeqAgbIYbc3alf9w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js'))</OriginalItemSpec>
@@ -3018,8 +3036,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8fk3trbcz3</Fingerprint>
-      <Integrity>JMMY2eFU2i8AsitzJVXTovSgtF7p1Hhf0v45jaoZ/Kg=</Integrity>
+      <Fingerprint>5sudv7uvkq</Fingerprint>
+      <Integrity>64dntWgrOHSRt2q6WLOvmfCVDgF7rBhzaI4GwFDQHO4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\id.js'))</OriginalItemSpec>
@@ -3036,8 +3054,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>i3ibtfqnqh</Fingerprint>
-      <Integrity>opZT0bm1Mqqk3h+2bheeKdmnEyC3ORmk0dJo0rHHkYA=</Integrity>
+      <Fingerprint>2u2q59ynw0</Fingerprint>
+      <Integrity>JqbFcrAWTUb8B/rkDWM7gKGGx7asS0DnVLguilaMPro=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\it.js'))</OriginalItemSpec>
@@ -3054,8 +3072,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pghmrpl0gp</Fingerprint>
-      <Integrity>F6+h8TFbsQeEYGaQA16MrP2f9fI0WIoTq6cBWLvzzi4=</Integrity>
+      <Fingerprint>fviqc63y75</Fingerprint>
+      <Integrity>C/YybO8qI/EMdrCQftk8acXg3zouVHUcqOE8UeL7aKU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js'))</OriginalItemSpec>
@@ -3072,8 +3090,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>tjxar26uhi</Fingerprint>
-      <Integrity>WesfMAX7BX0yI9x2naAkBpFzepMZhJcTHkSVzSV+4vs=</Integrity>
+      <Fingerprint>wwd4q7948w</Fingerprint>
+      <Integrity>kHof8JhKeVPKhMHnPdPIv6YCMYVv2A+DdwjxXaNWYH0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\km.js'))</OriginalItemSpec>
@@ -3090,8 +3108,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5gnbqicit5</Fingerprint>
-      <Integrity>i5KHucavGSHl4U0UjiYULpllNZgJNFKsD0QH6l8chcE=</Integrity>
+      <Fingerprint>cn28qtji3l</Fingerprint>
+      <Integrity>mKL1FE4Viij841PWC5l6p+xmoV7/PRFCoVaO86DgZ04=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js'))</OriginalItemSpec>
@@ -3108,8 +3126,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>c779dkwj4p</Fingerprint>
-      <Integrity>SLYu72bgS/Hjsbqf4SRb+Oce/I2ACNPhN7VYH9Eeb3M=</Integrity>
+      <Fingerprint>y84vpu2o1j</Fingerprint>
+      <Integrity>vsc449mjTijSBrVjcHwL05vOxpZKMwebJQmjaw3szlE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js'))</OriginalItemSpec>
@@ -3126,8 +3144,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gdya0smeg9</Fingerprint>
-      <Integrity>fGNXROtq6GjxHv6WAlk4zosJofPtOlzJ5+yFTuRUjD0=</Integrity>
+      <Fingerprint>yx648n86dq</Fingerprint>
+      <Integrity>2j+YCNQ0SffERZSpNd/ZwLor3Ap77AKLBH+yE2rt97I=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js'))</OriginalItemSpec>
@@ -3144,8 +3162,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3d8qq3xblz</Fingerprint>
-      <Integrity>18ILGNEQi2h1kUcV9U034OoGhl7O3RMzGWC6fgPbQDg=</Integrity>
+      <Fingerprint>z8vqdvaokp</Fingerprint>
+      <Integrity>s8n+iIwPvY0iJVNPHwy4bwKBT2c+L6s03k6+YT/kM4M=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js'))</OriginalItemSpec>
@@ -3162,8 +3180,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kdb2qa22je</Fingerprint>
-      <Integrity>6PczyvxQ/oLPYFaRZqsHERsbHMXh9Z71l+VVLuTV9aY=</Integrity>
+      <Fingerprint>qjw9my99ka</Fingerprint>
+      <Integrity>Bnv4BCP9gQM+ywXILBgX/HvfA6TjAZVU+JCuTa8MOmc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js'))</OriginalItemSpec>
@@ -3180,8 +3198,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>q1qzd0xn45</Fingerprint>
-      <Integrity>YpQY1ntw+pirOFhFpEV73R0lp0fjbwX/Wu9hbA5+Ruc=</Integrity>
+      <Fingerprint>d2w3vd0eu4</Fingerprint>
+      <Integrity>FRhttzOpiSQkciZUjpTJJ3GRL6itcJhI0ruC2+31KBw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js'))</OriginalItemSpec>
@@ -3198,8 +3216,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>tukr1pbuo5</Fingerprint>
-      <Integrity>VXcUUsAklEkkc7khD47eXYrpC7tedX801IhYwz9DWHU=</Integrity>
+      <Fingerprint>k9boueyuzh</Fingerprint>
+      <Integrity>+Dr2zac4CtnKFcQfVRVY85BkIiqQCZN38qZJzLXqHdQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js'))</OriginalItemSpec>
@@ -3216,8 +3234,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3q9ovysjbb</Fingerprint>
-      <Integrity>xfH+6R0HolfJXNUS89fj/w3x37OkrpNeGifISqErHlo=</Integrity>
+      <Fingerprint>q4p2mxvcnr</Fingerprint>
+      <Integrity>RiqKmC9J9mjbbQcv2VA/PtkQE7/DMvJq2veQ7wkjLPU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js'))</OriginalItemSpec>
@@ -3234,8 +3252,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6ks1j2cnsc</Fingerprint>
-      <Integrity>1gEGBJHfxC8K1ovaTVjV3dHL684EXwKjRNrk6YPRqZA=</Integrity>
+      <Fingerprint>9dm2bjh3z3</Fingerprint>
+      <Integrity>QztwUm/2QViG5IQVfvPzWIHdPhj2k27Yp6eXQtxgkJg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\no.js'))</OriginalItemSpec>
@@ -3252,8 +3270,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>j0ah06erx1</Fingerprint>
-      <Integrity>DTuLIpHVqMu7MeNBUN5U+g38KeaPkKIrVe5HhP9P5GY=</Integrity>
+      <Fingerprint>q3oqa257hm</Fingerprint>
+      <Integrity>hp5wSx3PRKJ6n5In9dlvDvD48y3Sr+8c9dxAVtTNJHo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\oc.js'))</OriginalItemSpec>
@@ -3270,8 +3288,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dyfmxw5avd</Fingerprint>
-      <Integrity>u/RA08rPkTTycFVH+qCoBgmypuCwQgrQcQD0+myOTLc=</Integrity>
+      <Fingerprint>viv2bapzwe</Fingerprint>
+      <Integrity>6VCW5jaBc5qOqxWQuzk0SDc89UlU5O/y7PKbIiLqgZg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js'))</OriginalItemSpec>
@@ -3288,8 +3306,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3ft7kohgwt</Fingerprint>
-      <Integrity>UWtyI5MNp2jEyaTHedlzEdYtpQkYfiycYPlqfjIvxaA=</Integrity>
+      <Fingerprint>wvbqd2r1ep</Fingerprint>
+      <Integrity>rCMsnsyOasVp9lc8vr9tqgBYd1S6yTD9P+8dHa1Osvc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js'))</OriginalItemSpec>
@@ -3306,8 +3324,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ha5sav6koe</Fingerprint>
-      <Integrity>N3AKnOiUdT2nO//9TCznJlmsiABzn1EHAGxeZDrvaqM=</Integrity>
+      <Fingerprint>ehj74h85yt</Fingerprint>
+      <Integrity>nnn5wtmFA2KGQpLLnStR/sCsRgZ6+jIF1GYoU3uZaSU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js'))</OriginalItemSpec>
@@ -3324,8 +3342,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ztekmjyy6a</Fingerprint>
-      <Integrity>6dWA+orRDcvrLQSq7a1VgiE1YbDjk4Fld3nIOYEzdW0=</Integrity>
+      <Fingerprint>wzp4igq6yw</Fingerprint>
+      <Integrity>nA46mnbZ8nkydcdn50ZKWjG+8er6hTH55SL8NvNyj8o=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js'))</OriginalItemSpec>
@@ -3342,8 +3360,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>c7l93o5bew</Fingerprint>
-      <Integrity>aNn2OqMAnK2BglI6nWtYhtJcieRYJxY5kxpXIN54k7Y=</Integrity>
+      <Fingerprint>n3rhismc1s</Fingerprint>
+      <Integrity>jbp0KTYU7nycadNOF+YQ6Rk3KNsO648pPFSNQYB1dnk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js'))</OriginalItemSpec>
@@ -3360,8 +3378,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>lhwrmxycfa</Fingerprint>
-      <Integrity>OffYfN/elGNZ6KKS1hJMp2rGsDKbUtmsHLt4r4wVaJ4=</Integrity>
+      <Fingerprint>ugz60zpu7c</Fingerprint>
+      <Integrity>DnVk78vqEDhlT+YhNY8/eflrUw409EiGIms9suwD75E=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\si.js'))</OriginalItemSpec>
@@ -3378,8 +3396,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dn1ej7u2i3</Fingerprint>
-      <Integrity>2c7Z9MHQfPdtbWn+VBsm4fWMH0Qf5EyPXzr3u8GLVVc=</Integrity>
+      <Fingerprint>fuhs3cmo7o</Fingerprint>
+      <Integrity>VzyJIE3u3OM4XXrHNpTNCW9wG7k+/my5nH8lVo0cUxk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js'))</OriginalItemSpec>
@@ -3396,8 +3414,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8d9y9regvv</Fingerprint>
-      <Integrity>FMcPSU5kL2/rs03MbJN0rZ88ljoaddBRJBIuymuVMiE=</Integrity>
+      <Fingerprint>8ko4wzrktl</Fingerprint>
+      <Integrity>qG5/YhZopTn5yqxdDKzUybTEU1m6/j0mET/Kxpwln/0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js'))</OriginalItemSpec>
@@ -3414,8 +3432,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>xsjjlu37ja</Fingerprint>
-      <Integrity>AUiDI1lWXI1GimPGsjY1TVrqpSw/CRBH2DbHLJgW6ZI=</Integrity>
+      <Fingerprint>5pyw67ccfj</Fingerprint>
+      <Integrity>qXlm7e5AsMdkXg2oYDMcDqcCAtIXAaSKdGawKqaY+s8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js'))</OriginalItemSpec>
@@ -3432,8 +3450,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9htxc952nq</Fingerprint>
-      <Integrity>fTOiS7aB1/lC6VFmBOlcjn02PcSuK9dhII7p/3BDHJw=</Integrity>
+      <Fingerprint>l94696hjnq</Fingerprint>
+      <Integrity>51PXweX8qTKRffwjJCm0c3RXm1wPR9y86gZqeBEfiew=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js'))</OriginalItemSpec>
@@ -3450,8 +3468,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9grdib5nk6</Fingerprint>
-      <Integrity>x8VUthVv4beMVCPnpzKAl8dvfMzsLP4H9r78IljVIHE=</Integrity>
+      <Fingerprint>g1j5tdgnex</Fingerprint>
+      <Integrity>pEBAIROCOfgCXEq4ejk+LKjbwkbV/lcNhFee+gG4JP0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js'))</OriginalItemSpec>
@@ -3468,8 +3486,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>cwiqpfeesv</Fingerprint>
-      <Integrity>LJeVzI9utvs72iXhCzBCu2AnrJe6M+8hcMNgpTqEhmo=</Integrity>
+      <Fingerprint>iapo7u3q3c</Fingerprint>
+      <Integrity>CuWmUR64SHIXvIZwtPr/aGrVSGhfjujdl15BKkcGVYg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js'))</OriginalItemSpec>
@@ -3486,8 +3504,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3xzjpfr2wx</Fingerprint>
-      <Integrity>aT66QY/c0mnqpO337tZrXpIhk6Rljvox//Chnq3yblI=</Integrity>
+      <Fingerprint>rhl0d9mryt</Fingerprint>
+      <Integrity>z30vcOoQCEJJ6KyUcDXAcSDcS0/WhIAASyNhSJzJwL0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\th.js'))</OriginalItemSpec>
@@ -3504,8 +3522,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ibzvrj9giw</Fingerprint>
-      <Integrity>jnsiZWI5k/RZ6nF5xW9w2VYDPbIgy/qMBULNqk/i0do=</Integrity>
+      <Fingerprint>5c414ghrsr</Fingerprint>
+      <Integrity>NWBahmPucz5p8Phh9pxRFjk+X6esYxNQaDYRynTtg9s=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js'))</OriginalItemSpec>
@@ -3522,8 +3540,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7scnhtkzem</Fingerprint>
-      <Integrity>iRqRPdMN3My9NvWcuGGcOAdvj3qe8eqYdrtVxpmVN38=</Integrity>
+      <Fingerprint>qxpj6egave</Fingerprint>
+      <Integrity>DkijEhyundhLlGFeNrUt7H3oFxymWHaoOoCYGLmRY8o=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js'))</OriginalItemSpec>
@@ -3540,8 +3558,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>bwz5jfuugv</Fingerprint>
-      <Integrity>+zOWL8pgW4U6BQfHsDYQ5pbukatXTxFdbZ7cmQIHNJo=</Integrity>
+      <Fingerprint>pwzdi6r4d8</Fingerprint>
+      <Integrity>9y7sbXuDbw3cVm7IBZWuoja6U5FYct3xeAhE4aV8iAE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js'))</OriginalItemSpec>
@@ -3558,8 +3576,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5m23r4yuyx</Fingerprint>
-      <Integrity>/VoCyIOMMtooRXHzxXCT+/pHEqxnNtQozqq+xPOCP4I=</Integrity>
+      <Fingerprint>gdm8e092zt</Fingerprint>
+      <Integrity>vP4n2Md2MYOlvGKUGrNKQ5C5bzEIcCijeJfvwC5S7xY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js'))</OriginalItemSpec>
@@ -3576,8 +3594,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dl64xop5ib</Fingerprint>
-      <Integrity>nxRip+sI1U+VppyIMwwLEONzpEljyzXR5E7Tm0Rc1Lw=</Integrity>
+      <Fingerprint>xl0p3cta0h</Fingerprint>
+      <Integrity>q02a7gRoDPGeoWPkNscrM2vVeAZcvghLMvjU+6nrJ1g=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js'))</OriginalItemSpec>
@@ -3594,8 +3612,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0g7ikhu0yp</Fingerprint>
-      <Integrity>ME4MJ8ofhdU/R81AzjfcD14+VASa8DaBLSwRx0qdEAE=</Integrity>
+      <Fingerprint>rkv4iyloe8</Fingerprint>
+      <Integrity>JR2VFbfI1Kbw0lE3D4jBHrMijIK2HvZBjMTpVgZp9xA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js'))</OriginalItemSpec>
@@ -3612,8 +3630,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>bdwt6xejby</Fingerprint>
-      <Integrity>H9MSEGlG6n97PrLJa9HIm5DAcztvabhI5HusBIsdE7Y=</Integrity>
+      <Fingerprint>pldz51qd6y</Fingerprint>
+      <Integrity>ndjS8n274NoVMVax517b3qmuYW3/gKYiXIdJDHGOWlo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js'))</OriginalItemSpec>
@@ -3630,8 +3648,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hnj8mnzb9d</Fingerprint>
-      <Integrity>g2io0kizxzTY9+b/6L8JTNgfKeGqGsZpgrNq6xa5fbs=</Integrity>
+      <Fingerprint>mrhk3tdfal</Fingerprint>
+      <Integrity>DmLYGQJZgC7zdUEEoJq7+Mo6772Ow81nAsdgA2fyroY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt'))</OriginalItemSpec>
@@ -3648,8 +3666,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>goib2mybw1</Fingerprint>
-      <Integrity>UG3mLO4Z6DIrGPBr/kTG5o9l8EJ7b0W5Bo/7uDWCKRw=</Integrity>
+      <Fingerprint>qiuwnnz4po</Fingerprint>
+      <Integrity>fjpF6vapPwDYdzzXBZHTopkqZyeztQFpvfPP9RRJqMw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\about\dialogs\about.js'))</OriginalItemSpec>
@@ -3702,8 +3720,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>cglh9x3gs4</Fingerprint>
-      <Integrity>JHyAG5qgYMnFnBxvdnCiI3OUq5ToAmeeH9zVBKFoUHQ=</Integrity>
+      <Fingerprint>vulkekzxhn</Fingerprint>
+      <Integrity>p7mMtIn9CMl6cFYG36P8wUg90Gy1N3vHWBj4E92Uxw8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\clipboard\dialogs\paste.js'))</OriginalItemSpec>
@@ -3720,8 +3738,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nx7u1n0yum</Fingerprint>
-      <Integrity>VZ8BZu7V8X3IKvQUUCLjea0PsEFafR+Cs+WQbTuNH04=</Integrity>
+      <Fingerprint>oc4c93s6ar</Fingerprint>
+      <Integrity>+IkPlfHP7AajZA5A4ybULLEUXb+OFFg1T5q6UdIxUSo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\dialog\dialogDefinition.js'))</OriginalItemSpec>
@@ -3792,8 +3810,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wxt3rocdo9</Fingerprint>
-      <Integrity>VBWwUuXLZZ1iJjEuIOkITrKmyHdGxL/oAIR4fY4ljR0=</Integrity>
+      <Fingerprint>dxvaipq75q</Fingerprint>
+      <Integrity>IXa3eHbSs+t3xMEDBQSUWFHtis85cqbKC5T5yx63Js0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\image\dialogs\image.js'))</OriginalItemSpec>
@@ -3828,8 +3846,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6uep6git9o</Fingerprint>
-      <Integrity>ooIEY8ZeV+ixAdr87Vj2w/+C3eVJdfHJCh3bhz4GXDg=</Integrity>
+      <Fingerprint>qehqbb5qfu</Fingerprint>
+      <Integrity>oqGWsHx97zYsZ92MDfstrcm32LqEzF+FfOi/fuSGBP4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\link\dialogs\anchor.js'))</OriginalItemSpec>
@@ -3846,8 +3864,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>n4auq9g6nz</Fingerprint>
-      <Integrity>xyzJdse8trJhVgCBwTi4W3sezoA3johrzCmLc8F7jJI=</Integrity>
+      <Fingerprint>cc7bmwi1fe</Fingerprint>
+      <Integrity>7K9E7g97Uxhk63XBPa3JfgMAjZtyqbTLoY956y5i5Fs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\link\dialogs\link.js'))</OriginalItemSpec>
@@ -3972,8 +3990,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>h2fcrqtod3</Fingerprint>
-      <Integrity>SUoFbF6GCqV3fBe9tjud9oK5Y3ba9liqqeat9CCKeg4=</Integrity>
+      <Fingerprint>eo0bfsidjg</Fingerprint>
+      <Integrity>0miij/msGqjBLFPu03UPUq/2AuSIPhSoa4OzgOzLqHs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\pastefromgdocs\filter\default.js'))</OriginalItemSpec>
@@ -3990,8 +4008,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>bkgfyj0333</Fingerprint>
-      <Integrity>m0/23+8KJXYRYaPOk02NNDVdhq2fFGqvaer3tARGNJ8=</Integrity>
+      <Fingerprint>k5xwrcq5v5</Fingerprint>
+      <Integrity>2PpsLByQP1hpXLvV8VAcbsQ6ZQnSg+8J9DVGhv2t3EI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\pastefromlibreoffice\filter\default.js'))</OriginalItemSpec>
@@ -4008,8 +4026,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6i60bcojb3</Fingerprint>
-      <Integrity>7vtopAy8+/tuSOhfrUWpXgIQofnFbKow0azTBxFF7TM=</Integrity>
+      <Fingerprint>4ban8jnfnd</Fingerprint>
+      <Integrity>EAi9wxRyCnCGCekMs/SG6p2pOB5WxnVDx+9/xQw9pRc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\pastefromword\filter\default.js'))</OriginalItemSpec>
@@ -4026,8 +4044,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9mvck48oxq</Fingerprint>
-      <Integrity>7zD06yW74lun2VXu/bkKK+OFiveg8jefUOiIQEvzejo=</Integrity>
+      <Fingerprint>e7axgvqdbs</Fingerprint>
+      <Integrity>6n13b6b2GokjTUQAovc0EmiAEUPeY9PY8YJ/LyOS9EU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\pastetools\filter\common.js'))</OriginalItemSpec>
@@ -4044,8 +4062,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>w1yito81jm</Fingerprint>
-      <Integrity>HCY6GMI5XsTVbNI1Ei8nxxvem/ya0sCoChG+n9cTfIc=</Integrity>
+      <Fingerprint>xgw22lubcj</Fingerprint>
+      <Integrity>H5lSKLREdUXyC1DE4cCP2APCXA3oMLZZ8+FxuwnCvug=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\pastetools\filter\image.js'))</OriginalItemSpec>
@@ -4188,8 +4206,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>n61w8nnctx</Fingerprint>
-      <Integrity>/wFvkcrnJB0/+S3NkVm8aTvTwzOtzfcw3RBHlo+cG5A=</Integrity>
+      <Fingerprint>w4ihnon6be</Fingerprint>
+      <Integrity>8MLjF1I2JhD0mRHABad2j3tOqfTtJlbt2Q8u3ClTLBA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\af.js'))</OriginalItemSpec>
@@ -4206,8 +4224,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>j95z98omec</Fingerprint>
-      <Integrity>mTFaTcVU3a/ELESSMvIAktMkdYZF/MjGTaWAuBODEFs=</Integrity>
+      <Fingerprint>m48j08ip81</Fingerprint>
+      <Integrity>5i9yA6wlPzYcCG5J0eiZfFt+n0QcpNEV86WcIZUxVRI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\ar.js'))</OriginalItemSpec>
@@ -4224,8 +4242,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>sdq9t9jt4u</Fingerprint>
-      <Integrity>0F51eAZWKRdlUsJgybrF7Y5Pk7OsEUQKQGd1jltnduY=</Integrity>
+      <Fingerprint>pos3363uqg</Fingerprint>
+      <Integrity>+R4Cgezl+bNOnh8kyWt2BNt8z7QvOa5YaEVxZ64mBB0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\az.js'))</OriginalItemSpec>
@@ -4242,8 +4260,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yjlus35k7f</Fingerprint>
-      <Integrity>nqCuo57GIlEYLUVtAyS27XnYZTc6vhscXppeq8mDalc=</Integrity>
+      <Fingerprint>e6iw258p68</Fingerprint>
+      <Integrity>+qXtTqvqOb+hFzyD8QUaimrLPZ/7AAfLPNYvookKYXM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\bg.js'))</OriginalItemSpec>
@@ -4260,8 +4278,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kn6fk46ocr</Fingerprint>
-      <Integrity>kKxRN7SlE72ejJ6lT4gDrxc7LZ3wSCMcrmvaAaGKwsU=</Integrity>
+      <Fingerprint>kufhslxb74</Fingerprint>
+      <Integrity>hLXRcUqcEXvv1Q9xI7LWvyf5cznvaDw19/y3HJVbFrw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\ca.js'))</OriginalItemSpec>
@@ -4278,8 +4296,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>558cwf0ivy</Fingerprint>
-      <Integrity>OfATCiBslEcQgB19X1uFEQb975FjbdvYc8c2fddi5oM=</Integrity>
+      <Fingerprint>kmqfndh2oe</Fingerprint>
+      <Integrity>dHDgYJwZb0Wk4xRgC0/A1JuETBujTfztamhTg52iJfU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\cs.js'))</OriginalItemSpec>
@@ -4296,8 +4314,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yhwz7fy6tt</Fingerprint>
-      <Integrity>us2MzltmWnvAdGbS6Ivt/9LoszNC6LMlLuv7PNUb9UQ=</Integrity>
+      <Fingerprint>ldxw4gpm60</Fingerprint>
+      <Integrity>B7sfGVOwcP7LyoKyidYulvVt+vXfWvzgXipG1T3xifU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\cy.js'))</OriginalItemSpec>
@@ -4314,8 +4332,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>rhk21li6w9</Fingerprint>
-      <Integrity>P4kzdiG8TqNCLo+9rvSBFkLYhPjai6z5XFBAOBpFBN0=</Integrity>
+      <Fingerprint>tkvasmum7e</Fingerprint>
+      <Integrity>XdIrNq/22q4ikfG6MhTWbl782DRHY71PzNgb9aAXjuE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\da.js'))</OriginalItemSpec>
@@ -4332,8 +4350,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qgyxhhi9wt</Fingerprint>
-      <Integrity>Rt4LIoEgPqHioz2/sGPeil80fChKoklqfKUPQOaLpRE=</Integrity>
+      <Fingerprint>cabj76bkka</Fingerprint>
+      <Integrity>5K7fZBwhI29A5Osjue+4hQV5QwTI8HYfuvTejVxQ3cQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\de.js'))</OriginalItemSpec>
@@ -4350,8 +4368,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nwmld296k3</Fingerprint>
-      <Integrity>N+zuigyc12RwZp/XsG7R5lxHUon64FW0aaNhdjkGJ+Y=</Integrity>
+      <Fingerprint>a0vyw0gnbt</Fingerprint>
+      <Integrity>hk5rIuDGVgS/avh1HlV54FCxtspCYgwERGocjjXrEq8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\de-ch.js'))</OriginalItemSpec>
@@ -4368,8 +4386,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>svlj2vjq7k</Fingerprint>
-      <Integrity>iMNiELyCYGlUmyxlcSYgaGekU0yMLLOTjESAEqEKiWc=</Integrity>
+      <Fingerprint>by13hwnfxd</Fingerprint>
+      <Integrity>o42/8md0h5k/1NuAfWU3WTIxQGktMIlFA9ipbz3Po0M=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\el.js'))</OriginalItemSpec>
@@ -4386,8 +4404,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>op6yag3xey</Fingerprint>
-      <Integrity>hK/DIj9l1dWW3X6/CazqApbAvSEWJw5lFEccrCnTD2A=</Integrity>
+      <Fingerprint>aktpy9ogba</Fingerprint>
+      <Integrity>Fvjl/8WKAV3ji/pB8ZZLAomH0Lj39/g9JXIvJez4p1k=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\en.js'))</OriginalItemSpec>
@@ -4404,8 +4422,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9u186mcvle</Fingerprint>
-      <Integrity>r+Z6gBoywq6QfxbqDQvRvMnZwuEpqY8wt/dTLKc/1BE=</Integrity>
+      <Fingerprint>itc1dy17pr</Fingerprint>
+      <Integrity>2kNg0f7BMYeRX9VRdyX1PzLOXeIyyaCMhqHgwSLKYAc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\en-au.js'))</OriginalItemSpec>
@@ -4422,8 +4440,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>vv13a2bea1</Fingerprint>
-      <Integrity>S+6SkcypaU8u2EH++xrIE3iZCCnll9MeW5IJI/7DtSg=</Integrity>
+      <Fingerprint>2hih3sqods</Fingerprint>
+      <Integrity>OhViJT/k/Im/fOWBadw8an9Gxy5nPkElH+NOhylAGUw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\en-ca.js'))</OriginalItemSpec>
@@ -4440,8 +4458,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>s0g0i52rm5</Fingerprint>
-      <Integrity>5EjUa6q1hzz4OfBATZhu3/WDRRtFY6FgHq6N+Dcd1q8=</Integrity>
+      <Fingerprint>mfbios3cm4</Fingerprint>
+      <Integrity>nr1DwJ3z7lTKuElU1lmpkWHiufc+YDRkVkaXaNRGMsg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js'))</OriginalItemSpec>
@@ -4458,8 +4476,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>b73vwmjfk9</Fingerprint>
-      <Integrity>90mwonLFvlhL10TX2aTRSccUi7Wd3pDbjXc3ZWNOTKY=</Integrity>
+      <Fingerprint>hkh3g5wl04</Fingerprint>
+      <Integrity>sf/+HIRa/TR49/mb/Ywxkpv+sORhC/+ipR7bW/ybRxI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\eo.js'))</OriginalItemSpec>
@@ -4476,8 +4494,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pazuqf4q4q</Fingerprint>
-      <Integrity>McRq6/ZUzzcUDXy6tApQz3J6INpkvk+++YL7Th4QGx4=</Integrity>
+      <Fingerprint>i04gkelmwn</Fingerprint>
+      <Integrity>UtSCcLu5crRYXGqUKSqMsEOQNoPJ7Bjikz9exNubzMg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\es.js'))</OriginalItemSpec>
@@ -4494,8 +4512,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>mxavccla99</Fingerprint>
-      <Integrity>5qrOmXnr9q/MG2toIFDYwPJGL4zJUZRXALh9EPzd4wM=</Integrity>
+      <Fingerprint>fp1v31qqt9</Fingerprint>
+      <Integrity>nT4H2egxc9ie9QWpZLAAum1gwVUBpPeLFCc1epYD10E=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\es-mx.js'))</OriginalItemSpec>
@@ -4512,8 +4530,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>b9bhepjjyc</Fingerprint>
-      <Integrity>PxVc5g2a/PF5jpHk9bxsGDoeTOYiAcnzvBmgwXv28JU=</Integrity>
+      <Fingerprint>vm66rytt2k</Fingerprint>
+      <Integrity>Fzo2OCj1IuJUY769AaeSzrg+iZ/8fWjWWS91PtgsaGc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\et.js'))</OriginalItemSpec>
@@ -4530,8 +4548,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fp84y8a6hy</Fingerprint>
-      <Integrity>E6eUtlTcv95F57XjOZS4WeCYm+qtNBN7qCKOS217Zbg=</Integrity>
+      <Fingerprint>8sh80k2k5w</Fingerprint>
+      <Integrity>CPz6S4bKRiIYgLjijDA3pC0RlMVzz6c3Yog05cMvVxU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\eu.js'))</OriginalItemSpec>
@@ -4548,8 +4566,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>679ioj73a5</Fingerprint>
-      <Integrity>7ozfNOxC90eBBRbZy14ewxww3Z7DTevWUHfPq75vg4E=</Integrity>
+      <Fingerprint>csy38gm6od</Fingerprint>
+      <Integrity>3PqmrxcrALMtAQvpBO3cwbWINlMD5GcBimJNYAHMTkE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\fa.js'))</OriginalItemSpec>
@@ -4566,8 +4584,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>06oy2tun4f</Fingerprint>
-      <Integrity>2CQM6PxHFrMz4S3qaIZ1diaaLxfMTQ1UsmHQaXsuRyQ=</Integrity>
+      <Fingerprint>3pptpjyntu</Fingerprint>
+      <Integrity>V+yM+yDY7Vkyk7MaRtbo8G7ttUDC5eE75q2tQrtQroY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\fi.js'))</OriginalItemSpec>
@@ -4584,8 +4602,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5fd9ek2zow</Fingerprint>
-      <Integrity>MSob+Uw1PdR2ae/KfWX2hd5u1/y70QZAC1xi0Z//NaE=</Integrity>
+      <Fingerprint>gfegtesz76</Fingerprint>
+      <Integrity>DGJ/Y+4xXW5I+UV5UsLr3NdiXP+YhlmdyRaMZgljws4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\fr.js'))</OriginalItemSpec>
@@ -4602,8 +4620,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zgfp3zwl80</Fingerprint>
-      <Integrity>k6lo6O4LZf5vE9snVM1dgxAvj/7eN48HNjWRWO3a2hM=</Integrity>
+      <Fingerprint>jf1wbrhejs</Fingerprint>
+      <Integrity>wWl1Y2rOSlLLDFdhL3/73Eg28PqhoM0AzDZHAn4YuZs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js'))</OriginalItemSpec>
@@ -4620,8 +4638,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>u4w396utdp</Fingerprint>
-      <Integrity>bmZrvi+6tMl3XM3rsK0elOj1zGvcKQZjvqQ6/VugE4M=</Integrity>
+      <Fingerprint>hzsf3hhle1</Fingerprint>
+      <Integrity>fVfaHPmPqEw5MLQPWPeP1AZit+ZW4TXX5LEgsjL1JJI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\gl.js'))</OriginalItemSpec>
@@ -4638,8 +4656,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>t3y0yginm7</Fingerprint>
-      <Integrity>V9Ekjr2aTaHM3l8li+5+48Vv6p6Tb35Hszsf8YWwu9s=</Integrity>
+      <Fingerprint>34b12kmo0f</Fingerprint>
+      <Integrity>g2AWRHAXjgMYBN6RYzgDVN/tbQUNTnYLpPoVlFmoJqw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\he.js'))</OriginalItemSpec>
@@ -4656,8 +4674,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4htqm2lpe5</Fingerprint>
-      <Integrity>SDphPgP2EGWh9kzo7n/MVys7UfB+woP2scM5URPjf+0=</Integrity>
+      <Fingerprint>qcoevh41dr</Fingerprint>
+      <Integrity>ylUt0W4dbg1aua33lufV3UvWL1x28SafZtz8jFpjkGA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\hr.js'))</OriginalItemSpec>
@@ -4674,8 +4692,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>aplvqgs1b0</Fingerprint>
-      <Integrity>nhkqGkisucJvDI0VLL22y4IEIZ/7h7DoUmsvrkyKdUg=</Integrity>
+      <Fingerprint>lywjmlxcyj</Fingerprint>
+      <Integrity>Y3hkEqwj0R2M2F8oluD0km7XTZFzcQ5VIe1YNM7bFc0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\hu.js'))</OriginalItemSpec>
@@ -4692,8 +4710,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3574s67cnd</Fingerprint>
-      <Integrity>J+E/6tz+9PErKnTTQUgJYcTimhAIAUhyVvlB+uOIuNw=</Integrity>
+      <Fingerprint>6l8aj8cvj1</Fingerprint>
+      <Integrity>BiNXQDHSUmi96lqaAXhvcVwc7c1oVlXQJ+DlkY1601s=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\id.js'))</OriginalItemSpec>
@@ -4710,8 +4728,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>cnb4h6byqj</Fingerprint>
-      <Integrity>CDOpRDiPHi+MlXt2lcq4wXmWVmL6+3hvjEtmsSd0tJs=</Integrity>
+      <Fingerprint>65z86z0ji3</Fingerprint>
+      <Integrity>6lXh8LvQYFcAt+MehcxBbN4J6QaMD9qpD8ZDdv0HWuk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\it.js'))</OriginalItemSpec>
@@ -4728,8 +4746,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>slsb0kfrg4</Fingerprint>
-      <Integrity>kOWfqskvdfg8+R2vFmhUNP6E0KEv5eDTlEGEP/Ml35E=</Integrity>
+      <Fingerprint>42sjxb7j1w</Fingerprint>
+      <Integrity>NO6F4hPMttm+/oFydA0SAEIJ0oMAtiBI2MqxdFacAmk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\ja.js'))</OriginalItemSpec>
@@ -4746,8 +4764,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>x3i1xtf77w</Fingerprint>
-      <Integrity>7RYw7JUZtqM8Ruodl8tpjnsQS/ftwszeKJrzkndT2z4=</Integrity>
+      <Fingerprint>1ody7mjke2</Fingerprint>
+      <Integrity>T9d4wtEMb5qsClnvduION988nrceot589CaGmQ+c/RE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\km.js'))</OriginalItemSpec>
@@ -4764,8 +4782,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>vg6izv7o24</Fingerprint>
-      <Integrity>P0A5YTfyWgd5csDqgRFjCItBY/SQBhHrPD5BpekVIxc=</Integrity>
+      <Fingerprint>prqehv3kka</Fingerprint>
+      <Integrity>BTyOaYqKo8ZgylosEo03D0sRHT3BbNAsSXA8eg3ovtk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\ko.js'))</OriginalItemSpec>
@@ -4782,8 +4800,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kwqbsars6b</Fingerprint>
-      <Integrity>DO/3vaG50zTy4/UeCGeE0twJuoQkTxilako9awl3A5Q=</Integrity>
+      <Fingerprint>jlu548tuyu</Fingerprint>
+      <Integrity>Jx5q9dcE8Io6uBZqX92NWVo3FN6BN+trGypRxxWknfo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\ku.js'))</OriginalItemSpec>
@@ -4800,8 +4818,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qhha10fm51</Fingerprint>
-      <Integrity>8nc68p+HpiHwK28NZU53HsZWkUaWnP3nL/tobBTXcDU=</Integrity>
+      <Fingerprint>ehvidfbatm</Fingerprint>
+      <Integrity>4mhDYsKp0sgw1Vqx+GkDExJaioMKV9Ytjw+/sc2WI0M=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\lt.js'))</OriginalItemSpec>
@@ -4818,8 +4836,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fba7vtyo56</Fingerprint>
-      <Integrity>+2LHuE1vKrxrJb1g2ypKpAR3aKRo1xKIxtWDZ67o7FQ=</Integrity>
+      <Fingerprint>0ao4pdc7km</Fingerprint>
+      <Integrity>6ODiC/OQ64dKtorP9RghvV687GXOGlRIGaYrNBgjcZc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\lv.js'))</OriginalItemSpec>
@@ -4836,8 +4854,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>en9mkdrle4</Fingerprint>
-      <Integrity>pk31VvRiC4r++GC6xgWP+uDabvxkO1+PdDGArUqzei8=</Integrity>
+      <Fingerprint>hij9g6ph9a</Fingerprint>
+      <Integrity>CYOshFwqGnktO4k2yQ2F3VHbEQ9XWZURhl5tpm1fP78=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\nb.js'))</OriginalItemSpec>
@@ -4854,8 +4872,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ncxpy1ulbt</Fingerprint>
-      <Integrity>F5viQB5ajA88vEkgq2LrBFeiTsYmZ+SYZWe6+5kgsVs=</Integrity>
+      <Fingerprint>mim9sk2rf6</Fingerprint>
+      <Integrity>PibvJirfteBbl4B+aucqzp5Mh/gBDtCxQy2ooBlJWVg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\nl.js'))</OriginalItemSpec>
@@ -4872,8 +4890,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qd57op6tau</Fingerprint>
-      <Integrity>Ai2gqoC7vkiGlG/zJXPhTfY8PUms0evEbGNjzuB5FgA=</Integrity>
+      <Fingerprint>ryo20zmba5</Fingerprint>
+      <Integrity>HYnjXkz7Ux3CHtSW7DRvJDC6j2jxivx6/Zfvc7CmiFI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\no.js'))</OriginalItemSpec>
@@ -4890,8 +4908,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>cb7yc97bfp</Fingerprint>
-      <Integrity>iNm0OgeYsutJeP8IIhUFaoPxHNAQWUSFmb/juhoom/s=</Integrity>
+      <Fingerprint>l46dfuq0fn</Fingerprint>
+      <Integrity>u1jkgMRYC56TW+mBiOGFThge6IlT0Viu0l9swB7bGdk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\oc.js'))</OriginalItemSpec>
@@ -4908,8 +4926,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>grx5u2pklm</Fingerprint>
-      <Integrity>LPDs9GBgjy0wbT5mPdtfWinu6OVOUqleR4nx+xo60eI=</Integrity>
+      <Fingerprint>fqd5gsspwp</Fingerprint>
+      <Integrity>x9Tlcw5tnLRnIxkcT30ht4RKP000smOiAXHYq7OZYiw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\pl.js'))</OriginalItemSpec>
@@ -4926,8 +4944,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>mfwe6h2lif</Fingerprint>
-      <Integrity>Tlrvs5Bkqnygca3xPnBlIiCyQwVZxh3/vVaftBw4rH8=</Integrity>
+      <Fingerprint>f9sj5mxlcg</Fingerprint>
+      <Integrity>06JgqUBLlhpbRyMmGAAkjJhwo/YmE0+HBU2Q7+4mwuQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\pt.js'))</OriginalItemSpec>
@@ -4944,8 +4962,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nwn4e9g5qq</Fingerprint>
-      <Integrity>ByRUuOvPyWxZKsvgB+YEHM6qwA4qxvDoU8BWkC5MUuI=</Integrity>
+      <Fingerprint>e6usm6kgh1</Fingerprint>
+      <Integrity>OopRgqBIigTleBmwfqMDDbHwgZ7Y7mn0BborWPc8ZZ8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js'))</OriginalItemSpec>
@@ -4962,8 +4980,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2ky023f7nt</Fingerprint>
-      <Integrity>DnOLVlwxQ42paRySAkpzyEtJaJHfhKFwV0GKrDSQCms=</Integrity>
+      <Fingerprint>ptgc6b41rv</Fingerprint>
+      <Integrity>080W0cXVenPI75pLK5nYDag70YquvPDNMDUv0zpmgrc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\ro.js'))</OriginalItemSpec>
@@ -4980,8 +4998,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1cusjvuqr5</Fingerprint>
-      <Integrity>b0glNp+4Pmyqs8xHwNhhi+GsuAZUdqgtjICGuYBNoCw=</Integrity>
+      <Fingerprint>r5l42m8q1f</Fingerprint>
+      <Integrity>H54o6CyXxi4t2WhDjVd6SkqMLu0+LYjzh/Gglep8fVI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\ru.js'))</OriginalItemSpec>
@@ -4998,8 +5016,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>os4njkjnsw</Fingerprint>
-      <Integrity>CCuOihSeBc8mkeSeh+a4p5+JP9IX7ARCghO8705BJMw=</Integrity>
+      <Fingerprint>lq316xl0gu</Fingerprint>
+      <Integrity>LQPOrr1P9UpoP7rj3aOhrXDPrzkjvRNICyCu87x8w3c=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\si.js'))</OriginalItemSpec>
@@ -5016,8 +5034,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>q7okt48eaz</Fingerprint>
-      <Integrity>anu5nOagGWOCd1D4emO+cchfjzjX1rkiaDzpTCuY5U4=</Integrity>
+      <Fingerprint>gbyuqb8s6d</Fingerprint>
+      <Integrity>xBBZYfFJFEaYIsfpnX+jaXgb+6tnWUFVYmizKXWozvs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\sk.js'))</OriginalItemSpec>
@@ -5034,8 +5052,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2p6lboqgct</Fingerprint>
-      <Integrity>2v+bIokPAQD2dVCirgboO8AQUv0+sX0mupYWkU/fgRw=</Integrity>
+      <Fingerprint>hzh49ql4wr</Fingerprint>
+      <Integrity>8ypw2xsAY9HOV7oek9KEjQx4+bOg0EJ+8bz95LGOYlA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\sl.js'))</OriginalItemSpec>
@@ -5052,8 +5070,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0k0zp2b4g7</Fingerprint>
-      <Integrity>kJ5J9EsRAkwn57u5GxP0u0UdjoCC9W6G5/eiXtpIypQ=</Integrity>
+      <Fingerprint>o9k94br400</Fingerprint>
+      <Integrity>JPEd3UY8nd7tLaBsxk0w4Uiai1Vuexj8KwRdAEL7bcA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\sq.js'))</OriginalItemSpec>
@@ -5070,8 +5088,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>rv7f7eojwn</Fingerprint>
-      <Integrity>WYsIaXmR4LHWq7iym3O4UeoSgfP/STEM1MKp3XaPuxA=</Integrity>
+      <Fingerprint>2owi1jqu1u</Fingerprint>
+      <Integrity>Hp1SRFk+XbuqEAFA5kpu8KtfdPlRCf3wyGylewzJHgE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\sr.js'))</OriginalItemSpec>
@@ -5088,8 +5106,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kw9zuyxhtt</Fingerprint>
-      <Integrity>5BJotXaVJfMrRXtXSREiMNE66LFjw/EehZTfmYpVkIo=</Integrity>
+      <Fingerprint>etbjvxptdq</Fingerprint>
+      <Integrity>bsrd1hcEEO7GZ5+Wj28POw8xBO0LJBPsBAteVGBPCGQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\sr-latn.js'))</OriginalItemSpec>
@@ -5106,8 +5124,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ic3vmo89du</Fingerprint>
-      <Integrity>TucIcUdu35GxHsCCrRQj0tam1bCeEiEO529rdHytEIE=</Integrity>
+      <Fingerprint>d9jgpf173y</Fingerprint>
+      <Integrity>geqJC76Snn5b2sQDmjufiJRbLogi97hAt6H6eyeN5IM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\sv.js'))</OriginalItemSpec>
@@ -5124,8 +5142,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>h9i169wtck</Fingerprint>
-      <Integrity>tdzlbVv7id0YgJNvzkAYcyntzAQg140JhsF5jmzE1Io=</Integrity>
+      <Fingerprint>gik2q4exd6</Fingerprint>
+      <Integrity>qCHbBxvnnb+5U5SIiMstq5YioUcet7wawicUkjz8sCE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\th.js'))</OriginalItemSpec>
@@ -5142,8 +5160,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>eztvje3q7x</Fingerprint>
-      <Integrity>ikQd1JdW2DZN2cQmMgez/he+4FJgl2vFLITmoSF6icU=</Integrity>
+      <Fingerprint>lpav1a5221</Fingerprint>
+      <Integrity>B9+n1rCBLu+utQKIbcFf4YqaYlhltRcCIO8F1sMTiaE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\tr.js'))</OriginalItemSpec>
@@ -5160,8 +5178,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dbtcnhftxc</Fingerprint>
-      <Integrity>l1V0wEpqlQfIMAkS3NN4VXHKlKmnNAdL3tIw9boVVw8=</Integrity>
+      <Fingerprint>innessx6f7</Fingerprint>
+      <Integrity>PovDLIhRAwpuzskA1s14BMX5cbwW7lZaNvaPKIdgEGo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\tt.js'))</OriginalItemSpec>
@@ -5178,8 +5196,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4n1cp8jf89</Fingerprint>
-      <Integrity>UFx+r4jBwT5g4dIN1XfLSs4PPjq9Ou6TG1toLt70owc=</Integrity>
+      <Fingerprint>2a6a2wgmzm</Fingerprint>
+      <Integrity>tn9Lj64wqBnjuW/Ly73gIxBA+crwet2mvJphKi1opzA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\ug.js'))</OriginalItemSpec>
@@ -5196,8 +5214,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1dktzoa7fg</Fingerprint>
-      <Integrity>qzCB9qY34UGk1yYr25pUW/2vNGbtOYa4Ru4KyORiM1w=</Integrity>
+      <Fingerprint>k19pn3h9zv</Fingerprint>
+      <Integrity>CK0+JNIFeqMAS4rIbVbxJrgCDJzphj1o/aJJMFvDEyA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\uk.js'))</OriginalItemSpec>
@@ -5214,8 +5232,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7q9wfnxhj4</Fingerprint>
-      <Integrity>wYv9Vhmbd+WLxq0U9my1ZzdH5iXTETblUQwT/Qq2xpc=</Integrity>
+      <Fingerprint>8dyjun70kr</Fingerprint>
+      <Integrity>RMHinlpe9+mp99CFppae+wf7v/FbgMhY7/HaSAgOlNE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\vi.js'))</OriginalItemSpec>
@@ -5232,8 +5250,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>r992q8rpka</Fingerprint>
-      <Integrity>kfrHkKlfH7GrJwi3FaDiet7puT+TBA2pll4KgV4BGWg=</Integrity>
+      <Fingerprint>3kw0ab9vf7</Fingerprint>
+      <Integrity>00qynO+BW1ZLUOCgvMPqme7VB7sT34+zHWQ4kISVGSw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\zh.js'))</OriginalItemSpec>
@@ -5250,8 +5268,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6za1eq278w</Fingerprint>
-      <Integrity>LrzpghYAUJ6z8YJKO398hmA67YPg966wN0Y++hY2az8=</Integrity>
+      <Fingerprint>zj9zcjjth5</Fingerprint>
+      <Integrity>4bx4DUcVdQOoUK0tlvbi7LPiFe8m3t/MkuJzAnLxyL4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js'))</OriginalItemSpec>
@@ -5268,8 +5286,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hqnj97grdh</Fingerprint>
-      <Integrity>6ePh96CgCfUsRMOSpmdHbzfE5K7uMBbWdWdcNu9v0CE=</Integrity>
+      <Fingerprint>dia4roel66</Fingerprint>
+      <Integrity>NYlCnMnXVY4FVv0U3/tuzMbiwZKcEwMcJ/2RsFAfnWA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt'))</OriginalItemSpec>
@@ -5286,8 +5304,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1jeedweku3</Fingerprint>
-      <Integrity>Dc61R9gLsjM0lRMbvbaSloLsJndoAemtiA8P+5bTGGw=</Integrity>
+      <Fingerprint>xasdimo1j5</Fingerprint>
+      <Integrity>dwWQYhQ0+l6hO1YfC73JWn+op9YZ6N4ZNOJSeXgqSys=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\specialchar\dialogs\specialchar.js'))</OriginalItemSpec>
@@ -5304,8 +5322,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1wtiwddoqz</Fingerprint>
-      <Integrity>L1R0B8o0ot7+0YqNZtL6H5d6JW1B7Yd+x01qBNsoMJI=</Integrity>
+      <Fingerprint>nlv9z6qqkn</Fingerprint>
+      <Integrity>OwMyldW4C4s0ile2oRUPFIx384qmvpjeqmKBrI5lNB4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\table\dialogs\table.js'))</OriginalItemSpec>
@@ -5340,8 +5358,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>obou6t1u3k</Fingerprint>
-      <Integrity>pMABLYEx9KFZYACTfjxCwS/OE1vLLuPNAjv+rsF+weE=</Integrity>
+      <Fingerprint>m8ahe9bres</Fingerprint>
+      <Integrity>6q9Ytop8VoGk3OdcYBgNk2kUydlmddG+IlesC/YwUZc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\plugins\tabletools\dialogs\tableCell.js'))</OriginalItemSpec>
@@ -5376,8 +5394,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>tdfth1eaxu</Fingerprint>
-      <Integrity>31fiMBqsTGaPPlhC6QueVGAh3dOwtZcYZvTNlkN84us=</Integrity>
+      <Fingerprint>mf4mfcbamc</Fingerprint>
+      <Integrity>DvH1nhS+iz+agLZSZ+SiJwZBDd1UbND/gpn++UiFBWA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\README.md'))</OriginalItemSpec>
@@ -5394,8 +5412,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>xcat4rj7m3</Fingerprint>
-      <Integrity>sZmeUWPj5A9cU2lZ0nWRya5Bo2OFSZyRBZpq3gbdiAo=</Integrity>
+      <Fingerprint>lman47ql9l</Fingerprint>
+      <Integrity>c4rOzw4GXVmN9Ui/+TqOapmrNTT1qj1iOSFQgEQaYrY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\css\samples.css'))</OriginalItemSpec>
@@ -5520,8 +5538,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0xy9n6rfjk</Fingerprint>
-      <Integrity>BNjz//J+yulFjgLKKM4XC0Jj6rMFXAgvnaEdvARpon0=</Integrity>
+      <Fingerprint>tfpwacbfhi</Fingerprint>
+      <Integrity>ybKLSi4QpPZjtH2a82V10lPBsRQeyUAIKxBu4V1zypE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\index.html'))</OriginalItemSpec>
@@ -5538,8 +5556,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>2oe6cvirp6</Fingerprint>
-      <Integrity>wteCeEPufwM5loYNQNEzuV+lzRNuqSsXGpI0yyE2GBs=</Integrity>
+      <Fingerprint>o9wkvayatx</Fingerprint>
+      <Integrity>pJj8LGu+/XLelQsahIjwhUYy/fgCgGW+HSdb3shQi8o=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\js\sample.js'))</OriginalItemSpec>
@@ -5556,8 +5574,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>q25y9j8yn8</Fingerprint>
-      <Integrity>ztzCKEpRPuazf4QKuld5nWjxZSn1no3LPI9gJDH3umQ=</Integrity>
+      <Fingerprint>mnvjr5gf69</Fingerprint>
+      <Integrity>AhaoHt+97Jt0P64jss/Pk6CxDt4NWgAqfOMtcKyrRi0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\js\sf.js'))</OriginalItemSpec>
@@ -5574,8 +5592,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>x2fhlukz9l</Fingerprint>
-      <Integrity>mdMiTrL7v6xAAsRD/XXbGlocnjMDIabxN/CXQOQgR18=</Integrity>
+      <Fingerprint>q2nrlv0rkn</Fingerprint>
+      <Integrity>kn6Y4eIb5Ts5Y6XAjAZfwObxX1TmR4ZtI5heN2Nu2jU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\ajax.html'))</OriginalItemSpec>
@@ -5592,8 +5610,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>337gnyxwey</Fingerprint>
-      <Integrity>39bRLcLVOK5YfxTPbuGPCtogou5ireLZ1bO2ibPNJFM=</Integrity>
+      <Fingerprint>dey5hpco32</Fingerprint>
+      <Integrity>m01Y+P/9UIf73Bw5tHKefSFmRxfAUCq4NimrVfo5zm0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\api.html'))</OriginalItemSpec>
@@ -5610,8 +5628,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>y8r0tv4owk</Fingerprint>
-      <Integrity>8uLDnFrxhYxaaVUCWD1u4EoSlVuspSp5sJGa8vJ7f7c=</Integrity>
+      <Fingerprint>nrkpdiqw4a</Fingerprint>
+      <Integrity>Y4qaZb7C48AwA4TCl/JUDVFdaZzWl/41NC5xrAQsHuw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\appendto.html'))</OriginalItemSpec>
@@ -5646,8 +5664,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1lu93qdagh</Fingerprint>
-      <Integrity>Fd6OL4ujd+M38TDovHZN5vklNzr7/Ihfa1sb1vt6r5o=</Integrity>
+      <Fingerprint>j6ocvih1ev</Fingerprint>
+      <Integrity>laN0UJowsOO6TDEStns7yatbsur8V1Qjt5ZmpS69vmk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\assets\outputxhtml\outputxhtml.css'))</OriginalItemSpec>
@@ -5664,8 +5682,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pgo380qou1</Fingerprint>
-      <Integrity>Z7mw3j5zG7+8uSpM3Kd3kpaStvu50IsOph3Vntu3ogY=</Integrity>
+      <Fingerprint>aq6l7tfyq1</Fingerprint>
+      <Integrity>UoALKBqvCUljCf4C75yzxRPH22cmUgRuDqGUpVPsPSQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\assets\posteddata.php'))</OriginalItemSpec>
@@ -5700,8 +5718,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>so4ll8odfk</Fingerprint>
-      <Integrity>/B9Q8UjjALAUM6kZudjKwNy59HoJPfkotKclRH+ci8c=</Integrity>
+      <Fingerprint>ocrry9gc1m</Fingerprint>
+      <Integrity>yBZw1bjzDc3AVr6Iwb9jSqVzvXiS5577vdHgyTzNN5o=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\assets\uilanguages\languages.js'))</OriginalItemSpec>
@@ -5718,8 +5736,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>53w01ucwd8</Fingerprint>
-      <Integrity>cTsDhWmM8d4GGfwd16Jjz9NVQLQXKgWsMjvEl89OhkY=</Integrity>
+      <Fingerprint>v8a55i68cl</Fingerprint>
+      <Integrity>4S9gb9W82S2jXVbcVAuP1jVc2H9WcIKPm/Cy5fSl7No=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\datafiltering.html'))</OriginalItemSpec>
@@ -5736,8 +5754,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>m4iok2lrb8</Fingerprint>
-      <Integrity>OqLQxe4ctHDy+1gFIQeWIFrgkTZAqcHn+mL759JvDIA=</Integrity>
+      <Fingerprint>lnco34y632</Fingerprint>
+      <Integrity>75ZGj2n2MxCykjl7U/98ZIuXcTOk0eOK15+30+HSJgA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\dialog\assets\my_dialog.js'))</OriginalItemSpec>
@@ -5754,8 +5772,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ix6nlypzq9</Fingerprint>
-      <Integrity>KjCiVj0qWJL3qQhVv/wLHK3MzfUO6KRlRW0GHWCGoQE=</Integrity>
+      <Fingerprint>8nz47kl4k8</Fingerprint>
+      <Integrity>dBRVAkKEosY3zPXefEPTWs1i+Amm7WvjcJI/A5YqTZU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\dialog\dialog.html'))</OriginalItemSpec>
@@ -5772,8 +5790,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>lwgn8cnovk</Fingerprint>
-      <Integrity>qyKDJZkFdEDf/F6txv2w/jF6ILCqxeKX12JEhVAsL6U=</Integrity>
+      <Fingerprint>d4acp71tq0</Fingerprint>
+      <Integrity>PUP6QLwHlo1RJprJUXos5UinMM+Rlaoq5BdNbAJVfQk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\divreplace.html'))</OriginalItemSpec>
@@ -5790,8 +5808,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>a845zyph3s</Fingerprint>
-      <Integrity>VsBTWfDO0E6rhHdPQmGGzxdjpGTl9GJPYwAqEw53f+o=</Integrity>
+      <Fingerprint>sr93qxg9i3</Fingerprint>
+      <Integrity>yO1EyjcCl8qkgSCcn8Zbmzsv9YqMEYN3zYyoL2BDRX8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\enterkey\enterkey.html'))</OriginalItemSpec>
@@ -5808,8 +5826,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>vgag6gmxa7</Fingerprint>
-      <Integrity>/z6n23sW4moeDstrn6eRt3RDBeFZg53TemWVoKizJTA=</Integrity>
+      <Fingerprint>ludfn45g0m</Fingerprint>
+      <Integrity>3UoKD2LkVHIdzGznACb8p+2gW9E8c70nNSb6cNC3pdg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\htmlwriter\outputhtml.html'))</OriginalItemSpec>
@@ -5826,8 +5844,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kkgyow6lv8</Fingerprint>
-      <Integrity>ZMBo2DA/zNcVyaJ51hjef/V7nQ+wYUd1Hje2abos8EI=</Integrity>
+      <Fingerprint>0b9cy73kze</Fingerprint>
+      <Integrity>5DegFsuFRleBdYQ4VtHSYfR2Z+tTgYIC1nVStiaDqIg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\index.html'))</OriginalItemSpec>
@@ -5844,8 +5862,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jqovlhbmuf</Fingerprint>
-      <Integrity>BSjxwI3AAamErMYDZ+s0xlNMDy3yn84lArmz4jyGSqo=</Integrity>
+      <Fingerprint>oi129luau8</Fingerprint>
+      <Integrity>MPHH0SOAKTcftlsGf1WkUX/0QsWJz9sLKdHTzwnG5nc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\inlineall.html'))</OriginalItemSpec>
@@ -5862,8 +5880,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>tb4w1nhazu</Fingerprint>
-      <Integrity>FzVxOpQMCHXEhzakSx5MhU7ZOkiQOQOE9aIoLRv38VM=</Integrity>
+      <Fingerprint>hdhqcbvikc</Fingerprint>
+      <Integrity>deKyiSgucoJJ+uja5x0B+AECUetNACoAazTYOKDpVDc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\inlinebycode.html'))</OriginalItemSpec>
@@ -5880,8 +5898,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>vhn4ewtk25</Fingerprint>
-      <Integrity>DZIZElYxPlfqpwVu2cDb5kFuDtLrPr6x/iCMRpg6slw=</Integrity>
+      <Fingerprint>g48i5l3fld</Fingerprint>
+      <Integrity>YH23AqOkwcnQ28tLDR5c1YwM9EsiLdH2wl5QpNHirvM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\inlinetextarea.html'))</OriginalItemSpec>
@@ -5898,8 +5916,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4a89dlu2c2</Fingerprint>
-      <Integrity>LJNnuqg0QAIwyQN6jrf+pQOCzMvxkjogRDlZ7LCskck=</Integrity>
+      <Fingerprint>rug78i8gq2</Fingerprint>
+      <Integrity>E2FwVl1eW4RW+VPW4ad4NOl4oJCLeAiQwYJ40ncsk4s=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\jquery.html'))</OriginalItemSpec>
@@ -5916,8 +5934,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7rhikogi0d</Fingerprint>
-      <Integrity>nWHNTdEjZWD9EZUbzdU0MOT+FazBRBWuWdwgSZq7+1g=</Integrity>
+      <Fingerprint>5svi9ugy2a</Fingerprint>
+      <Integrity>my29sVs31G78mKrkJTUoyJfXeZlICyGKA2oWTVk+OPg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\magicline\magicline.html'))</OriginalItemSpec>
@@ -5934,8 +5952,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nlqvjcgqo3</Fingerprint>
-      <Integrity>a7vE4j2L5vAdJ/1gaeBqOZ7rFh7V8mNzGxLaz2399hs=</Integrity>
+      <Fingerprint>cwh6ol2zpp</Fingerprint>
+      <Integrity>5PNGD/ffFg6yRo5rt/H3zh544Og5WJBa3x4RVPGu20c=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\readonly.html'))</OriginalItemSpec>
@@ -5952,8 +5970,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>whei3owr5a</Fingerprint>
-      <Integrity>5Bw5AcxL46pB/uZpBpWUIpWCMD3vtlHfIjyXl/D3VU8=</Integrity>
+      <Fingerprint>990ack0uic</Fingerprint>
+      <Integrity>MwTjB0AwXf+M3M1oYqBjFAIHWwiouTetSaOdvg+TYZA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\replacebyclass.html'))</OriginalItemSpec>
@@ -5970,8 +5988,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>h93o0eytxp</Fingerprint>
-      <Integrity>hX7oSnhS88t5xARmhB6YdTppSPGEmYvwiJJiaANAFs0=</Integrity>
+      <Fingerprint>bnrqnlqloi</Fingerprint>
+      <Integrity>iSYtyH5k5/HPIueBRfga09wbDzh4FrG7ddqfK7a0f7M=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\replacebycode.html'))</OriginalItemSpec>
@@ -5988,8 +6006,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0ev4s99a3y</Fingerprint>
-      <Integrity>GBjuKkVZyRCxe8qGqJbeN17iEFoleepg5TnJpaRG7Qo=</Integrity>
+      <Fingerprint>7ojivhpjku</Fingerprint>
+      <Integrity>F+f/nwPuKVcpqT3aRWQ2M3mswohyOSU4kRcdZ7uo6lc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\sample.css'))</OriginalItemSpec>
@@ -6006,8 +6024,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1n1a8bqvzj</Fingerprint>
-      <Integrity>M2XmmiOXk9GzBJUT66YZp1qBSWhm5aR4eNjgVJJ78X4=</Integrity>
+      <Fingerprint>cmu88iwocf</Fingerprint>
+      <Integrity>/CJNz7LhuVfE4IIY/UraYV0iJOTBDO2hF46gIo8EtiE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\sample.js'))</OriginalItemSpec>
@@ -6024,8 +6042,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uijljjrr6e</Fingerprint>
-      <Integrity>FuXl/R9z+/ti2REZkE61NL7LvsBaxj6O4Ovq+/gr1pY=</Integrity>
+      <Fingerprint>uk9ym4hfqp</Fingerprint>
+      <Integrity>AmX1oQUKAhTKLKIAgROJHRp3OiJL0/PMIvRLB1ZV5bk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\sample_posteddata.php'))</OriginalItemSpec>
@@ -6042,8 +6060,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6jtjy3pjtp</Fingerprint>
-      <Integrity>vkWy67PhL/25N+XjBarRCbWen2NZcU/2Y+YbRHP8EAQ=</Integrity>
+      <Fingerprint>4qiy6ilk5o</Fingerprint>
+      <Integrity>tM7/em1Qqpbz/XldbWASSEYhKH5I6RcYe14G4O5QLcU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\tabindex.html'))</OriginalItemSpec>
@@ -6060,8 +6078,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jjm9zeyjo1</Fingerprint>
-      <Integrity>oUoISPdoFzDfUBmiVwB95baN2p3bPWPqaOlKwGLR058=</Integrity>
+      <Fingerprint>djl9aoaneo</Fingerprint>
+      <Integrity>tyCtR1b4mu3TBKyLqPYr6Qldn+83DGmBM2k08oig06A=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\toolbar\toolbar.html'))</OriginalItemSpec>
@@ -6078,8 +6096,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6yi8h6i8lv</Fingerprint>
-      <Integrity>7roLLfuVjSdT8PQpNFi79NjLuoXoY8sNUnIG+CNjtIE=</Integrity>
+      <Fingerprint>e04wtnrg9n</Fingerprint>
+      <Integrity>ToVyGsA9HMcgR/nl02lhhCGZN7pHLpFU2/5IAfHllDY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\uicolor.html'))</OriginalItemSpec>
@@ -6096,8 +6114,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hi3pjcvyts</Fingerprint>
-      <Integrity>CfEMcKXoFYxpB5fIr1656JP5NL7szUZnagZcjR6eqx4=</Integrity>
+      <Fingerprint>7ep9fgze07</Fingerprint>
+      <Integrity>z0cUsU4dShtlO8PzGr+m0HOfOmKzJ4huma+893EMLOM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\uilanguages.html'))</OriginalItemSpec>
@@ -6114,8 +6132,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>nl883p9j5c</Fingerprint>
-      <Integrity>det3EICCNjqiNfXbRiGUWb8qWetLqiL3pNRTWoBLq08=</Integrity>
+      <Fingerprint>nvq5loed49</Fingerprint>
+      <Integrity>U8zB6nSoh9h4FgKIgKEUaTLwXk+WUY3RrjahR7+3Pzw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\wysiwygarea\fullpage.html'))</OriginalItemSpec>
@@ -6132,8 +6150,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>b1tm3g0uxr</Fingerprint>
-      <Integrity>gSDAxNqj4mGuCYt0xHObD2tTZU9ByCYotMVW9zGjPgU=</Integrity>
+      <Fingerprint>3znotvuc1u</Fingerprint>
+      <Integrity>oXdVciKqfUTit76qZx+RWWO12fJL8EZaNqvw+6OgqY8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\old\xhtmlstyle.html'))</OriginalItemSpec>
@@ -6276,8 +6294,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9lwdbp7ry6</Fingerprint>
-      <Integrity>w/odKXVxWjbb2iBJNq+NuFMu43R29otDyJnbGoPI0bA=</Integrity>
+      <Fingerprint>7k7sh9acqm</Fingerprint>
+      <Integrity>udUUg1IjHz+50lDEtjGGJEPCN1RdVbiYwxIlTmpZ7P0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\toolbarconfigurator\index.html'))</OriginalItemSpec>
@@ -6366,8 +6384,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6qm4k9rupf</Fingerprint>
-      <Integrity>DtSa9rB0+TFWK+e0bXz64lxtffORCJUSo9p4PyqqVwc=</Integrity>
+      <Fingerprint>lh09uwajct</Fingerprint>
+      <Integrity>R9c+o5wWQKqMXIABINRgTAdnXT/ZJViP10BSKN4XL/U=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.css'))</OriginalItemSpec>
@@ -6384,8 +6402,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>65vucx7en8</Fingerprint>
-      <Integrity>1mYPvw5L0+S4DB4KBaLfwJw3Y2Io7H0wodXlCVr0DDY=</Integrity>
+      <Fingerprint>zkmbtobo0u</Fingerprint>
+      <Integrity>7WvNl2xAWqzLywpLJ3ItJyQy6Dk0xUEuWB6aaZ9qsEc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.js'))</OriginalItemSpec>
@@ -6402,8 +6420,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>8cii8sysuc</Fingerprint>
-      <Integrity>WEWhNnmHZcBE7ll34dqTOF9EjZafbJA7hMEM69gO2Bs=</Integrity>
+      <Fingerprint>hx6cpdw219</Fingerprint>
+      <Integrity>FTtHp5edx38KSjIOBWuPbOgDpajQ5EPOfiBupzoVvNU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\toolbarconfigurator\lib\codemirror\javascript.js'))</OriginalItemSpec>
@@ -6420,8 +6438,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>a7dduimh0l</Fingerprint>
-      <Integrity>FopL7Mlo9QAeLuLgKRtuTaq6/BiUoRreHhHVbpYJbgc=</Integrity>
+      <Fingerprint>r7jypbi1l1</Fingerprint>
+      <Integrity>x7rk/0U6CZxh5ZBgFNNkQxkYGDSkfbg5aW3KCoWnY3g=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE'))</OriginalItemSpec>
@@ -6438,8 +6456,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9ylcqnp8g3</Fingerprint>
-      <Integrity>IaBuDHvtVJJDUKVLdT9xvisqi+IsV02Je8M3sqnozYQ=</Integrity>
+      <Fingerprint>5spidapiem</Fingerprint>
+      <Integrity>+wf8uYz7IAKdYZnUNBKSTEw9Gov1ndTbtUllTBtLLME=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\toolbarconfigurator\lib\codemirror\neo.css'))</OriginalItemSpec>
@@ -6456,8 +6474,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>f2yahng2fv</Fingerprint>
-      <Integrity>CUjnPhsnKSLm+oJjBPXIly2hDPC3NxJG0phsRnWsxVs=</Integrity>
+      <Fingerprint>7wbom9qq3d</Fingerprint>
+      <Integrity>Nwz2T0JXNLI5/iaYEyaAN+bbncvzjl35I0Y+7D6jVkE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.css'))</OriginalItemSpec>
@@ -6474,8 +6492,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ab5iojrx1u</Fingerprint>
-      <Integrity>Zh8U2An5ybl0dS02nPiX0YnyDXxyAaHB5yEjkIsRKus=</Integrity>
+      <Fingerprint>h5qbp2a9lo</Fingerprint>
+      <Integrity>28U1/ZhpQvaCAJWudyQeaZC1z0RwmkglmLMdpyE56s0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.js'))</OriginalItemSpec>
@@ -6510,8 +6528,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>pijlnh3zvg</Fingerprint>
-      <Integrity>EaGgC7JiShkkpfVmaan5566BA745dgdv3ka7KLKejRc=</Integrity>
+      <Fingerprint>hj3nuqwutc</Fingerprint>
+      <Integrity>U4h/5upMQ2D87rLOnkCmcZ0mHf03LETowREU53IEk6Y=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\skins\moono-lisa\dialog.css'))</OriginalItemSpec>
@@ -6528,8 +6546,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>d32q8rynlf</Fingerprint>
-      <Integrity>GcEHyRnLXJ4GDckT1KisejTaW5aUgr7DIUhyPBbay3Q=</Integrity>
+      <Fingerprint>k89fc0a58y</Fingerprint>
+      <Integrity>fLfTcGsszrWmoq55ESRUhO3v3ZBCwxacb+txu0bC1Gk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\skins\moono-lisa\dialog_ie.css'))</OriginalItemSpec>
@@ -6546,8 +6564,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>d3biwke5vs</Fingerprint>
-      <Integrity>V+cAthE3NH/a3niaT/f8ttSA2hxndnE+n74Dq2WmULw=</Integrity>
+      <Fingerprint>gwd14wp0od</Fingerprint>
+      <Integrity>YG+vXsJxNmHjCE/7I7dc9YjW/oFvmJqFDKxaEzPxxFM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\skins\moono-lisa\dialog_ie8.css'))</OriginalItemSpec>
@@ -6564,8 +6582,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dnauaosjgr</Fingerprint>
-      <Integrity>abtlcSlQrbw5FaYmBu9zKDXAE0f0w33Nqw8iN6WLVKU=</Integrity>
+      <Fingerprint>y5422fzxgg</Fingerprint>
+      <Integrity>ajDmJogsRePva+t4kHreCauifWAENNUd1fNJz9DOwuA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\skins\moono-lisa\dialog_iequirks.css'))</OriginalItemSpec>
@@ -6582,8 +6600,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wdfecblcxi</Fingerprint>
-      <Integrity>ZC3zBUhLguM1r2UotEevoT4YAakwnyUYV0gspIKJBfM=</Integrity>
+      <Fingerprint>1l3cvkx5tz</Fingerprint>
+      <Integrity>28NWVwORHA/I2MnsqAoyeOrUrHH58du23lo+hsLHDhQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\skins\moono-lisa\editor.css'))</OriginalItemSpec>
@@ -6600,8 +6618,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>eagpo5gfe2</Fingerprint>
-      <Integrity>StVUBpEVOZqdh78m4FOz+vWeSRM8GOmDI7IAo58a2HU=</Integrity>
+      <Fingerprint>n7w2dzea3e</Fingerprint>
+      <Integrity>bfdf79Qg/mDXcYrMRBoJuQZuPRnUcd/zpkuqKXlZ6QQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\skins\moono-lisa\editor_gecko.css'))</OriginalItemSpec>
@@ -6618,8 +6636,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6lfa0yd01t</Fingerprint>
-      <Integrity>lvpl9i/+cvWRK5clrP5mYEaGQ83nDleIM1v/0Rpu+gU=</Integrity>
+      <Fingerprint>oalnb9bs3i</Fingerprint>
+      <Integrity>kCpaRbXAEhRFJXIxDszyOJkABW2weZ73s8dc7+4RKEo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\skins\moono-lisa\editor_ie.css'))</OriginalItemSpec>
@@ -6636,8 +6654,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>jkwebcsycz</Fingerprint>
-      <Integrity>Y3f2vTRAUMoMAfkiLhqFtkOEjEUF0p7SC/F7hS5/c0o=</Integrity>
+      <Fingerprint>y12nuy7km6</Fingerprint>
+      <Integrity>JoAfcfOr2Ew1vG1gRNL5tE8PnSYkc6Yak4GxYRXFmYA=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\skins\moono-lisa\editor_ie8.css'))</OriginalItemSpec>
@@ -6654,8 +6672,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>tnzphgmmkv</Fingerprint>
-      <Integrity>yVF1EqF5XxgbJH9fz3MZeQGEozBXGZ1e4R5OIEB0SDE=</Integrity>
+      <Fingerprint>ukw0scb8zo</Fingerprint>
+      <Integrity>7qAoSUB/4Ipet+hXiXbjYm++x8UXazKM5vqOoofjY9U=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\skins\moono-lisa\editor_iequirks.css'))</OriginalItemSpec>
@@ -6888,8 +6906,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>4f6814c4fh</Fingerprint>
-      <Integrity>gMNai1/JhjYP3vzj++s1ptOqE8IdKEd/hwuAuEMfjRg=</Integrity>
+      <Fingerprint>v8teyk34rk</Fingerprint>
+      <Integrity>cRKoiqjC9NuLB2IhiARZVjI7GiwII3xLX3NRKQNEVHM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\skins\moono-lisa\readme.md'))</OriginalItemSpec>
@@ -6906,8 +6924,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>l5xz34fmxn</Fingerprint>
-      <Integrity>Z4pWIZzmwRmW97itZzSySqF01XIAgwgUZeqaUvm0xG8=</Integrity>
+      <Fingerprint>9l6pg925xq</Fingerprint>
+      <Integrity>nSE6xl8mWxVcXsqcy9AgwVnublo/ngCTkuv88391P1w=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\ckeditor\styles.js'))</OriginalItemSpec>

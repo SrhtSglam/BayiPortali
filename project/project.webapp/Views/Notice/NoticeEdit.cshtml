@@ -1,4 +1,5 @@
 <script src="~/lib/ckeditor/ckeditor.js"></script>
+@* <script src="https://cdn.ckeditor.com/4.25.1-lts/standard/ckeditor.js"></script> *@
 
 @{
     ViewData["Title"] = "Duyuru Düzenle";
@@ -8,13 +9,16 @@
 <div class="pb-3">
     <div class="mb-3 row">
         <div class="col-12">
-            <textarea name="Description" id="editor" class="ckeditor"></textarea>
+            <textarea name="editor" id="editor" class="ckeditor"></textarea>
 
             <form>
                 <script>
                     CKEDITOR.replace('editor');
+                    
 
                     CKEDITOR.instances['editor'].setData(@Html.Raw(Json.Serialize(value)));
+
+                    CKEDITOR.version = '4.22'; // Sürüm numarasını manuel olarak eski sürüme sabitleyin
                 </script>
             </form>
         </div>

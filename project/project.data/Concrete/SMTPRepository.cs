@@ -8,10 +8,12 @@ namespace project.data.Concrete
     public class SMTPRepository : ISMTPRepository
     {
         private readonly string _connectionString;
+        private readonly IConfiguration _configuration;
         private string _schema;
         public SMTPRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("Default");
+            _configuration = configuration;
             _schema = WebLoginUser.Company;
         }
 
@@ -21,13 +23,14 @@ namespace project.data.Concrete
             string query = $@"SELECT 
             SMS.[Primary Key], SMS.[SMTP Server], SMS.[Authentication], SMS.[User ID], SMS.[Password], 
             SMS.[SMTP Server Port], SMS.[Secure Connection], SMS.[Sender Name], SMS.[Sender Address] 
-            FROM [{_schema}$SMTP Mail Setup] SMS";
+            FROM [{_schema}$SMTP Mail Setup] SMS WHERE SMS.[Primary Key] = @SMTPKey";
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
+                    cmd.Parameters.AddWithValue("@SMTPKey", _configuration.GetValue<string>("SMTPKey"));
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {

@@ -12,6 +12,10 @@
     int endPage = Math.Min(totalPages, startPage + pageRange - 1);
 }
 
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
 <h1>@ViewData["Title"]</h1>
 
 <div class="pb-3">
@@ -30,60 +34,46 @@
         <div class="col-sm-4">
             <select class="form-select" id="secondFilter">
                 <option selected>Seçiniz..</option>
-                @try
-                {
-                    foreach (var item in Model.ItemCategoriesById)
-                    {
-                        <option value="@item.Code">@item.Description</option>
-                    }
-
-                }
-                catch
-                {
-
-                }
             </select>
         </div>
         <label class="col-sm-4 col-form-label">Stoklar Anlık Olarak Değişebilir</label>
     </div>
 
-
+    <!-- Pagination controls -->
     <nav>
         <ul class="pagination">
             @if (currentPage > 1)
             {
                 <li class="page-item">
-                    <a class="page-link" href="@Url.Action("Place", "Order", new { page = 1 })">&laquo;</a>
+                    <a class="page-link" href="@Url.Action("Place", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = 1 })">&laquo;</a>
                 </li>
-
                 <li class="page-item">
-                    <a class="page-link" href="@Url.Action("Place", "Order", new { page = currentPage - 1 })">&lt;</a>
+                    <a class="page-link" href="@Url.Action("Place", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = currentPage - 1 })">&lt;</a>
                 </li>
             }
 
             @for (int i = startPage; i <= endPage; i++)
             {
                 <li class="page-item @(i == currentPage ? "active" : "")">
-                    <a class="page-link" href="@Url.Action("Place", "Order", new { page = i })">@i</a>
+                    <a class="page-link" href="@Url.Action("Place", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = i })">@i</a>
                 </li>
             }
 
             @if (currentPage < totalPages)
             {
                 <li class="page-item">
-                    <a class="page-link" href="@Url.Action("Place", "Order", new { page = currentPage + 1 })">&gt;</a>
+                    <a class="page-link" href="@Url.Action("Place", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = currentPage + 1 })">&gt;</a>
                 </li>
-
                 <li class="page-item">
-                    <a class="page-link" href="@Url.Action("Place", "Order", new { page = totalPages })">&raquo;</a>
+                    <a class="page-link" href="@Url.Action("Place", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = totalPages })">&raquo;</a>
                 </li>
             }
         </ul>
     </nav>
 
-
     <partial name="_itemTable" />
 
+    <!-- Modal for item details -->
     <div class="modal fade" id="InfoModal" tabindex="-1" aria-labelledby="InfoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -107,16 +97,15 @@
                         <div class="tab-pane show active" id="content1">
                             <div class="row">
                                 <div class="col-6">
-                                    <img src="" style="max-width: 480px;" class="rounded float-start" alt="">
+                                    <img src="" style="max-width: 480px;" class="rounded float-start" alt="Product Image">
                                 </div>
                                 <div class="col-6">
                                     <ul class="list-group">
-
+                                        <!-- Dynamic content will be loaded here -->
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
                         <div class="tab-pane" id="content2">
                             <div class="row">
                                 <div class="col-12">
@@ -124,14 +113,23 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="tab-pane" id="content3">
                             <div class="row">
                                 <div class="col-12">
                                     <table class="table">
-                                        <div class="alert alert-warning" role="alert"></div>
-                                            Veri Bulunamadı!
-                                        </div>
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th scope="col">Madde No</th>
+                                                <th scope="col">Bileşen No</th>
+                                                <th scope="col">Açıklama</th>
+                                                <th scope="col">Sipariş Açıklama</th>
+                                                <th scope="col">Miktar</th>
+                                                <th scope="col">#</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Dynamic content for item components -->
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
@@ -141,7 +139,6 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                    @* <button type="button" class="btn btn-success">Ekle</button> *@
                 </div>
             </div>
         </div>
@@ -151,144 +148,189 @@
 <div id="settings" data-use-dynamic-image="@ViewBag.UseDynamicImage.ToString().ToLower()"></div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Tab bağlantılarını al
-        const tabLinks = document.querySelectorAll('.nav-tabs .nav-link');
-        const tabContents = document.querySelectorAll('.tab-pane');
+    $(document).ready(function () {
+        let currentPage = @ViewBag.CurrentPage;
 
-        // Tab bağlantılarındaki tıklamayı dinle
-        tabLinks.forEach(link => {
-            link.addEventListener('click', function (event) {
-                event.preventDefault(); // Varsayılan davranışı engelle
+        $('.nav-tabs .nav-link').on('click', function (e) {
+            e.preventDefault();
 
-                // Aktif olan sekmeyi kaldır
-                tabLinks.forEach(nav => nav.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('show', 'active'));
+            $('.nav-tabs .nav-link').removeClass('active');
+            $('.tab-pane').removeClass('show active');
 
-                // Yeni aktif sekmeyi belirle
-                this.classList.add('active');
-                
-                // Data-bs-target özelliğinden hedef içeriği al
-                const target = document.querySelector(this.getAttribute('href'));
-
-                // Eğer hedef içerik varsa, onu göster
-                if (target) {
-                    target.classList.add('show', 'active');
-                } else {
-                    console.error("Hedef tab içeriği bulunamadı!");
-                }
-            });
+            $(this).addClass('active');
+            let target = $(this).attr('href');
+            $(target).addClass('show active');
         });
 
-        // İlk filtre değişikliği olayı
-        const firstFilter = document.getElementById('firstFilter');
-        const secondFilter = document.getElementById('secondFilter');
+        $('#firstFilter').on('change', function () {
+            let selectedItemCode = $("#firstFilter").val();
+            @* let selectedItemCode = $(this).val(); *@
 
-        firstFilter.addEventListener('change', function () {
-            var selectedItemCode = this.value;
+            console.log("Seçili Data " + selectedItemCode);
 
             if (selectedItemCode) {
-                fetch(`/Order/GetItemCategoriesByItemCode?selectedItemCode=${selectedItemCode}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        secondFilter.innerHTML = '<option selected>Seçiniz..</option>'; // Filtreyi temizle
+                $.ajax({
+                    url: `/Order/GetItemCategoriesByItemCode`,
+                    method: 'GET',
+                    data: { selectedItemCode },
+                    success: function (data) {
+                        updateTable(data.filteredItems);
+                        console.log(data.filteredItems);
+                        console.log(data.categories);
+                        let secondFilter = $('#secondFilter');
+                        secondFilter.html('<option selected>Seçiniz..</option>');
 
-                        data.forEach(function (item) {
-                            var option = document.createElement('option');
-                            option.value = item.code;
-                            option.textContent = item.description;
-                            secondFilter.appendChild(option);
+                        $.each(data.categories, function (i, item) {
+                            secondFilter.append(`<option value="${item.code}">${item.description}</option>`);
                         });
 
-                        secondFilter.disabled = false; // İkinci filtreyi aktif hale getir
-                    })
-                    .catch(error => console.error('Error:', error));
+                        secondFilter.prop('disabled', false);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("İkinci filtre alınırken hata:", error);
+                    }
+                });
             }
         });
 
-        // İkinci filtreye tıklama ve tabloyu güncelleme
-        function filterTable() {
-            var selectedCategory = firstFilter.value;
-            var selectedSubCategory = secondFilter.value;
+        $('#secondFilter').on('change', function () {
+            let selectedItemCode = $('#firstFilter').val();
+            let selectedSubItemCode = $("#secondFilter option:selected").text();
+            console.log(selectedItemCode + " Second Data " + selectedSubItemCode);
+            if (selectedItemCode && selectedSubItemCode && selectedSubItemCode !== "Seçiniz..") {
+                $.ajax({
+                    url: `/Order/GetItemsByCategory`,
+                    method: 'GET',
+                    data: {
+                        selectedItemCode: selectedItemCode,
+                        selectedSubCategory: selectedSubItemCode
+                    },
+                    success: function (data) {
+                        updateTable(data);
+                        console.log(data);
+                        updatePagination(data.totalPages || 1, currentPage);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Veri çekilirken hata:", error);
+                    }
+                });
+            }
+        });
 
-            fetch(`/Order/GetItemsByCategory?selectedItemCode=${selectedCategory}`)
-                .then(response => response.json())
-                .then(data => {
-                    var tbody = document.querySelector("tbody");
-                    tbody.innerHTML = "";
+        // Tabloyu güncelle
+        function updateTable(items) {
+            let tbody = $('tbody');
+            tbody.empty();
 
-                    data.forEach(function (item) {
-                        console.log("Item:", item);
-                        var row = document.createElement("tr");
-                        row.innerHTML = `
-                            <td>${item.itemCategory}</td>
-                            <td>${item.productGroup}</td>
-                            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#InfoModal" data-itemcode="${item.itemCode}">Detay</button></td>
-                            <td>${item.itemCode}</td>
-                            <td>${item.itemDescription}</td>
-                            <td>${item.alternativeCode}</td>
-                            <td>${item.currencyCode}</td>
-                            <td>${item.formattedPrice}</td>
-                            <td><input type="text" class="form-control"></td>
-                            <td><input type="number" class="form-control"></td>
-                            <td><button type="button" class="btn btn-success">Ekle</button></td>
-                        `;
-
-                        // Eğer ikinci filtre seçiliyse, sadece ona uyanları göster
-                        if (selectedSubCategory === "Seçiniz.." || selectedSubCategory === "" || item.ProductGroup === selectedSubCategory) {
-                            tbody.appendChild(row);
-                        }
-                    });
-                })
-                .catch(error => console.error('Error:', error));
+            $.each(items, function (i, item) {
+                let row = `
+                    <tr>
+                        <td>${item.itemCategory}</td>
+                        <td>${item.productGroup}</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#InfoModal" data-itemcode="${item.itemCode}">Detay</button></td>
+                        <td>${item.itemCode}</td>
+                        <td>${item.itemDescription}</td>
+                        <td>${item.alternativeCode}</td>
+                        <td>${item.currencyCode}</td>
+                        <td>${item.formattedPrice}</td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="number" class="form-control"></td>
+                        <td><button type="button" class="btn btn-success">Ekle</button></td>
+                    </tr>`;
+                tbody.append(row);
+            });
         }
 
-        // Filtre değişikliklerinde tabloyu güncelle
-        firstFilter.addEventListener("change", filterTable);
-        secondFilter.addEventListener("change", filterTable);
+        function updatePagination(totalPages, currentPage) {
+            let pagination = $('.pagination');
+            pagination.empty();
 
-        // Modal için ürün detayını yükleme
+            for (let i = 1; i <= totalPages; i++) {
+                let activeClass = i === currentPage ? 'active' : '';
+                let pageItem = `
+                    <li class="page-item ${activeClass}">
+                        <a class="page-link" href="/Order/Place?selectedItemCode=${$('#firstFilter').val()}&selectedSubItemCode=${$('#secondFilter').val()}&page=${i}">${i}</a>
+                    </li>`;
+                pagination.append(pageItem);
+            }
+        }
+        
         $('#InfoModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget);
             var itemCode = button.data('itemcode');
+            var modal = $(this);
+            var modalBody = modal.find('.modal-body');
+            var useDynamicImage = $('#settings').data('use-dynamic-image');
 
-            $('#InfoModal .modal-body').html('<p>Yükleniyor...</p>');
+            modalBody.html('<p>Yükleniyor...</p>');
 
-            fetch(`/Order/GetItemDetails?itemCode=${itemCode}`)
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data)
+            $.ajax({
+                url: `/Order/GetItemDetails`,
+                method: 'GET',
+                data: { itemCode },
+                success: function (data) {
+                    var itemDetail = data.itemDetailData || {};
+                    var components = data.itemComponentData || [];
 
-                    const useDynamicImage = document.getElementById('settings').dataset.useDynamicImage === 'true';
+                    var imageSrc = useDynamicImage && itemDetail.pictureData
+                        ? itemDetail.pictureData
+                        : `/image/items/${itemCode}.jpg`;
 
-                    const imageHtml = useDynamicImage && data.itemDetailData.pictureData
-                    ? `<img src="${data.itemDetailData.pictureData}" style="max-width: 480px;" class="rounded float-start" alt="Product Image">`
-                    : `<img src="/image/items/${itemCode}.jpg" style="max-width: 480px;" class="rounded float-start" alt="Product Image">`;
-                    
-                    var modalContent = `
+                    var imageHtml = `<img src="${imageSrc}" style="max-width: 480px;" class="rounded float-start" alt="Product Image">`;
+
+                    var detailList = `
+                        <ul class="list-group">
+                            <li class="list-group-item text-center"><h3>Genel</h3></li>
+                            <li class="list-group-item"><strong>No:</strong> ${itemDetail.itemNo || '-'}</li>
+                            <li class="list-group-item"><strong>No 2:</strong> ${itemDetail.itemNo2 || '-'}</li>
+                            <li class="list-group-item"><strong>Açıklama:</strong> ${itemDetail.description || '-'}</li>
+                            <li class="list-group-item"><strong>Ölçü Birimi:</strong> ${itemDetail.baseUnitOfMeasure || '-'}</li>
+                        </ul>`;
+
+                        if (itemDetail.featured === true) {
+                            detailList += `
+                                <ul class="list-group my-2">
+                                    <li class="list-group-item text-center"><h4>Ek Özellikler</h4></li>
+                                    <li class="list-group-item"><strong>Aylık Baskı Hacmi:</strong> ${itemDetail.monthlyPrintVolume || '-'}</li>
+                                    <li class="list-group-item"><strong>Baskı Kapasitesi:</strong> ${itemDetail.printingCapacity || '-'}</li>
+                                </ul>`;
+                        }
+
+                    var componentRows = components.length > 0
+                        ? components.map(item => `
+                            <tr>
+                                <td>${item.itemNo}</td>
+                                <td>${item.componentItemNo}</td>
+                                <td>${item.description}</td>
+                                <td><input type="text" class="form-control"></td>
+                                <td><input type="number" class="form-control"></td>
+                                <td><button type="button" class="btn btn-success">Ekle</button></td>
+                            </tr>`).join('')
+                        : '<tr><td colspan="6">Bileşen bulunamadı.</td></tr>';
+
+                    var componentTable = `
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Madde No</th>
+                                    <th>Bileşen No</th>
+                                    <th>Açıklama</th>
+                                    <th>Sipariş Açıklama</th>
+                                    <th>Miktar</th>
+                                    <th>#</th>
+                                </tr>
+                            </thead>
+                            <tbody>${componentRows}</tbody>
+                        </table>`;
+
+                    var modalHtml = `
                         <div class="tab-content">
                             <div class="tab-pane show active" id="content1">
                                 <div class="row">
-                                    <div class="col-6">
-                                        ${imageHtml}
-                                    </div>
-                                    <div class="col-6">
-                                        <ul class="list-group">
-                                            <li class="list-group-item">
-                                                <strong>Temel Ölçü Birimi:</strong> ${data.itemDetailData.baseUnitOfMeasure}
-                                            </li>
-                                            <li class="list-group-item">
-                                                <strong>Aylık Baskı Hacmi:</strong> ${data.itemDetailData.monthlyPrintVolume}
-                                            </li>
-                                            <li class="list-group-item">
-                                                <strong>Baskı Kapasitesi:</strong> ${data.itemDetailData.printingCapacity}
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <div class="col-6">${imageHtml}</div>
+                                    <div class="col-6">${detailList}</div>
                                 </div>
                             </div>
-
-                            <!-- Aksesuar ve bileşenler içeriği -->
                             <div class="tab-pane" id="content2">
                                 <div class="row">
                                     <div class="col-12">
@@ -296,49 +338,19 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Saf Malzemeler tabı içerik -->
                             <div class="tab-pane" id="content3">
                                 <div class="row">
-                                    <div class="col-12">
-                                        <table class="table">
-                                            <thead class="thead-dark">
-                                                <tr>
-                                                    <th scope="col">Madde No</th>
-                                                    <th scope="col">Bileşen No</th>
-                                                    <th scope="col">Açıklama</th>
-                                                    <th scope="col">Sipariş Açıklama</th>
-                                                    <th scope="col">Miktar</th>
-                                                    <th scope="col">#</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                ${console.log(data.itemComponentData)}
-                                                ${data.itemComponentData ? data.itemComponentData.map(item => `
-                                                    <tr>
-                                                        ${console.log(item.ItemNo)}
-                                                        <td>${item.itemNo}</td>
-                                                        <td>${item.componentItemNo}</td>
-                                                        <td>${item.description}</td>
-                                                        <td><input type="text" class="form-control"></td>
-                                                        <td><input type="number" class="form-control"></td>
-                                                        <td><button type="button" class="btn btn-success">Ekle</button></td>
-                                                    </tr>
-                                                `).join('') : '<tr><td colspan="6">Bileşen bulunamadı.</td></tr>'}
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                    <div class="col-12">${componentTable}</div>
                                 </div>
                             </div>
-                        </div>
-                    `;
+                        </div>`;
 
-                    $('#InfoModal .modal-body').html(modalContent);
-                })
-                .catch(error => {
-                    console.error('Hata:', error);
-                    $('#InfoModal .modal-body').html('<p>Veri yüklenirken bir hata oluştu.</p>');
-                });
+                    modalBody.html(modalHtml);
+                },
+                error: function () {
+                    modalBody.html('<p>Veri yüklenirken bir hata oluştu.</p>');
+                }
+            });
         });
     });
 </script>

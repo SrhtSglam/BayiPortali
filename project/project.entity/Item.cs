@@ -12,12 +12,5 @@ namespace project.entity{
         public string? Image { get; set; }
         public string? FormattedPrice { get; set; }
     }
-
-    public class ItemDetail{
-        public string? PictureData { get; set; }
-        public string? BaseUnitOfMeasure { get; set; }
-        public int MonthlyPrintVolume { get; set; }
-        public int PrintingCapacity { get; set; }
-    }
 }
 
