@@ -1,0 +1,49 @@
+using System;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml;
+
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        string url = "http://192.168.100.5:9047/DTRKYOCERA/WS/Bilgitas/Codeunit/Integration";
+        string username = "BILGITAS\\STJ067";
+        string password = "+F066crbu4Wbhs0KM0iVryQrKOf+e5+IUzSE7z3Ym+Q=";
+
+        string _data = "03KYFS2020D";
+
+        SoapRequestBinary ReqBin = new SoapRequestBinary();
+
+        using (HttpClient client = new HttpClient())
+        {
+            try
+            {
+                var byteArray = Encoding.ASCII.GetBytes($"{username}:{password}");
+                client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
+
+                // var content = new StringContent(ReqBin.Request_TestGiris(), Encoding.UTF8, "text/xml");
+                var content = new StringContent(ReqBin.Request_TestGiris02("_pValue", _data), Encoding.UTF8, "text/xml");
+
+                content.Headers.Add("SOAPAction", "urn:microsoft-dynamics-schemas/codeunit/Integration");
+                HttpResponseMessage response = await client.PostAsync(url, content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseData = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine("Response: ");
+                    Console.WriteLine(responseData);
+                }
+                else
+                {
+                    Console.WriteLine($"Error: {response.StatusCode}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "pa2+phFjV6w=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\TEST\\WcfClient\\WcfClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\stj067\\.nuget\\packages\\microsoft.extensions.objectpool\\8.0.10\\microsoft.extensions.objectpool.8.0.10.nupkg.sha512",
+    "C:\\Users\\stj067\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.1\\system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
+    "C:\\Users\\stj067\\.nuget\\packages\\system.security.cryptography.xml\\8.0.2\\system.security.cryptography.xml.8.0.2.nupkg.sha512",
+    "C:\\Users\\stj067\\.nuget\\packages\\system.servicemodel.http\\8.1.2\\system.servicemodel.http.8.1.2.nupkg.sha512",
+    "C:\\Users\\stj067\\.nuget\\packages\\system.servicemodel.primitives\\8.1.2\\system.servicemodel.primitives.8.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

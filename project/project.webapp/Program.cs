@@ -1,16 +1,15 @@
-using Microsoft.EntityFrameworkCore;
 using project.data;
 using project.data.Abstract;
 using project.data.Concrete;
 using System.Configuration;
 using project.webapp.Filters;
+using project.webapp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var service = builder.Services;
 // var connString = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 var connectionString = builder.Configuration.GetConnectionString("Default");
 
-// Add services to the container.
 service.AddControllersWithViews();
 
 service.AddScoped<IAccountRepository, AccountRepository>();
@@ -20,6 +19,7 @@ service.AddScoped<IOrderRepository, OrderRepository>();
 service.AddScoped<ISMTPRepository, SMTPRepository>();
 
 service.AddScoped<IMailHelper, MailHelper>();
+service.AddScoped<NAVServer>();
 
 #region Session
     service.AddDistributedMemoryCache();
@@ -33,7 +33,6 @@ service.AddScoped<IMailHelper, MailHelper>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");

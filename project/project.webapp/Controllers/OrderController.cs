@@ -56,29 +56,59 @@ namespace project.webapp.Controllers{
             return View(model);
         }
 
+        // [HttpGet]
+        // public JsonResult GetItemCategoriesByItemCode(string selectedItemCode)
+        // {
+        //     Console.WriteLine(selectedItemCode);
+        //     var filteredCategories = _orderRepository.GetItemCategories(selectedItemCode);
+        //     var items = _orderRepository.GetItemsByCategory(1, 40, selectedItemCode, null);
+        //     return Json(new { filteredItems = items, categories = filteredCategories});
+        // }
+
         [HttpGet]
-        public JsonResult GetItemCategoriesByItemCode(string selectedItemCode)
+        public JsonResult GetItemCategoriesByItemCode(string selectedItemCode, int page = 1)
         {
-            Console.WriteLine(selectedItemCode);
+            int pageSize = 40;
             var filteredCategories = _orderRepository.GetItemCategories(selectedItemCode);
-            var items = _orderRepository.GetItemsByCategory(1, 40, selectedItemCode, null);
-            return Json(new { filteredItems = items, categories = filteredCategories});
+            var items = _orderRepository.GetItemsByCategory(page, pageSize, selectedItemCode, null);
+            var totalCount = _orderRepository.GetFilterItemCount(selectedItemCode, null);
+            var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+
+            return Json(new
+            {
+                filteredItems = items,
+                categories = filteredCategories,
+                totalPages = totalPages,
+                currentPage = page
+            });
         }
 
 
         [HttpGet]
         public JsonResult GetItemsByCategory(string selectedItemCode, string selectedSubCategory)
         {
-            var filteredItems = _orderRepository.GetItemsByCategory(1, 40, selectedItemCode, selectedSubCategory);
-            return Json(filteredItems);
+            // var filteredItems = _orderRepository.GetItemsByCategory(1, 40, selectedItemCode, selectedSubCategory);
+            // return Json(filteredItems);
+            int page = 1;
+            int pageSize = 40;
 
-            // int pageSize = 40;
+            var filteredItems = _orderRepository.GetItemsByCategory(page, pageSize, selectedItemCode, selectedSubCategory);
+            var totalCount = _orderRepository.GetFilterItemCount(selectedItemCode, selectedSubCategory);
+            int totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
 
-            // var filteredItems = _orderRepository.GetItemsByCategory(page, pageSize, selectedItemCode, selectedSubCategory);
-            // var totalCount = _orderRepository.GetFilterItemCount(selectedItemCode, selectedSubCategory);
-            // int totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+            return Json(new { items = filteredItems, totalPages = totalPages });
+        }
 
-            // return Json(new { items = filteredItems, totalPages = totalPages });
+        [HttpGet]
+        public JsonResult GetItemsByCategoryPaged(string selectedItemCode, string selectedSubCategory, int page = 1)
+        {
+            int pageSize = 40;
+
+            var filteredItems = _orderRepository.GetItemsByCategory(page, pageSize, selectedItemCode, selectedSubCategory);
+            var totalCount = _orderRepository.GetFilterItemCount(selectedItemCode, selectedSubCategory);
+            int totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+
+            return Json(new { items = filteredItems, totalPages = totalPages, currentPage = page });
         }
 
         [HttpGet]

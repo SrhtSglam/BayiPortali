@@ -5,7 +5,6 @@ C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Debug\net9
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Debug\net9.0\project.data.csproj.CoreCompileInputs.cache
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Debug\net9.0\project.data.sourcelink.json
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\bin\Debug\net9.0\project.data.deps.json
-C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\bin\Debug\net9.0\project.data.runtimeconfig.json
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\bin\Debug\net9.0\project.data.dll
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\bin\Debug\net9.0\project.data.pdb
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\bin\Debug\net9.0\project.entity.dll
@@ -14,5 +13,4 @@ C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Debug\net9
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Debug\net9.0\project.data.dll
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Debug\net9.0\refint\project.data.dll
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Debug\net9.0\project.data.pdb
-C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Debug\net9.0\project.data.genruntimeconfig.cache
 C:\Users\stj067\Documents\GitHub\BayiPortali\project\project.data\obj\Debug\net9.0\ref\project.data.dll

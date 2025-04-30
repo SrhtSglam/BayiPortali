@@ -6,25 +6,31 @@ using project.webapp.Filters;
 using project.data.Abstract;
 using project.data;
 using project.data.Concrete;
+using project.webapp.Services;
+using System.ServiceModel;
 
 namespace project.webapp.Controllers
 {
     public class AccountController : Controller
     {
         private readonly ILogger<AccountController> _logger;
+        private readonly IConfiguration _configuration;
         private readonly IAccountRepository _accountRepository;
 
-        public AccountController(ILogger<AccountController> logger, IAccountRepository accountRepository)
+        public AccountController(ILogger<AccountController> logger, IAccountRepository accountRepository, IConfiguration configuration)
         {
             _logger = logger;
+            _configuration = configuration;
             _accountRepository = accountRepository;
         }
 
         public IActionResult Login()
         {
-            // WebLoginUser.AuthId = "ERDEN_ADMIN";
-            // WebLoginUser.Visibility = 3;
-            // WebLoginUser.Company = "Bilgitas";
+            if(_configuration.GetValue<bool>("DevelopmentConfig:UseQuickLogin") == true){
+                WebLoginUser.AuthId = "BAŞAK";
+                WebLoginUser.Visibility = 3;
+                WebLoginUser.Company = "Bilgitas";
+            }
             var companies = _accountRepository.GetCompanies();
             return View(companies);
         }
@@ -43,6 +49,29 @@ namespace project.webapp.Controllers
                 WebLoginUser.AuthId = user.UserId;
                 WebLoginUser.Visibility = user.WebVisibility;
                 WebLoginUser.Company = company;
+
+                NAVServer.NAVServiceURL = _configuration.GetValue<string>("DynamicNAV:NAVServiceURL");
+                NAVServer.NAVServiceServerName = _configuration.GetValue<string>("DynamicNAV:NAVServiceServerName");
+                NAVServer.NAVServiceCompanyName = _configuration.GetValue<string>("DynamicNAV:NAVServiceCompanyName");
+                NAVServer.NAVServiceCodeunit = _configuration.GetValue<string>("DynamicNAV:NAVServiceCodeunit");
+                NAVServer.NAVServiceDomain = _configuration.GetValue<string>("DynamicNAV:NAVServiceDomain");
+                NAVServer.NAVServiceUserName = _configuration.GetValue<string>("DynamicNAV:NAVServiceUserName");
+                NAVServer.NAVServicePassword = _configuration.GetValue<string>("DynamicNAV:NAVServicePassword");
+
+                NAVServer.NAVServiceURL = string.Format(NAVServer.NAVServiceURL, NAVServer.NAVServiceServerName,
+                    NAVServer.NAVServiceCompanyName, NAVServer.NAVServiceCodeunit);
+
+                NAVServer.mWebManagement = new WebManagement_PortClient(new BasicHttpBinding(BasicHttpSecurityMode.TransportCredentialOnly)
+                {
+                    Security =
+                    {
+                        Transport = { ClientCredentialType = HttpClientCredentialType.Basic }
+                    },
+                    MaxReceivedMessageSize = 20000000
+                }, new EndpointAddress(NAVServer.NAVServiceURL));
+
+                NAVServer.mWebManagement.ClientCredentials.UserName.UserName = string.Format("{0}\\{1}", NAVServer.NAVServiceDomain, NAVServer.NAVServiceUserName);
+                NAVServer.mWebManagement.ClientCredentials.UserName.Password = NAVServer.NAVServicePassword; 
                 
                 return RedirectToAction("Index", "Home");
             }

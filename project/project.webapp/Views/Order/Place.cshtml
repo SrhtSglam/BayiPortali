@@ -164,30 +164,22 @@
 
         $('#firstFilter').on('change', function () {
             let selectedItemCode = $("#firstFilter").val();
-            @* let selectedItemCode = $(this).val(); *@
-
-            console.log("Seçili Data " + selectedItemCode);
 
             if (selectedItemCode) {
                 $.ajax({
                     url: `/Order/GetItemCategoriesByItemCode`,
                     method: 'GET',
-                    data: { selectedItemCode },
+                    data: { selectedItemCode: selectedItemCode, page: 1 },
                     success: function (data) {
                         updateTable(data.filteredItems);
-                        console.log(data.filteredItems);
-                        console.log(data.categories);
+                        updatePagination(data.totalPages || 1, data.currentPage || 1);
+                        
                         let secondFilter = $('#secondFilter');
                         secondFilter.html('<option selected>Seçiniz..</option>');
-
                         $.each(data.categories, function (i, item) {
                             secondFilter.append(`<option value="${item.code}">${item.description}</option>`);
                         });
-
                         secondFilter.prop('disabled', false);
-                    },
-                    error: function (xhr, status, error) {
-                        console.error("İkinci filtre alınırken hata:", error);
                     }
                 });
             }
@@ -195,20 +187,20 @@
 
         $('#secondFilter').on('change', function () {
             let selectedItemCode = $('#firstFilter').val();
-            let selectedSubItemCode = $("#secondFilter option:selected").text();
-            console.log(selectedItemCode + " Second Data " + selectedSubItemCode);
+            let selectedSubItemCode = $('#secondFilter').val();
+
             if (selectedItemCode && selectedSubItemCode && selectedSubItemCode !== "Seçiniz..") {
                 $.ajax({
-                    url: `/Order/GetItemsByCategory`,
+                    url: `/Order/GetItemsByCategoryPaged`,
                     method: 'GET',
                     data: {
                         selectedItemCode: selectedItemCode,
-                        selectedSubCategory: selectedSubItemCode
+                        selectedSubCategory: selectedSubItemCode,
+                        page: 1
                     },
                     success: function (data) {
-                        updateTable(data);
-                        console.log(data);
-                        updatePagination(data.totalPages || 1, currentPage);
+                        updateTable(data.items);
+                        updatePagination(data.totalPages || 1, data.currentPage || 1);
                     },
                     error: function (xhr, status, error) {
                         console.error("Veri çekilirken hata:", error);
@@ -216,6 +208,7 @@
                 });
             }
         });
+
 
         // Tabloyu güncelle
         function updateTable(items) {
@@ -249,11 +242,56 @@
                 let activeClass = i === currentPage ? 'active' : '';
                 let pageItem = `
                     <li class="page-item ${activeClass}">
-                        <a class="page-link" href="/Order/Place?selectedItemCode=${$('#firstFilter').val()}&selectedSubItemCode=${$('#secondFilter').val()}&page=${i}">${i}</a>
+                        <a class="page-link pagination-link" href="#" data-page="${i}">${i}</a>
                     </li>`;
                 pagination.append(pageItem);
             }
+
+            bindPaginationEvents(); // sayfa linklerine tıklama olayını bağla
         }
+
+        function bindPaginationEvents() {
+            $('.pagination-link').off('click').on('click', function (e) {
+                e.preventDefault();
+
+                let page = $(this).data('page');
+                let selectedItemCode = $('#firstFilter').val();
+                let selectedSubItemCode = $('#secondFilter').val();
+
+                let url = "";
+                let data = {};
+
+                if (selectedSubItemCode && selectedSubItemCode !== "Seçiniz..") {
+                    url = "/Order/GetItemsByCategoryPaged";
+                    data = {
+                        selectedItemCode: selectedItemCode,
+                        selectedSubCategory: selectedSubItemCode,
+                        page: page
+                    };
+                } else {
+                    url = "/Order/GetItemCategoriesByItemCode";
+                    data = {
+                        selectedItemCode: selectedItemCode,
+                        page: page
+                    };
+                }
+
+                $.ajax({
+                    url: url,
+                    method: 'GET',
+                    data: data,
+                    success: function (response) {
+                        if (url.includes("GetItemCategoriesByItemCode")) {
+                            updateTable(response.filteredItems);
+                        } else {
+                            updateTable(response.items);
+                        }
+                        updatePagination(response.totalPages || 1, response.currentPage || page);
+                    }
+                });
+            });
+        }
+
         
         $('#InfoModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget);
