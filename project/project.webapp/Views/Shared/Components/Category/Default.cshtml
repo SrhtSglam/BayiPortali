@@ -35,11 +35,11 @@
 
 <div class="dropdown">
     <a class="nav-link text-dark" asp-area="" asp-controller="Order"
-        asp-action="Place">Sipariş</a>
+        asp-action="CreateOrder">Sipariş</a>
 
     <ul class="dropdown-menu">
         <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
-            asp-action="Place">Sipariş Geç</a></li>
+            asp-action="CreateOrder">Sipariş Geç</a></li>
 
         <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
             asp-action="Confirm">Sipariş Onayla</a></li>
@@ -98,13 +98,14 @@
 </li>
 
 <ul class="navbar-nav ms-auto">
+    <li class="nav-item"></li>
+        <a class="nav-link text-dark">Hoşgeldiniz, @WebLoginUser.AuthId</a>
+    </li>
+
     <li class="nav-item">
         <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout"><span style="color: brown;">[Sistemden Çıkış]</span></a>
     </li>
 
-    <li class="nav-item"></li>
-        <a class="nav-link text-dark">@WebLoginUser.AuthId</a>
-    </li>
 </ul>
 
 

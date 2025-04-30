@@ -1,32 +1,33 @@
 @{
     ViewData["Title"] = "Mizan";
 
+    string dateOld = DateTime.Now.AddDays(-60).ToString("yyyy-MM-dd");
     string dateNow = DateTime.Now.ToString("yyyy-MM-dd");
 }
 <h1>@ViewData["Title"]</h1>
-
 <div class="row">
-    <div class="col-3">
-        <div class="input-group mb-3">
-            <label class="input-group-text" for="ekstreGroup">Başlangıç Tarihi: </label>
-            <input type="date" class="form-control" value="@dateNow">
-        </div>
+    <form method="post" asp-controller="Report" asp-action="MizanCreateReport" class="d-flex gap-2">
+        <div class="col-3">
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="ekstreGroup">Başlangıç Tarihi: </label>
+                <input type="date" name="pStartDate" class="form-control" value="@dateOld">
+            </div>
 
-        <div class="input-group mb-3">
-            <label class="input-group-text" for="ekstreGroup">Bitiş Tarihi: </label>
-            <input type="date" class="form-control">
-        </div>
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="ekstreGroup">Bitiş Tarihi: </label>
+                <input type="date" name="pEndDate" class="form-control" value="@dateNow">
+            </div>
 
-        <div class="input-group mb-3">
-            <label class="input-group-text" for="ekstreGroup">Dosya Biçimi</label>
-            <select class="form-select" id="ekstreGroup">
-                <option selected>Seçiniz..</option>
-                <option value="1">PDF</option>
-                <option value="2">Excel</option>
-            </select>
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="ekstreGroup">Dosya Biçimi</label>
+                <select class="form-select" name="pFileType" id="ekstreGroup">
+                    <option selected value="pdf">PDF</option>
+                    <option value="xlsx">Excel</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <button type="submit" class="btn btn-secondary">İndir</button>
+            </div>
         </div>
-        <div class="input-group mb-3">
-            <button type="button" class="btn btn-secondary">İndir</button>
-        </div>
-    </div>
+    </form>
 </div>

@@ -40,7 +40,8 @@
             <th scope="col" class="sortable" onclick="sortTable(6)">Para Birimi</th>
             <th scope="col" class="sortable" onclick="sortTable(7)">Satış Fiyatı</th>
             <th scope="col" class="sortable" onclick="sortTable(8)">Sipariş Açıklama</th>
-            <th scope="col" class="sortable" onclick="sortTable(9)">#</th>
+            <th scope="col" class="sortable" onclick="sortTable(9)">Adet</th>
+            <th scope="col" class="sortable" onclick="sortTable(10)">#</th>
         </tr>
         <tr>
             <th scope="col"></th>
@@ -53,6 +54,7 @@
             <th scope="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
@@ -60,20 +62,25 @@
         {
             foreach (var items in Model.Items)
             {
-                <tr>
-                    <td>@items.ItemCategory</td>
-                    <td>@items.ProductGroup</td>
-                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#InfoModal" data-itemcode="@items.ItemCode">Detay</button></td>
-                    <td>@items.ItemCode</td>
-                    <td>@items.ItemDescription</td>
-                    <td>@items.AlternativeCode</td>
-                    <td>@items.CurrencyCode</td>
-                    <td>@items.FormattedPrice</td>
-                    <td><input type="text" class="form-control"></td>
-                    <td><input type="number" name="" id="" class="form-control"></td>
-                    <td><button type="button" class="btn btn-success">Ekle</button></td>
-                </tr>
+                    <tr>
+                        <td>@items.ItemCategory</td>
+                        <td>@items.ProductGroup</td>
+                        <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#InfoModal" data-itemcode="@items.ItemCode">Detay</button></td>
+                        <td>@items.ItemCode</td>
+                        <td>@items.ItemDescription</td>
+                        <td>@items.AlternativeCode</td>
+                        <td>@items.CurrencyCode</td>
+                        <td>@items.FormattedPrice</td>
+                        <form method="post" asp-controller="Order" asp-action="AddToBasket" class="d-flex gap-2"> 
+                            <td>
+                                <input type="hidden" id="pItemNo" name="pItemNo" value="@items.ItemCode" />
+                                <input type="text" id="pSalesDescription" name="pSalesDescription" class="form-control" style="min-width: 200px;"/>
+                            </td>
+                            <td><input type="number" id="pQuantity" name="pQuantity" min="0" class="form-control"/></td>
+                            <td><button type="submit" class="btn btn-success">Ekle</button></td>
+                        </form>
+                    </tr>
             }
         }
         catch
@@ -185,4 +192,40 @@
             });
         }
     });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const quantityInputs = document.querySelectorAll('input[name="pQuantity"]');
+
+        quantityInputs.forEach(input => {
+            input.addEventListener("focus", function () {
+                if (input.value === "") {
+                    input.value = "0";
+                }
+            });
+        });
+    });
+</script>
+
+<script>
+    function addToBasket() {
+        $.ajax({
+            url: '/Order/AddToBasket',
+            type: 'POST',
+            data: {
+                pItemNo: $('#pItemNo').val(),
+                pQuantity: $('#pQuantity').val(),
+                pSalesDescription: $('#pSalesDescription').val()
+            },
+            success: function (response) {
+                alert(response.message); // Popup veya başka bir UI gösterebilirsiniz
+            },
+            error: function () {
+                alert("Bir hata oluştu.");
+            }
+        });
+
+        return false; // Form gönderimini engeller
+    }
 </script>

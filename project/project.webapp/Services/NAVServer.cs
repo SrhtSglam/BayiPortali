@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Net;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
+using DocumentFormat.OpenXml.Spreadsheet;
 
 namespace project.webapp.Services{
     public class NAVServer
@@ -151,20 +152,19 @@ namespace project.webapp.Services{
         //     }
         // }
 
-        // public bool ConfirmWebBasket(string userIDp,
-        //     ref string Exceptionp)
-        // {
-        //     try
-        //     {
-        //         return mWebManagement.ConfirmWebBasket(userIDp);
-        //     }
+        public static async Task<(bool success, string errorMessage)> ConfirmWebBasket(string pUserId)
+        {
+            try
+            {
+                await mWebManagement.ConfirmWebBasketAsync(pUserId);
+                return (true, null);
+            }
 
-        //     catch (Exception exc)
-        //     {
-        //         Exceptionp = exc.Message;
-        //         return false;
-        //     }
-        // }
+            catch (Exception exc)
+            {
+                return (false, exc.Message);
+            }
+        }
 
         // public async Task<int> FindItemSerial(string pUserID, string pSerialNo, string pDealerNo)
         // {
@@ -204,7 +204,7 @@ namespace project.webapp.Services{
         //     }
         // }
 
-        // public bool CreateReport_50018(string customerNo, DateTime startDate, DateTime endDate, string reportType, 
+        // public bool CreateReport_50018(string customerNo, DateTime startDate, DateTime endDate, string reportType,
         //     ref string fileContent,
         //     ref string exception)
         // {
@@ -219,6 +219,28 @@ namespace project.webapp.Services{
         //         return false;
         //     }
         // }
+        public static async Task<(bool success, string errorMessage, string fileContent)> CreateReport_50018(string pCustomerNo, DateTime pStartDate, DateTime pEndDate, string pReportType)
+        {
+            // PDF
+            // Excel
+            try
+            {
+                CreateReport_50018 createReport_ = new CreateReport_50018(){
+                    customerNo = pCustomerNo,
+                    startDate = pStartDate,
+                    endDate = pEndDate,
+                    reportType = pReportType,
+                    fileContent = ""
+                };
+                var result = await mWebManagement.CreateReport_50018Async(createReport_);
+
+                return (true, null, result.fileContent);
+            }
+            catch (Exception exc)
+            {
+                return (false, exc.Message, null);
+            }
+        }
 
         // public bool CreateReport_50162(string customerNo, DateTime startDate, DateTime endDate, string reportType,
         //     ref string fileContent,

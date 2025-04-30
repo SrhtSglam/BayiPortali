@@ -1,9 +1,11 @@
 using System.Diagnostics;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using project.data.Abstract;
 using project.entity;
 using project.webapp.Filters;
 using project.webapp.Models;
+using project.webapp.Services;
 
 namespace project.webapp.Controllers{
     [CustomAuthorize(3,2,1)]
@@ -26,7 +28,7 @@ namespace project.webapp.Controllers{
             return View();
         }
 
-        public IActionResult Place(string _selectedItemCode, string _selectedSubItemCode, int page = 1)
+        public IActionResult CreateOrder(string _selectedItemCode, string _selectedSubItemCode, int page = 1)
         {
             int pageSize = 40;
             
@@ -56,14 +58,30 @@ namespace project.webapp.Controllers{
             return View(model);
         }
 
-        // [HttpGet]
-        // public JsonResult GetItemCategoriesByItemCode(string selectedItemCode)
-        // {
-        //     Console.WriteLine(selectedItemCode);
-        //     var filteredCategories = _orderRepository.GetItemCategories(selectedItemCode);
-        //     var items = _orderRepository.GetItemsByCategory(1, 40, selectedItemCode, null);
-        //     return Json(new { filteredItems = items, categories = filteredCategories});
-        // }
+        [HttpPost]
+        public IActionResult AddToBasket(string pItemNo, decimal pQuantity, string pSalesDescription)
+        {
+            if (string.IsNullOrEmpty(pItemNo) || pQuantity <= 0)
+            {
+                Console.WriteLine("Geçersiz veri!");
+                // return RedirectToAction("CreateOrder");
+                return Json(new { success = false, message = "Geçersiz veri!" });
+            }
+
+            // Console.WriteLine(DateTime.Now + " " + WebLoginUser.AuthId + " " + pItemNo + " " + pQuantity + " " + pSalesDescription);
+            // var result = await NAVServer.InsertWebBasket(DateTime.Now, WebLoginUser.AuthId, "04KYM4125IDN", pQuantity, pSalesDescription);
+            // if (result.success)
+            // {
+            //     TempData["PopupMessage"] = "Ürün başarıyla sepete eklendi.";
+            // }
+            // else
+            // {
+            //     TempData["PopupMessage"] = "Ürün sepete eklenemedi.";
+            // }
+            TempData["PopupMessage"] = "Ürün başarıyla sepete eklendi.";
+            // return Json(new { success = true, message = "Ürün başarıyla sepete eklendi." });
+            return RedirectToAction("CreateOrder");
+        }
 
         [HttpGet]
         public JsonResult GetItemCategoriesByItemCode(string selectedItemCode, int page = 1)
@@ -87,8 +105,6 @@ namespace project.webapp.Controllers{
         [HttpGet]
         public JsonResult GetItemsByCategory(string selectedItemCode, string selectedSubCategory)
         {
-            // var filteredItems = _orderRepository.GetItemsByCategory(1, 40, selectedItemCode, selectedSubCategory);
-            // return Json(filteredItems);
             int page = 1;
             int pageSize = 40;
 
@@ -120,9 +136,9 @@ namespace project.webapp.Controllers{
         }
 
         [HttpGet]
-        public JsonResult GetAllFilterItems(string itemCode)
+        public JsonResult GetAllFilterItems(string pItemCode)
         {
-            var filteredItems = _orderRepository.GetAll(1, 40, itemCode);
+            var filteredItems = _orderRepository.GetAll(1, 40, pItemCode);
 
             return Json(filteredItems);
         }
@@ -130,6 +146,13 @@ namespace project.webapp.Controllers{
         public IActionResult Confirm(){
             var items = _orderRepository.GetBasketByUserId(0);
             return View(items);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ConfirmBasket()
+        {
+            await NAVServer.ConfirmWebBasket(WebLoginUser.AuthId);
+            return RedirectToAction("Place");
         }
 
         public IActionResult Control(){

@@ -68,12 +68,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ29udHJvbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Order/OrderHome.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJIb21lLmNzaHRtbA==
+[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Order/CreateOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ3JlYXRlT3JkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Order/Place.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUGxhY2UuY3NodG1s
+[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Order/OrderHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Report/Ekstre.cshtml]

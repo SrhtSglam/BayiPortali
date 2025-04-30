@@ -44,7 +44,7 @@ namespace project.data.Concrete{
         public WebLoginUser GetUserByName(string name, string password, string company){
             WebLoginUser user = new WebLoginUser();
             _schema = company;
-            string query = @$"SELECT [User ID], [Password], [Web Visibility], [E-mail]
+            string query = @$"SELECT [User ID], [Password], [Web Visibility], [E-mail], [Customer No_]
             FROM [{_schema}$Light User] 
             WHERE [User ID] = @name AND [Password] = @password";
             
@@ -61,6 +61,8 @@ namespace project.data.Concrete{
                                 user.Password = reader.IsDBNull(1) ? string.Empty : reader.GetString(1);
                                 user.WebVisibility = reader.IsDBNull(2) ? 0 : reader.GetInt32(2);
                                 WebLoginUser.EMail = reader.IsDBNull(3) ? string.Empty : reader.GetString(3);
+                                // WebLoginUser.CustomerNo = reader["Customer No_"].ToString();
+                                WebLoginUser.CustomerNo = reader.IsDBNull(reader.GetOrdinal("Customer No_")) ? string.Empty : reader["Customer No_"].ToString();
                             }
                         }
                     }

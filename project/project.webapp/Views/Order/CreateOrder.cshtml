@@ -392,3 +392,39 @@
         });
     });
 </script>
+
+@{
+    var message = TempData["PopupMessage"] as string;
+}
+
+@if (!string.IsNullOrEmpty(message))
+{
+    <div class="modal fade" id="PopupModal" tabindex="-1" aria-labelledby="PopupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="PopupModalLabel">Sipariş Bilgisi</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body">
+                <span style="font-size: 15;">Ürün başarılı bir şekilde sepete eklendi.</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            var myModal = new bootstrap.Modal(document.getElementById('PopupModal'), {
+                keyboard: false
+            });
+            myModal.show();
+            setTimeout(() => {
+                myModal.hide();
+            }, 3000);
+        });
+    </script>
+}
