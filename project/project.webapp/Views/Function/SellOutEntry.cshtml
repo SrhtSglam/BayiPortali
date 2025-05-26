@@ -22,16 +22,12 @@
 
 <nav>
     <ul class="pagination">
-        @if (currentPage > 1)
-        {
-            <li class="page-item">
-                <a class="page-link" href="@Url.Action("SellOutEntry", "Function", new { page = 1 })">&laquo;</a>
-            </li>
-
-            <li class="page-item">
-                <a class="page-link" href="@Url.Action("SellOutEntry", "Function", new { page = currentPage - 1 })">&lt;</a>
-            </li>
-        }
+        <li class="page-item">
+            <a class="page-link @(currentPage > 1 ? "" : "disabled")" href="@Url.Action("SellOutEntry", "Function", new { page = 1 })">&laquo;</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link @(currentPage > 1 ? "" : "disabled")" href="@Url.Action("SellOutEntry", "Function", new { page = currentPage - 1 })">&lt;</a>
+        </li>
 
         @for (int i = startPage; i <= endPage; i++)
         {
@@ -39,17 +35,12 @@
                 <a class="page-link" href="@Url.Action("SellOutEntry", "Function", new { page = i })">@i</a>
             </li>
         }
-
-        @if (currentPage < totalPages)
-        {
-            <li class="page-item">
-                <a class="page-link" href="@Url.Action("SellOutEntry", "Function", new { page = currentPage + 1 })">&gt;</a>
-            </li>
-
-            <li class="page-item">
-                <a class="page-link" href="@Url.Action("SellOutEntry", "Function", new { page = totalPages })">&raquo;</a>
-            </li>
-        }
+        <li class="page-item">
+            <a class="page-link @(currentPage < totalPages ? "" : "disabled")" href="@Url.Action("SellOutEntry", "Function", new { page = currentPage + 1 })">&gt;</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link @(currentPage < totalPages ? "" : "disabled")" href="@Url.Action("SellOutEntry", "Function", new { page = totalPages })">&raquo;</a>
+        </li>
     </ul>
 </nav>
 

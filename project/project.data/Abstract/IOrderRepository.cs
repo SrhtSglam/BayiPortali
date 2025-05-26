@@ -11,5 +11,7 @@ namespace project.data.Abstract{
         public List<KeyValueItem> GetItemCategories(string SelectedItemCode);
         public List<Item> GetItemsByCategory(int currentPage, int itemPerPage, string selectedItemCode, string selectedSubCategory);
         public List<ItemComponent> GetComponentsByItemNo(string itemNo);
+
+        public Task DeleteItemFromBasket(DateTime pDateTime, string pItemNo);
     }
 }

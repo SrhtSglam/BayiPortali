@@ -11,5 +11,8 @@ namespace project.entity
         public bool Featured { get; set; }  = false;
         public int MonthlyPrintVolume { get; set; }
         public int PrintingCapacity { get; set; }
+
+        public string? ItemCategory { get; set; }
+        public string? ProductGroup { get; set; }
     }
 }

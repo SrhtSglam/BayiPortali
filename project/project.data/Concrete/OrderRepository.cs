@@ -19,8 +19,20 @@ namespace project.data.Concrete
         public ItemDetail GetItemDetail(string itemCode)
         {
             ItemDetail item = new ItemDetail();
-            string query = @$"SELECT [No_], [No_ 2], [Description], [Base Unit of Measure], [Aylık Baskı Hacmi], [Baskı Kapasitesi (Num)], [Picture]
-            FROM [{_schema}$Item] WHERE [No_] = @itemCode";
+            string query = @$"SELECT 
+            ITE.[No_] AS ItemNo, 
+            ITE.[No_ 2] AS ItemNo2, 
+            ITE.[Description], 
+            ITE.[Base Unit of Measure] AS BaseUnit, 
+            ITE.[Aylık Baskı Hacmi] AS MonthlyPrintVolume, 
+            ITE.[Baskı Kapasitesi (Num)] AS PrintingCapacity, 
+            ITE.[Picture],
+            IC.[Description] AS ItemCategoryDescription, 
+            ITE.[Product Group Code] AS ProductGroup
+            FROM [{_schema}$Item] ITE
+            INNER JOIN [{_schema}$Item Category] IC on 
+            IC.[Code] = ITE.[Item Category Code]
+            WHERE [No_] = @itemCode";
 
             try
             {
@@ -37,12 +49,15 @@ namespace project.data.Concrete
                                 item = new ItemDetail
                                 {
                                     // ItemNo = reader["No_"].ToString(),
-                                    ItemNo = reader.GetString(0), //? string.Empty : reader.GetString(0),
-                                    ItemNo2 = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
-                                    Description = reader.GetString(2), //? string.Empty : reader.GetString(2),
-                                    BaseUnitOfMeasure = reader.GetString(3), //? string.Empty : reader.GetString(3),
-                                    MonthlyPrintVolume = reader.IsDBNull(4) ? 0 : reader.GetInt32(4),
-                                    PrintingCapacity = reader.IsDBNull(5) ? 0 : reader.GetInt32(5)
+                                    // ItemNo = reader.GetString(0), //? string.Empty : reader.GetString(0),
+                                    ItemNo = reader.IsDBNull(reader.GetOrdinal("ItemNo")) ? string.Empty : reader["ItemNo"].ToString()!,
+                                    ItemNo2 = reader.IsDBNull(reader.GetOrdinal("ItemNo2")) ? string.Empty : reader["ItemNo2"].ToString()!,
+                                    Description = reader.IsDBNull(reader.GetOrdinal("Description")) ? string.Empty : reader["Description"].ToString()!,
+                                    BaseUnitOfMeasure = reader.IsDBNull(reader.GetOrdinal("BaseUnit")) ? string.Empty : reader["BaseUnit"].ToString()!,
+                                    MonthlyPrintVolume = reader.IsDBNull(reader.GetOrdinal("MonthlyPrintVolume")) ? 0 : Convert.ToInt32(reader["MonthlyPrintVolume"]),
+                                    PrintingCapacity = reader.IsDBNull(reader.GetOrdinal("PrintingCapacity")) ? 0 : Convert.ToInt32(reader["PrintingCapacity"]),
+                                    ItemCategory = reader.IsDBNull(reader.GetOrdinal("ItemCategoryDescription")) ? string.Empty : reader["ItemCategoryDescription"].ToString()!,
+                                    ProductGroup = reader.IsDBNull(reader.GetOrdinal("ProductGroup")) ? string.Empty : reader["ProductGroup"].ToString()!
                                 };
 
                                 if(item.MonthlyPrintVolume != 0 || item.PrintingCapacity != 0)
@@ -234,7 +249,7 @@ namespace project.data.Concrete
 
             if (!string.IsNullOrEmpty(selectedSubItemCode))
             {
-                query += " AND BI.[SubCategory Code] = @SubItemCode";
+                query += " AND BI.[Product Group Code] = @SubItemCode";
             }
 
             try
@@ -519,6 +534,34 @@ namespace project.data.Concrete
             }
 
             return items;
+        }
+
+        public async Task DeleteItemFromBasket(DateTime pDateTime, string pItemNo){
+            string query = $@"DELETE FROM [Bilgitas$Web Basket]
+            WHERE [User ID] = @UserId AND [Item No_] = @ItemNo AND [Time Stamp] = @DateTime AND [Confirmed] = 0";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(_connectionString))
+                {
+                    await conn.OpenAsync();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@UserId", WebLoginUser.AuthId);
+                        cmd.Parameters.AddWithValue("@ItemNo", pItemNo);
+                        cmd.Parameters.AddWithValue("@DateTime", pDateTime.ToUniversalTime());
+                        // cmd.Parameters.AddWithValue("@DateTime", pDateTime.AddHours(-3).ToString("yyyy-MM-dd HH:mm:ss.fff"));
+
+                        await cmd.ExecuteNonQueryAsync();
+                        Console.WriteLine($"Ürün sepetten silindi: {pDateTime.AddHours(-3).ToString("yyyy-MM-dd HH:mm:ss.fff")}, {pItemNo}, {WebLoginUser.AuthId}");
+                    }
+                    await conn.CloseAsync();
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
     }

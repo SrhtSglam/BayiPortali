@@ -8,13 +8,14 @@ using project.webapp.Models;
 using project.webapp.Services;
 
 namespace project.webapp.Controllers{
-    [CustomAuthorize(3,2,1)]
+    [CustomAuthorize("3,2,1")]
     public class OrderController : Controller
     {
         private readonly ILogger<OrderController> _logger;
         private readonly IConfiguration _configuration;
         private readonly IOtherRepository _otherRepository;
         private readonly IOrderRepository _orderRepository;
+        public int _pageSize = 20;
         public OrderController(ILogger<OrderController> logger, IOtherRepository otherRepository, IOrderRepository orderRepository, IConfiguration configuration)
         {
             _logger = logger;
@@ -28,18 +29,19 @@ namespace project.webapp.Controllers{
             return View();
         }
 
-        public IActionResult CreateOrder(string _selectedItemCode, string _selectedSubItemCode, int page = 1)
+        public IActionResult CreateOrder(string _selectedItemCode, string _selectedSubItemCode, int page = 1, int pageSize = 20)
         {
-            int pageSize = 40;
-            
             var items = _orderRepository.GetAll(page, pageSize, _selectedItemCode, _selectedSubItemCode);
-
             var itemCategories = _orderRepository.GetItemCategories();
 
             int totalCount = _orderRepository.GetFilterItemCount(_selectedItemCode, _selectedSubItemCode);
             int totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
             ViewBag.TotalPage = totalPages;
             ViewBag.CurrentPage = page;
+            ViewData["PageSize"] = pageSize;
+            _pageSize = pageSize;
+
+            ViewBag.PageSizes = new List<int> { 10, 20, 30, 40 };
 
             ViewBag.SelectedItemCode = _selectedItemCode;
             ViewBag.SelectedSubItemCode = _selectedSubItemCode;
@@ -58,35 +60,24 @@ namespace project.webapp.Controllers{
             return View(model);
         }
 
+
         [HttpPost]
-        public IActionResult AddToBasket(string pItemNo, decimal pQuantity, string pSalesDescription)
+        public async Task<IActionResult> AddToBasket(string pItemNo, decimal pQuantity, string pSalesDescription)
         {
             if (string.IsNullOrEmpty(pItemNo) || pQuantity <= 0)
             {
                 Console.WriteLine("Geçersiz veri!");
-                // return RedirectToAction("CreateOrder");
-                return Json(new { success = false, message = "Geçersiz veri!" });
+                return BadRequest("Geçersiz veri!");
             }
 
-            // Console.WriteLine(DateTime.Now + " " + WebLoginUser.AuthId + " " + pItemNo + " " + pQuantity + " " + pSalesDescription);
-            // var result = await NAVServer.InsertWebBasket(DateTime.Now, WebLoginUser.AuthId, "04KYM4125IDN", pQuantity, pSalesDescription);
-            // if (result.success)
-            // {
-            //     TempData["PopupMessage"] = "Ürün başarıyla sepete eklendi.";
-            // }
-            // else
-            // {
-            //     TempData["PopupMessage"] = "Ürün sepete eklenemedi.";
-            // }
-            TempData["PopupMessage"] = "Ürün başarıyla sepete eklendi.";
-            // return Json(new { success = true, message = "Ürün başarıyla sepete eklendi." });
-            return RedirectToAction("CreateOrder");
+            await NAVServer.InsertWebBasket(DateTime.Now, WebLoginUser.AuthId, pItemNo, pQuantity, pSalesDescription);
+            
+            return Ok("Ürün başarıyla sepete eklendi.");
         }
 
         [HttpGet]
-        public JsonResult GetItemCategoriesByItemCode(string selectedItemCode, int page = 1)
+        public JsonResult GetItemCategoriesByItemCode(string selectedItemCode, int page = 1, int pageSize = 20)
         {
-            int pageSize = 40;
             var filteredCategories = _orderRepository.GetItemCategories(selectedItemCode);
             var items = _orderRepository.GetItemsByCategory(page, pageSize, selectedItemCode, null);
             var totalCount = _orderRepository.GetFilterItemCount(selectedItemCode, null);
@@ -106,20 +97,17 @@ namespace project.webapp.Controllers{
         public JsonResult GetItemsByCategory(string selectedItemCode, string selectedSubCategory)
         {
             int page = 1;
-            int pageSize = 40;
 
-            var filteredItems = _orderRepository.GetItemsByCategory(page, pageSize, selectedItemCode, selectedSubCategory);
+            var filteredItems = _orderRepository.GetItemsByCategory(page, _pageSize, selectedItemCode, selectedSubCategory);
             var totalCount = _orderRepository.GetFilterItemCount(selectedItemCode, selectedSubCategory);
-            int totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+            int totalPages = (int)Math.Ceiling((double)totalCount / _pageSize);
 
             return Json(new { items = filteredItems, totalPages = totalPages });
         }
 
         [HttpGet]
-        public JsonResult GetItemsByCategoryPaged(string selectedItemCode, string selectedSubCategory, int page = 1)
+        public JsonResult GetItemsByCategoryPaged(string selectedItemCode, string selectedSubCategory, int page = 1, int pageSize = 20)
         {
-            int pageSize = 40;
-
             var filteredItems = _orderRepository.GetItemsByCategory(page, pageSize, selectedItemCode, selectedSubCategory);
             var totalCount = _orderRepository.GetFilterItemCount(selectedItemCode, selectedSubCategory);
             int totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
@@ -138,7 +126,7 @@ namespace project.webapp.Controllers{
         [HttpGet]
         public JsonResult GetAllFilterItems(string pItemCode)
         {
-            var filteredItems = _orderRepository.GetAll(1, 40, pItemCode);
+            var filteredItems = _orderRepository.GetAll(1, _pageSize, pItemCode);
 
             return Json(filteredItems);
         }
@@ -152,7 +140,14 @@ namespace project.webapp.Controllers{
         public async Task<IActionResult> ConfirmBasket()
         {
             await NAVServer.ConfirmWebBasket(WebLoginUser.AuthId);
-            return RedirectToAction("Place");
+            return RedirectToAction("CreateOrder");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteBasketItem(DateTime pDateTime, string pItemNo)
+        {
+            await _orderRepository.DeleteItemFromBasket(pDateTime, pItemNo);
+            return RedirectToAction("Confirm");
         }
 
         public IActionResult Control(){

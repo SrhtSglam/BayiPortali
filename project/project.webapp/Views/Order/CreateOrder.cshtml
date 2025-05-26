@@ -10,6 +10,7 @@
     int pageRange = 10;
     int startPage = Math.Max(1, currentPage - (pageRange / 2));
     int endPage = Math.Min(totalPages, startPage + pageRange - 1);
+    var pageSize = (int)ViewData["PageSize"];
 }
 
 <head>
@@ -36,38 +37,51 @@
                 <option selected>Seçiniz..</option>
             </select>
         </div>
-        <label class="col-sm-4 col-form-label">Stoklar Anlık Olarak Değişebilir</label>
+        <div class="col-sm-2">
+            <label class="col-form-label">Stoklar Anlık Olarak Değişebilir</label>
+        </div>
+        <div class="col-sm-2">
+            <form method="get" action="@Url.Action("CreateOrder", "Order")">
+                <select class="form-select" name="pageSize" onchange="this.form.submit()">
+                    @foreach (var size in ViewBag.PageSizes as List<int>)
+                    {
+                        if (size == pageSize)
+                        {
+                            <option value="@size" selected>@size</option>
+                        }
+                        else
+                        {
+                            <option value="@size">@size</option>
+                        }
+                    }
+                </select>
+            </form>
+        </div>
     </div>
 
     <!-- Pagination controls -->
     <nav>
         <ul class="pagination">
-            @if (currentPage > 1)
-            {
-                <li class="page-item">
-                    <a class="page-link" href="@Url.Action("Place", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = 1 })">&laquo;</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="@Url.Action("Place", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = currentPage - 1 })">&lt;</a>
-                </li>
-            }
+            <li class="page-item">
+                <a class="page-link @(currentPage > 1 ? "" : "disabled")" href="@Url.Action("CreateOrder", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = 1, pageSize = pageSize })">&laquo;</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link @(currentPage > 1 ? "" : "disabled")" href="@Url.Action("CreateOrder", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = currentPage - 1, pageSize = pageSize })">&lt;</a>
+            </li>
 
             @for (int i = startPage; i <= endPage; i++)
             {
                 <li class="page-item @(i == currentPage ? "active" : "")">
-                    <a class="page-link" href="@Url.Action("Place", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = i })">@i</a>
+                    <a class="page-link" href="@Url.Action("CreateOrder", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = i, pageSize = pageSize })">@i</a>
                 </li>
             }
 
-            @if (currentPage < totalPages)
-            {
-                <li class="page-item">
-                    <a class="page-link" href="@Url.Action("Place", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = currentPage + 1 })">&gt;</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="@Url.Action("Place", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = totalPages })">&raquo;</a>
-                </li>
-            }
+            <li class="page-item">
+                <a class="page-link @(currentPage < totalPages ? "" : "disabled")" href="@Url.Action("CreateOrder", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = currentPage + 1, pageSize = pageSize })">&gt;</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link @(currentPage < totalPages ? "" : "disabled")" href="@Url.Action("CreateOrder", "Order", new { selectedItemCode = ViewBag.SelectedItemCode, selectedSubItemCode = ViewBag.SelectedSubItemCode, page = totalPages, pageSize = pageSize })">&raquo;</a>
+            </li>
         </ul>
     </nav>
 
@@ -164,12 +178,13 @@
 
         $('#firstFilter').on('change', function () {
             let selectedItemCode = $("#firstFilter").val();
+            let pageSize = @pageSize;
 
             if (selectedItemCode) {
                 $.ajax({
                     url: `/Order/GetItemCategoriesByItemCode`,
                     method: 'GET',
-                    data: { selectedItemCode: selectedItemCode, page: 1 },
+                    data: { selectedItemCode: selectedItemCode, page: 1, pageSize: pageSize },
                     success: function (data) {
                         updateTable(data.filteredItems);
                         updatePagination(data.totalPages || 1, data.currentPage || 1);
@@ -177,7 +192,7 @@
                         let secondFilter = $('#secondFilter');
                         secondFilter.html('<option selected>Seçiniz..</option>');
                         $.each(data.categories, function (i, item) {
-                            secondFilter.append(`<option value="${item.code}">${item.description}</option>`);
+                            secondFilter.append(`<option value="${item.description}">${item.description}</option>`);
                         });
                         secondFilter.prop('disabled', false);
                     }
@@ -188,15 +203,18 @@
         $('#secondFilter').on('change', function () {
             let selectedItemCode = $('#firstFilter').val();
             let selectedSubItemCode = $('#secondFilter').val();
+            let pageSize = @pageSize;
 
             if (selectedItemCode && selectedSubItemCode && selectedSubItemCode !== "Seçiniz..") {
+                console.log("Second Filter Is :" + selectedSubItemCode);
                 $.ajax({
                     url: `/Order/GetItemsByCategoryPaged`,
                     method: 'GET',
                     data: {
                         selectedItemCode: selectedItemCode,
                         selectedSubCategory: selectedSubItemCode,
-                        page: 1
+                        page: 1,
+                        pageSize: pageSize
                     },
                     success: function (data) {
                         updateTable(data.items);
@@ -238,7 +256,27 @@
             let pagination = $('.pagination');
             pagination.empty();
 
-            for (let i = 1; i <= totalPages; i++) {
+            const pageRange = 10;
+            let startPage = Math.max(1, currentPage - Math.floor(pageRange / 2));
+            let endPage = Math.min(totalPages, startPage + pageRange - 1);
+
+             if (endPage - startPage + 1 < pageRange) {
+                startPage = Math.max(1, endPage - pageRange + 1);
+            }
+
+            pagination.append(`
+                <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+                    <a class="page-link pagination-link" href="#" data-page="1">&laquo;</a>
+                </li>
+            `);
+
+            pagination.append(`
+                <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+                    <a class="page-link pagination-link" href="#" data-page="${currentPage - 1}">&lt;</a>
+                </li>
+            `);
+
+            for (let i = startPage; i <= endPage; i++) {
                 let activeClass = i === currentPage ? 'active' : '';
                 let pageItem = `
                     <li class="page-item ${activeClass}">
@@ -246,6 +284,18 @@
                     </li>`;
                 pagination.append(pageItem);
             }
+
+            pagination.append(`
+                <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+                    <a class="page-link pagination-link" href="#" data-page="${currentPage + 1}">&gt;</a>
+                </li>
+            `);
+
+            pagination.append(`
+                <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+                    <a class="page-link pagination-link" href="#" data-page="${totalPages}">&raquo;</a>
+                </li>
+            `);
 
             bindPaginationEvents(); // sayfa linklerine tıklama olayını bağla
         }
@@ -257,6 +307,7 @@
                 let page = $(this).data('page');
                 let selectedItemCode = $('#firstFilter').val();
                 let selectedSubItemCode = $('#secondFilter').val();
+                let pageSize = @pageSize;
 
                 let url = "";
                 let data = {};
@@ -266,13 +317,15 @@
                     data = {
                         selectedItemCode: selectedItemCode,
                         selectedSubCategory: selectedSubItemCode,
-                        page: page
+                        page: page,
+                        pageSize: pageSize
                     };
                 } else {
                     url = "/Order/GetItemCategoriesByItemCode";
                     data = {
                         selectedItemCode: selectedItemCode,
-                        page: page
+                        page: page,
+                        pageSize: pageSize
                     };
                 }
 
@@ -337,7 +390,6 @@
                     var componentRows = components.length > 0
                         ? components.map(item => `
                             <tr>
-                                <td>${item.itemNo}</td>
                                 <td>${item.componentItemNo}</td>
                                 <td>${item.description}</td>
                                 <td><input type="text" class="form-control"></td>
@@ -346,15 +398,22 @@
                             </tr>`).join('')
                         : '<tr><td colspan="6">Bileşen bulunamadı.</td></tr>';
 
+                    console.log(itemDetail);
                     var componentTable = `
+                        <h4>${itemDetail.itemCategory} ${itemDetail.productGroup} ${itemDetail.itemNo} ${itemDetail.itemNo2} ${itemDetail.description}</h4>
                         <table class="table">
                             <thead class="thead-dark">
                                 <tr>
-                                    <th>Madde No</th>
-                                    <th>Bileşen No</th>
-                                    <th>Açıklama</th>
+                                    <th>Madde Kategori</th>
+                                    <th>Ürün Grup</th>
+                                    <th>Özellikler</th>
+                                    <th>Madde Kodu</th>
+                                    <th>Madde Açıklama</th>
+                                    <th>Alternatif Kod</th>
+                                    <th>Para Birimi</th>
+                                    <th>Satış Fiyatı</th>
                                     <th>Sipariş Açıklama</th>
-                                    <th>Miktar</th>
+                                    <th>Adet</th>
                                     <th>#</th>
                                 </tr>
                             </thead>
@@ -390,41 +449,29 @@
                 }
             });
         });
+
+        function buildModalHtml(imageHtml, detailList, componentTable) {
+            return `
+                <div class="tab-content">
+                    <div class="tab-pane show active" id="content1">
+                        <div class="row">
+                            <div class="col-6">${imageHtml}</div>
+                            <div class="col-6">${detailList}</div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="content2">
+                        <div class="row">
+                            <div class="col-12">
+                                <p>Aksesuar & Bileşenler İçeriği Buraya Gelecek</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="content3">
+                        <div class="row">
+                            <div class="col-12">${componentTable}</div>
+                        </div>
+                    </div>
+                </div>`;
+    }
     });
 </script>
-
-@{
-    var message = TempData["PopupMessage"] as string;
-}
-
-@if (!string.IsNullOrEmpty(message))
-{
-    <div class="modal fade" id="PopupModal" tabindex="-1" aria-labelledby="PopupModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="PopupModalLabel">Sipariş Bilgisi</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
-            </div>
-            <div class="modal-body">
-                <span style="font-size: 15;">Ürün başarılı bir şekilde sepete eklendi.</span>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            var myModal = new bootstrap.Modal(document.getElementById('PopupModal'), {
-                keyboard: false
-            });
-            myModal.show();
-            setTimeout(() => {
-                myModal.hide();
-            }, 3000);
-        });
-    </script>
-}

@@ -24,6 +24,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Dev/NavTest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2XE5hdlRlc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Function/NumaratorEntry.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY3Rpb25cTnVtYXJhdG9yRW50cnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,6 +38,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Function/SerialControl.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY3Rpb25cU2VyaWFsQ29udHJvbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Function/WarrantyProcessTrack.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY3Rpb25cV2FycmFudHlQcm9jZXNzVHJhY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Function/WarrantyReqEntry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY3Rpb25cV2FycmFudHlSZXFFbnRyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Home/Index.cshtml]
@@ -56,12 +68,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ29udHJvbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Order/OrderHome.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJIb21lLmNzaHRtbA==
+[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Order/CreateOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ3JlYXRlT3JkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Order/Place.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUGxhY2UuY3NodG1s
+[C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Order/OrderHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/stj067/Documents/GitHub/BayiPortali/project/project.webapp/Views/Report/Ekstre.cshtml]

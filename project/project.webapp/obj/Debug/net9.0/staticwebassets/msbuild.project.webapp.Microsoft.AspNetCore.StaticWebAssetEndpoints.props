@@ -132,6 +132,18 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"63325"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 15 Apr 2025 10:29:53 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/project.webapp/image/items/31BILTON1018.3psws3ub66.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image\items\31BILTON1018.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3psws3ub66"},{"Name":"integrity","Value":"sha256-R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI="},{"Name":"label","Value":"_content/project.webapp/image/items/31BILTON1018.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"63325"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 15 Apr 2025 10:29:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/project.webapp/image/items/31BILTON1018.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image\items\31BILTON1018.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"63325"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 15 Apr 2025 10:29:53 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/project.webapp/image/printers/ecosys-pa3500cx-1.jdavczg9ou.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image\printers\ecosys-pa3500cx-1.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

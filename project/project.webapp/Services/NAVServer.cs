@@ -61,11 +61,12 @@ namespace project.webapp.Services{
         //     }
         // }
 
-        public static async Task<(bool success, string errorMessage)> InsertWebBasket(DateTime dateTime, string userID, string itemNo, decimal quantity, string salesDescription)
+        public static async Task<(bool success, string errorMessage)> InsertWebBasket(DateTime pDateTime, string pUserID, string pItemNo, decimal pQuantity, string pSalesDescription)
         {
             try
             {
-                mWebManagement.InsertWebBasketAsync(userID, itemNo, quantity, salesDescription);
+                await mWebManagement.InsertWebBasketAsync(pUserID, pItemNo, pQuantity, pSalesDescription);
+                Console.WriteLine($"Ürün sepete eklendi: {pDateTime}, {pUserID}, {pItemNo}, {pQuantity}, {pSalesDescription}");
                 return (true, null);
             }
             catch (Exception exp)
@@ -157,6 +158,7 @@ namespace project.webapp.Services{
             try
             {
                 await mWebManagement.ConfirmWebBasketAsync(pUserId);
+                Console.WriteLine($"Ürün sepeti onaylandı: {pUserId}");
                 return (true, null);
             }
 
@@ -166,22 +168,21 @@ namespace project.webapp.Services{
             }
         }
 
-        // public async Task<int> FindItemSerial(string pUserID, string pSerialNo, string pDealerNo)
-        // {
-        //     try
-        //     {
-        //         var result = await mWebManagement.FindItemSerialAsync(pSerialNo, pDealerNo, pUserID);
+        public static async Task<int> FindItemSerial(string pUserID, string pSerialNo, string pDealerNo)
+        {
+            try
+            {
+                var result = await mWebManagement.FindItemSerialAsync(pSerialNo, pDealerNo, pUserID);
                 
-        //         return 1;
-        //     }
+                return 1;
+            }
 
-        //     catch (Exception exc)
-        //     {
-        //         // Exceptionp = exc.Message;
-        //         Console.WriteLine(exc.Message);
-        //         return 0;
-        //     }
-        // }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc.Message);
+                return 0;
+            }
+        }
 
         // public bool UpdateWarReqEntry(int pEntryNo, string pSpareItemNo, string pSpareOldSerialNo, string pSpareNewSerialNo,
         //             DateTime pRepairDate, int pNumaratoratProblem, int pNumaratoratRepair, string pProblemCode, string pProblemDescription,
@@ -203,22 +204,7 @@ namespace project.webapp.Services{
         //         return false;
         //     }
         // }
-
-        // public bool CreateReport_50018(string customerNo, DateTime startDate, DateTime endDate, string reportType,
-        //     ref string fileContent,
-        //     ref string exception)
-        // {
-        //     try
-        //     {
-        //         mWebManagement.CreateReport_50018(customerNo, startDate, endDate, reportType, ref fileContent);
-        //         return true;
-        //     }
-        //     catch (Exception exc)
-        //     {
-        //         exception = exc.Message;
-        //         return false;
-        //     }
-        // }
+        
         public static async Task<(bool success, string errorMessage, string fileContent)> CreateReport_50018(string pCustomerNo, DateTime pStartDate, DateTime pEndDate, string pReportType)
         {
             // PDF
@@ -233,7 +219,7 @@ namespace project.webapp.Services{
                     fileContent = ""
                 };
                 var result = await mWebManagement.CreateReport_50018Async(createReport_);
-
+                Console.WriteLine($"Mizan raporu oluşturuldu: {pCustomerNo}, {pStartDate}, {pEndDate}, {pReportType}");
                 return (true, null, result.fileContent);
             }
             catch (Exception exc)
@@ -242,20 +228,25 @@ namespace project.webapp.Services{
             }
         }
 
-        // public bool CreateReport_50162(string customerNo, DateTime startDate, DateTime endDate, string reportType,
-        //     ref string fileContent,
-        //     ref string exception)
-        // {
-        //     try
-        //     {
-        //         mWebManagement.CreateReport_50162(customerNo, startDate, endDate, reportType, ref fileContent);
-        //         return true;
-        //     }
-        //     catch (Exception exc)
-        //     {
-        //         exception = exc.Message;
-        //         return false;
-        //     }
-        // }
+        public static async Task<(bool success, string errorMessage, string fileContent)> CreateReport_50162(string pCustomerNo, DateTime pStartDate, DateTime pEndDate, string pReportType)
+        {
+            try
+            {
+                CreateReport_50162 createReport_ = new CreateReport_50162(){
+                    customerNo = pCustomerNo,
+                    startDate = pStartDate,
+                    endDate = pEndDate,
+                    reportType = pReportType,
+                    fileContent = ""
+                };
+                var result = await mWebManagement.CreateReport_50162Async(createReport_);
+                Console.WriteLine($"Ekstre raporu oluşturuldu: {pCustomerNo}, {pStartDate}, {pEndDate}, {pReportType}");
+                return (true, null, result.fileContent);
+            }
+            catch (Exception exc)
+            {
+                return (false, exc.Message, null);
+            }
+        }
     }
 }

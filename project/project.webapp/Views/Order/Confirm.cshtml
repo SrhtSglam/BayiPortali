@@ -35,7 +35,13 @@
                         @* <td>@item.Quantity</td> *@
                         <td>@item.FormattedQuantity</td>
                         <td>@item.BaseUnit</td>
-                        <td><button type="button" class="btn btn-danger">Sil</button></td>
+                        <form method="post" asp-controller="Order" asp-action="DeleteBasketItem" class="d-flex gap-2">
+                            <td>
+                                <input type="hidden" name="pDateTime" value="@item.Date.ToString("yyyy-MM-dd HH:mm:ss.fff")"/>
+                                <input type="hidden" name="pItemNo" value="@item.ItemNo"/>
+                                <button type="submit" class="btn btn-danger">Sil</button>
+                            </td>
+                        </form>
                     </tr>
                 }
             }

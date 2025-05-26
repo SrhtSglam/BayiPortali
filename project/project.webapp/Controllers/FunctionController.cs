@@ -7,11 +7,12 @@ using project.webapp.Models;
 using System.IO;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using ClosedXML.Excel;  // ClosedXML kütüphanesini kullanıyoruz
+using ClosedXML.Excel;
+using project.webapp.Services;  // ClosedXML kütüphanesini kullanıyoruz
 
 namespace project.webapp.Controllers
 {
-    [CustomAuthorize(3, 2, 1)]
+    [CustomAuthorize("3, 2, 1")]
     public class FunctionController : Controller
     {
         private readonly ILogger<FunctionController> _logger;
@@ -49,16 +50,24 @@ namespace project.webapp.Controllers
         }
 
         [HttpPost]
-        public IActionResult SerialControl(string SerialNo = "")
+        public async Task<IActionResult> SerialControl(string pSerialNo = "")
         {
-            var item = _functionRepository.GetItemBySerialNo(SerialNo);
+            if (string.IsNullOrEmpty(pSerialNo))
+            {
+                Console.WriteLine("Geçersiz veri!");
+                return BadRequest("Geçersiz veri!");
+            }
+            var result = await NAVServer.FindItemSerial(WebLoginUser.AuthId, pSerialNo, WebLoginUser.CustomerNo); //burası konulacak mı 1 0 değerinde bi doğrulama dönüyor ancak veriye ihtiyaç var
+            // var result = await NAVServer.FindItemSerial("STARGRUPBURO", "H564X49609", "B0000132"); //burası konulacak mı 1 0 değerinde bi doğrulama dönüyor ancak veriye ihtiyaç var
             
-            if(item != null && SerialNo != "" && !string.IsNullOrEmpty(item.SerialNo))
+            if(result != 0){
+                var item = _functionRepository.GetItemBySerialNo(pSerialNo);
                 ViewBag.QuerySuccess = true;
-            else
+                return View(item);
+            }else{
                 ViewBag.QuerySuccess = false;
-            
-            return View(item);
+                return View();
+            }
         }
 
         public IActionResult NumaratorEntry()

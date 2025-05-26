@@ -25,114 +25,105 @@
         border-radius: 4px;
         transition: background-color 0.5s ease, padding 0.3s ease;
     }
-
-
 </style>
 
 <li class="nav-item">
     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
 </li>
+@if(WebLoginUser.PageAuthorize.Siparis != false){
+    <div class="dropdown">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Order"
+            asp-action="CreateOrder">Sipariş</a>
 
-<div class="dropdown">
-    <a class="nav-link text-dark" asp-area="" asp-controller="Order"
-        asp-action="CreateOrder">Sipariş</a>
+        <ul class="dropdown-menu">
+            @if(WebLoginUser.PageAuthorize.Siparis_Gec != false){
+                <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
+                    asp-action="CreateOrder">Sipariş Geç</a></li>
+            }
+            @if(WebLoginUser.PageAuthorize.Siparis_Onayla != false){
+                <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
+                    asp-action="Confirm">Sipariş Onayla</a></li>
+            }
+            @if(WebLoginUser.PageAuthorize.Siparis_Kontrol != false){
+                <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
+                    asp-action="Control">Sipariş Kontrol</a></li>
+            }
+        </ul>
+    </div>
+}
 
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
-            asp-action="CreateOrder">Sipariş Geç</a></li>
+@if(WebLoginUser.PageAuthorize.Islevler != false){
+    <div class="dropdown">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Function"
+        asp-action="SellOutEntry">İşlevler</a>
 
-        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
-            asp-action="Confirm">Sipariş Onayla</a></li>
-
-        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Order"
-            asp-action="Control">Sipariş Kontrol</a></li>
-    </ul>
-</div>
-
-<div class="dropdown">
-    <a class="nav-link text-dark" asp-area="" asp-controller="Function"
-       asp-action="SellOutEntry">İşlevler</a>
-
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
-               asp-action="SellOutEntry">Sell-out Giriş</a></li>
-
-        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
-               asp-action="NumaratorEntry">Numaratör Giriş</a></li>
-
-        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
-               asp-action="SerialControl">Seri Kontrol</a></li>
-        
-        <li class="dropdown-submenu">
-            <a class="dropdown-item text-dark">Garanti</a>
-            <ul class="dropdown-menu">
+        <ul class="dropdown-menu">
+            @if(WebLoginUser.PageAuthorize.Islevler_SellOutGiris != false){
                 <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
-               asp-action="WarrantyReqEntry">Garanti İstek Giriş</a></li>
+                    asp-action="SellOutEntry">Sell-out Giriş</a></li>
+            }
+            @if(WebLoginUser.PageAuthorize.Islevler_NumaratorGiris != false){
                 <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
-               asp-action="WarrantyProcessTrack">Garanti Süreç Takibi</a></li>
-            </ul>
-        </li>
-    </ul>
-</div>
+                    asp-action="NumaratorEntry">Numaratör Giriş</a></li>
+            }
+            @if(WebLoginUser.PageAuthorize.Islevler_SeriKontrol != false){
+                <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
+                    asp-action="SerialControl">Seri Kontrol</a></li>
+            }
+            @if(WebLoginUser.PageAuthorize.Islevler_Garanti != false){
+                <li class="dropdown-submenu">
+                    <a class="dropdown-item text-dark">Garanti</a>
+                    <ul class="dropdown-menu">
+                        @if(WebLoginUser.PageAuthorize.Islevler_Garanti_IstekGiris != false){
+                            <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
+                        asp-action="WarrantyReqEntry">Garanti İstek Giriş</a></li>
+                        }
+                        @if(WebLoginUser.PageAuthorize.Islevler_Garanti_SurecTakip != false){
+                            <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Function"
+                        asp-action="WarrantyProcessTrack">Garanti Süreç Takibi</a></li>
+                        }
+                    </ul>
+                </li>
+            }
+        </ul>
+    </div>
+}
 
+@if(WebLoginUser.PageAuthorize.Raporlar != false){
+    <div class="dropdown">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Report"
+            asp-action="Mizan">Raporlar</a>
 
-<div class="dropdown">
-    <a class="nav-link text-dark" asp-area="" asp-controller="Report"
-        asp-action="Mizan">Raporlar</a>
+        <ul class="dropdown-menu">
+            @if(WebLoginUser.PageAuthorize.Raporlar_Mizan != false){
+                <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Report"
+                    asp-action="Mizan">Mizan</a></li>
+            }
+            @if(WebLoginUser.PageAuthorize.Raporlar_Ekstre != false){
+                <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Report"
+                    asp-action="Ekstre">Ekstre</a></li>
+            }
+        </ul>
+    </div>
+}
 
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Report"
-            asp-action="Mizan">Mizan</a></li>
+@if(WebLoginUser.PageAuthorize.DuyuruDuzenle != false){
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Notice" asp-action="NoticeEdit">Duyuru Düzenle</a>
+    </li>
+}
+@if(WebLoginUser.PageAuthorize.Download != false){
+    <li class="nav-item">
+        <a class="nav-link text-dark" href="ftp://bayii:2563@mbl.bilgitas.com.tr">Download</a>
+    </li>
+}
 
-        <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Report"
-            asp-action="Ekstre">Ekstre</a></li>
-    </ul>
-</div>
-
-<li class="nav-item">
-    <a class="nav-link text-dark" asp-area="" asp-controller="Notice" asp-action="NoticeEdit">Duyuru Düzenle</a>
-</li>
-
-<li class="nav-item">
-    <a class="nav-link text-dark" href="ftp://bayii:2563@mbl.bilgitas.com.tr">Download</a>
-</li>
 
 <ul class="navbar-nav ms-auto">
     <li class="nav-item"></li>
         <a class="nav-link text-dark">Hoşgeldiniz, @WebLoginUser.AuthId</a>
     </li>
-
     <li class="nav-item">
         <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout"><span style="color: brown;">[Sistemden Çıkış]</span></a>
     </li>
-
 </ul>
-
-
-@*
-<style>
-    .dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-</style>
-
-@foreach (var items in Model)
-{
-    <div class="dropdown">
-            <a class="nav-link text-dark" asp-area="" asp-controller="@items.Controller"
-            asp-action="@items.Action">@items.Name</a>
-            
-            <ul class="dropdown-menu">
-                @foreach(var itemsSubCategories in items.subCategories){
-                    <li><a class="dropdown-item text-dark" asp-area="" asp-controller="@itemsSubCategories.Controller"
-                    asp-action="@itemsSubCategories.Action">@itemsSubCategories.Name</a></li>
-                }
-            </ul>
-        </div>
-
-    @* <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="" asp-controller="@items.Controller"
-            asp-action="@items.Action">@items.Name</a>
-    </li>
-} *@

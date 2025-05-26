@@ -9,9 +9,9 @@ namespace project.webapp.Filters
 {
     public class CustomAuthorizeAttribute : Attribute, IAuthorizationFilter
     {
-        private readonly int[] _allowedRoles;
+        private readonly string[] _allowedRoles;
 
-        public CustomAuthorizeAttribute(params int[] roles)
+        public CustomAuthorizeAttribute(params string[] roles)
         {
             _allowedRoles = roles;
         }

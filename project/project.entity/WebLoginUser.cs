@@ -11,6 +11,25 @@ namespace project.entity{
         public static int Visibility {get; set;}
 
         public static string? EMail {get; set;}
+
+        public static class PageAuthorize{
+            public static bool Siparis { get; set; }
+            public static bool Siparis_Gec { get; set; }
+            public static bool Siparis_Onayla { get; set; }
+            public static bool Siparis_Kontrol { get; set; }
+            public static bool Islevler { get; set; }
+            public static bool Islevler_SellOutGiris { get; set; }
+            public static bool Islevler_NumaratorGiris { get; set; }
+            public static bool Islevler_SeriKontrol { get; set; }
+            public static bool Islevler_Garanti { get; set; }
+            public static bool Islevler_Garanti_IstekGiris { get; set; }
+            public static bool Islevler_Garanti_SurecTakip { get; set; }
+            public static bool Raporlar { get; set; }
+            public static bool Raporlar_Mizan { get; set; }
+            public static bool Raporlar_Ekstre { get; set; }
+            public static bool DuyuruDuzenle { get; set; }
+            public static bool Download { get; set; }
+        }
     }
 }
 

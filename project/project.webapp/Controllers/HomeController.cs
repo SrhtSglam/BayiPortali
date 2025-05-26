@@ -7,7 +7,7 @@ using project.webapp.Filters;
 using project.webapp.Models;
 
 namespace project.webapp.Controllers{
-    [CustomAuthorize(3, 2, 1)]
+    [CustomAuthorize("3, 2, 1")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

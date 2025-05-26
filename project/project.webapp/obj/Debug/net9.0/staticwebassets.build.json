@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "f2+j1zfxELcZHTYKsLhLQ92jdXAEQ3ud8YDVfXjVi2A=",
+  "Hash": "cVqjviJVEPVEKk1qHUhB1gebfcAID3I+UWUe1/G41m4=",
   "Source": "project.webapp",
   "BasePath": "_content/project.webapp",
   "Mode": "Default",
@@ -7827,6 +7827,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\items\\03KYFSC5300DN.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\items\\31BILTON1018.png",
+      "SourceId": "project.webapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\",
+      "BasePath": "_content/project.webapp",
+      "RelativePath": "image/items/31BILTON1018#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3psws3ub66",
+      "Integrity": "R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\items\\31BILTON1018.png"
     },
     {
       "Identity": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\printers\\ecosys-pa3500cx-1.jpg",
@@ -18197,6 +18218,88 @@
         {
           "Name": "Content-Type",
           "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 10:29:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI="
+        }
+      ]
+    },
+    {
+      "Route": "image/items/31BILTON1018.3psws3ub66.png",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\items\\31BILTON1018.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "63325"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 15 Apr 2025 10:29:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3psws3ub66"
+        },
+        {
+          "Name": "label",
+          "Value": "image/items/31BILTON1018.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-R4ET14ZbCqBNqeKX5bPtxW/aZNhUCjRgUPvt0LKzZcI="
+        }
+      ]
+    },
+    {
+      "Route": "image/items/31BILTON1018.png",
+      "AssetFile": "C:\\Users\\stj067\\Documents\\GitHub\\BayiPortali\\project\\project.webapp\\wwwroot\\image\\items\\31BILTON1018.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "63325"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
