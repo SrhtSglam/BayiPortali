@@ -232,7 +232,6 @@
         function updateTable(items) {
             let tbody = $('tbody');
             tbody.empty();
-
             $.each(items, function (i, item) {
                 let row = `
                     <tr>
@@ -242,10 +241,10 @@
                         <td>${item.itemCode}</td>
                         <td>${item.itemDescription}</td>
                         <td>${item.alternativeCode}</td>
-                        <td>${item.currencyCode}</td>
                         <td>${item.formattedPrice}</td>
+                        <td>${item.currencyCode}</td>
                         <td><input type="text" class="form-control"></td>
-                        <td><input type="number" class="form-control"></td>
+                        <td><input type="number" min="0" step="1" class="form-control"></td>
                         <td><button type="button" class="btn btn-success">Ekle</button></td>
                     </tr>`;
                 tbody.append(row);
@@ -307,7 +306,6 @@
                 let page = $(this).data('page');
                 let selectedItemCode = $('#firstFilter').val();
                 let selectedSubItemCode = $('#secondFilter').val();
-                let pageSize = @pageSize;
 
                 let url = "";
                 let data = {};
@@ -317,15 +315,13 @@
                     data = {
                         selectedItemCode: selectedItemCode,
                         selectedSubCategory: selectedSubItemCode,
-                        page: page,
-                        pageSize: pageSize
+                        page: page
                     };
                 } else {
                     url = "/Order/GetItemCategoriesByItemCode";
                     data = {
                         selectedItemCode: selectedItemCode,
-                        page: page,
-                        pageSize: pageSize
+                        page: page
                     };
                 }
 
@@ -390,11 +386,21 @@
                     var componentRows = components.length > 0
                         ? components.map(item => `
                             <tr>
-                                <td>${item.componentItemNo}</td>
-                                <td>${item.description}</td>
-                                <td><input type="text" class="form-control"></td>
-                                <td><input type="number" class="form-control"></td>
-                                <td><button type="button" class="btn btn-success">Ekle</button></td>
+                                <td>${item.itemCategory}</td>
+                                <td>${item.productGroup}</td>
+                                <td>${item.itemCode}</td>
+                                <td>${item.itemDescription}</td>
+                                <td>${item.alternativeCode}</td>
+                                <td>${item.formattedPrice}</td>
+                                <td>${item.currencyCode}</td>
+                                <td colspan="3">
+                                    <form method="post" action="/Order/AddToBasket" class="add-to-basket-form d-flex gap-2">
+                                        <input type="hidden" name="pItemNo" value="${item.itemCode}"/>
+                                        <input type="text" name="pSalesDescription" class="form-control" style="min-width: 200px;" required/>
+                                        <input type="number" name="pQuantity" min="1" step="1" class="form-control" required/>
+                                        <button type="submit" class="btn btn-success">Ekle</button>
+                                    </form>
+                                </td>
                             </tr>`).join('')
                         : '<tr><td colspan="6">Bileşen bulunamadı.</td></tr>';
 
@@ -406,7 +412,6 @@
                                 <tr>
                                     <th>Madde Kategori</th>
                                     <th>Ürün Grup</th>
-                                    <th>Özellikler</th>
                                     <th>Madde Kodu</th>
                                     <th>Madde Açıklama</th>
                                     <th>Alternatif Kod</th>
@@ -443,6 +448,13 @@
                         </div>`;
 
                     modalBody.html(modalHtml);
+
+                    if (components.length === 0) {
+                        $('#InfoModal .nav-tabs a[href="#content3"]').parent().hide(); // Sekme butonunu gizle
+                    } else {
+                        $('#InfoModal .nav-tabs a[href="#content3"]').parent().show(); // Sekme butonunu göster
+                    }
+
                 },
                 error: function () {
                     modalBody.html('<p>Veri yüklenirken bir hata oluştu.</p>');

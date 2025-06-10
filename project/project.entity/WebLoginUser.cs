@@ -11,8 +11,9 @@ namespace project.entity{
         public static int Visibility {get; set;}
 
         public static string? EMail {get; set;}
-
-        public static class PageAuthorize{
+        
+        public static class PageAuthorize
+        {
             public static bool Siparis { get; set; }
             public static bool Siparis_Gec { get; set; }
             public static bool Siparis_Onayla { get; set; }

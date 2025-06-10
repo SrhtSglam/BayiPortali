@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Drawing.Imaging;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using project.data.Abstract;
@@ -15,7 +16,7 @@ namespace project.webapp.Controllers{
         private readonly IConfiguration _configuration;
         private readonly IOtherRepository _otherRepository;
         private readonly IOrderRepository _orderRepository;
-        public int _pageSize = 20;
+        private int _PageSize => HttpContext.Session.GetInt32("PageSize") ?? 20;
         public OrderController(ILogger<OrderController> logger, IOtherRepository otherRepository, IOrderRepository orderRepository, IConfiguration configuration)
         {
             _logger = logger;
@@ -29,9 +30,9 @@ namespace project.webapp.Controllers{
             return View();
         }
 
-        public IActionResult CreateOrder(string _selectedItemCode, string _selectedSubItemCode, int page = 1, int pageSize = 20)
+        public async Task<IActionResult> CreateOrder(string _selectedItemCode, string _selectedSubItemCode, int page = 1, int pageSize = 20)
         {
-            var items = _orderRepository.GetAll(page, pageSize, _selectedItemCode, _selectedSubItemCode);
+            var items = await _orderRepository.GetAllAsync(page, pageSize, _selectedItemCode, _selectedSubItemCode);
             var itemCategories = _orderRepository.GetItemCategories();
 
             int totalCount = _orderRepository.GetFilterItemCount(_selectedItemCode, _selectedSubItemCode);
@@ -39,7 +40,7 @@ namespace project.webapp.Controllers{
             ViewBag.TotalPage = totalPages;
             ViewBag.CurrentPage = page;
             ViewData["PageSize"] = pageSize;
-            _pageSize = pageSize;
+            HttpContext.Session.SetInt32("PageSize", pageSize);
 
             ViewBag.PageSizes = new List<int> { 10, 20, 30, 40 };
 
@@ -64,10 +65,19 @@ namespace project.webapp.Controllers{
         [HttpPost]
         public async Task<IActionResult> AddToBasket(string pItemNo, decimal pQuantity, string pSalesDescription)
         {
-            if (string.IsNullOrEmpty(pItemNo) || pQuantity <= 0)
+            if (string.IsNullOrEmpty(pItemNo))
             {
                 Console.WriteLine("Geçersiz veri!");
                 return BadRequest("Geçersiz veri!");
+            }
+            else if (pQuantity <= 0) {
+                Console.WriteLine("Lütfen geçerli adet sayısı giriniz!");
+                return BadRequest("Lütfen geçerli adet sayısı giriniz!");
+            }
+
+            if (string.IsNullOrEmpty(pSalesDescription))
+            {
+                pSalesDescription = "-";
             }
 
             await NAVServer.InsertWebBasket(DateTime.Now, WebLoginUser.AuthId, pItemNo, pQuantity, pSalesDescription);
@@ -76,12 +86,12 @@ namespace project.webapp.Controllers{
         }
 
         [HttpGet]
-        public JsonResult GetItemCategoriesByItemCode(string selectedItemCode, int page = 1, int pageSize = 20)
+        public JsonResult GetItemCategoriesByItemCode(string selectedItemCode, int page = 1)
         {
             var filteredCategories = _orderRepository.GetItemCategories(selectedItemCode);
-            var items = _orderRepository.GetItemsByCategory(page, pageSize, selectedItemCode, null);
+            var items = _orderRepository.GetItemsByCategory(page, _PageSize, selectedItemCode, null);
             var totalCount = _orderRepository.GetFilterItemCount(selectedItemCode, null);
-            var totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+            var totalPages = (int)Math.Ceiling((double)totalCount / _PageSize);
 
             return Json(new
             {
@@ -98,19 +108,19 @@ namespace project.webapp.Controllers{
         {
             int page = 1;
 
-            var filteredItems = _orderRepository.GetItemsByCategory(page, _pageSize, selectedItemCode, selectedSubCategory);
+            var filteredItems = _orderRepository.GetItemsByCategory(page, _PageSize, selectedItemCode, selectedSubCategory);
             var totalCount = _orderRepository.GetFilterItemCount(selectedItemCode, selectedSubCategory);
-            int totalPages = (int)Math.Ceiling((double)totalCount / _pageSize);
+            int totalPages = (int)Math.Ceiling((double)totalCount / _PageSize);
 
             return Json(new { items = filteredItems, totalPages = totalPages });
         }
 
         [HttpGet]
-        public JsonResult GetItemsByCategoryPaged(string selectedItemCode, string selectedSubCategory, int page = 1, int pageSize = 20)
+        public JsonResult GetItemsByCategoryPaged(string selectedItemCode, string selectedSubCategory, int page = 1)
         {
-            var filteredItems = _orderRepository.GetItemsByCategory(page, pageSize, selectedItemCode, selectedSubCategory);
+            var filteredItems = _orderRepository.GetItemsByCategory(page, _PageSize, selectedItemCode, selectedSubCategory);
             var totalCount = _orderRepository.GetFilterItemCount(selectedItemCode, selectedSubCategory);
-            int totalPages = (int)Math.Ceiling((double)totalCount / pageSize);
+            int totalPages = (int)Math.Ceiling((double)totalCount / _PageSize);
 
             return Json(new { items = filteredItems, totalPages = totalPages, currentPage = page });
         }
@@ -124,9 +134,9 @@ namespace project.webapp.Controllers{
         }
 
         [HttpGet]
-        public JsonResult GetAllFilterItems(string pItemCode)
+        public JsonResult GetAllFilterItems(string pItemCode, string pSalesDescription, string pAlternativeCode)
         {
-            var filteredItems = _orderRepository.GetAll(1, _pageSize, pItemCode);
+            var filteredItems = _orderRepository.GetAll(1, _PageSize, pItemCode, pSalesDescription, pAlternativeCode);
 
             return Json(filteredItems);
         }

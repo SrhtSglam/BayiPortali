@@ -37,8 +37,8 @@
             <th scope="col" class="sortable" onclick="sortTable(3)">Madde Kodu</th>
             <th scope="col" class="sortable" onclick="sortTable(4)">Madde Açıklama</th>
             <th scope="col" class="sortable" onclick="sortTable(5)">Alternatif Kod</th>
-            <th scope="col" class="sortable" onclick="sortTable(6)">Para Birimi</th>
-            <th scope="col" class="sortable" onclick="sortTable(7)">Satış Fiyatı</th>
+            <th scope="col" class="sortable" onclick="sortTable(6)">Satış Fiyatı</th>
+            <th scope="col" class="sortable" onclick="sortTable(5)">Para Birimi</th>
             <th scope="col" class="sortable" onclick="sortTable(8)">Sipariş Açıklama</th>
             <th scope="col" class="sortable" onclick="sortTable(9)">Adet</th>
             <th scope="col" class="sortable" onclick="sortTable(10)">#</th>
@@ -72,8 +72,8 @@
                     <td>@items.ItemCode</td>
                     <td>@items.ItemDescription</td>
                     <td>@items.AlternativeCode</td>
-                    <td>@items.CurrencyCode</td>
                     <td>@items.FormattedPrice</td>
+                    <td>@items.CurrencyCode</td>
 
                     <form method="post" asp-controller="Order" asp-action="AddToBasket" class="add-to-basket-form d-flex gap-2"> 
                         <td>
@@ -141,14 +141,22 @@
                     }, 2000);
                 },
                 error: function (xhr, status, error) {
+                    let errorMessage = "Bir hata oluştu.";
+
+                    if (xhr.responseText) {
+                        errorMessage += " " + xhr.responseText;
+                    }
+
                     $modalTitle.text("Hata!");
-                    $modalBody.text("Bir hata oluştu: " + error);
+                    $modalBody.text(errorMessage);
                     modal.show();
 
                     setTimeout(() => {
                         modal.hide();
                     }, 2000);
-                    console.error(error);
+
+                    console.error("XHR error:", error);
+                    console.error("Response text:", xhr.responseText);
                 }
             });
         });
@@ -214,10 +222,12 @@
                 event.preventDefault();
 
                 let value = input.value.trim();
-
                 if (value === "") return;
 
-                fetch(`/Order/GetAllFilterItems?pItemCode=${encodeURIComponent(value)}`)
+                let description = document.getElementById("filterItemDescription").value.trim();
+                let alternativeCode = document.getElementById("filterAlternativeCode").value.trim();
+
+                fetch(`/Order/GetAllFilterItems?pItemCode=${encodeURIComponent(value)}&pSalesDescription=${encodeURIComponent(description)}&pAlternativeCode=${encodeURIComponent(alternativeCode)}`)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error("Sunucu hatası");

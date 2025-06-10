@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
@@ -123,7 +124,7 @@ namespace project.data.Concrete
                                         Quantity = reader.IsDBNull(4) ? 0 : reader.GetDecimal(4),
                                         BaseUnit = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
                                     };
-                                    item.FormattedQuantity = item.Quantity.ToString("0.##");
+                                    item.FormattedQuantity = item.Quantity.ToString("0.00");
                                     items.Add(item);
                                 }
                             }
@@ -140,7 +141,7 @@ namespace project.data.Concrete
             return items;
         }
 
-        public List<Item> GetAll(int currentPage, int itemPerPage, string selectedItemCode, string selectedSubItemCode)
+        public async Task<List<Item>> GetAllAsync(int currentPage, int itemPerPage, string selectedItemCode, string selectedSubItemCode)
         {
             List<Item> items = new List<Item>();
             int offset = (currentPage - 1) * itemPerPage;
@@ -169,7 +170,7 @@ namespace project.data.Concrete
             {
                 using (SqlConnection conn = new SqlConnection(_connectionString))
                 {
-                    conn.Open();
+                    await conn.OpenAsync();
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Offset", offset);
@@ -181,11 +182,11 @@ namespace project.data.Concrete
                         if (!string.IsNullOrEmpty(selectedSubItemCode))
                             cmd.Parameters.AddWithValue("@SubItemCode", selectedSubItemCode);
 
-                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
                         {
                             if (reader.HasRows)
                             {
-                                while (reader.Read())
+                                while (await reader.ReadAsync())
                                 {
                                     Item item = new Item
                                     {
@@ -213,7 +214,10 @@ namespace project.data.Concrete
                                         item.Image = string.Empty;
                                     }
 
-                                    item.FormattedPrice = item.UnitPrice.ToString("0.##");
+                                    if (string.IsNullOrEmpty(item.CurrencyCode))
+                                        item.CurrencyCode = "TL";
+
+                                    item.FormattedPrice = item.UnitPrice.ToString("N2", new CultureInfo("tr-TR"));
                                     items.Add(item);
                                 }
                             }
@@ -278,7 +282,7 @@ namespace project.data.Concrete
             return count;
         }
 
-        public List<Item> GetAll(int currentPage, int itemPerPage, string itemCode)
+        public List<Item> GetAll(int currentPage, int itemPerPage, string itemCode, string description, string alternativeCode)
         {
             List<Item> items = new List<Item>();
             int offset = (currentPage - 1) * itemPerPage;
@@ -290,8 +294,20 @@ namespace project.data.Concrete
             BIC.[Code] = BI.[Item Category Code]
             LEFT JOIN [{_schema}$Sales Price] SP on
             SP.[Item No_] = BI.[No_]
-            WHERE SP.[Sales Code] = 'BAYI' AND BI.[No_] LIKE '%' + @ItemCode + '%'
-            ORDER BY BI.[No_]";
+            WHERE SP.[Sales Code] = 'BAYI' AND BI.[No_] LIKE '%' + @ItemCode + '%'";
+
+            if (!string.IsNullOrEmpty(description))
+            {
+                query += " AND BI.[Description] LIKE '%' + @Description + '%'";
+            }
+
+            if (!string.IsNullOrEmpty(alternativeCode))
+            {
+                query += " AND BI.[No_ 2] LIKE '%' + @AlternativeCode + '%'";
+            }
+
+            query += " ORDER BY BI.[No_]";
+
             // OFFSET @Offset ROWS FETCH NEXT @ItemPerPage ROWS ONLY
 
             try
@@ -304,6 +320,12 @@ namespace project.data.Concrete
                         // cmd.Parameters.AddWithValue("@Offset", offset);
                         // cmd.Parameters.AddWithValue("@ItemPerPage", itemPerPage);
                         cmd.Parameters.AddWithValue("@ItemCode", itemCode);
+                        
+                        if (!string.IsNullOrEmpty(description))
+                            cmd.Parameters.AddWithValue("@Description", description);
+
+                        if (!string.IsNullOrEmpty(alternativeCode))
+                            cmd.Parameters.AddWithValue("@AlternativeCode", alternativeCode);
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
@@ -337,7 +359,11 @@ namespace project.data.Concrete
                                         item.Image = string.Empty;
                                     }
 
-                                    item.FormattedPrice = item.UnitPrice.ToString("0.##");
+                                    if (string.IsNullOrEmpty(item.CurrencyCode))
+                                        item.CurrencyCode = "TL";
+
+                                    // item.FormattedPrice = item.UnitPrice.ToString("0.00");
+                                    item.FormattedPrice = item.UnitPrice.ToString("N2", new CultureInfo("tr-TR"));
                                     items.Add(item);
                                 }
                             }
@@ -467,7 +493,7 @@ namespace project.data.Concrete
                         {
                             while (reader.Read())
                             {
-                                items.Add(new Item
+                                Item item = new Item
                                 {
                                     ItemCategory = reader.IsDBNull(0) ? string.Empty : reader.GetString(0),
                                     ProductGroup = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
@@ -476,7 +502,14 @@ namespace project.data.Concrete
                                     AlternativeCode = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
                                     CurrencyCode = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
                                     UnitPrice = reader.IsDBNull(6) ? 0 : reader.GetDecimal(6)
-                                });
+                                };
+
+                                if (string.IsNullOrEmpty(item.CurrencyCode))
+                                    item.CurrencyCode = "TL";
+
+                                item.FormattedPrice = item.UnitPrice.ToString("N2", new CultureInfo("tr-TR"));
+
+                                items.Add(item);
                             }
                         }
                     }
@@ -495,9 +528,18 @@ namespace project.data.Concrete
         {
             List<ItemComponent> items = new List<ItemComponent>();
             string query = $@"SELECT 
-            IAC.[Item No_], IAC.[Component Item No_], IAC.[Description]
+            IC.[Description] AS ItemCategory,
+            IT.[Product Group Code] AS ProductGroup, 
+            IT.[No_] AS ItemCode, 
+            IT.[Description] AS ItemDescription, 
+            IT.[No_ 2] AS AlternativeCode,
+            SP.[Currency Code] AS CurrencyCode,
+            SP.[Unit Price] AS UnitPrice
             FROM [{_schema}$Item Applicable Components] IAC
-            WHERE [Item No_] = @itemNo";
+            INNER JOIN [{_schema}$Item] IT ON IT.No_= IAC.[Component Item No_]
+            INNER JOIN [{_schema}$Item Category] IC on IC.[Code] = IT.[Item Category Code]
+            LEFT JOIN [{_schema}$Sales Price] SP on SP.[Item No_] = IT.[No_] AND SP.[Sales Code] = 'BAYI'
+            WHERE IAC.[Item No_] = @itemNo";
 
             try
             {
@@ -516,10 +558,19 @@ namespace project.data.Concrete
                                 {
                                     ItemComponent item = new ItemComponent
                                     {
-                                        ItemNo = reader.IsDBNull(0) ? string.Empty : reader.GetString(0),
-                                        ComponentItemNo = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
-                                        Description = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                                        ItemCategory = reader.IsDBNull(reader.GetOrdinal("ItemCategory")) ? string.Empty : reader["ItemCategory"].ToString()!,
+                                        ProductGroup= reader.IsDBNull(reader.GetOrdinal("ProductGroup")) ? string.Empty : reader["ProductGroup"].ToString()!,
+                                        ItemCode= reader.IsDBNull(reader.GetOrdinal("ItemCode")) ? string.Empty : reader["ItemCode"].ToString()!,
+                                        ItemDescription= reader.IsDBNull(reader.GetOrdinal("ItemDescription")) ? string.Empty : reader["ItemDescription"].ToString()!,
+                                        AlternativeCode= reader.IsDBNull(reader.GetOrdinal("AlternativeCode")) ? string.Empty : reader["AlternativeCode"].ToString()!,
+                                        CurrencyCode= reader.IsDBNull(reader.GetOrdinal("CurrencyCode")) ? string.Empty : reader["CurrencyCode"].ToString()!,
+                                        UnitPrice= reader.IsDBNull(reader.GetOrdinal("UnitPrice")) ? 0 : Convert.ToInt32(reader["UnitPrice"])!,
                                     };
+
+                                    if (string.IsNullOrEmpty(item.CurrencyCode))
+                                        item.CurrencyCode = "TL";
+
+                                    item.FormattedPrice = item.UnitPrice.ToString("N2", new CultureInfo("tr-TR"));
                                     items.Add(item);
                                 }
                             }
